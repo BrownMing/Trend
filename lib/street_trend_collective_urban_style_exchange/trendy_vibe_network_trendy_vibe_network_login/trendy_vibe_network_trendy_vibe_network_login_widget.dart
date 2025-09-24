@@ -1,3 +1,5 @@
+import 'package:trend/flutter_flow/flutter_flow_widgets.dart';
+
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/index.dart';
@@ -41,6 +43,66 @@ class _TrendyVibeNetworkTrendyVibeNetworkLoginWidgetState
     _model.dispose();
 
     super.dispose();
+  }
+
+  Future<void> _tranquilityWhisperSoulComfortCompanionAI(
+      BuildContext context) async {
+    if (_model.textController1.text.isEmpty) {
+      emotionalNestAICareSphere(
+          context, 'Please enter your email address!', '');
+      safeSetState(() {});
+      return;
+    }
+
+    if (_model.textController2.text.isEmpty) {
+      emotionalNestAICareSphere(context, 'Please enter the password!', '');
+      safeSetState(() {});
+      return;
+    }
+
+    try {
+      final matchingUsers = FFAppState().urbanOutfitTrendSharingUsers.where(
+          (e) =>
+              _model.textController1.text == e.streetTrendEchoSharingUserEmail);
+
+      if (matchingUsers.isEmpty) {
+        emotionalNestAICareSphere(
+            context, 'The account does not exist!', 'error');
+        _model.textController1?.clear();
+        _model.textController2?.clear();
+        safeSetState(() {});
+        return;
+      }
+
+      final user = matchingUsers.first;
+      if (user.streetTrendEchoSharingUserPassword !=
+          _model.textController2.text) {
+        emotionalNestAICareSphere(context, 'Password error!', 'error');
+        _model.textController2?.clear();
+        safeSetState(() {});
+        return;
+      }
+
+      FFAppState().urbanTrendVisualCollaborationCurrent =
+          user.streetTrendEchoSharingUserId;
+      FFAppState().update(() {});
+      await Future.delayed(const Duration(seconds: 1));
+
+      if (mounted) {
+        context.pushNamed(
+          TrendSharingArenaTrendSharingArenaHomeWidget.routeName,
+          extra: <String, dynamic>{
+            kTransitionInfoKey: TransitionInfo(
+              hasTransition: true,
+              transitionType: PageTransitionType.bottomToTop,
+            ),
+          },
+        );
+      }
+    } catch (e) {
+    } finally {
+      safeSetState(() {});
+    }
   }
 
   @override
@@ -322,7 +384,7 @@ class _TrendyVibeNetworkTrendyVibeNetworkLoginWidgetState
                                         focusNode: _model.textFieldFocusNode2,
                                         autofocus: false,
                                         textInputAction: TextInputAction.done,
-                                        obscureText: false,
+                                        obscureText: true,
                                         decoration: InputDecoration(
                                           isDense: true,
                                           labelStyle: FlutterFlowTheme.of(
@@ -463,17 +525,8 @@ class _TrendyVibeNetworkTrendyVibeNetworkLoginWidgetState
                               hoverColor: Colors.transparent,
                               highlightColor: Colors.transparent,
                               onTap: () async {
-                                context.pushNamed(
-                                  TrendSharingArenaTrendSharingArenaHomeWidget
-                                      .routeName,
-                                  extra: <String, dynamic>{
-                                    kTransitionInfoKey: TransitionInfo(
-                                      hasTransition: true,
-                                      transitionType:
-                                          PageTransitionType.bottomToTop,
-                                    ),
-                                  },
-                                );
+                                await _tranquilityWhisperSoulComfortCompanionAI(
+                                    context);
                               },
                               child: Container(
                                 width: double.infinity,

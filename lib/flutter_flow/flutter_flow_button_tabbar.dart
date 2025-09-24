@@ -665,6 +665,7 @@ class _FlutterFlowButtonTabBarState extends State<FlutterFlowButtonTabBar>
           borderRadius: widget.useToggleButtonStyle
               ? null
               : BorderRadius.circular(widget.borderRadius),
+          image: widget.unselectedDecoration?.image,
         ),
         BoxDecoration(
           color: widget.decoration?.color ??
@@ -675,6 +676,7 @@ class _FlutterFlowButtonTabBarState extends State<FlutterFlowButtonTabBar>
           borderRadius: widget.useToggleButtonStyle
               ? null
               : BorderRadius.circular(widget.borderRadius),
+          image: widget.decoration?.image,
         ),
         animationValue);
 

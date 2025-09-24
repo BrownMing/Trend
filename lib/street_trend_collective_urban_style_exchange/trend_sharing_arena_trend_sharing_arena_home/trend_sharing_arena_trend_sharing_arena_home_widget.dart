@@ -146,7 +146,7 @@ class _TrendSharingArenaTrendSharingArenaHomeWidgetState
                               decoration: BoxDecoration(
                                 shape: BoxShape.circle,
                               ),
-                              child: Image.network(
+                              child: Image.asset(
                                 FFAppState()
                                     .urbanOutfitTrendSharingUsers
                                     .elementAtOrNull(FFAppState()
@@ -167,71 +167,86 @@ class _TrendSharingArenaTrendSharingArenaHomeWidgetState
                                 FFAppState()
                                     .urbanOutfitTrendSharingUsers
                                     .where((e) =>
-                                        e.streetTrendEchoSharingUserId ==
+                                        e.streetTrendEchoSharingUserId !=
                                         FFAppState()
                                             .urbanTrendVisualCollaborationCurrent)
                                     .toList();
 
-                            return Row(
-                              mainAxisSize: MainAxisSize.max,
-                              children: List.generate(
-                                  contemporaryOutfitInspirationArena.length,
-                                  (contemporaryOutfitInspirationArenaIndex) {
-                                final contemporaryOutfitInspirationArenaItem =
-                                    contemporaryOutfitInspirationArena[
-                                        contemporaryOutfitInspirationArenaIndex];
-                                return InkWell(
-                                  splashColor: Colors.transparent,
-                                  focusColor: Colors.transparent,
-                                  hoverColor: Colors.transparent,
-                                  highlightColor: Colors.transparent,
-                                  onTap: () async {
-                                    context.pushNamed(
-                                      FashionCollaborationSharingArenaOtherInfoWidget
-                                          .routeName,
-                                      queryParameters: {
-                                        'streetStyleHubUrbanTrendShare':
-                                            serializeParam(
-                                          contemporaryOutfitInspirationArenaItem
-                                              .streetTrendEchoSharingUserId,
-                                          ParamType.int,
+                            return SingleChildScrollView(
+                              scrollDirection: Axis.horizontal,
+                              child: Row(
+                                mainAxisSize: MainAxisSize.max,
+                                children: List.generate(
+                                    contemporaryOutfitInspirationArena.length,
+                                    (contemporaryOutfitInspirationArenaIndex) {
+                                  final contemporaryOutfitInspirationArenaItem =
+                                      contemporaryOutfitInspirationArena[
+                                          contemporaryOutfitInspirationArenaIndex];
+                                  return InkWell(
+                                    splashColor: Colors.transparent,
+                                    focusColor: Colors.transparent,
+                                    hoverColor: Colors.transparent,
+                                    highlightColor: Colors.transparent,
+                                    onTap: () async {
+                                      context.pushNamed(
+                                        FashionCollaborationSharingArenaOtherInfoWidget
+                                            .routeName,
+                                        queryParameters: {
+                                          'streetStyleHubUrbanTrendShare':
+                                              serializeParam(
+                                            contemporaryOutfitInspirationArenaItem
+                                                .streetTrendEchoSharingUserId,
+                                            ParamType.int,
+                                          ),
+                                        }.withoutNulls,
+                                        extra: <String, dynamic>{
+                                          kTransitionInfoKey: TransitionInfo(
+                                            hasTransition: true,
+                                            transitionType:
+                                                PageTransitionType.rightToLeft,
+                                          ),
+                                        },
+                                      );
+                                    },
+                                    child: Column(
+                                      mainAxisSize: MainAxisSize.max,
+                                      children: [
+                                        Container(
+                                          width: 72.0,
+                                          height: 72.0,
+                                          clipBehavior: Clip.antiAlias,
+                                          decoration: BoxDecoration(
+                                            shape: BoxShape.circle,
+                                          ),
+                                          child: Image.asset(
+                                            FFAppState()
+                                                .urbanOutfitTrendSharingUsers
+                                                .elementAtOrNull(
+                                                    contemporaryOutfitInspirationArenaItem
+                                                        .streetTrendEchoSharingUserId)!
+                                                .streetTrendEchoSharingUserPhoto,
+                                            fit: BoxFit.cover,
+                                          ),
                                         ),
-                                      }.withoutNulls,
-                                      extra: <String, dynamic>{
-                                        kTransitionInfoKey: TransitionInfo(
-                                          hasTransition: true,
-                                          transitionType:
-                                              PageTransitionType.rightToLeft,
-                                        ),
-                                      },
-                                    );
-                                  },
-                                  child: Column(
-                                    mainAxisSize: MainAxisSize.max,
-                                    children: [
-                                      Container(
-                                        width: 72.0,
-                                        height: 72.0,
-                                        clipBehavior: Clip.antiAlias,
-                                        decoration: BoxDecoration(
-                                          shape: BoxShape.circle,
-                                        ),
-                                        child: Image.network(
-                                          FFAppState()
-                                              .urbanOutfitTrendSharingUsers
-                                              .elementAtOrNull(
-                                                  contemporaryOutfitInspirationArenaItem
-                                                      .streetTrendEchoSharingUserId)!
-                                              .streetTrendEchoSharingUserPhoto,
-                                          fit: BoxFit.cover,
-                                        ),
-                                      ),
-                                      Text(
-                                        '${FFAppState().urbanOutfitTrendSharingUsers.elementAtOrNull(contemporaryOutfitInspirationArenaItem.streetTrendEchoSharingUserId)?.streetTrendEchoSharingUserName}',
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .override(
-                                              font: GoogleFonts.poppins(
+                                        Text(
+                                          '${FFAppState().urbanOutfitTrendSharingUsers.elementAtOrNull(contemporaryOutfitInspirationArenaItem.streetTrendEchoSharingUserId)?.streetTrendEchoSharingUserName}',
+                                          style: FlutterFlowTheme.of(context)
+                                              .bodyMedium
+                                              .override(
+                                                font: GoogleFonts.poppins(
+                                                  fontWeight:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .bodyMedium
+                                                          .fontWeight,
+                                                  fontStyle:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .bodyMedium
+                                                          .fontStyle,
+                                                ),
+                                                color: Color(0xCCFFFFFF),
+                                                letterSpacing: 0.0,
                                                 fontWeight:
                                                     FlutterFlowTheme.of(context)
                                                         .bodyMedium
@@ -241,22 +256,12 @@ class _TrendSharingArenaTrendSharingArenaHomeWidgetState
                                                         .bodyMedium
                                                         .fontStyle,
                                               ),
-                                              color: Color(0xCCFFFFFF),
-                                              letterSpacing: 0.0,
-                                              fontWeight:
-                                                  FlutterFlowTheme.of(context)
-                                                      .bodyMedium
-                                                      .fontWeight,
-                                              fontStyle:
-                                                  FlutterFlowTheme.of(context)
-                                                      .bodyMedium
-                                                      .fontStyle,
-                                            ),
-                                      ),
-                                    ].divide(SizedBox(height: 8.0)),
-                                  ),
-                                );
-                              }).divide(SizedBox(width: 16.0)),
+                                        ),
+                                      ].divide(SizedBox(height: 8.0)),
+                                    ),
+                                  );
+                                }).divide(SizedBox(width: 16.0)),
+                              ),
                             );
                           },
                         ),
@@ -343,14 +348,13 @@ class _TrendSharingArenaTrendSharingArenaHomeWidgetState
                                     16.0, 16.0, 16.0, 0.0),
                                 child: Builder(
                                   builder: (context) {
-                                    final globalStreetwearInfluenceExchange =
-                                        FFAppState()
-                                            .sneakerheadCultureConnectPosts
-                                            .where((e) =>
-                                                e.crossCultureTrendExchangeHubPostsCreateId !=
-                                                FFAppState()
-                                                    .urbanTrendVisualCollaborationCurrent)
-                                            .toList();
+                                    final globalStreetwearInfluenceExchange = FFAppState()
+                                        .creativeWardrobeFusionCommunPostImages
+                                        .where((e) =>
+                                            e.futureLifestyleSharingPostImageCreateId !=
+                                            FFAppState()
+                                                .urbanTrendVisualCollaborationCurrent)
+                                        .toList();
 
                                     return ListView.separated(
                                       padding: EdgeInsets.fromLTRB(
@@ -377,9 +381,9 @@ class _TrendSharingArenaTrendSharingArenaHomeWidgetState
                                           decoration: BoxDecoration(
                                             image: DecorationImage(
                                               fit: BoxFit.cover,
-                                              image: Image.network(
+                                              image: Image.asset(
                                                 globalStreetwearInfluenceExchangeItem
-                                                    .crossCultureTrendExchangeHubPostsPhoto
+                                                    .futureLifestyleSharingPostImagePhoto
                                                     .firstOrNull!,
                                               ).image,
                                             ),
@@ -405,12 +409,12 @@ class _TrendSharingArenaTrendSharingArenaHomeWidgetState
                                                       decoration: BoxDecoration(
                                                         image: DecorationImage(
                                                           fit: BoxFit.cover,
-                                                          image: Image.network(
+                                                          image: Image.asset(
                                                             FFAppState()
                                                                 .urbanOutfitTrendSharingUsers
                                                                 .elementAtOrNull(
                                                                     globalStreetwearInfluenceExchangeItem
-                                                                        .crossCultureTrendExchangeHubPostsCreateId)!
+                                                                        .futureLifestyleSharingPostImageCreateId)!
                                                                 .streetTrendEchoSharingUserPhoto,
                                                           ).image,
                                                         ),
@@ -423,7 +427,7 @@ class _TrendSharingArenaTrendSharingArenaHomeWidgetState
                                                       ),
                                                     ),
                                                     Text(
-                                                      '${FFAppState().urbanOutfitTrendSharingUsers.elementAtOrNull(globalStreetwearInfluenceExchangeItem.crossCultureTrendExchangeHubPostsCreateId)?.streetTrendEchoSharingUserName}',
+                                                      '${FFAppState().urbanOutfitTrendSharingUsers.elementAtOrNull(globalStreetwearInfluenceExchangeItem.futureLifestyleSharingPostImageCreateId)?.streetTrendEchoSharingUserName}',
                                                       style:
                                                           FlutterFlowTheme.of(
                                                                   context)
@@ -498,7 +502,7 @@ class _TrendSharingArenaTrendSharingArenaHomeWidgetState
                                                                         WorldYouthTrendInspirationNetworkReportBlackWidget(
                                                                       tureStyleCultureCollaborationGrid:
                                                                           globalStreetwearInfluenceExchangeItem
-                                                                              .crossCultureTrendExchangeHubPostsCreateId,
+                                                                              .futureLifestyleSharingPostImageCreateId,
                                                                     ),
                                                                   ),
                                                                 );
@@ -533,7 +537,7 @@ class _TrendSharingArenaTrendSharingArenaHomeWidgetState
                                                       CrossAxisAlignment.start,
                                                   children: [
                                                     Text(
-                                                      '${globalStreetwearInfluenceExchangeItem.crossCultureTrendExchangeHubPostsDescribe}',
+                                                      '${globalStreetwearInfluenceExchangeItem.futureLifestyleSharingPostImageDescribe}',
                                                       style:
                                                           FlutterFlowTheme.of(
                                                                   context)
@@ -569,7 +573,7 @@ class _TrendSharingArenaTrendSharingArenaHomeWidgetState
                                                       builder: (context) {
                                                         final creativeWardrobeInnovationCommunity =
                                                             globalStreetwearInfluenceExchangeItem
-                                                                .crossCultureTrendExchangeHubPostsPhoto
+                                                                .futureLifestyleSharingPostImagePhoto
                                                                 .toList();
 
                                                         return Row(
@@ -595,7 +599,7 @@ class _TrendSharingArenaTrendSharingArenaHomeWidgetState
                                                                   fit: BoxFit
                                                                       .cover,
                                                                   image: Image
-                                                                      .network(
+                                                                      .asset(
                                                                     creativeWardrobeInnovationCommunityItem,
                                                                   ).image,
                                                                 ),
@@ -762,7 +766,7 @@ class _TrendSharingArenaTrendSharingArenaHomeWidgetState
                                               decoration: BoxDecoration(
                                                 image: DecorationImage(
                                                   fit: BoxFit.cover,
-                                                  image: Image.network(
+                                                  image: Image.asset(
                                                     trendDrivenStyleDiscoveryCircleItem
                                                         .worldFashionSharingCollectiveTrendsPhoto,
                                                   ).image,
@@ -804,7 +808,7 @@ class _TrendSharingArenaTrendSharingArenaHomeWidgetState
                                                                   fit: BoxFit
                                                                       .cover,
                                                                   image: Image
-                                                                      .network(
+                                                                      .asset(
                                                                     FFAppState()
                                                                         .urbanOutfitTrendSharingUsers
                                                                         .elementAtOrNull(

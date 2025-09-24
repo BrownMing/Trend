@@ -91,7 +91,7 @@ class _UrbanCultureFusionExplorationPlatformImageWidgetState
                       },
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(12.0),
-                        child: Image.network(
+                        child: Image.asset(
                           urbanBeatStyleFusionPlatformItem,
                           width: double.infinity,
                           height: double.infinity,

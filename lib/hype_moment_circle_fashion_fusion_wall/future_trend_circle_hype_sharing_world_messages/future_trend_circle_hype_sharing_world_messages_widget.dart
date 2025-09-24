@@ -132,7 +132,7 @@ class _FutureTrendCircleHypeSharingWorldMessagesWidgetState
                                       decoration: BoxDecoration(
                                         image: DecorationImage(
                                           fit: BoxFit.cover,
-                                          image: Image.network(
+                                          image: Image.asset(
                                             FFAppState()
                                                 .urbanOutfitTrendSharingUsers
                                                 .elementAtOrNull(widget
@@ -308,9 +308,8 @@ class _FutureTrendCircleHypeSharingWorldMessagesWidgetState
                                       padding: MediaQuery.viewInsetsOf(context),
                                       child:
                                           WorldYouthTrendInspirationNetworkReportBlackWidget(
-                                        tureStyleCultureCollaborationGrid:
-                                            widget
-                                                .popCultureVibeInnovationUserid!,
+                                        tureStyleCultureCollaborationGrid: widget
+                                            .popCultureVibeInnovationUserid!,
                                       ),
                                     ),
                                   );
@@ -435,7 +434,7 @@ class _FutureTrendCircleHypeSharingWorldMessagesWidgetState
                                                                 DecorationImage(
                                                               fit: BoxFit.cover,
                                                               image:
-                                                                  Image.network(
+                                                                  Image.asset(
                                                                 FFAppState()
                                                                     .urbanOutfitTrendSharingUsers
                                                                     .elementAtOrNull(

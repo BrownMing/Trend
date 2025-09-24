@@ -145,18 +145,108 @@ class FFAppState extends ChangeNotifier {
   late SharedPreferences prefs;
 
   List<StreetTrendEchoSharingUserStruct> _urbanOutfitTrendSharingUsers = [
-    StreetTrendEchoSharingUserStruct.fromSerializableMap(jsonDecode(
-        '{\"StreetTrendEchoSharingUser_id\":\"0\",\"StreetTrendEchoSharingUser_email\":\"Hello World\",\"StreetTrendEchoSharingUser_password\":\"Hello World\",\"StreetTrendEchoSharingUser_name\":\"Hello World\",\"StreetTrendEchoSharingUser_photo\":\"https://picsum.photos/seed/605/600\",\"StreetTrendEchoSharingUser_gender\":\"Hello World\",\"StreetTrendEchoSharingUser_datebirth\":\"Hello World\",\"StreetTrendEchoSharingUser_describe\":\"Hello World\",\"StreetTrendEchoSharingUser_balance\":\"0\",\"StreetTrendEchoSharingUser_followings\":\"[\\\"0\\\"]\",\"StreetTrendEchoSharingUser_followers\":\"[\\\"0\\\"]\",\"StreetTrendEchoSharingUser_blacklist\":\"[\\\"0\\\"]\",\"StreetTrendEchoSharingUser_create_time\":\"1758535007833\"}')),
-    StreetTrendEchoSharingUserStruct.fromSerializableMap(jsonDecode(
-        '{\"StreetTrendEchoSharingUser_id\":\"0\",\"StreetTrendEchoSharingUser_email\":\"Hello World\",\"StreetTrendEchoSharingUser_password\":\"Hello World\",\"StreetTrendEchoSharingUser_name\":\"Hello World\",\"StreetTrendEchoSharingUser_photo\":\"https://picsum.photos/seed/71/600\",\"StreetTrendEchoSharingUser_gender\":\"Hello World\",\"StreetTrendEchoSharingUser_datebirth\":\"Hello World\",\"StreetTrendEchoSharingUser_describe\":\"Hello World\",\"StreetTrendEchoSharingUser_balance\":\"0\",\"StreetTrendEchoSharingUser_followings\":\"[\\\"0\\\"]\",\"StreetTrendEchoSharingUser_followers\":\"[\\\"0\\\"]\",\"StreetTrendEchoSharingUser_blacklist\":\"[\\\"0\\\"]\",\"StreetTrendEchoSharingUser_create_time\":\"1758535008513\"}')),
-    StreetTrendEchoSharingUserStruct.fromSerializableMap(jsonDecode(
-        '{\"StreetTrendEchoSharingUser_id\":\"0\",\"StreetTrendEchoSharingUser_email\":\"Hello World\",\"StreetTrendEchoSharingUser_password\":\"Hello World\",\"StreetTrendEchoSharingUser_name\":\"Hello World\",\"StreetTrendEchoSharingUser_photo\":\"https://picsum.photos/seed/393/600\",\"StreetTrendEchoSharingUser_gender\":\"Hello World\",\"StreetTrendEchoSharingUser_datebirth\":\"Hello World\",\"StreetTrendEchoSharingUser_describe\":\"Hello World\",\"StreetTrendEchoSharingUser_balance\":\"0\",\"StreetTrendEchoSharingUser_followings\":\"[\\\"0\\\"]\",\"StreetTrendEchoSharingUser_followers\":\"[\\\"0\\\"]\",\"StreetTrendEchoSharingUser_blacklist\":\"[\\\"0\\\"]\",\"StreetTrendEchoSharingUser_create_time\":\"1758535009400\"}')),
-    StreetTrendEchoSharingUserStruct.fromSerializableMap(jsonDecode(
-        '{\"StreetTrendEchoSharingUser_id\":\"0\",\"StreetTrendEchoSharingUser_email\":\"Hello World\",\"StreetTrendEchoSharingUser_password\":\"Hello World\",\"StreetTrendEchoSharingUser_name\":\"Hello World\",\"StreetTrendEchoSharingUser_photo\":\"https://picsum.photos/seed/757/600\",\"StreetTrendEchoSharingUser_gender\":\"Hello World\",\"StreetTrendEchoSharingUser_datebirth\":\"Hello World\",\"StreetTrendEchoSharingUser_describe\":\"Hello World\",\"StreetTrendEchoSharingUser_balance\":\"0\",\"StreetTrendEchoSharingUser_followings\":\"[\\\"0\\\"]\",\"StreetTrendEchoSharingUser_followers\":\"[\\\"0\\\"]\",\"StreetTrendEchoSharingUser_blacklist\":\"[\\\"0\\\"]\",\"StreetTrendEchoSharingUser_create_time\":\"1758535010141\"}')),
-    StreetTrendEchoSharingUserStruct.fromSerializableMap(jsonDecode(
-        '{\"StreetTrendEchoSharingUser_id\":\"0\",\"StreetTrendEchoSharingUser_email\":\"Hello World\",\"StreetTrendEchoSharingUser_password\":\"Hello World\",\"StreetTrendEchoSharingUser_name\":\"Hello World\",\"StreetTrendEchoSharingUser_photo\":\"https://picsum.photos/seed/498/600\",\"StreetTrendEchoSharingUser_gender\":\"Hello World\",\"StreetTrendEchoSharingUser_datebirth\":\"Hello World\",\"StreetTrendEchoSharingUser_describe\":\"Hello World\",\"StreetTrendEchoSharingUser_balance\":\"0\",\"StreetTrendEchoSharingUser_followings\":\"[\\\"0\\\"]\",\"StreetTrendEchoSharingUser_followers\":\"[\\\"0\\\"]\",\"StreetTrendEchoSharingUser_blacklist\":\"[\\\"0\\\"]\",\"StreetTrendEchoSharingUser_create_time\":\"1758535010879\"}')),
-    StreetTrendEchoSharingUserStruct.fromSerializableMap(jsonDecode(
-        '{\"StreetTrendEchoSharingUser_id\":\"0\",\"StreetTrendEchoSharingUser_email\":\"Hello World\",\"StreetTrendEchoSharingUser_password\":\"Hello World\",\"StreetTrendEchoSharingUser_name\":\"Hello World\",\"StreetTrendEchoSharingUser_photo\":\"https://picsum.photos/seed/181/600\",\"StreetTrendEchoSharingUser_gender\":\"Hello World\",\"StreetTrendEchoSharingUser_datebirth\":\"Hello World\",\"StreetTrendEchoSharingUser_describe\":\"Hello World\",\"StreetTrendEchoSharingUser_balance\":\"0\",\"StreetTrendEchoSharingUser_followings\":\"[\\\"0\\\"]\",\"StreetTrendEchoSharingUser_followers\":\"[\\\"0\\\"]\",\"StreetTrendEchoSharingUser_blacklist\":\"[\\\"0\\\"]\",\"StreetTrendEchoSharingUser_create_time\":\"1758535021266\"}'))
+    StreetTrendEchoSharingUserStruct.fromSerializableMap(jsonDecode('''
+      {
+        "StreetTrendEchoSharingUser_id": "0",
+        "StreetTrendEchoSharingUser_email": "marine@gmail.com",
+        "StreetTrendEchoSharingUser_password": "12345678",
+        "StreetTrendEchoSharingUser_name": "Thorne",
+        "StreetTrendEchoSharingUser_photo": "assets/images/dafyguidfgiydyf_xcuvigsdfyugiAIUSFG.png",
+        "StreetTrendEchoSharingUser_gender": "Male",
+        "StreetTrendEchoSharingUser_datebirth": "28",
+        "StreetTrendEchoSharingUser_describe": "Hiding sunsets in ocean waves, writing starry skies in code—half free, half fiery.",
+        "StreetTrendEchoSharingUser_balance": "0",
+        "StreetTrendEchoSharingUser_followings": "[\\\"1\\\"]",
+        "StreetTrendEchoSharingUser_followers": "[\\\"2\\\"]",
+        "StreetTrendEchoSharingUser_blacklist": "[]",
+        "StreetTrendEchoSharingUser_create_time": "1758535007833"
+      }
+    ''')),
+    StreetTrendEchoSharingUserStruct.fromSerializableMap(jsonDecode('''
+      {
+        "StreetTrendEchoSharingUser_id": "1",
+        "StreetTrendEchoSharingUser_email": "techhub@outlook.com",
+        "StreetTrendEchoSharingUser_password": "dfsdfasdgfsdg",
+        "StreetTrendEchoSharingUser_name": "Maren",
+        "StreetTrendEchoSharingUser_photo": "assets/images/yugafyudgfdfugio_cxbvyhusdgifyuASDU.png",
+        "StreetTrendEchoSharingUser_gender": "Female",
+        "StreetTrendEchoSharingUser_datebirth": "27",
+        "StreetTrendEchoSharingUser_describe": "No chasing right in definitions, just being cool in instincts—my rhythm, my own melody.",
+        "StreetTrendEchoSharingUser_balance": "0",
+        "StreetTrendEchoSharingUser_followings": "[\\\"0\\\"]",
+        "StreetTrendEchoSharingUser_followers": "[]",
+        "StreetTrendEchoSharingUser_blacklist": "[]",
+        "StreetTrendEchoSharingUser_create_time": "1758535008513"
+      }
+    ''')),
+    StreetTrendEchoSharingUserStruct.fromSerializableMap(jsonDecode('''
+      {
+        "StreetTrendEchoSharingUser_id": "2",
+        "StreetTrendEchoSharingUser_email": "elowen.art@icloud.com",
+        "StreetTrendEchoSharingUser_password": "1234561516",
+        "StreetTrendEchoSharingUser_name": "Thea",
+        "StreetTrendEchoSharingUser_photo": "assets/images/gfdshugfdhuiohg_xcvghsyudfgiaudfg.png",
+        "StreetTrendEchoSharingUser_gender": "Female",
+        "StreetTrendEchoSharingUser_datebirth": "26",
+        "StreetTrendEchoSharingUser_describe": "Catching wind’s shape with a lens, wrapping emotion’s warmth in words—record seriously, live slowly.",
+        "StreetTrendEchoSharingUser_balance": "0",
+        "StreetTrendEchoSharingUser_followings": "[\\\"1\\\"]",
+        "StreetTrendEchoSharingUser_followers": "[]",
+        "StreetTrendEchoSharingUser_blacklist": "[]",
+        "StreetTrendEchoSharingUser_create_time": "1758535009400"
+      }
+    ''')),
+    StreetTrendEchoSharingUserStruct.fromSerializableMap(jsonDecode('''
+      {
+        "StreetTrendEchoSharingUser_id": "3",
+        "StreetTrendEchoSharingUser_email": "silas.flow@yahoo.com",
+        "StreetTrendEchoSharingUser_password": "1234561516",
+        "StreetTrendEchoSharingUser_name": "Soren",
+        "StreetTrendEchoSharingUser_photo": "assets/images/dfhgudiofhG_xcjbvyuuidfaghudfh.png",
+        "StreetTrendEchoSharingUser_gender": "Female",
+        "StreetTrendEchoSharingUser_datebirth": "30",
+        "StreetTrendEchoSharingUser_describe": "Breaking impossible into try a little today, turning want to do into doing now—small steps still reach far.",
+        "StreetTrendEchoSharingUser_balance": "0",
+        "StreetTrendEchoSharingUser_followings": "[]",
+        "StreetTrendEchoSharingUser_followers": "[]",
+        "StreetTrendEchoSharingUser_blacklist": "[]",
+        "StreetTrendEchoSharingUser_create_time": "1758535010141"
+      }
+    ''')),
+    StreetTrendEchoSharingUserStruct.fromSerializableMap(jsonDecode('''
+      {
+        "StreetTrendEchoSharingUser_id": "4",
+        "StreetTrendEchoSharingUser_email": "thorne.vibe@outlook.com",
+        "StreetTrendEchoSharingUser_password": "1234561516",
+        "StreetTrendEchoSharingUser_name": "Lila",
+        "StreetTrendEchoSharingUser_photo": "assets/images/dfguiodjgiujdoip_iosdfgugfjgi.png",
+        "StreetTrendEchoSharingUser_gender": "Female",
+        "StreetTrendEchoSharingUser_datebirth": "24",
+        "StreetTrendEchoSharingUser_describe": "Loving the texture of old vinyl, craving the edge of new tech—classic and trendy, I want both.",
+        "StreetTrendEchoSharingUser_balance": "0",
+        "StreetTrendEchoSharingUser_followings": "[]",
+        "StreetTrendEchoSharingUser_followers": "[]",
+        "StreetTrendEchoSharingUser_blacklist": "[]",
+        "StreetTrendEchoSharingUser_create_time": "1758535010879"
+      }
+    ''')),
+    StreetTrendEchoSharingUserStruct.fromSerializableMap(jsonDecode('''
+      {
+        "StreetTrendEchoSharingUser_id": "5",
+        "StreetTrendEchoSharingUser_email": "thea.note@gmail.com",
+        "StreetTrendEchoSharingUser_password": "1234561516",
+        "StreetTrendEchoSharingUser_name": "Owen",
+        "StreetTrendEchoSharingUser_photo": "assets/images/dgsiugduifgo_jgvyusagdyuiagdfg.png",
+        "StreetTrendEchoSharingUser_gender": "Male",
+        "StreetTrendEchoSharingUser_datebirth": "25",
+        "StreetTrendEchoSharingUser_describe": "Not a standard answer, but a 'unique option'—my life, with its own filter.",
+        "StreetTrendEchoSharingUser_balance": "0",
+        "StreetTrendEchoSharingUser_followings": "[]",
+        "StreetTrendEchoSharingUser_followers": "[]",
+        "StreetTrendEchoSharingUser_blacklist": "[]",
+        "StreetTrendEchoSharingUser_create_time": "1758535021266"
+      }
+    '''))
   ];
   List<StreetTrendEchoSharingUserStruct> get urbanOutfitTrendSharingUsers =>
       _urbanOutfitTrendSharingUsers;
@@ -174,19 +264,6 @@ class FFAppState extends ChangeNotifier {
         _urbanOutfitTrendSharingUsers.map((x) => x.serialize()).toList());
   }
 
-  void removeFromUrbanOutfitTrendSharingUsers(
-      StreetTrendEchoSharingUserStruct value) {
-    urbanOutfitTrendSharingUsers.remove(value);
-    prefs.setStringList('ff_urbanOutfitTrendSharingUsers',
-        _urbanOutfitTrendSharingUsers.map((x) => x.serialize()).toList());
-  }
-
-  void removeAtIndexFromUrbanOutfitTrendSharingUsers(int index) {
-    urbanOutfitTrendSharingUsers.removeAt(index);
-    prefs.setStringList('ff_urbanOutfitTrendSharingUsers',
-        _urbanOutfitTrendSharingUsers.map((x) => x.serialize()).toList());
-  }
-
   void updateUrbanOutfitTrendSharingUsersAtIndex(
     int index,
     StreetTrendEchoSharingUserStruct Function(StreetTrendEchoSharingUserStruct)
@@ -194,13 +271,6 @@ class FFAppState extends ChangeNotifier {
   ) {
     urbanOutfitTrendSharingUsers[index] =
         updateFn(_urbanOutfitTrendSharingUsers[index]);
-    prefs.setStringList('ff_urbanOutfitTrendSharingUsers',
-        _urbanOutfitTrendSharingUsers.map((x) => x.serialize()).toList());
-  }
-
-  void insertAtIndexInUrbanOutfitTrendSharingUsers(
-      int index, StreetTrendEchoSharingUserStruct value) {
-    urbanOutfitTrendSharingUsers.insert(index, value);
     prefs.setStringList('ff_urbanOutfitTrendSharingUsers',
         _urbanOutfitTrendSharingUsers.map((x) => x.serialize()).toList());
   }
@@ -215,18 +285,78 @@ class FFAppState extends ChangeNotifier {
 
   List<CrossCultureTrendExchangeHubPostsStruct>
       _sneakerheadCultureConnectPosts = [
-    CrossCultureTrendExchangeHubPostsStruct.fromSerializableMap(jsonDecode(
-        '{\"CrossCultureTrendExchangeHubPosts_id\":\"0\",\"CrossCultureTrendExchangeHubPosts_create_id\":\"0\",\"CrossCultureTrendExchangeHubPosts_photo\":\"[\\\"https://picsum.photos/seed/251/600\\\"]\",\"CrossCultureTrendExchangeHubPosts_video\":\"https://assets.mixkit.co/videos/529/529-720.mp4\",\"CrossCultureTrendExchangeHubPosts_describe\":\"Hello World\",\"CrossCultureTrendExchangeHubPosts_like_user\":\"[\\\"0\\\"]\",\"CrossCultureTrendExchangeHubPosts_comments\":\"0\",\"CrossCultureTrendExchangeHubPosts_create_time\":\"1758535152982\"}')),
-    CrossCultureTrendExchangeHubPostsStruct.fromSerializableMap(jsonDecode(
-        '{\"CrossCultureTrendExchangeHubPosts_id\":\"0\",\"CrossCultureTrendExchangeHubPosts_create_id\":\"0\",\"CrossCultureTrendExchangeHubPosts_photo\":\"[\\\"https://picsum.photos/seed/25/600\\\"]\",\"CrossCultureTrendExchangeHubPosts_video\":\"https://assets.mixkit.co/videos/529/529-720.mp4\",\"CrossCultureTrendExchangeHubPosts_describe\":\"Hello World\",\"CrossCultureTrendExchangeHubPosts_like_user\":\"[\\\"0\\\"]\",\"CrossCultureTrendExchangeHubPosts_comments\":\"0\",\"CrossCultureTrendExchangeHubPosts_create_time\":\"1758535159425\"}')),
-    CrossCultureTrendExchangeHubPostsStruct.fromSerializableMap(jsonDecode(
-        '{\"CrossCultureTrendExchangeHubPosts_id\":\"0\",\"CrossCultureTrendExchangeHubPosts_create_id\":\"0\",\"CrossCultureTrendExchangeHubPosts_photo\":\"[\\\"https://picsum.photos/seed/177/600\\\"]\",\"CrossCultureTrendExchangeHubPosts_video\":\"https://assets.mixkit.co/videos/529/529-720.mp4\",\"CrossCultureTrendExchangeHubPosts_describe\":\"Hello World\",\"CrossCultureTrendExchangeHubPosts_like_user\":\"[\\\"0\\\"]\",\"CrossCultureTrendExchangeHubPosts_comments\":\"0\",\"CrossCultureTrendExchangeHubPosts_create_time\":\"1758535160162\"}')),
-    CrossCultureTrendExchangeHubPostsStruct.fromSerializableMap(jsonDecode(
-        '{\"CrossCultureTrendExchangeHubPosts_id\":\"0\",\"CrossCultureTrendExchangeHubPosts_create_id\":\"0\",\"CrossCultureTrendExchangeHubPosts_photo\":\"[\\\"https://picsum.photos/seed/930/600\\\"]\",\"CrossCultureTrendExchangeHubPosts_video\":\"https://assets.mixkit.co/videos/529/529-720.mp4\",\"CrossCultureTrendExchangeHubPosts_describe\":\"Hello World\",\"CrossCultureTrendExchangeHubPosts_like_user\":\"[\\\"0\\\"]\",\"CrossCultureTrendExchangeHubPosts_comments\":\"0\",\"CrossCultureTrendExchangeHubPosts_create_time\":\"1758535160937\"}')),
-    CrossCultureTrendExchangeHubPostsStruct.fromSerializableMap(jsonDecode(
-        '{\"CrossCultureTrendExchangeHubPosts_id\":\"0\",\"CrossCultureTrendExchangeHubPosts_create_id\":\"0\",\"CrossCultureTrendExchangeHubPosts_photo\":\"[\\\"https://picsum.photos/seed/293/600\\\"]\",\"CrossCultureTrendExchangeHubPosts_video\":\"https://assets.mixkit.co/videos/529/529-720.mp4\",\"CrossCultureTrendExchangeHubPosts_describe\":\"Hello World\",\"CrossCultureTrendExchangeHubPosts_like_user\":\"[\\\"0\\\"]\",\"CrossCultureTrendExchangeHubPosts_comments\":\"0\",\"CrossCultureTrendExchangeHubPosts_create_time\":\"1758535163764\"}')),
-    CrossCultureTrendExchangeHubPostsStruct.fromSerializableMap(jsonDecode(
-        '{\"CrossCultureTrendExchangeHubPosts_id\":\"0\",\"CrossCultureTrendExchangeHubPosts_create_id\":\"0\",\"CrossCultureTrendExchangeHubPosts_photo\":\"[\\\"https://picsum.photos/seed/392/600\\\"]\",\"CrossCultureTrendExchangeHubPosts_video\":\"https://assets.mixkit.co/videos/529/529-720.mp4\",\"CrossCultureTrendExchangeHubPosts_describe\":\"Hello World\",\"CrossCultureTrendExchangeHubPosts_like_user\":\"[\\\"0\\\"]\",\"CrossCultureTrendExchangeHubPosts_comments\":\"0\",\"CrossCultureTrendExchangeHubPosts_create_time\":\"1758535164548\"}'))
+    CrossCultureTrendExchangeHubPostsStruct.fromSerializableMap(jsonDecode('''
+      {
+        "CrossCultureTrendExchangeHubPosts_id": "0",
+        "CrossCultureTrendExchangeHubPosts_create_id": "5",
+        "CrossCultureTrendExchangeHubPosts_photo": "[\\\"assets/images/dfgdfuuihosidhfguIOD_xcjvbsdgfhuyaishgui.jpeg\\\",\\\"assets/images/fdgudfjguia_sdufasuiof.jpeg\\\"]",
+        "CrossCultureTrendExchangeHubPosts_video": "",
+        "CrossCultureTrendExchangeHubPosts_describe": "Morning win: Café latte + sun through windows. What’s your tiny happy moment today? ☕️",
+        "CrossCultureTrendExchangeHubPosts_like_user": "[]",
+        "CrossCultureTrendExchangeHubPosts_comments": "0",
+        "CrossCultureTrendExchangeHubPosts_create_time": "1758535152982"
+      }
+    ''')),
+    CrossCultureTrendExchangeHubPostsStruct.fromSerializableMap(jsonDecode('''
+      {
+        "CrossCultureTrendExchangeHubPosts_id": "1",
+        "CrossCultureTrendExchangeHubPosts_create_id": "4",
+        "CrossCultureTrendExchangeHubPosts_photo": "[\\\"assets/images/dfsughdsuifgo_ibfguyidfguiod.jpeg\\\",\\\"assets/images/sudfusidfhos_cvbuyisogfyaiuSFDSUHIO.jpeg\\\"]",
+        "CrossCultureTrendExchangeHubPosts_video": "",
+        "CrossCultureTrendExchangeHubPosts_describe": "Thrifted denim jacket alert, fits like a dream. Who’s thrifting this weekend? 👖",
+        "CrossCultureTrendExchangeHubPosts_like_user": "[]",
+        "CrossCultureTrendExchangeHubPosts_comments": "0",
+        "CrossCultureTrendExchangeHubPosts_create_time": "1758535159425"
+      }
+    ''')),
+    CrossCultureTrendExchangeHubPostsStruct.fromSerializableMap(jsonDecode('''
+      {
+        "CrossCultureTrendExchangeHubPosts_id": "2",
+        "CrossCultureTrendExchangeHubPosts_create_id": "3",
+        "CrossCultureTrendExchangeHubPosts_photo": "[\\\"assets/images/dfgdufgsdoufig_xcivbyusadgafaiyuysuygaidFY.jpeg\\\",\\\"assets/images/dfguadfgudofg_vcbidfugihduiofgf.jpeg\\\"]",
+        "CrossCultureTrendExchangeHubPosts_video": "",
+        "CrossCultureTrendExchangeHubPosts_describe": "Saturday clay class = messy hands + a lopsided (but cute!) mug. New hobby unlocked! 🧱",
+        "CrossCultureTrendExchangeHubPosts_like_user": "[]",
+        "CrossCultureTrendExchangeHubPosts_comments": "0",
+        "CrossCultureTrendExchangeHubPosts_create_time": "1758535160162"
+      }
+    ''')),
+    CrossCultureTrendExchangeHubPostsStruct.fromSerializableMap(jsonDecode('''
+      {
+        "CrossCultureTrendExchangeHubPosts_id": "3",
+        "CrossCultureTrendExchangeHubPosts_create_id": "2",
+        "CrossCultureTrendExchangeHubPosts_photo": "[]",
+        "CrossCultureTrendExchangeHubPosts_video": "assets/videos/agsyduifGHASDHFUIASO_xcvbsdgfyusadfuso.mp4",
+        "CrossCultureTrendExchangeHubPosts_describe": "30-minute evening walks > 24/7 hustling. Rest = superpower, right? 🌿",
+        "CrossCultureTrendExchangeHubPosts_like_user": "[]",
+        "CrossCultureTrendExchangeHubPosts_comments": "0",
+        "CrossCultureTrendExchangeHubPosts_create_time": "1758535160937"
+      }
+    ''')),
+    CrossCultureTrendExchangeHubPostsStruct.fromSerializableMap(jsonDecode('''
+      {
+        "CrossCultureTrendExchangeHubPosts_id": "4",
+        "CrossCultureTrendExchangeHubPosts_create_id": "1",
+        "CrossCultureTrendExchangeHubPosts_photo": "[]",
+        "CrossCultureTrendExchangeHubPosts_video": "assets/videos/dfgusdouiohsdufgO_xcihudfhguiodfgou.mp4",
+        "CrossCultureTrendExchangeHubPosts_describe": "Coastal hike sunset = sky on fire. Nature, you outdid yourself. 🌅",
+        "CrossCultureTrendExchangeHubPosts_like_user": "[]",
+        "CrossCultureTrendExchangeHubPosts_comments": "0",
+        "CrossCultureTrendExchangeHubPosts_create_time": "1758535163764"
+      }
+    ''')),
+    CrossCultureTrendExchangeHubPostsStruct.fromSerializableMap(jsonDecode('''
+      {
+        "CrossCultureTrendExchangeHubPosts_id": "5",
+        "CrossCultureTrendExchangeHubPosts_create_id": "0",
+        "CrossCultureTrendExchangeHubPosts_photo": "[]",
+        "CrossCultureTrendExchangeHubPosts_video": "assets/videos/dhfugodhfiug_xcvsgdfhusidhfoui.mp4",
+        "CrossCultureTrendExchangeHubPosts_describe": "Game night recap: Pizza, laughs, and my team losing (oops). Best night ever! 🎮",
+        "CrossCultureTrendExchangeHubPosts_like_user": "[]",
+        "CrossCultureTrendExchangeHubPosts_comments": "0",
+        "CrossCultureTrendExchangeHubPosts_create_time": "1758535164548"
+      }
+    '''))
   ];
   List<CrossCultureTrendExchangeHubPostsStruct>
       get sneakerheadCultureConnectPosts => _sneakerheadCultureConnectPosts;
@@ -240,19 +370,6 @@ class FFAppState extends ChangeNotifier {
   void addToSneakerheadCultureConnectPosts(
       CrossCultureTrendExchangeHubPostsStruct value) {
     sneakerheadCultureConnectPosts.add(value);
-    prefs.setStringList('ff_sneakerheadCultureConnectPosts',
-        _sneakerheadCultureConnectPosts.map((x) => x.serialize()).toList());
-  }
-
-  void removeFromSneakerheadCultureConnectPosts(
-      CrossCultureTrendExchangeHubPostsStruct value) {
-    sneakerheadCultureConnectPosts.remove(value);
-    prefs.setStringList('ff_sneakerheadCultureConnectPosts',
-        _sneakerheadCultureConnectPosts.map((x) => x.serialize()).toList());
-  }
-
-  void removeAtIndexFromSneakerheadCultureConnectPosts(int index) {
-    sneakerheadCultureConnectPosts.removeAt(index);
     prefs.setStringList('ff_sneakerheadCultureConnectPosts',
         _sneakerheadCultureConnectPosts.map((x) => x.serialize()).toList());
   }
@@ -278,14 +395,39 @@ class FFAppState extends ChangeNotifier {
 
   List<FutureLifestyleSharingPostImageStruct>
       _creativeWardrobeFusionCommunPostImages = [
-    FutureLifestyleSharingPostImageStruct.fromSerializableMap(jsonDecode(
-        '{\"FutureLifestyleSharingPostImage_id\":\"0\",\"FutureLifestyleSharingPostImage_photo\":\"[\\\"https://picsum.photos/seed/505/600\\\"]\",\"FutureLifestyleSharingPostImage_describe\":\"Hello World\",\"FutureLifestyleSharingPostImage_like_users\":\"[\\\"0\\\"]\",\"FutureLifestyleSharingPostImage_comment\":\"0\",\"FutureLifestyleSharingPostImage_create_id\":\"0\",\"FutureLifestyleSharingPostImage_create_time\":\"1758535267006\"}')),
-    FutureLifestyleSharingPostImageStruct.fromSerializableMap(jsonDecode(
-        '{\"FutureLifestyleSharingPostImage_id\":\"0\",\"FutureLifestyleSharingPostImage_photo\":\"[\\\"https://picsum.photos/seed/161/600\\\"]\",\"FutureLifestyleSharingPostImage_describe\":\"Hello World\",\"FutureLifestyleSharingPostImage_like_users\":\"[\\\"0\\\"]\",\"FutureLifestyleSharingPostImage_comment\":\"0\",\"FutureLifestyleSharingPostImage_create_id\":\"0\",\"FutureLifestyleSharingPostImage_create_time\":\"1758535268221\"}')),
-    FutureLifestyleSharingPostImageStruct.fromSerializableMap(jsonDecode(
-        '{\"FutureLifestyleSharingPostImage_id\":\"0\",\"FutureLifestyleSharingPostImage_photo\":\"[\\\"https://picsum.photos/seed/249/600\\\"]\",\"FutureLifestyleSharingPostImage_describe\":\"Hello World\",\"FutureLifestyleSharingPostImage_like_users\":\"[\\\"0\\\"]\",\"FutureLifestyleSharingPostImage_comment\":\"0\",\"FutureLifestyleSharingPostImage_create_id\":\"0\",\"FutureLifestyleSharingPostImage_create_time\":\"1758535269034\"}')),
-    FutureLifestyleSharingPostImageStruct.fromSerializableMap(jsonDecode(
-        '{\"FutureLifestyleSharingPostImage_id\":\"0\",\"FutureLifestyleSharingPostImage_photo\":\"[\\\"https://picsum.photos/seed/505/600\\\"]\",\"FutureLifestyleSharingPostImage_describe\":\"Hello World\",\"FutureLifestyleSharingPostImage_like_users\":\"[\\\"0\\\"]\",\"FutureLifestyleSharingPostImage_comment\":\"0\",\"FutureLifestyleSharingPostImage_create_id\":\"0\",\"FutureLifestyleSharingPostImage_create_time\":\"1758535270300\"}'))
+    FutureLifestyleSharingPostImageStruct.fromSerializableMap(jsonDecode('''
+      {
+        "FutureLifestyleSharingPostImage_id": "0",
+        "FutureLifestyleSharingPostImage_photo": "[\\\"assets/images/adgudfouiuuodi_cxbvysgdyfuiasudioFOG.jpeg\\\",\\\"assets/images/dfgdfuidfguiodf_xcjvgbsayudfgaysiudF.jpeg\\\",\\\"assets/images/dfgdufigoufid_cvxiuoBudfigoDUFG.jpeg\\\",\\\"assets/images/weiuuuaifgdfoIGUIDO_xcvuaidsOFGUOIDF.jpeg\\\"]",
+        "FutureLifestyleSharingPostImage_describe": "Life Snippet: Morning Coffee & City Light",
+        "FutureLifestyleSharingPostImage_like_users": "[]",
+        "FutureLifestyleSharingPostImage_comment": "0",
+        "FutureLifestyleSharingPostImage_create_id": "1",
+        "FutureLifestyleSharingPostImage_create_time": "1758535267006"
+      }
+    ''')),
+    FutureLifestyleSharingPostImageStruct.fromSerializableMap(jsonDecode('''
+      {
+        "FutureLifestyleSharingPostImage_id": "1",
+        "FutureLifestyleSharingPostImage_photo": "[\\\"assets/images/gsdyufghsdiuyg_udisfuashduifosdf.jpeg\\\",\\\"assets/images/sagfdugjudfhgo_xcuvigsuydfgsdyfu.jpeg\\\",\\\"assets/images/dfhhguhdufiogHDFG_cvbughdfuyIGHASUDIOFG.jpeg\\\",\\\"assets/images/sdfgdfuuiodfuig_dgfyausdgyfsiudgfyu.jpeg\\\"]",
+        "FutureLifestyleSharingPostImage_describe": "Trend Share: Thrifted Denim Find",
+        "FutureLifestyleSharingPostImage_like_users": "[]",
+        "FutureLifestyleSharingPostImage_comment": "0",
+        "FutureLifestyleSharingPostImage_create_id": "2",
+        "FutureLifestyleSharingPostImage_create_time": "1758535268221"
+      }
+    ''')),
+    FutureLifestyleSharingPostImageStruct.fromSerializableMap(jsonDecode('''
+      {
+        "FutureLifestyleSharingPostImage_id": "2",
+        "FutureLifestyleSharingPostImage_photo": "[\\\"assets/images/sdfhugduiuoduifgo_cgsuydhfuisod.jpeg\\\",\\\"assets/images/fgfdhugisdfohgi_xcvushdiofhiuasdf.jpeg\\\",\\\"assets/images/dsuyifasuidfoiasudf_cvudsiuygfuisdfoiu.jpeg\\\",\\\"assets/images/sdgfyuasgdyfuGASDYIUF_cxvjjgsdyufisgdfuy.jpeg\\\"]",
+        "FutureLifestyleSharingPostImage_describe": "Hobby Exploration: Weekend Pottery Class",
+        "FutureLifestyleSharingPostImage_like_users": "[]",
+        "FutureLifestyleSharingPostImage_comment": "0",
+        "FutureLifestyleSharingPostImage_create_id": "3",
+        "FutureLifestyleSharingPostImage_create_time": "1758535269034"
+      }
+    ''')),
   ];
   List<FutureLifestyleSharingPostImageStruct>
       get creativeWardrobeFusionCommunPostImages =>
@@ -295,35 +437,6 @@ class FFAppState extends ChangeNotifier {
     _creativeWardrobeFusionCommunPostImages = value;
     prefs.setStringList('ff_creativeWardrobeFusionCommunPostImages',
         value.map((x) => x.serialize()).toList());
-  }
-
-  void addToCreativeWardrobeFusionCommunPostImages(
-      FutureLifestyleSharingPostImageStruct value) {
-    creativeWardrobeFusionCommunPostImages.add(value);
-    prefs.setStringList(
-        'ff_creativeWardrobeFusionCommunPostImages',
-        _creativeWardrobeFusionCommunPostImages
-            .map((x) => x.serialize())
-            .toList());
-  }
-
-  void removeFromCreativeWardrobeFusionCommunPostImages(
-      FutureLifestyleSharingPostImageStruct value) {
-    creativeWardrobeFusionCommunPostImages.remove(value);
-    prefs.setStringList(
-        'ff_creativeWardrobeFusionCommunPostImages',
-        _creativeWardrobeFusionCommunPostImages
-            .map((x) => x.serialize())
-            .toList());
-  }
-
-  void removeAtIndexFromCreativeWardrobeFusionCommunPostImages(int index) {
-    creativeWardrobeFusionCommunPostImages.removeAt(index);
-    prefs.setStringList(
-        'ff_creativeWardrobeFusionCommunPostImages',
-        _creativeWardrobeFusionCommunPostImages
-            .map((x) => x.serialize())
-            .toList());
   }
 
   void updateCreativeWardrobeFusionCommunPostImagesAtIndex(
@@ -341,26 +454,53 @@ class FFAppState extends ChangeNotifier {
             .toList());
   }
 
-  void insertAtIndexInCreativeWardrobeFusionCommunPostImages(
-      int index, FutureLifestyleSharingPostImageStruct value) {
-    creativeWardrobeFusionCommunPostImages.insert(index, value);
-    prefs.setStringList(
-        'ff_creativeWardrobeFusionCommunPostImages',
-        _creativeWardrobeFusionCommunPostImages
-            .map((x) => x.serialize())
-            .toList());
-  }
-
   List<WorldFashionSharingCollectiveTrendsStruct>
       _trendDrivenStyleCollaborationTrends = [
-    WorldFashionSharingCollectiveTrendsStruct.fromSerializableMap(jsonDecode(
-        '{\"WorldFashionSharingCollectiveTrends_id\":\"0\",\"WorldFashionSharingCollectiveTrends_title\":\"Hello World\",\"WorldFashionSharingCollectiveTrends_smatilte\":\"Hello World\",\"WorldFashionSharingCollectiveTrends_star\":\"0\",\"WorldFashionSharingCollectiveTrends_photo\":\"https://picsum.photos/seed/23/600\",\"WorldFashionSharingCollectiveTrends_describe\":\"Hello World\",\"WorldFashionSharingCollectiveTrends_unlock\":\"[\\\"0\\\"]\",\"WorldFashionSharingCollectiveTrends_like_users\":\"[\\\"0\\\"]\",\"WorldFashionSharingCollectiveTrends_comment\":\"0\",\"WorldFashionSharingCollectiveTrends_joinusers\":\"[\\\"0\\\"]\",\"WorldFashionSharingCollectiveTrends_createid\":\"0\"}')),
-    WorldFashionSharingCollectiveTrendsStruct.fromSerializableMap(jsonDecode(
-        '{\"WorldFashionSharingCollectiveTrends_id\":\"0\",\"WorldFashionSharingCollectiveTrends_title\":\"Hello World\",\"WorldFashionSharingCollectiveTrends_smatilte\":\"Hello World\",\"WorldFashionSharingCollectiveTrends_star\":\"0\",\"WorldFashionSharingCollectiveTrends_photo\":\"https://picsum.photos/seed/123/600\",\"WorldFashionSharingCollectiveTrends_describe\":\"Hello World\",\"WorldFashionSharingCollectiveTrends_unlock\":\"[\\\"0\\\"]\",\"WorldFashionSharingCollectiveTrends_like_users\":\"[\\\"0\\\"]\",\"WorldFashionSharingCollectiveTrends_comment\":\"0\",\"WorldFashionSharingCollectiveTrends_joinusers\":\"[\\\"0\\\"]\",\"WorldFashionSharingCollectiveTrends_createid\":\"0\"}')),
-    WorldFashionSharingCollectiveTrendsStruct.fromSerializableMap(jsonDecode(
-        '{\"WorldFashionSharingCollectiveTrends_id\":\"0\",\"WorldFashionSharingCollectiveTrends_title\":\"Hello World\",\"WorldFashionSharingCollectiveTrends_smatilte\":\"Hello World\",\"WorldFashionSharingCollectiveTrends_star\":\"0\",\"WorldFashionSharingCollectiveTrends_photo\":\"https://picsum.photos/seed/359/600\",\"WorldFashionSharingCollectiveTrends_describe\":\"Hello World\",\"WorldFashionSharingCollectiveTrends_unlock\":\"[\\\"0\\\"]\",\"WorldFashionSharingCollectiveTrends_like_users\":\"[\\\"0\\\"]\",\"WorldFashionSharingCollectiveTrends_comment\":\"0\",\"WorldFashionSharingCollectiveTrends_joinusers\":\"[\\\"0\\\"]\",\"WorldFashionSharingCollectiveTrends_createid\":\"0\"}')),
-    WorldFashionSharingCollectiveTrendsStruct.fromSerializableMap(jsonDecode(
-        '{\"WorldFashionSharingCollectiveTrends_id\":\"0\",\"WorldFashionSharingCollectiveTrends_title\":\"Hello World\",\"WorldFashionSharingCollectiveTrends_smatilte\":\"Hello World\",\"WorldFashionSharingCollectiveTrends_star\":\"0\",\"WorldFashionSharingCollectiveTrends_photo\":\"https://picsum.photos/seed/322/600\",\"WorldFashionSharingCollectiveTrends_describe\":\"Hello World\",\"WorldFashionSharingCollectiveTrends_unlock\":\"[\\\"0\\\"]\",\"WorldFashionSharingCollectiveTrends_like_users\":\"[\\\"0\\\"]\",\"WorldFashionSharingCollectiveTrends_comment\":\"0\",\"WorldFashionSharingCollectiveTrends_joinusers\":\"[\\\"0\\\"]\",\"WorldFashionSharingCollectiveTrends_createid\":\"0\"}'))
+    WorldFashionSharingCollectiveTrendsStruct.fromSerializableMap(jsonDecode('''
+      {
+        "WorldFashionSharingCollectiveTrends_id": "0",
+        "WorldFashionSharingCollectiveTrends_title": "Fashion Trends",
+        "WorldFashionSharingCollectiveTrends_smatilte": "Trending Styles",
+        "WorldFashionSharingCollectiveTrends_star": "4.8",
+        "WorldFashionSharingCollectiveTrends_photo": "assets/images/fgsdayuadgfyuIDF_byidsagFDUYIFGUIDO.jpeg",
+        "WorldFashionSharingCollectiveTrends_describe": "Fashion’s landscape thrives on the dynamic exchange between designers and enthusiasts. The latest streetwear collection keeps leading discussions, lauded for its bold silhouettes and seamless blend of retro and futuristic vibes......",
+        "WorldFashionSharingCollectiveTrends_unlock": "[]",
+        "WorldFashionSharingCollectiveTrends_like_users": "[]",
+        "WorldFashionSharingCollectiveTrends_comment": "0",
+        "WorldFashionSharingCollectiveTrends_joinusers": "[\\\"1\\\",\\\"2\\\",\\\"5\\\",\\\"4\\\"]",
+        "WorldFashionSharingCollectiveTrends_createid": "3"
+      }
+    ''')),
+    WorldFashionSharingCollectiveTrendsStruct.fromSerializableMap(jsonDecode('''
+      {
+        "WorldFashionSharingCollectiveTrends_id": "1",
+        "WorldFashionSharingCollectiveTrends_title": "Trendy Toys",
+        "WorldFashionSharingCollectiveTrends_smatilte": "Buzzworthy Picks",
+        "WorldFashionSharingCollectiveTrends_star": "4.7",
+        "WorldFashionSharingCollectiveTrends_photo": "assets/images/sgfhhdfuhguhdsofiUG_vbchidfguahshhoguiDHF.jpeg",
+        "WorldFashionSharingCollectiveTrends_describe": "The world of trendy toys is perpetually redefined by passionate dialogues among creators and collectors. The new limited-edition figure keeps captivating attention, celebrated for its exquisite detailing and nostalgic callbacks to classic animations......",
+        "WorldFashionSharingCollectiveTrends_unlock": "[]",
+        "WorldFashionSharingCollectiveTrends_like_users": "[]",
+        "WorldFashionSharingCollectiveTrends_comment": "0",
+        "WorldFashionSharingCollectiveTrends_joinusers": "[\\\"0\\\",\\\"2\\\",\\\"3\\\",\\\"4\\\"]",
+        "WorldFashionSharingCollectiveTrends_createid": "1"
+      }
+    ''')),
+    WorldFashionSharingCollectiveTrendsStruct.fromSerializableMap(jsonDecode('''
+      {
+        "WorldFashionSharingCollectiveTrends_id": "2",
+        "WorldFashionSharingCollectiveTrends_title": "Street Fashion",
+        "WorldFashionSharingCollectiveTrends_smatilte": "Hot Topics",
+        "WorldFashionSharingCollectiveTrends_star": "4.6",
+        "WorldFashionSharingCollectiveTrends_photo": "assets/images/gdyfugsdyiuFGASDUYF_auysdfhuadfghuoi.jpeg",
+        "WorldFashionSharingCollectiveTrends_describe": "Street fashion’s realm is ceaselessly molded by lively interactions between stylists and fans. The newly-released collaborative apparel line keeps ruling conversations, praised for its unique patterns and homage to subculture aesthetics......",
+        "WorldFashionSharingCollectiveTrends_unlock": "[]",
+        "WorldFashionSharingCollectiveTrends_like_users": "[]",
+        "WorldFashionSharingCollectiveTrends_comment": "0",
+        "WorldFashionSharingCollectiveTrends_joinusers": "[\\\"1\\\",\\\"5\\\",\\\"3\\\",\\\"4\\\"]",
+        "WorldFashionSharingCollectiveTrends_createid": "2"
+      }
+    ''')),
   ];
   List<WorldFashionSharingCollectiveTrendsStruct>
       get trendDrivenStyleCollaborationTrends =>
@@ -382,25 +522,6 @@ class FFAppState extends ChangeNotifier {
             .toList());
   }
 
-  void removeFromTrendDrivenStyleCollaborationTrends(
-      WorldFashionSharingCollectiveTrendsStruct value) {
-    trendDrivenStyleCollaborationTrends.remove(value);
-    prefs.setStringList(
-        'ff_trendDrivenStyleCollaborationTrends',
-        _trendDrivenStyleCollaborationTrends
-            .map((x) => x.serialize())
-            .toList());
-  }
-
-  void removeAtIndexFromTrendDrivenStyleCollaborationTrends(int index) {
-    trendDrivenStyleCollaborationTrends.removeAt(index);
-    prefs.setStringList(
-        'ff_trendDrivenStyleCollaborationTrends',
-        _trendDrivenStyleCollaborationTrends
-            .map((x) => x.serialize())
-            .toList());
-  }
-
   void updateTrendDrivenStyleCollaborationTrendsAtIndex(
     int index,
     WorldFashionSharingCollectiveTrendsStruct Function(
@@ -409,16 +530,6 @@ class FFAppState extends ChangeNotifier {
   ) {
     trendDrivenStyleCollaborationTrends[index] =
         updateFn(_trendDrivenStyleCollaborationTrends[index]);
-    prefs.setStringList(
-        'ff_trendDrivenStyleCollaborationTrends',
-        _trendDrivenStyleCollaborationTrends
-            .map((x) => x.serialize())
-            .toList());
-  }
-
-  void insertAtIndexInTrendDrivenStyleCollaborationTrends(
-      int index, WorldFashionSharingCollectiveTrendsStruct value) {
-    trendDrivenStyleCollaborationTrends.insert(index, value);
     prefs.setStringList(
         'ff_trendDrivenStyleCollaborationTrends',
         _trendDrivenStyleCollaborationTrends
@@ -444,19 +555,6 @@ class FFAppState extends ChangeNotifier {
         _modernFashionInfluenceComments.map((x) => x.serialize()).toList());
   }
 
-  void removeFromModernFashionInfluenceComments(
-      CreativeTrendBeatCollCommentsStruct value) {
-    modernFashionInfluenceComments.remove(value);
-    prefs.setStringList('ff_modernFashionInfluenceComments',
-        _modernFashionInfluenceComments.map((x) => x.serialize()).toList());
-  }
-
-  void removeAtIndexFromModernFashionInfluenceComments(int index) {
-    modernFashionInfluenceComments.removeAt(index);
-    prefs.setStringList('ff_modernFashionInfluenceComments',
-        _modernFashionInfluenceComments.map((x) => x.serialize()).toList());
-  }
-
   void updateModernFashionInfluenceCommentsAtIndex(
     int index,
     CreativeTrendBeatCollCommentsStruct Function(
@@ -469,17 +567,17 @@ class FFAppState extends ChangeNotifier {
         _modernFashionInfluenceComments.map((x) => x.serialize()).toList());
   }
 
-  void insertAtIndexInModernFashionInfluenceComments(
-      int index, CreativeTrendBeatCollCommentsStruct value) {
-    modernFashionInfluenceComments.insert(index, value);
-    prefs.setStringList('ff_modernFashionInfluenceComments',
-        _modernFashionInfluenceComments.map((x) => x.serialize()).toList());
-  }
-
   List<NextGenStreetwearShowcaseChatStruct>
       _streetCultureExpressionNetworkChats = [
-    NextGenStreetwearShowcaseChatStruct.fromSerializableMap(jsonDecode(
-        '{\"NextGenStreetwearShowcaseChat_id\":\"0\",\"NextGenStreetwearShowcaseChat_last_msg\":\"Hello!\",\"NextGenStreetwearShowcaseChat_last_time\":\"1758535502072\",\"NextGenStreetwearShowcaseChat_other_id\":\"1\",\"NextGenStreetwearShowcaseChat_current_id\":\"0\"}'))
+    NextGenStreetwearShowcaseChatStruct.fromSerializableMap(jsonDecode('''
+      {
+        "NextGenStreetwearShowcaseChat_id": "0",
+        "NextGenStreetwearShowcaseChat_last_msg": "Hello!",
+        "NextGenStreetwearShowcaseChat_last_time": "1758535502072",
+        "NextGenStreetwearShowcaseChat_other_id": "1",
+        "NextGenStreetwearShowcaseChat_current_id": "0"
+      }
+    '''))
   ];
   List<NextGenStreetwearShowcaseChatStruct>
       get streetCultureExpressionNetworkChats =>
@@ -494,25 +592,6 @@ class FFAppState extends ChangeNotifier {
   void addToStreetCultureExpressionNetworkChats(
       NextGenStreetwearShowcaseChatStruct value) {
     streetCultureExpressionNetworkChats.add(value);
-    prefs.setStringList(
-        'ff_streetCultureExpressionNetworkChats',
-        _streetCultureExpressionNetworkChats
-            .map((x) => x.serialize())
-            .toList());
-  }
-
-  void removeFromStreetCultureExpressionNetworkChats(
-      NextGenStreetwearShowcaseChatStruct value) {
-    streetCultureExpressionNetworkChats.remove(value);
-    prefs.setStringList(
-        'ff_streetCultureExpressionNetworkChats',
-        _streetCultureExpressionNetworkChats
-            .map((x) => x.serialize())
-            .toList());
-  }
-
-  void removeAtIndexFromStreetCultureExpressionNetworkChats(int index) {
-    streetCultureExpressionNetworkChats.removeAt(index);
     prefs.setStringList(
         'ff_streetCultureExpressionNetworkChats',
         _streetCultureExpressionNetworkChats
@@ -535,20 +614,15 @@ class FFAppState extends ChangeNotifier {
             .toList());
   }
 
-  void insertAtIndexInStreetCultureExpressionNetworkChats(
-      int index, NextGenStreetwearShowcaseChatStruct value) {
-    streetCultureExpressionNetworkChats.insert(index, value);
-    prefs.setStringList(
-        'ff_streetCultureExpressionNetworkChats',
-        _streetCultureExpressionNetworkChats
-            .map((x) => x.serialize())
-            .toList());
-  }
-
   List<GlobalHypeFashionExchangeMessageStruct>
       _aestheticStyleInspirationMessages = [
-    GlobalHypeFashionExchangeMessageStruct.fromSerializableMap(jsonDecode(
-        '{\"GlobalHypeFashionExchangeMessage_content\":\"Hello!\",\"GlobalHypeFashionExchangeMessage_create_id\":\"1\",\"GlobalHypeFashionExchangeMessage_chatref\":\"0\"}'))
+    GlobalHypeFashionExchangeMessageStruct.fromSerializableMap(jsonDecode('''
+      {
+        "GlobalHypeFashionExchangeMessage_content": "Hello!",
+        "GlobalHypeFashionExchangeMessage_create_id": "1",
+        "GlobalHypeFashionExchangeMessage_chatref": "0"
+      }
+    '''))
   ];
   List<GlobalHypeFashionExchangeMessageStruct>
       get aestheticStyleInspirationMessages =>
@@ -567,19 +641,6 @@ class FFAppState extends ChangeNotifier {
         _aestheticStyleInspirationMessages.map((x) => x.serialize()).toList());
   }
 
-  void removeFromAestheticStyleInspirationMessages(
-      GlobalHypeFashionExchangeMessageStruct value) {
-    aestheticStyleInspirationMessages.remove(value);
-    prefs.setStringList('ff_aestheticStyleInspirationMessages',
-        _aestheticStyleInspirationMessages.map((x) => x.serialize()).toList());
-  }
-
-  void removeAtIndexFromAestheticStyleInspirationMessages(int index) {
-    aestheticStyleInspirationMessages.removeAt(index);
-    prefs.setStringList('ff_aestheticStyleInspirationMessages',
-        _aestheticStyleInspirationMessages.map((x) => x.serialize()).toList());
-  }
-
   void updateAestheticStyleInspirationMessagesAtIndex(
     int index,
     GlobalHypeFashionExchangeMessageStruct Function(
@@ -591,23 +652,10 @@ class FFAppState extends ChangeNotifier {
     prefs.setStringList('ff_aestheticStyleInspirationMessages',
         _aestheticStyleInspirationMessages.map((x) => x.serialize()).toList());
   }
-
-  void insertAtIndexInAestheticStyleInspirationMessages(
-      int index, GlobalHypeFashionExchangeMessageStruct value) {
-    aestheticStyleInspirationMessages.insert(index, value);
-    prefs.setStringList('ff_aestheticStyleInspirationMessages',
-        _aestheticStyleInspirationMessages.map((x) => x.serialize()).toList());
-  }
 }
 
 void _safeInit(Function() initializeField) {
   try {
     initializeField();
-  } catch (_) {}
-}
-
-Future _safeInitAsync(Function() initializeField) async {
-  try {
-    await initializeField();
   } catch (_) {}
 }

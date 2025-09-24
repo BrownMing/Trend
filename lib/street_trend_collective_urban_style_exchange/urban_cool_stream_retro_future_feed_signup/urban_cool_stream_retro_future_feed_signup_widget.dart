@@ -1,3 +1,5 @@
+import 'package:trend/flutter_flow/flutter_flow_widgets.dart';
+
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/index.dart';
@@ -37,6 +39,48 @@ class _UrbanCoolStreamRetroFutureFeedSignupWidgetState
 
     _model.textController3 ??= TextEditingController();
     _model.textFieldFocusNode3 ??= FocusNode();
+  }
+
+  void serenityHavenEmbraceNestHealingAssistant(BuildContext context) {
+    final email = _model.textController1.text.trim();
+    final password = _model.textController2.text.trim();
+    final confirmPassword = _model.textController3.text.trim();
+
+    if (email.isEmpty) {
+      emotionalNestAICareSphere(
+          context, 'Please enter your email address.', '');
+      return;
+    }
+
+    if (password.isEmpty) {
+      emotionalNestAICareSphere(context, 'Please enter the password.', '');
+      return;
+    }
+
+    if (confirmPassword.isEmpty) {
+      emotionalNestAICareSphere(
+          context, 'Please enter the password again!', '');
+      return;
+    }
+
+    if (password != confirmPassword) {
+      emotionalNestAICareSphere(
+          context, 'The two inputs are inconsistent.', '');
+      setState(() {
+        _model.textController3?.clear();
+      });
+      return;
+    }
+
+    context.pushNamed(
+      LifestylePhotographyInspirationWallUploadFileWidget.routeName,
+      extra: <String, dynamic>{
+        kTransitionInfoKey: TransitionInfo(
+          hasTransition: true,
+          transitionType: PageTransitionType.rightToLeft,
+        ),
+      },
+    );
   }
 
   @override
@@ -325,7 +369,7 @@ class _UrbanCoolStreamRetroFutureFeedSignupWidgetState
                                         focusNode: _model.textFieldFocusNode2,
                                         autofocus: false,
                                         textInputAction: TextInputAction.done,
-                                        obscureText: false,
+                                        obscureText: true,
                                         decoration: InputDecoration(
                                           isDense: true,
                                           labelStyle: FlutterFlowTheme.of(
@@ -472,7 +516,7 @@ class _UrbanCoolStreamRetroFutureFeedSignupWidgetState
                                         focusNode: _model.textFieldFocusNode3,
                                         autofocus: false,
                                         textInputAction: TextInputAction.done,
-                                        obscureText: false,
+                                        obscureText: true,
                                         decoration: InputDecoration(
                                           isDense: true,
                                           labelStyle: FlutterFlowTheme.of(

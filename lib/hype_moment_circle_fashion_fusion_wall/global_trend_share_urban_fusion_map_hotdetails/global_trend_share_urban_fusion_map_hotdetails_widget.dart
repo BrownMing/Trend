@@ -74,15 +74,14 @@ class _GlobalTrendShareUrbanFusionMapHotdetailsWidgetState
                           decoration: BoxDecoration(),
                           child: Stack(
                             children: [
-                              FlutterFlowVideoPlayer(
+                              GrapeMacaronCreationCirclePlayer(
                                 path: widget.modernTrendVisualConnectionArena!
                                     .crossCultureTrendExchangeHubPostsVideo,
-                                videoType: VideoType.network,
+                        
                                 autoPlay: true,
                                 looping: true,
                                 showControls: true,
-                                allowFullScreen: false,
-                                allowPlaybackSpeedMenu: false,
+                            
                               ),
                             ],
                           ),

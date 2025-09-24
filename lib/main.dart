@@ -1,3 +1,4 @@
+import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter/material.dart';
 
@@ -24,7 +25,6 @@ void main() async {
 }
 
 class MyApp extends StatefulWidget {
-  // This widget is the root of your application.
   @override
   State<MyApp> createState() => _MyAppState();
 
@@ -89,6 +89,7 @@ class _MyAppState extends State<MyApp> {
       ),
       themeMode: _themeMode,
       routerConfig: _router,
+      builder: FlutterSmartDialog.init(),
     );
   }
 }
@@ -109,7 +110,6 @@ class NavBarPage extends StatefulWidget {
   _NavBarPageState createState() => _NavBarPageState();
 }
 
-/// This is the private State class that goes with NavBarPage.
 class _NavBarPageState extends State<NavBarPage> {
   String _currentPageName = 'TrendSharingArenaTrendSharingArena_home';
   late Widget? _currentPage;
@@ -137,52 +137,80 @@ class _NavBarPageState extends State<NavBarPage> {
 
     return Scaffold(
       resizeToAvoidBottomInset: !widget.disableResizeToAvoidBottomInset,
-      body: _currentPage ?? tabs[_currentPageName],
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: currentIndex,
-        onTap: (i) => safeSetState(() {
-          _currentPage = null;
-          _currentPageName = tabs.keys.toList()[i];
-        }),
-        backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
-        selectedItemColor: FlutterFlowTheme.of(context).primary,
-        unselectedItemColor: FlutterFlowTheme.of(context).secondaryText,
-        showSelectedLabels: false,
-        showUnselectedLabels: false,
-        type: BottomNavigationBarType.fixed,
-        items: <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.home_outlined,
-              size: 24.0,
+      body: Stack(
+        children: [
+          _currentPage ?? tabs[_currentPageName]!,
+          Positioned(
+            left: 0,
+            right: 0,
+            bottom: 0,
+            child: HoneyTiramisuMoonlightCircle(
+              selectedColor: Colors.transparent,
+              backgroundColor: Colors.transparent,
+              unselectedColor: Colors.transparent,
+              currentIndex: currentIndex,
+              onTap: (i) async {
+                safeSetState(() {
+                  _currentPage = null;
+                  _currentPageName = tabs.keys.toList()[i];
+                });
+              },
+              items: [
+                CustomNavItem(
+                  icon: Container(
+                    width: 24,
+                    height: 24,
+                    decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: Image.asset(currentIndex == 0
+                                    ? 'assets/images/difguidfgodufig_vcbuyidfugihdof.png'
+                                    : 'assets/images/dfgdhfguiodfg_vxcbuidfguiadfogi.png')
+                                .image)),
+                  ),
+                  label: 'Home',
+                ),
+                CustomNavItem(
+                  icon: Container(
+                    width: 28,
+                    height: 28,
+                    decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: Image.asset(currentIndex == 1
+                                    ? 'assets/images/werhufdbohdifgu_vxcsdfghuaisdogfiusi.png'
+                                    : 'assets/images/sfrhuasdfoasg_xcvbiuyidsfGIUYASDFGIY.png')
+                                .image)),
+                  ),
+                  label: 'Explore',
+                ),
+                CustomNavItem(
+                  icon: Container(
+                    width: 28,
+                    height: 28,
+                    decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: Image.asset(currentIndex == 2
+                                    ? 'assets/images/wedauifgdufiogA_cxvbiagdsfyuasgyiuD.png'
+                                    : 'assets/images/dgfuggdufiog_xcbvsydufsgidfyugi.png')
+                                .image)),
+                  ),
+                  label: 'Chat',
+                ),
+                CustomNavItem(
+                  icon: Container(
+                    width: 28,
+                    height: 28,
+                    decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: Image.asset(currentIndex == 3
+                                    ? 'assets/images/sgdfafuihgHDFOUIG_cvxbjdfghiaudfhgIO.png'
+                                    : 'assets/images/fuagdifgasydi_vbsadygfuyasgdfhuao.png')
+                                .image)),
+                  ),
+                  label: 'Me',
+                ),
+              ],
             ),
-            label: 'Home',
-            tooltip: '',
           ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.home_outlined,
-              size: 24.0,
-            ),
-            label: 'Home',
-            tooltip: '',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.home_outlined,
-              size: 24.0,
-            ),
-            label: 'Home',
-            tooltip: '',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.home_outlined,
-              size: 24.0,
-            ),
-            label: 'Home',
-            tooltip: '',
-          )
         ],
       ),
     );

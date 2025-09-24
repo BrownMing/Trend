@@ -222,6 +222,7 @@ class _CultureSwapZoneTrendPulseNetworkDiscoverWidgetState
                                         crossAxisCount: 2,
                                       ),
                                       crossAxisSpacing: 9.0,
+                                      shrinkWrap: true,
                                       mainAxisSpacing: 8.0,
                                       itemCount:
                                           culturalVisualStorytellingCommunity
@@ -237,6 +238,13 @@ class _CultureSwapZoneTrendPulseNetworkDiscoverWidgetState
                                         final culturalVisualStorytellingCommunityItem =
                                             culturalVisualStorytellingCommunity[
                                                 culturalVisualStorytellingCommunityIndex];
+
+                                        double sdgfuyasdiFG =
+                                            culturalVisualStorytellingCommunityIndex
+                                                    .isOdd
+                                                ? 167
+                                                : 326;
+
                                         return InkWell(
                                           splashColor: Colors.transparent,
                                           focusColor: Colors.transparent,
@@ -244,8 +252,8 @@ class _CultureSwapZoneTrendPulseNetworkDiscoverWidgetState
                                           highlightColor: Colors.transparent,
                                           onTap: () async {
                                             if (culturalVisualStorytellingCommunityItem
-                                                        .crossCultureTrendExchangeHubPostsVideo !=
-                                                    '') {
+                                                    .crossCultureTrendExchangeHubPostsVideo !=
+                                                '') {
                                               context.pushNamed(
                                                 GlobalTrendShareUrbanFusionMapHotdetailsWidget
                                                     .routeName,
@@ -290,30 +298,40 @@ class _CultureSwapZoneTrendPulseNetworkDiscoverWidgetState
                                             }
                                           },
                                           child: Container(
+                                            width: 167,
+                                            height: sdgfuyasdiFG,
                                             decoration: BoxDecoration(
-                                              image: DecorationImage(
-                                                fit: BoxFit.cover,
-                                                image: Image.network(
-                                                  culturalVisualStorytellingCommunityItem
-                                                      .crossCultureTrendExchangeHubPostsPhoto
-                                                      .firstOrNull!,
-                                                ).image,
-                                              ),
                                               borderRadius:
                                                   BorderRadius.circular(16.0),
                                             ),
                                             child: Stack(
                                               children: [
-                                                FlutterFlowVideoPlayer(
-                                                  path: culturalVisualStorytellingCommunityItem
-                                                      .crossCultureTrendExchangeHubPostsVideo,
-                                                  videoType: VideoType.network,
-                                                  autoPlay: false,
-                                                  looping: true,
-                                                  showControls: false,
-                                                  allowFullScreen: false,
-                                                  allowPlaybackSpeedMenu: false,
-                                                ),
+                                                if (culturalVisualStorytellingCommunityItem
+                                                    .crossCultureTrendExchangeHubPostsVideo
+                                                    .isNotEmpty)
+                                                  GrapeMacaronCreationCirclePlayer(
+                                                    path: culturalVisualStorytellingCommunityItem
+                                                        .crossCultureTrendExchangeHubPostsVideo,
+                                                    autoPlay: false,
+                                                    looping: true,
+                                                    showControls: false,
+                                                  ),
+                                                if (culturalVisualStorytellingCommunityItem
+                                                    .crossCultureTrendExchangeHubPostsVideo
+                                                    .isEmpty)
+                                                  ClipRRect(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            16.0),
+                                                    child: Image.asset(
+                                                      culturalVisualStorytellingCommunityItem
+                                                          .crossCultureTrendExchangeHubPostsPhoto
+                                                          .firstOrNull!,
+                                                      fit: BoxFit.cover,
+                                                      width: double.infinity,
+                                                      height: double.infinity,
+                                                    ),
+                                                  ),
                                                 Column(
                                                   mainAxisSize:
                                                       MainAxisSize.max,
@@ -409,8 +427,8 @@ class _CultureSwapZoneTrendPulseNetworkDiscoverWidgetState
                                                           Builder(
                                                             builder: (context) {
                                                               if (culturalVisualStorytellingCommunityItem
-                                                                          .crossCultureTrendExchangeHubPostsVideo !=
-                                                                      '') {
+                                                                      .crossCultureTrendExchangeHubPostsVideo !=
+                                                                  '') {
                                                                 return Image
                                                                     .asset(
                                                                   'assets/images/cvstdufsdtyfgs_sudifygewyiufyusdigysud.png',
@@ -456,8 +474,7 @@ class _CultureSwapZoneTrendPulseNetworkDiscoverWidgetState
                                                               shape: BoxShape
                                                                   .circle,
                                                             ),
-                                                            child:
-                                                                Image.network(
+                                                            child: Image.asset(
                                                               FFAppState()
                                                                   .urbanOutfitTrendSharingUsers
                                                                   .elementAtOrNull(
@@ -560,7 +577,7 @@ class _CultureSwapZoneTrendPulseNetworkDiscoverWidgetState
                                                     decoration: BoxDecoration(
                                                       shape: BoxShape.circle,
                                                     ),
-                                                    child: Image.network(
+                                                    child: Image.asset(
                                                       FFAppState()
                                                           .urbanOutfitTrendSharingUsers
                                                           .elementAtOrNull(

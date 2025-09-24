@@ -120,7 +120,7 @@ class _FutureLifestyleSharingInnovationLabInfomationWidgetState
                                     decoration: BoxDecoration(
                                       image: DecorationImage(
                                         fit: BoxFit.cover,
-                                        image: Image.network(
+                                        image: Image.asset(
                                           FFAppState()
                                               .urbanOutfitTrendSharingUsers
                                               .elementAtOrNull(FFAppState()
@@ -163,7 +163,7 @@ class _FutureLifestyleSharingInnovationLabInfomationWidgetState
                                     ),
                               ),
                               Text(
-                                'ID: ${FFAppState().urbanOutfitTrendSharingUsers.elementAtOrNull(FFAppState().urbanTrendVisualCollaborationCurrent)?.streetTrendEchoSharingUserCreateTime?.toString()}',
+                                'ID: ${FFAppState().urbanOutfitTrendSharingUsers.elementAtOrNull(FFAppState().urbanTrendVisualCollaborationCurrent)?.streetTrendEchoSharingUserCreateTime?.millisecondsSinceEpoch}',
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(

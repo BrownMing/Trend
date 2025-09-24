@@ -54,7 +54,7 @@ class _UrbanStyleExpressionPlatformVideoChatWidgetState
         key: scaffoldKey,
         body: Stack(
           children: [
-            Image.network(
+            Image.asset(
               FFAppState()
                   .urbanOutfitTrendSharingUsers
                   .elementAtOrNull(widget.uthTrendDanceCollaborationCircle!)!

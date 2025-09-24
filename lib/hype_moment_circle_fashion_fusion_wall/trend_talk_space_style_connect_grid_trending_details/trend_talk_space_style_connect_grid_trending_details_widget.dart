@@ -60,7 +60,7 @@ class _TrendTalkSpaceStyleConnectGridTrendingDetailsWidgetState
         key: scaffoldKey,
         body: Stack(
           children: [
-            Image.network(
+            Image.asset(
               widget.hipHopFashionExpressionSharingHub!
                   .worldFashionSharingCollectiveTrendsPhoto,
               width: double.infinity,
@@ -308,7 +308,7 @@ class _TrendTalkSpaceStyleConnectGridTrendingDetailsWidgetState
                                           decoration: BoxDecoration(
                                             image: DecorationImage(
                                               fit: BoxFit.cover,
-                                              image: Image.network(
+                                              image: Image.asset(
                                                 FFAppState()
                                                     .urbanOutfitTrendSharingUsers
                                                     .elementAtOrNull(

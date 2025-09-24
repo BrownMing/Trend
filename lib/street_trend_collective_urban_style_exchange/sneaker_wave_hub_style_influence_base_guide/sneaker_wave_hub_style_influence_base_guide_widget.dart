@@ -76,7 +76,7 @@ class _SneakerWaveHubStyleInfluenceBaseGuideWidgetState
                           final nextWaveFashionExpressionCollectiveItem =
                               nextWaveFashionExpressionCollective[
                                   nextWaveFashionExpressionCollectiveIndex];
-                          return Image.network(
+                          return Image.asset(
                             nextWaveFashionExpressionCollectiveItem,
                             width: double.infinity,
                             height: double.infinity,

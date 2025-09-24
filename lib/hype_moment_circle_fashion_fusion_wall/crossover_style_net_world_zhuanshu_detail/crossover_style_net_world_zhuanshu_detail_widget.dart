@@ -129,7 +129,7 @@ class _CrossoverStyleNetWorldZhuanshuDetailWidgetState
                                             creativeStreetArtCollaborationHubIndex];
                                     return ClipRRect(
                                       borderRadius: BorderRadius.circular(12.0),
-                                      child: Image.network(
+                                      child: Image.asset(
                                         creativeStreetArtCollaborationHubItem,
                                         width: 260.0,
                                         height: 320.0,
@@ -155,7 +155,7 @@ class _CrossoverStyleNetWorldZhuanshuDetailWidgetState
                                 decoration: BoxDecoration(
                                   shape: BoxShape.circle,
                                 ),
-                                child: Image.network(
+                                child: Image.asset(
                                   FFAppState()
                                       .urbanOutfitTrendSharingUsers
                                       .elementAtOrNull(widget
@@ -596,7 +596,7 @@ class _CrossoverStyleNetWorldZhuanshuDetailWidgetState
                                         decoration: BoxDecoration(
                                           shape: BoxShape.circle,
                                         ),
-                                        child: Image.network(
+                                        child: Image.asset(
                                           FFAppState()
                                               .urbanOutfitTrendSharingUsers
                                               .elementAtOrNull(

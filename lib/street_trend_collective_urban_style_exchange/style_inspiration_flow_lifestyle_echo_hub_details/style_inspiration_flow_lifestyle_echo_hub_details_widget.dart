@@ -92,7 +92,7 @@ class _StyleInspirationFlowLifestyleEchoHubDetailsWidgetState
                                   sneakerCultureTrendSharingNetworkIndex];
                           return Stack(
                             children: [
-                              Image.network(
+                              Image.asset(
                                 sneakerCultureTrendSharingNetworkItem,
                                 width: double.infinity,
                                 height: double.infinity,
@@ -374,7 +374,7 @@ class _StyleInspirationFlowLifestyleEchoHubDetailsWidgetState
                                             decoration: BoxDecoration(
                                               image: DecorationImage(
                                                 fit: BoxFit.cover,
-                                                image: Image.network(
+                                                image: Image.asset(
                                                   FFAppState()
                                                       .urbanOutfitTrendSharingUsers
                                                       .elementAtOrNull(widget
