@@ -21,7 +21,7 @@ class _YouthCultureStyleDiscoveryLabNotenoughWidgetState
     with TickerProviderStateMixin {
   late YouthCultureStyleDiscoveryLabNotenoughModel _model;
 
-  final animationsMap = <String, AnimationInfo>{};
+  final cultureStyleExchangeCommunity = <String, AnimationInfo>{};
 
   @override
   void setState(VoidCallback callback) {
@@ -35,7 +35,7 @@ class _YouthCultureStyleDiscoveryLabNotenoughWidgetState
     _model = createModel(
         context, () => YouthCultureStyleDiscoveryLabNotenoughModel());
 
-    animationsMap.addAll({
+    cultureStyleExchangeCommunity.addAll({
       'containerOnPageLoadAnimation': AnimationInfo(
         trigger: AnimationTrigger.onPageLoad,
         effectsBuilder: () => [
@@ -163,6 +163,7 @@ class _YouthCultureStyleDiscoveryLabNotenoughWidgetState
           ],
         ),
       ),
-    ).animateOnPageLoad(animationsMap['containerOnPageLoadAnimation']!);
+    ).animateOnPageLoad(
+        cultureStyleExchangeCommunity['containerOnPageLoadAnimation']!);
   }
 }

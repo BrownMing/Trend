@@ -275,14 +275,31 @@ class _TrendSharingArenaTrendSharingArenaHomeWidgetState
                         EdgeInsetsDirectional.fromSTEB(0.0, 24.0, 0.0, 0.0),
                     child: Column(
                       children: [
-                        Align(
-                          alignment: Alignment(0.0, 0),
-                          child: FlutterFlowButtonTabBar(
-                            useToggleButtonStyle: false,
-                            labelStyle: FlutterFlowTheme.of(context)
-                                .titleMedium
-                                .override(
-                                  font: GoogleFonts.poppins(
+                        Padding(
+                          padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
+                          child: Container(
+                            width: double.infinity,
+                            height: 54,
+                            decoration: BoxDecoration(
+                                image: DecorationImage(
+                                    fit: BoxFit.fill,
+                                    image: AssetImage(
+                                        'assets/images/gdfguidfhghdhofgu_xcgvsdygfuasgdfius.png'))),
+                            child: FlutterFlowButtonTabBar(
+                              useToggleButtonStyle: false,
+                              labelStyle: FlutterFlowTheme.of(context)
+                                  .titleMedium
+                                  .override(
+                                    font: GoogleFonts.poppins(
+                                      fontWeight: FlutterFlowTheme.of(context)
+                                          .titleMedium
+                                          .fontWeight,
+                                      fontStyle: FlutterFlowTheme.of(context)
+                                          .titleMedium
+                                          .fontStyle,
+                                    ),
+                                    fontSize: 16.0,
+                                    letterSpacing: 0.0,
                                     fontWeight: FlutterFlowTheme.of(context)
                                         .titleMedium
                                         .fontWeight,
@@ -290,53 +307,53 @@ class _TrendSharingArenaTrendSharingArenaHomeWidgetState
                                         .titleMedium
                                         .fontStyle,
                                   ),
-                                  fontSize: 16.0,
-                                  letterSpacing: 0.0,
-                                  fontWeight: FlutterFlowTheme.of(context)
-                                      .titleMedium
-                                      .fontWeight,
-                                  fontStyle: FlutterFlowTheme.of(context)
-                                      .titleMedium
-                                      .fontStyle,
-                                ),
-                            unselectedLabelStyle: FlutterFlowTheme.of(context)
-                                .titleMedium
-                                .override(
-                                  font: GoogleFonts.poppins(
+                              unselectedLabelStyle: FlutterFlowTheme.of(context)
+                                  .titleMedium
+                                  .override(
+                                    font: GoogleFonts.poppins(
+                                      fontWeight: FontWeight.normal,
+                                      fontStyle: FlutterFlowTheme.of(context)
+                                          .titleMedium
+                                          .fontStyle,
+                                    ),
+                                    fontSize: 16.0,
+                                    letterSpacing: 0.0,
                                     fontWeight: FontWeight.normal,
                                     fontStyle: FlutterFlowTheme.of(context)
                                         .titleMedium
                                         .fontStyle,
                                   ),
-                                  fontSize: 16.0,
-                                  letterSpacing: 0.0,
-                                  fontWeight: FontWeight.normal,
-                                  fontStyle: FlutterFlowTheme.of(context)
-                                      .titleMedium
-                                      .fontStyle,
+                              labelColor: FlutterFlowTheme.of(context).info,
+                              unselectedLabelColor: Color(0x98FFFFFF),
+                              backgroundColor: Colors.transparent,
+                              selectedGradient: LinearGradient(
+                                begin: Alignment.centerLeft,
+                                end: Alignment.centerRight,
+                                colors: [
+                                  Color(0xFFFF94FA),
+                                  Color(0xFF696EFF),
+                                ],
+                                stops: [0.0, 1.0],
+                              ),
+                              borderColor: Colors.transparent,
+                              borderWidth: 0.0,
+                              borderRadius: 10.0,
+                              elevation: 0.0,
+                              buttonMargin: EdgeInsetsDirectional.fromSTEB(
+                                  8.0, 8.0, 8.0, 8.0),
+                              tabs: [
+                                Tab(
+                                  text: 'Following',
                                 ),
-                            labelColor: FlutterFlowTheme.of(context).info,
-                            unselectedLabelColor: Color(0x98FFFFFF),
-                            backgroundColor:
-                                FlutterFlowTheme.of(context).accent1,
-                            borderColor: FlutterFlowTheme.of(context).primary,
-                            borderWidth: 2.0,
-                            borderRadius: 8.0,
-                            elevation: 0.0,
-                            buttonMargin: EdgeInsetsDirectional.fromSTEB(
-                                8.0, 0.0, 8.0, 0.0),
-                            tabs: [
-                              Tab(
-                                text: 'Following',
-                              ),
-                              Tab(
-                                text: 'Trending',
-                              ),
-                            ],
-                            controller: _model.tabBarController,
-                            onTap: (i) async {
-                              [() async {}, () async {}][i]();
-                            },
+                                Tab(
+                                  text: 'Trending',
+                                ),
+                              ],
+                              controller: _model.tabBarController,
+                              onTap: (i) async {
+                                [() async {}, () async {}][i]();
+                              },
+                            ),
                           ),
                         ),
                         Expanded(
@@ -352,8 +369,15 @@ class _TrendSharingArenaTrendSharingArenaHomeWidgetState
                                         .creativeWardrobeFusionCommunPostImages
                                         .where((e) =>
                                             e.futureLifestyleSharingPostImageCreateId !=
-                                            FFAppState()
-                                                .urbanTrendVisualCollaborationCurrent)
+                                                FFAppState()
+                                                    .urbanTrendVisualCollaborationCurrent &&
+                                            !FFAppState()
+                                                .urbanOutfitTrendSharingUsers[
+                                                    FFAppState()
+                                                        .urbanTrendVisualCollaborationCurrent]
+                                                .streetTrendEchoSharingUserBlacklist
+                                                .contains(e
+                                                    .futureLifestyleSharingPostImageCreateId))
                                         .toList();
 
                                     return ListView.separated(
@@ -375,66 +399,108 @@ class _TrendSharingArenaTrendSharingArenaHomeWidgetState
                                         final globalStreetwearInfluenceExchangeItem =
                                             globalStreetwearInfluenceExchange[
                                                 globalStreetwearInfluenceExchangeIndex];
-                                        return Container(
-                                          width: double.infinity,
-                                          height: 404.0,
-                                          decoration: BoxDecoration(
-                                            image: DecorationImage(
-                                              fit: BoxFit.cover,
-                                              image: Image.asset(
-                                                globalStreetwearInfluenceExchangeItem
-                                                    .futureLifestyleSharingPostImagePhoto
-                                                    .firstOrNull!,
-                                              ).image,
+                                        return GestureDetector(
+                                          onTap: () async {
+                                            context.pushNamed(
+                                              StyleInspirationFlowLifestyleEchoHubDetailsWidget
+                                                  .routeName,
+                                              queryParameters: {
+                                                'wardrobeCultureConnectionHub':
+                                                    serializeParam(
+                                                  globalStreetwearInfluenceExchangeItem,
+                                                  ParamType.DataStruct,
+                                                ),
+                                              }.withoutNulls,
+                                              extra: <String, dynamic>{
+                                                kTransitionInfoKey:
+                                                    TransitionInfo(
+                                                  hasTransition: true,
+                                                  transitionType:
+                                                      PageTransitionType
+                                                          .rightToLeft,
+                                                ),
+                                              },
+                                            );
+                                          },
+                                          child: Container(
+                                            width: double.infinity,
+                                            height: 404.0,
+                                            decoration: BoxDecoration(
+                                              image: DecorationImage(
+                                                fit: BoxFit.cover,
+                                                image: Image.asset(
+                                                  globalStreetwearInfluenceExchangeItem
+                                                      .futureLifestyleSharingPostImagePhoto
+                                                      .firstOrNull!,
+                                                ).image,
+                                              ),
+                                              borderRadius:
+                                                  BorderRadius.circular(20.0),
                                             ),
-                                            borderRadius:
-                                                BorderRadius.circular(20.0),
-                                          ),
-                                          child: Column(
-                                            mainAxisSize: MainAxisSize.max,
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.spaceBetween,
-                                            children: [
-                                              Padding(
-                                                padding: EdgeInsetsDirectional
-                                                    .fromSTEB(
-                                                        27.0, 23.0, 26.0, 0.0),
-                                                child: Row(
-                                                  mainAxisSize:
-                                                      MainAxisSize.max,
-                                                  children: [
-                                                    Container(
-                                                      width: 36.0,
-                                                      height: 36.0,
-                                                      decoration: BoxDecoration(
-                                                        image: DecorationImage(
-                                                          fit: BoxFit.cover,
-                                                          image: Image.asset(
-                                                            FFAppState()
-                                                                .urbanOutfitTrendSharingUsers
-                                                                .elementAtOrNull(
-                                                                    globalStreetwearInfluenceExchangeItem
-                                                                        .futureLifestyleSharingPostImageCreateId)!
-                                                                .streetTrendEchoSharingUserPhoto,
-                                                          ).image,
-                                                        ),
-                                                        shape: BoxShape.circle,
-                                                        border: Border.all(
-                                                          color:
-                                                              Color(0xFF696EFF),
-                                                          width: 1.0,
+                                            child: Column(
+                                              mainAxisSize: MainAxisSize.max,
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment
+                                                      .spaceBetween,
+                                              children: [
+                                                Padding(
+                                                  padding: EdgeInsetsDirectional
+                                                      .fromSTEB(27.0, 23.0,
+                                                          26.0, 0.0),
+                                                  child: Row(
+                                                    mainAxisSize:
+                                                        MainAxisSize.max,
+                                                    children: [
+                                                      Container(
+                                                        width: 36.0,
+                                                        height: 36.0,
+                                                        decoration:
+                                                            BoxDecoration(
+                                                          image:
+                                                              DecorationImage(
+                                                            fit: BoxFit.cover,
+                                                            image: Image.asset(
+                                                              FFAppState()
+                                                                  .urbanOutfitTrendSharingUsers
+                                                                  .elementAtOrNull(
+                                                                      globalStreetwearInfluenceExchangeItem
+                                                                          .futureLifestyleSharingPostImageCreateId)!
+                                                                  .streetTrendEchoSharingUserPhoto,
+                                                            ).image,
+                                                          ),
+                                                          shape:
+                                                              BoxShape.circle,
+                                                          border: Border.all(
+                                                            color: Color(
+                                                                0xFF696EFF),
+                                                            width: 1.0,
+                                                          ),
                                                         ),
                                                       ),
-                                                    ),
-                                                    Text(
-                                                      '${FFAppState().urbanOutfitTrendSharingUsers.elementAtOrNull(globalStreetwearInfluenceExchangeItem.futureLifestyleSharingPostImageCreateId)?.streetTrendEchoSharingUserName}',
-                                                      style:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .bodyMedium
-                                                              .override(
-                                                                font: GoogleFonts
-                                                                    .poppins(
+                                                      Text(
+                                                        '${FFAppState().urbanOutfitTrendSharingUsers.elementAtOrNull(globalStreetwearInfluenceExchangeItem.futureLifestyleSharingPostImageCreateId)?.streetTrendEchoSharingUserName}',
+                                                        style:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .override(
+                                                                  font: GoogleFonts
+                                                                      .poppins(
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .w600,
+                                                                    fontStyle: FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .bodyMedium
+                                                                        .fontStyle,
+                                                                  ),
+                                                                  color: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .info,
+                                                                  fontSize:
+                                                                      20.0,
+                                                                  letterSpacing:
+                                                                      0.0,
                                                                   fontWeight:
                                                                       FontWeight
                                                                           .w600,
@@ -443,108 +509,112 @@ class _TrendSharingArenaTrendSharingArenaHomeWidgetState
                                                                       .bodyMedium
                                                                       .fontStyle,
                                                                 ),
-                                                                color: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .info,
-                                                                fontSize: 20.0,
-                                                                letterSpacing:
-                                                                    0.0,
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .w600,
-                                                                fontStyle: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .bodyMedium
-                                                                    .fontStyle,
-                                                              ),
-                                                    ),
-                                                    Flexible(
-                                                      child: Align(
-                                                        alignment:
-                                                            AlignmentDirectional(
-                                                                1.0, 0.0),
-                                                        child: InkWell(
-                                                          splashColor: Colors
-                                                              .transparent,
-                                                          focusColor: Colors
-                                                              .transparent,
-                                                          hoverColor: Colors
-                                                              .transparent,
-                                                          highlightColor: Colors
-                                                              .transparent,
-                                                          onTap: () async {
-                                                            await showModalBottomSheet(
-                                                              isScrollControlled:
-                                                                  true,
-                                                              backgroundColor:
-                                                                  Colors
-                                                                      .transparent,
-                                                              enableDrag: false,
-                                                              context: context,
-                                                              builder:
-                                                                  (context) {
-                                                                return GestureDetector(
-                                                                  onTap: () {
-                                                                    FocusScope.of(
-                                                                            context)
-                                                                        .unfocus();
-                                                                    FocusManager
-                                                                        .instance
-                                                                        .primaryFocus
-                                                                        ?.unfocus();
-                                                                  },
-                                                                  child:
-                                                                      Padding(
-                                                                    padding: MediaQuery
-                                                                        .viewInsetsOf(
-                                                                            context),
+                                                      ),
+                                                      Flexible(
+                                                        child: Align(
+                                                          alignment:
+                                                              AlignmentDirectional(
+                                                                  1.0, 0.0),
+                                                          child: InkWell(
+                                                            splashColor: Colors
+                                                                .transparent,
+                                                            focusColor: Colors
+                                                                .transparent,
+                                                            hoverColor: Colors
+                                                                .transparent,
+                                                            highlightColor:
+                                                                Colors
+                                                                    .transparent,
+                                                            onTap: () async {
+                                                              await showModalBottomSheet(
+                                                                isScrollControlled:
+                                                                    true,
+                                                                backgroundColor:
+                                                                    Colors
+                                                                        .transparent,
+                                                                enableDrag:
+                                                                    false,
+                                                                context:
+                                                                    context,
+                                                                builder:
+                                                                    (context) {
+                                                                  return GestureDetector(
+                                                                    onTap: () {
+                                                                      FocusScope.of(
+                                                                              context)
+                                                                          .unfocus();
+                                                                      FocusManager
+                                                                          .instance
+                                                                          .primaryFocus
+                                                                          ?.unfocus();
+                                                                    },
                                                                     child:
-                                                                        WorldYouthTrendInspirationNetworkReportBlackWidget(
-                                                                      tureStyleCultureCollaborationGrid:
-                                                                          globalStreetwearInfluenceExchangeItem
-                                                                              .futureLifestyleSharingPostImageCreateId,
+                                                                        Padding(
+                                                                      padding: MediaQuery
+                                                                          .viewInsetsOf(
+                                                                              context),
+                                                                      child:
+                                                                          WorldYouthTrendInspirationNetworkReportBlackWidget(
+                                                                        tureStyleCultureCollaborationGrid:
+                                                                            globalStreetwearInfluenceExchangeItem.futureLifestyleSharingPostImageCreateId,
+                                                                      ),
                                                                     ),
-                                                                  ),
-                                                                );
-                                                              },
-                                                            ).then((value) =>
-                                                                safeSetState(
-                                                                    () {}));
-                                                          },
-                                                          child: Icon(
-                                                            Icons
-                                                                .keyboard_control,
-                                                            color: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .info,
-                                                            size: 28.0,
+                                                                  );
+                                                                },
+                                                              ).then((value) =>
+                                                                  safeSetState(
+                                                                      () {}));
+                                                            },
+                                                            child: Icon(
+                                                              Icons
+                                                                  .keyboard_control,
+                                                              color: FlutterFlowTheme
+                                                                      .of(context)
+                                                                  .info,
+                                                              size: 28.0,
+                                                            ),
                                                           ),
                                                         ),
                                                       ),
-                                                    ),
-                                                  ].divide(
-                                                      SizedBox(width: 8.0)),
+                                                    ].divide(
+                                                        SizedBox(width: 8.0)),
+                                                  ),
                                                 ),
-                                              ),
-                                              Padding(
-                                                padding: EdgeInsetsDirectional
-                                                    .fromSTEB(
-                                                        24.0, 0.0, 24.0, 24.0),
-                                                child: Column(
-                                                  mainAxisSize:
-                                                      MainAxisSize.max,
-                                                  crossAxisAlignment:
-                                                      CrossAxisAlignment.start,
-                                                  children: [
-                                                    Text(
-                                                      '${globalStreetwearInfluenceExchangeItem.futureLifestyleSharingPostImageDescribe}',
-                                                      style:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .bodyMedium
-                                                              .override(
-                                                                font: GoogleFonts
-                                                                    .poppins(
+                                                Padding(
+                                                  padding: EdgeInsetsDirectional
+                                                      .fromSTEB(24.0, 0.0, 24.0,
+                                                          24.0),
+                                                  child: Column(
+                                                    mainAxisSize:
+                                                        MainAxisSize.max,
+                                                    crossAxisAlignment:
+                                                        CrossAxisAlignment
+                                                            .start,
+                                                    children: [
+                                                      Text(
+                                                        '${globalStreetwearInfluenceExchangeItem.futureLifestyleSharingPostImageDescribe}',
+                                                        style:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .override(
+                                                                  font: GoogleFonts
+                                                                      .poppins(
+                                                                    fontWeight: FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .bodyMedium
+                                                                        .fontWeight,
+                                                                    fontStyle: FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .bodyMedium
+                                                                        .fontStyle,
+                                                                  ),
+                                                                  color: Color(
+                                                                      0xE5FFFFFF),
+                                                                  fontSize:
+                                                                      20.0,
+                                                                  letterSpacing:
+                                                                      0.0,
                                                                   fontWeight: FlutterFlowTheme.of(
                                                                           context)
                                                                       .bodyMedium
@@ -554,77 +624,65 @@ class _TrendSharingArenaTrendSharingArenaHomeWidgetState
                                                                       .bodyMedium
                                                                       .fontStyle,
                                                                 ),
-                                                                color: Color(
-                                                                    0xE5FFFFFF),
-                                                                fontSize: 20.0,
-                                                                letterSpacing:
-                                                                    0.0,
-                                                                fontWeight: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .bodyMedium
-                                                                    .fontWeight,
-                                                                fontStyle: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .bodyMedium
-                                                                    .fontStyle,
-                                                              ),
-                                                    ),
-                                                    Builder(
-                                                      builder: (context) {
-                                                        final creativeWardrobeInnovationCommunity =
-                                                            globalStreetwearInfluenceExchangeItem
-                                                                .futureLifestyleSharingPostImagePhoto
-                                                                .toList();
+                                                      ),
+                                                      Builder(
+                                                        builder: (context) {
+                                                          final creativeWardrobeInnovationCommunity =
+                                                              globalStreetwearInfluenceExchangeItem
+                                                                  .futureLifestyleSharingPostImagePhoto
+                                                                  .toList();
 
-                                                        return Row(
-                                                          mainAxisSize:
-                                                              MainAxisSize.max,
-                                                          mainAxisAlignment:
-                                                              MainAxisAlignment
-                                                                  .spaceBetween,
-                                                          children: List.generate(
-                                                              creativeWardrobeInnovationCommunity
-                                                                  .length,
-                                                              (creativeWardrobeInnovationCommunityIndex) {
-                                                            final creativeWardrobeInnovationCommunityItem =
-                                                                creativeWardrobeInnovationCommunity[
-                                                                    creativeWardrobeInnovationCommunityIndex];
-                                                            return Container(
-                                                              width: 61.0,
-                                                              height: 80.0,
-                                                              decoration:
-                                                                  BoxDecoration(
-                                                                image:
-                                                                    DecorationImage(
-                                                                  fit: BoxFit
-                                                                      .cover,
-                                                                  image: Image
-                                                                      .asset(
-                                                                    creativeWardrobeInnovationCommunityItem,
-                                                                  ).image,
+                                                          return Row(
+                                                            mainAxisSize:
+                                                                MainAxisSize
+                                                                    .max,
+                                                            mainAxisAlignment:
+                                                                MainAxisAlignment
+                                                                    .spaceBetween,
+                                                            children: List.generate(
+                                                                creativeWardrobeInnovationCommunity
+                                                                    .length,
+                                                                (creativeWardrobeInnovationCommunityIndex) {
+                                                              final creativeWardrobeInnovationCommunityItem =
+                                                                  creativeWardrobeInnovationCommunity[
+                                                                      creativeWardrobeInnovationCommunityIndex];
+                                                              return Container(
+                                                                width: 61.0,
+                                                                height: 80.0,
+                                                                decoration:
+                                                                    BoxDecoration(
+                                                                  image:
+                                                                      DecorationImage(
+                                                                    fit: BoxFit
+                                                                        .cover,
+                                                                    image: Image
+                                                                        .asset(
+                                                                      creativeWardrobeInnovationCommunityItem,
+                                                                    ).image,
+                                                                  ),
+                                                                  borderRadius:
+                                                                      BorderRadius
+                                                                          .circular(
+                                                                              8.0),
+                                                                  border: Border
+                                                                      .all(
+                                                                    color: FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .info,
+                                                                    width: 1.0,
+                                                                  ),
                                                                 ),
-                                                                borderRadius:
-                                                                    BorderRadius
-                                                                        .circular(
-                                                                            8.0),
-                                                                border:
-                                                                    Border.all(
-                                                                  color: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .info,
-                                                                  width: 1.0,
-                                                                ),
-                                                              ),
-                                                            );
-                                                          }),
-                                                        );
-                                                      },
-                                                    ),
-                                                  ].divide(
-                                                      SizedBox(height: 16.0)),
+                                                              );
+                                                            }),
+                                                          );
+                                                        },
+                                                      ),
+                                                    ].divide(
+                                                        SizedBox(height: 16.0)),
+                                                  ),
                                                 ),
-                                              ),
-                                            ],
+                                              ],
+                                            ),
                                           ),
                                         );
                                       },
@@ -1054,67 +1112,6 @@ class _TrendSharingArenaTrendSharingArenaHomeWidgetState
                                                                   ].divide(SizedBox(
                                                                       width:
                                                                           4.0)),
-                                                                ),
-                                                                Align(
-                                                                  alignment:
-                                                                      AlignmentDirectional(
-                                                                          1.0,
-                                                                          0.0),
-                                                                  child:
-                                                                      InkWell(
-                                                                    splashColor:
-                                                                        Colors
-                                                                            .transparent,
-                                                                    focusColor:
-                                                                        Colors
-                                                                            .transparent,
-                                                                    hoverColor:
-                                                                        Colors
-                                                                            .transparent,
-                                                                    highlightColor:
-                                                                        Colors
-                                                                            .transparent,
-                                                                    onTap:
-                                                                        () async {
-                                                                      await showModalBottomSheet(
-                                                                        isScrollControlled:
-                                                                            true,
-                                                                        backgroundColor:
-                                                                            Colors.transparent,
-                                                                        enableDrag:
-                                                                            false,
-                                                                        context:
-                                                                            context,
-                                                                        builder:
-                                                                            (context) {
-                                                                          return GestureDetector(
-                                                                            onTap:
-                                                                                () {
-                                                                              FocusScope.of(context).unfocus();
-                                                                              FocusManager.instance.primaryFocus?.unfocus();
-                                                                            },
-                                                                            child:
-                                                                                Padding(
-                                                                              padding: MediaQuery.viewInsetsOf(context),
-                                                                              child: WorldYouthTrendInspirationNetworkReportBlackWidget(
-                                                                                tureStyleCultureCollaborationGrid: trendDrivenStyleDiscoveryCircleItem.worldFashionSharingCollectiveTrendsCreateid,
-                                                                              ),
-                                                                            ),
-                                                                          );
-                                                                        },
-                                                                      ).then((value) =>
-                                                                          safeSetState(
-                                                                              () {}));
-                                                                    },
-                                                                    child: Icon(
-                                                                      Icons
-                                                                          .keyboard_control,
-                                                                      color: Color(
-                                                                          0xFFCCCCCC),
-                                                                      size:
-                                                                          28.0,
-                                                                    ),
-                                                                  ),
                                                                 ),
                                                               ],
                                                             ),

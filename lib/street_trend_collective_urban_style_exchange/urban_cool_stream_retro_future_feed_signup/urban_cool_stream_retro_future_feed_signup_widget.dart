@@ -41,29 +41,29 @@ class _UrbanCoolStreamRetroFutureFeedSignupWidgetState
     _model.textFieldFocusNode3 ??= FocusNode();
   }
 
-  void serenityHavenEmbraceNestHealingAssistant(BuildContext context) {
-    final email = _model.textController1.text.trim();
-    final password = _model.textController2.text.trim();
-    final confirmPassword = _model.textController3.text.trim();
+  void _nextGenStyleHubGlobalTrendBox(BuildContext context) {
+    final hipHopStyleHub = _model.textController1.text.trim();
+    final danceTrendSpot = _model.textController2.text.trim();
+    final streetGrooveLab = _model.textController3.text.trim();
 
-    if (email.isEmpty) {
+    if (hipHopStyleHub.isEmpty) {
       emotionalNestAICareSphere(
           context, 'Please enter your email address.', '');
       return;
     }
 
-    if (password.isEmpty) {
+    if (danceTrendSpot.isEmpty) {
       emotionalNestAICareSphere(context, 'Please enter the password.', '');
       return;
     }
 
-    if (confirmPassword.isEmpty) {
+    if (streetGrooveLab.isEmpty) {
       emotionalNestAICareSphere(
           context, 'Please enter the password again!', '');
       return;
     }
 
-    if (password != confirmPassword) {
+    if (danceTrendSpot != streetGrooveLab) {
       emotionalNestAICareSphere(
           context, 'The two inputs are inconsistent.', '');
       setState(() {
@@ -71,7 +71,6 @@ class _UrbanCoolStreamRetroFutureFeedSignupWidgetState
       });
       return;
     }
-
     context.pushNamed(
       LifestylePhotographyInspirationWallUploadFileWidget.routeName,
       extra: <String, dynamic>{
@@ -651,23 +650,9 @@ class _UrbanCoolStreamRetroFutureFeedSignupWidgetState
                           Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 60.0, 0.0, 0.0),
-                            child: InkWell(
-                              splashColor: Colors.transparent,
-                              focusColor: Colors.transparent,
-                              hoverColor: Colors.transparent,
-                              highlightColor: Colors.transparent,
+                            child: GestureDetector(
                               onTap: () async {
-                                context.pushNamed(
-                                  LifestylePhotographyInspirationWallUploadFileWidget
-                                      .routeName,
-                                  extra: <String, dynamic>{
-                                    kTransitionInfoKey: TransitionInfo(
-                                      hasTransition: true,
-                                      transitionType:
-                                          PageTransitionType.rightToLeft,
-                                    ),
-                                  },
-                                );
+                                _nextGenStyleHubGlobalTrendBox(context);
                               },
                               child: Container(
                                 width: double.infinity,

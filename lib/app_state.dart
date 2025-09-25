@@ -401,7 +401,7 @@ class FFAppState extends ChangeNotifier {
         "FutureLifestyleSharingPostImage_photo": "[\\\"assets/images/adgudfouiuuodi_cxbvysgdyfuiasudioFOG.jpeg\\\",\\\"assets/images/dfgdfuidfguiodf_xcjvgbsayudfgaysiudF.jpeg\\\",\\\"assets/images/dfgdufigoufid_cvxiuoBudfigoDUFG.jpeg\\\",\\\"assets/images/weiuuuaifgdfoIGUIDO_xcvuaidsOFGUOIDF.jpeg\\\"]",
         "FutureLifestyleSharingPostImage_describe": "Life Snippet: Morning Coffee & City Light",
         "FutureLifestyleSharingPostImage_like_users": "[]",
-        "FutureLifestyleSharingPostImage_comment": "0",
+        "FutureLifestyleSharingPostImage_comment": "120",
         "FutureLifestyleSharingPostImage_create_id": "1",
         "FutureLifestyleSharingPostImage_create_time": "1758535267006"
       }
@@ -412,7 +412,7 @@ class FFAppState extends ChangeNotifier {
         "FutureLifestyleSharingPostImage_photo": "[\\\"assets/images/gsdyufghsdiuyg_udisfuashduifosdf.jpeg\\\",\\\"assets/images/sagfdugjudfhgo_xcuvigsuydfgsdyfu.jpeg\\\",\\\"assets/images/dfhhguhdufiogHDFG_cvbughdfuyIGHASUDIOFG.jpeg\\\",\\\"assets/images/sdfgdfuuiodfuig_dgfyausdgyfsiudgfyu.jpeg\\\"]",
         "FutureLifestyleSharingPostImage_describe": "Trend Share: Thrifted Denim Find",
         "FutureLifestyleSharingPostImage_like_users": "[]",
-        "FutureLifestyleSharingPostImage_comment": "0",
+        "FutureLifestyleSharingPostImage_comment": "150",
         "FutureLifestyleSharingPostImage_create_id": "2",
         "FutureLifestyleSharingPostImage_create_time": "1758535268221"
       }
@@ -423,7 +423,7 @@ class FFAppState extends ChangeNotifier {
         "FutureLifestyleSharingPostImage_photo": "[\\\"assets/images/sdfhugduiuoduifgo_cgsuydhfuisod.jpeg\\\",\\\"assets/images/fgfdhugisdfohgi_xcvushdiofhiuasdf.jpeg\\\",\\\"assets/images/dsuyifasuidfoiasudf_cvudsiuygfuisdfoiu.jpeg\\\",\\\"assets/images/sdgfyuasgdyfuGASDYIUF_cxvjjgsdyufisgdfuy.jpeg\\\"]",
         "FutureLifestyleSharingPostImage_describe": "Hobby Exploration: Weekend Pottery Class",
         "FutureLifestyleSharingPostImage_like_users": "[]",
-        "FutureLifestyleSharingPostImage_comment": "0",
+        "FutureLifestyleSharingPostImage_comment": "180",
         "FutureLifestyleSharingPostImage_create_id": "3",
         "FutureLifestyleSharingPostImage_create_time": "1758535269034"
       }
@@ -466,7 +466,7 @@ class FFAppState extends ChangeNotifier {
         "WorldFashionSharingCollectiveTrends_describe": "Fashion’s landscape thrives on the dynamic exchange between designers and enthusiasts. The latest streetwear collection keeps leading discussions, lauded for its bold silhouettes and seamless blend of retro and futuristic vibes......",
         "WorldFashionSharingCollectiveTrends_unlock": "[]",
         "WorldFashionSharingCollectiveTrends_like_users": "[]",
-        "WorldFashionSharingCollectiveTrends_comment": "0",
+        "WorldFashionSharingCollectiveTrends_comment": "180",
         "WorldFashionSharingCollectiveTrends_joinusers": "[\\\"1\\\",\\\"2\\\",\\\"5\\\",\\\"4\\\"]",
         "WorldFashionSharingCollectiveTrends_createid": "3"
       }
@@ -477,11 +477,11 @@ class FFAppState extends ChangeNotifier {
         "WorldFashionSharingCollectiveTrends_title": "Trendy Toys",
         "WorldFashionSharingCollectiveTrends_smatilte": "Buzzworthy Picks",
         "WorldFashionSharingCollectiveTrends_star": "4.7",
-        "WorldFashionSharingCollectiveTrends_photo": "assets/images/sgfhhdfuhguhdsofiUG_vbchidfguahshhoguiDHF.jpeg",
+        "WorldFashionSharingCollectiveTrends_photo": "assets/images/dfghdufhhguiadfohg_uzcxuivgysudfgisydf.jpeg",
         "WorldFashionSharingCollectiveTrends_describe": "The world of trendy toys is perpetually redefined by passionate dialogues among creators and collectors. The new limited-edition figure keeps captivating attention, celebrated for its exquisite detailing and nostalgic callbacks to classic animations......",
         "WorldFashionSharingCollectiveTrends_unlock": "[]",
         "WorldFashionSharingCollectiveTrends_like_users": "[]",
-        "WorldFashionSharingCollectiveTrends_comment": "0",
+        "WorldFashionSharingCollectiveTrends_comment": "160",
         "WorldFashionSharingCollectiveTrends_joinusers": "[\\\"0\\\",\\\"2\\\",\\\"3\\\",\\\"4\\\"]",
         "WorldFashionSharingCollectiveTrends_createid": "1"
       }
@@ -492,11 +492,11 @@ class FFAppState extends ChangeNotifier {
         "WorldFashionSharingCollectiveTrends_title": "Street Fashion",
         "WorldFashionSharingCollectiveTrends_smatilte": "Hot Topics",
         "WorldFashionSharingCollectiveTrends_star": "4.6",
-        "WorldFashionSharingCollectiveTrends_photo": "assets/images/gdyfugsdyiuFGASDUYF_auysdfhuadfghuoi.jpeg",
+        "WorldFashionSharingCollectiveTrends_photo": "assets/images/cvhudsfghoahhfdhughdfo_cxuvisuydfyusdfg.jpeg",
         "WorldFashionSharingCollectiveTrends_describe": "Street fashion’s realm is ceaselessly molded by lively interactions between stylists and fans. The newly-released collaborative apparel line keeps ruling conversations, praised for its unique patterns and homage to subculture aesthetics......",
         "WorldFashionSharingCollectiveTrends_unlock": "[]",
         "WorldFashionSharingCollectiveTrends_like_users": "[]",
-        "WorldFashionSharingCollectiveTrends_comment": "0",
+        "WorldFashionSharingCollectiveTrends_comment": "200",
         "WorldFashionSharingCollectiveTrends_joinusers": "[\\\"1\\\",\\\"5\\\",\\\"3\\\",\\\"4\\\"]",
         "WorldFashionSharingCollectiveTrends_createid": "2"
       }

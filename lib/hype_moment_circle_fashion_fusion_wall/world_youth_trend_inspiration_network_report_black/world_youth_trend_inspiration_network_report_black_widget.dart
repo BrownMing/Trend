@@ -25,7 +25,7 @@ class _WorldYouthTrendInspirationNetworkReportBlackWidgetState
     with TickerProviderStateMixin {
   late WorldYouthTrendInspirationNetworkReportBlackModel _model;
 
-  final animationsMap = <String, AnimationInfo>{};
+  final cultureStyleExchangeCommunity = <String, AnimationInfo>{};
 
   @override
   void setState(VoidCallback callback) {
@@ -39,7 +39,7 @@ class _WorldYouthTrendInspirationNetworkReportBlackWidgetState
     _model = createModel(
         context, () => WorldYouthTrendInspirationNetworkReportBlackModel());
 
-    animationsMap.addAll({
+    cultureStyleExchangeCommunity.addAll({
       'containerOnPageLoadAnimation': AnimationInfo(
         trigger: AnimationTrigger.onPageLoad,
         effectsBuilder: () => [
@@ -136,6 +136,7 @@ class _WorldYouthTrendInspirationNetworkReportBlackWidgetState
           ].divide(SizedBox(height: 25.0)),
         ),
       ),
-    ).animateOnPageLoad(animationsMap['containerOnPageLoadAnimation']!);
+    ).animateOnPageLoad(
+        cultureStyleExchangeCommunity['containerOnPageLoadAnimation']!);
   }
 }

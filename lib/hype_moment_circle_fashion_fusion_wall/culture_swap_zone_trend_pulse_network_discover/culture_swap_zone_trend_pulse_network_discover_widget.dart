@@ -132,14 +132,31 @@ class _CultureSwapZoneTrendPulseNetworkDiscoverWidgetState
                         EdgeInsetsDirectional.fromSTEB(0.0, 24.0, 0.0, 0.0),
                     child: Column(
                       children: [
-                        Align(
-                          alignment: Alignment(0.0, 0),
-                          child: FlutterFlowButtonTabBar(
-                            useToggleButtonStyle: false,
-                            labelStyle: FlutterFlowTheme.of(context)
-                                .titleMedium
-                                .override(
-                                  font: GoogleFonts.poppins(
+                        Padding(
+                          padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
+                          child: Container(
+                            width: double.infinity,
+                            height: 54,
+                            decoration: BoxDecoration(
+                                image: DecorationImage(
+                                    fit: BoxFit.fill,
+                                    image: AssetImage(
+                                        'assets/images/gdfguidfhghdhofgu_xcgvsdygfuasgdfius.png'))),
+                            child: FlutterFlowButtonTabBar(
+                              useToggleButtonStyle: false,
+                              labelStyle: FlutterFlowTheme.of(context)
+                                  .titleMedium
+                                  .override(
+                                    font: GoogleFonts.poppins(
+                                      fontWeight: FlutterFlowTheme.of(context)
+                                          .titleMedium
+                                          .fontWeight,
+                                      fontStyle: FlutterFlowTheme.of(context)
+                                          .titleMedium
+                                          .fontStyle,
+                                    ),
+                                    fontSize: 16.0,
+                                    letterSpacing: 0.0,
                                     fontWeight: FlutterFlowTheme.of(context)
                                         .titleMedium
                                         .fontWeight,
@@ -147,53 +164,53 @@ class _CultureSwapZoneTrendPulseNetworkDiscoverWidgetState
                                         .titleMedium
                                         .fontStyle,
                                   ),
-                                  fontSize: 16.0,
-                                  letterSpacing: 0.0,
-                                  fontWeight: FlutterFlowTheme.of(context)
-                                      .titleMedium
-                                      .fontWeight,
-                                  fontStyle: FlutterFlowTheme.of(context)
-                                      .titleMedium
-                                      .fontStyle,
-                                ),
-                            unselectedLabelStyle: FlutterFlowTheme.of(context)
-                                .titleMedium
-                                .override(
-                                  font: GoogleFonts.poppins(
+                              unselectedLabelStyle: FlutterFlowTheme.of(context)
+                                  .titleMedium
+                                  .override(
+                                    font: GoogleFonts.poppins(
+                                      fontWeight: FontWeight.normal,
+                                      fontStyle: FlutterFlowTheme.of(context)
+                                          .titleMedium
+                                          .fontStyle,
+                                    ),
+                                    fontSize: 16.0,
+                                    letterSpacing: 0.0,
                                     fontWeight: FontWeight.normal,
                                     fontStyle: FlutterFlowTheme.of(context)
                                         .titleMedium
                                         .fontStyle,
                                   ),
-                                  fontSize: 16.0,
-                                  letterSpacing: 0.0,
-                                  fontWeight: FontWeight.normal,
-                                  fontStyle: FlutterFlowTheme.of(context)
-                                      .titleMedium
-                                      .fontStyle,
+                              labelColor: FlutterFlowTheme.of(context).info,
+                              unselectedLabelColor: Color(0x98FFFFFF),
+                              backgroundColor: Colors.transparent,
+                              selectedGradient: LinearGradient(
+                                begin: Alignment.centerLeft,
+                                end: Alignment.centerRight,
+                                colors: [
+                                  Color(0xFFFF94FA),
+                                  Color(0xFF696EFF),
+                                ],
+                                stops: [0.0, 1.0],
+                              ),
+                              borderColor: Colors.transparent,
+                              borderWidth: 0.0,
+                              borderRadius: 10.0,
+                              elevation: 0.0,
+                              buttonMargin: EdgeInsetsDirectional.fromSTEB(
+                                  8.0, 8.0, 8.0, 8.0),
+                              tabs: [
+                                Tab(
+                                  text: 'Trending',
                                 ),
-                            labelColor: FlutterFlowTheme.of(context).info,
-                            unselectedLabelColor: Color(0x98FFFFFF),
-                            backgroundColor:
-                                FlutterFlowTheme.of(context).accent1,
-                            borderColor: FlutterFlowTheme.of(context).primary,
-                            borderWidth: 2.0,
-                            borderRadius: 8.0,
-                            elevation: 0.0,
-                            buttonMargin: EdgeInsetsDirectional.fromSTEB(
-                                8.0, 0.0, 8.0, 0.0),
-                            tabs: [
-                              Tab(
-                                text: 'Trending',
-                              ),
-                              Tab(
-                                text: 'For you',
-                              ),
-                            ],
-                            controller: _model.tabBarController,
-                            onTap: (i) async {
-                              [() async {}, () async {}][i]();
-                            },
+                                Tab(
+                                  text: 'For you',
+                                ),
+                              ],
+                              controller: _model.tabBarController,
+                              onTap: (i) async {
+                                [() async {}, () async {}][i]();
+                              },
+                            ),
                           ),
                         ),
                         Expanded(
@@ -239,7 +256,7 @@ class _CultureSwapZoneTrendPulseNetworkDiscoverWidgetState
                                             culturalVisualStorytellingCommunity[
                                                 culturalVisualStorytellingCommunityIndex];
 
-                                        double sdgfuyasdiFG =
+                                        double beatStyleLink =
                                             culturalVisualStorytellingCommunityIndex
                                                     .isOdd
                                                 ? 167
@@ -299,7 +316,7 @@ class _CultureSwapZoneTrendPulseNetworkDiscoverWidgetState
                                           },
                                           child: Container(
                                             width: 167,
-                                            height: sdgfuyasdiFG,
+                                            height: beatStyleLink,
                                             decoration: BoxDecoration(
                                               borderRadius:
                                                   BorderRadius.circular(16.0),
@@ -533,13 +550,19 @@ class _CultureSwapZoneTrendPulseNetworkDiscoverWidgetState
                               ),
                               Builder(
                                 builder: (context) {
-                                  final youthArtStyleDiscoveryPlatform =
-                                      FFAppState()
-                                          .sneakerheadCultureConnectPosts
-                                          .where((e) => e
-                                              .crossCultureTrendExchangeHubPostsPhoto
-                                              .isNotEmpty)
-                                          .toList();
+                                  final youthArtStyleDiscoveryPlatform = FFAppState()
+                                      .sneakerheadCultureConnectPosts
+                                      .where((e) =>
+                                          e.crossCultureTrendExchangeHubPostsPhoto
+                                              .isNotEmpty &&
+                                          !FFAppState()
+                                              .urbanOutfitTrendSharingUsers[
+                                                  FFAppState()
+                                                      .urbanTrendVisualCollaborationCurrent]
+                                              .streetTrendEchoSharingUserBlacklist
+                                              .contains(e
+                                                  .crossCultureTrendExchangeHubPostsCreateId))
+                                      .toList();
 
                                   return ListView.separated(
                                     padding: EdgeInsets.zero,

@@ -256,6 +256,8 @@ class FlutterFlowButtonTabBar extends StatefulWidget
     this.unselectedBackgroundColor,
     this.decoration,
     this.unselectedDecoration,
+    this.selectedGradient,
+    this.unselectedGradient,
     this.labelStyle,
     this.unselectedLabelStyle,
     this.labelColor,
@@ -308,6 +310,16 @@ class FlutterFlowButtonTabBar extends StatefulWidget
   ///
   /// If [BoxDecoration] is not provided, [unselectedBackgroundColor] is used.
   final BoxDecoration? unselectedDecoration;
+
+  /// The [Gradient] for the selected tab button.
+  ///
+  /// This will override any gradient specified in [decoration].
+  final Gradient? selectedGradient;
+
+  /// The [Gradient] for the unselected tab buttons.
+  ///
+  /// This will override any gradient specified in [unselectedDecoration].
+  final Gradient? unselectedGradient;
 
   /// The [TextStyle] of the button's [Text] on its selected state. The color provided
   /// on the TextStyle will be used for the [Icon]'s color.
@@ -657,22 +669,23 @@ class _FlutterFlowButtonTabBarState extends State<FlutterFlowButtonTabBar>
 
     BoxDecoration? boxDecoration = BoxDecoration.lerp(
         BoxDecoration(
-          color: widget.unselectedDecoration?.color ??
-              widget.unselectedBackgroundColor ??
-              Colors.transparent,
+          color: (widget.unselectedGradient != null || widget.unselectedDecoration?.gradient != null) 
+              ? null 
+              : (widget.unselectedDecoration?.color ?? widget.unselectedBackgroundColor ?? Colors.transparent),
           boxShadow: widget.unselectedDecoration?.boxShadow,
-          gradient: widget.unselectedDecoration?.gradient,
+          gradient: widget.unselectedGradient ??
+              widget.unselectedDecoration?.gradient,
           borderRadius: widget.useToggleButtonStyle
               ? null
               : BorderRadius.circular(widget.borderRadius),
           image: widget.unselectedDecoration?.image,
         ),
         BoxDecoration(
-          color: widget.decoration?.color ??
-              widget.backgroundColor ??
-              Colors.transparent,
+          color: (widget.selectedGradient != null || widget.decoration?.gradient != null) 
+              ? null 
+              : (widget.decoration?.color ?? widget.backgroundColor ?? Colors.transparent),
           boxShadow: widget.decoration?.boxShadow,
-          gradient: widget.decoration?.gradient,
+          gradient: widget.selectedGradient ?? widget.decoration?.gradient,
           borderRadius: widget.useToggleButtonStyle
               ? null
               : BorderRadius.circular(widget.borderRadius),

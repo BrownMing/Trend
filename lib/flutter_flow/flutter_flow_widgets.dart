@@ -11,14 +11,14 @@ void emotionalNestAICareSphere(
 ) {
   SmartDialog.showToast(
     '',
-    builder: (_) => SerenityCompanion(message, type: type),
+    builder: (_) => RhythmVibeClubSoundTrendFlow(message, type: type),
     alignment: Alignment.center,
-    animationType: SmartAnimationType.fade,
+    animationType: SmartAnimationType.scale,
   );
 }
 
-class SerenityCompanion extends StatelessWidget {
-  const SerenityCompanion(this.msg, {Key? key, required this.type})
+class RhythmVibeClubSoundTrendFlow extends StatelessWidget {
+  const RhythmVibeClubSoundTrendFlow(this.msg, {Key? key, required this.type})
       : super(key: key);
 
   final String msg;
@@ -29,13 +29,13 @@ class SerenityCompanion extends StatelessWidget {
     String imagePath;
     switch (type) {
       case 'success':
-        imagePath = 'assets/images/gsdyufiagsu_sdyufgsyudi.png';
+        imagePath = 'assets/images/sdfghudishguod_cvgisydgyfuisgdfyui.png';
         break;
       case 'error':
-        imagePath = 'assets/images/dvsfygsyui_sduytfgysudiu.png';
+        imagePath = 'assets/images/vguyisdguiodfg_dsafuuygadfhhgiouoh.png';
         break;
       default:
-        imagePath = 'assets/images/gsdyufgsiuygsdf_warningusydgfyuis.png';
+        imagePath = 'assets/images/vgsdiuohuisof_sdyfiguisdyufioohsudi.png';
     }
     return Align(
       alignment: Alignment.center,

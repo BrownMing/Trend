@@ -113,7 +113,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               ParamType.DataStruct,
               isList: false,
               structBuilder:
-                  CrossCultureTrendExchangeHubPostsStruct.fromSerializableMap,
+                  FutureLifestyleSharingPostImageStruct.fromSerializableMap,
             ),
           ),
         ),

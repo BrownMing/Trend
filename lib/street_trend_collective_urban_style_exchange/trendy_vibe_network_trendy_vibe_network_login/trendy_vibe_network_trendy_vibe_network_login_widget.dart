@@ -1,3 +1,4 @@
+import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:trend/flutter_flow/flutter_flow_widgets.dart';
 
 import '/flutter_flow/flutter_flow_theme.dart';
@@ -45,8 +46,7 @@ class _TrendyVibeNetworkTrendyVibeNetworkLoginWidgetState
     super.dispose();
   }
 
-  Future<void> _tranquilityWhisperSoulComfortCompanionAI(
-      BuildContext context) async {
+  Future<void> _urbanVibeLabTrendLifeGrid(BuildContext context) async {
     if (_model.textController1.text.isEmpty) {
       emotionalNestAICareSphere(
           context, 'Please enter your email address!', '');
@@ -74,8 +74,8 @@ class _TrendyVibeNetworkTrendyVibeNetworkLoginWidgetState
         return;
       }
 
-      final user = matchingUsers.first;
-      if (user.streetTrendEchoSharingUserPassword !=
+      final futureStyleNet = matchingUsers.first;
+      if (futureStyleNet.streetTrendEchoSharingUserPassword !=
           _model.textController2.text) {
         emotionalNestAICareSphere(context, 'Password error!', 'error');
         _model.textController2?.clear();
@@ -84,10 +84,13 @@ class _TrendyVibeNetworkTrendyVibeNetworkLoginWidgetState
       }
 
       FFAppState().urbanTrendVisualCollaborationCurrent =
-          user.streetTrendEchoSharingUserId;
+          futureStyleNet.streetTrendEchoSharingUserId;
       FFAppState().update(() {});
+      SmartDialog.showLoading(
+          msg: 'Loading...', animationType: SmartAnimationType.scale);
+      await Future.delayed(const Duration(seconds: 2));
+      SmartDialog.dismiss();
       await Future.delayed(const Duration(seconds: 1));
-
       if (mounted) {
         context.pushNamed(
           TrendSharingArenaTrendSharingArenaHomeWidget.routeName,
@@ -525,8 +528,7 @@ class _TrendyVibeNetworkTrendyVibeNetworkLoginWidgetState
                               hoverColor: Colors.transparent,
                               highlightColor: Colors.transparent,
                               onTap: () async {
-                                await _tranquilityWhisperSoulComfortCompanionAI(
-                                    context);
+                                await _urbanVibeLabTrendLifeGrid(context);
                               },
                               child: Container(
                                 width: double.infinity,

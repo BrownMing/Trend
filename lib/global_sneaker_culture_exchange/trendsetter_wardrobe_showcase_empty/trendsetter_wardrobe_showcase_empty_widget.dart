@@ -18,7 +18,7 @@ class _TrendsetterWardrobeShowcaseEmptyWidgetState
     with TickerProviderStateMixin {
   late TrendsetterWardrobeShowcaseEmptyModel _model;
 
-  final animationsMap = <String, AnimationInfo>{};
+  final cultureStyleExchangeCommunity = <String, AnimationInfo>{};
 
   @override
   void setState(VoidCallback callback) {
@@ -32,8 +32,8 @@ class _TrendsetterWardrobeShowcaseEmptyWidgetState
     _model =
         createModel(context, () => TrendsetterWardrobeShowcaseEmptyModel());
 
-    animationsMap.addAll({
-      'imageOnPageLoadAnimation': AnimationInfo(
+    cultureStyleExchangeCommunity.addAll({
+      'GlobalStreetFashionInspirationHub': AnimationInfo(
         trigger: AnimationTrigger.onPageLoad,
         effectsBuilder: () => [
           FadeEffect(
@@ -59,9 +59,10 @@ class _TrendsetterWardrobeShowcaseEmptyWidgetState
   Widget build(BuildContext context) {
     return Image.asset(
       'assets/images/ruidfohidfgd_cviduiyfausiodigf.png',
-      width: 280.0,
-      height: 280.0,
-      fit: BoxFit.cover,
-    ).animateOnPageLoad(animationsMap['imageOnPageLoadAnimation']!);
+      width: 150.0,
+      height: 150.0,
+      fit: BoxFit.fill,
+    ).animateOnPageLoad(
+        cultureStyleExchangeCommunity['GlobalStreetFashionInspirationHub']!);
   }
 }

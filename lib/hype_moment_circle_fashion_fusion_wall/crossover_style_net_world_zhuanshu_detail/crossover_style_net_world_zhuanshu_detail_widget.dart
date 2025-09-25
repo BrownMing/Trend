@@ -355,32 +355,48 @@ class _CrossoverStyleNetWorldZhuanshuDetailWidgetState
                                       ),
                                     ),
                                   ),
-                                  Text(
-                                    '${widget.urbanVisualExpressionSharingref?.crossCultureTrendExchangeHubPostsComments.toString()}',
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .override(
-                                          font: GoogleFonts.poppins(
-                                            fontWeight:
-                                                FlutterFlowTheme.of(context)
-                                                    .bodyMedium
-                                                    .fontWeight,
-                                            fontStyle:
-                                                FlutterFlowTheme.of(context)
-                                                    .bodyMedium
-                                                    .fontStyle,
-                                          ),
-                                          color: Color(0xFFCCCCCC),
-                                          letterSpacing: 0.0,
-                                          fontWeight:
-                                              FlutterFlowTheme.of(context)
-                                                  .bodyMedium
-                                                  .fontWeight,
-                                          fontStyle:
-                                              FlutterFlowTheme.of(context)
-                                                  .bodyMedium
-                                                  .fontStyle,
-                                        ),
+                                  Builder(
+                                    builder: (context) {
+                                      // 从全局状态获取最新的评论数
+                                      final currentPost = FFAppState()
+                                          .sneakerheadCultureConnectPosts
+                                          .firstWhere(
+                                            (post) =>
+                                                post.crossCultureTrendExchangeHubPostsId ==
+                                                widget
+                                                    .urbanVisualExpressionSharingref
+                                                    ?.crossCultureTrendExchangeHubPostsId,
+                                            orElse: () => widget
+                                                .urbanVisualExpressionSharingref!,
+                                          );
+                                      return Text(
+                                        '${currentPost.crossCultureTrendExchangeHubPostsComments.toString()}',
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .override(
+                                              font: GoogleFonts.poppins(
+                                                fontWeight:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMedium
+                                                        .fontWeight,
+                                                fontStyle:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMedium
+                                                        .fontStyle,
+                                              ),
+                                              color: Color(0xFFCCCCCC),
+                                              letterSpacing: 0.0,
+                                              fontWeight:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .fontWeight,
+                                              fontStyle:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .fontStyle,
+                                            ),
+                                      );
+                                    },
                                   ),
                                 ].divide(SizedBox(width: 4.0)),
                               ),
@@ -392,12 +408,23 @@ class _CrossoverStyleNetWorldZhuanshuDetailWidgetState
                                   children: [
                                     Builder(
                                       builder: (context) {
-                                        if (widget
-                                                .urbanVisualExpressionSharingref
-                                                ?.crossCultureTrendExchangeHubPostsLikeUser
-                                                .contains(FFAppState()
-                                                    .urbanTrendVisualCollaborationCurrent) ??
-                                            false) {
+                                        // 从全局状态获取最新的数据
+                                        final currentPost = FFAppState()
+                                            .sneakerheadCultureConnectPosts
+                                            .firstWhere(
+                                              (post) =>
+                                                  post.crossCultureTrendExchangeHubPostsId ==
+                                                  widget
+                                                      .urbanVisualExpressionSharingref
+                                                      ?.crossCultureTrendExchangeHubPostsId,
+                                              orElse: () => widget
+                                                  .urbanVisualExpressionSharingref!,
+                                            );
+
+                                        if (currentPost
+                                            .crossCultureTrendExchangeHubPostsLikeUser
+                                            .contains(FFAppState()
+                                                .urbanTrendVisualCollaborationCurrent)) {
                                           return InkWell(
                                             splashColor: Colors.transparent,
                                             focusColor: Colors.transparent,
@@ -417,6 +444,7 @@ class _CrossoverStyleNetWorldZhuanshuDetailWidgetState
                                                   ),
                                               );
                                               FFAppState().update(() {});
+                                              setState(() {}); // 强制刷新UI
                                             },
                                             child: AnimatedContainer(
                                               duration:
@@ -435,50 +463,90 @@ class _CrossoverStyleNetWorldZhuanshuDetailWidgetState
                                             ),
                                           );
                                         } else {
-                                          return AnimatedContainer(
-                                            duration:
-                                                Duration(milliseconds: 400),
-                                            curve: Curves.easeInOut,
-                                            width: 24.0,
-                                            height: 24.0,
-                                            decoration: BoxDecoration(
-                                              image: DecorationImage(
-                                                fit: BoxFit.cover,
-                                                image: Image.asset(
-                                                  'assets/images/vdbysfugstudyiyfgeyui_ewfugyftusydfyagsif.png',
-                                                ).image,
+                                          return InkWell(
+                                            splashColor: Colors.transparent,
+                                            focusColor: Colors.transparent,
+                                            hoverColor: Colors.transparent,
+                                            highlightColor: Colors.transparent,
+                                            onTap: () async {
+                                              HapticFeedback.heavyImpact();
+                                              FFAppState()
+                                                  .updateSneakerheadCultureConnectPostsAtIndex(
+                                                widget
+                                                    .urbanVisualExpressionSharingref!
+                                                    .crossCultureTrendExchangeHubPostsId,
+                                                (e) => e
+                                                  ..updateCrossCultureTrendExchangeHubPostsLikeUser(
+                                                    (e) => e.add(FFAppState()
+                                                        .urbanTrendVisualCollaborationCurrent),
+                                                  ),
+                                              );
+                                              FFAppState().update(() {});
+                                              setState(() {}); // 强制刷新UI
+                                            },
+                                            child: AnimatedContainer(
+                                              duration:
+                                                  Duration(milliseconds: 400),
+                                              curve: Curves.easeInOut,
+                                              width: 24.0,
+                                              height: 24.0,
+                                              decoration: BoxDecoration(
+                                                image: DecorationImage(
+                                                  fit: BoxFit.cover,
+                                                  image: Image.asset(
+                                                    'assets/images/vdbysfugstudyiyfgeyui_ewfugyftusydfyagsif.png',
+                                                  ).image,
+                                                ),
                                               ),
                                             ),
                                           );
                                         }
                                       },
                                     ),
-                                    Text(
-                                      '${widget.urbanVisualExpressionSharingref?.crossCultureTrendExchangeHubPostsLikeUser.length.toString()}',
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .override(
-                                            font: GoogleFonts.poppins(
-                                              fontWeight:
-                                                  FlutterFlowTheme.of(context)
-                                                      .bodyMedium
-                                                      .fontWeight,
-                                              fontStyle:
-                                                  FlutterFlowTheme.of(context)
-                                                      .bodyMedium
-                                                      .fontStyle,
-                                            ),
-                                            color: Color(0xFFCCCCCC),
-                                            letterSpacing: 0.0,
-                                            fontWeight:
-                                                FlutterFlowTheme.of(context)
-                                                    .bodyMedium
-                                                    .fontWeight,
-                                            fontStyle:
-                                                FlutterFlowTheme.of(context)
-                                                    .bodyMedium
-                                                    .fontStyle,
-                                          ),
+                                    Builder(
+                                      builder: (context) {
+                                        // 从全局状态获取最新的点赞数
+                                        final currentPost = FFAppState()
+                                            .sneakerheadCultureConnectPosts
+                                            .firstWhere(
+                                              (post) =>
+                                                  post.crossCultureTrendExchangeHubPostsId ==
+                                                  widget
+                                                      .urbanVisualExpressionSharingref
+                                                      ?.crossCultureTrendExchangeHubPostsId,
+                                              orElse: () => widget
+                                                  .urbanVisualExpressionSharingref!,
+                                            );
+                                        return Text(
+                                          '${currentPost.crossCultureTrendExchangeHubPostsLikeUser.length.toString()}',
+                                          style: FlutterFlowTheme.of(context)
+                                              .bodyMedium
+                                              .override(
+                                                font: GoogleFonts.poppins(
+                                                  fontWeight:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .bodyMedium
+                                                          .fontWeight,
+                                                  fontStyle:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .bodyMedium
+                                                          .fontStyle,
+                                                ),
+                                                color: Color(0xFFCCCCCC),
+                                                letterSpacing: 0.0,
+                                                fontWeight:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMedium
+                                                        .fontWeight,
+                                                fontStyle:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMedium
+                                                        .fontStyle,
+                                              ),
+                                        );
+                                      },
                                     ),
                                   ].divide(SizedBox(width: 4.0)),
                                 ),

@@ -20,7 +20,7 @@ class HoneyTiramisuMoonlightCircle extends StatelessWidget {
     this.unselectedColor = const Color(0xFF6B4C93),
     this.useBackgroundImage = true,
     this.backgroundImageAsset =
-        'assets/images/dfjghdfuhgoda_fdguihadufgoiaduFG.png',
+        'assets/images/sdgfyusdgfgasiduyf_sajdfgasdyufoausidf.png',
   }) : super(key: key);
 
   @override
