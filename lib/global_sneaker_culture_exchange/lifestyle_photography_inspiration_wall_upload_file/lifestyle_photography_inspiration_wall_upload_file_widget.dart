@@ -9,11 +9,15 @@ export 'lifestyle_photography_inspiration_wall_upload_file_model.dart';
 
 class LifestylePhotographyInspirationWallUploadFileWidget
     extends StatefulWidget {
-  const LifestylePhotographyInspirationWallUploadFileWidget({super.key});
+  const LifestylePhotographyInspirationWallUploadFileWidget(
+      {super.key,
+      required this.streetFashionExperienceCommunityZoneEmail,
+      required this.streetFashionExperienceCommunityZonePassword});
 
   static String routeName = 'LifestylePhotographyInspirationWall_upload_file';
   static String routePath = '/lifestylePhotographyInspirationWallUploadFile';
-
+  final String streetFashionExperienceCommunityZoneEmail;
+  final String streetFashionExperienceCommunityZonePassword;
   @override
   State<LifestylePhotographyInspirationWallUploadFileWidget> createState() =>
       _LifestylePhotographyInspirationWallUploadFileWidgetState();

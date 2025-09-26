@@ -7,16 +7,9 @@ import 'package:flutter/material.dart';
 
 class CultureSwapZoneTrendPulseNetworkDiscoverModel
     extends FlutterFlowModel<CultureSwapZoneTrendPulseNetworkDiscoverWidget> {
-  ///  State fields for stateful widgets in this page.
 
-  // State field(s) for TabBar widget.
   TabController? tabBarController;
-  int get tabBarCurrentIndex =>
-      tabBarController != null ? tabBarController!.index : 0;
-  int get tabBarPreviousIndex =>
-      tabBarController != null ? tabBarController!.previousIndex : 0;
 
-  // Models for UrbanCultureFusionExplorationPlatform_image dynamic component.
   late FlutterFlowDynamicModels<UrbanCultureFusionExplorationPlatformImageModel>
       urbanCultureFusionExplorationPlatformImageModels;
 

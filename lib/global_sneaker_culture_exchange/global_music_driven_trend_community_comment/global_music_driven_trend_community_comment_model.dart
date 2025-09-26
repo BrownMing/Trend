@@ -5,9 +5,7 @@ import 'package:flutter/material.dart';
 
 class GlobalMusicDrivenTrendCommunityCommentModel
     extends FlutterFlowModel<GlobalMusicDrivenTrendCommunityCommentWidget> {
-  ///  State fields for stateful widgets in this component.
 
-  // State field(s) for TextField widget.
   FocusNode? textFieldFocusNode;
   TextEditingController? textController;
   String? Function(BuildContext, String?)? textControllerValidator;

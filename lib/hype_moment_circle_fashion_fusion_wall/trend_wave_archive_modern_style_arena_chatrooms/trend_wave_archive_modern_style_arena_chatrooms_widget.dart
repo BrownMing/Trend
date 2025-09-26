@@ -89,14 +89,19 @@ class _TrendWaveArchiveModernStyleArenaChatroomsWidgetState
                         EdgeInsetsDirectional.fromSTEB(24.0, 24.0, 24.0, 0.0),
                     child: Builder(
                       builder: (context) {
-                        final urbanCultureFusionExplorationPlatform =
-                            FFAppState()
-                                .streetCultureExpressionNetworkChats
-                                .where((e) =>
-                                    e.nextGenStreetwearShowcaseChatCurrentId ==
+                        final urbanCultureFusionExplorationPlatform = FFAppState()
+                            .streetCultureExpressionNetworkChats
+                            .where((e) =>
+                                e.nextGenStreetwearShowcaseChatCurrentId ==
                                     FFAppState()
-                                        .urbanTrendVisualCollaborationCurrent)
-                                .toList();
+                                        .urbanTrendVisualCollaborationCurrent &&
+                                !FFAppState()
+                                    .urbanOutfitTrendSharingUsers[FFAppState()
+                                        .urbanTrendVisualCollaborationCurrent]
+                                    .streetTrendEchoSharingUserBlacklist
+                                    .contains(
+                                        e.nextGenStreetwearShowcaseChatOtherId))
+                            .toList();
 
                         return ListView.separated(
                           padding: EdgeInsets.zero,

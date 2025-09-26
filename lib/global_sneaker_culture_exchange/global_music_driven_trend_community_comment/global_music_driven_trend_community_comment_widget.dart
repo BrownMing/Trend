@@ -1,7 +1,10 @@
+import '/backend/schema/structs/index.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
+
 import 'global_music_driven_trend_community_comment_model.dart';
 export 'global_music_driven_trend_community_comment_model.dart';
 
@@ -47,24 +50,50 @@ class _GlobalMusicDrivenTrendCommunityCommentWidgetState
 
   @override
   Widget build(BuildContext context) {
+    context.watch<FFAppState>();
+
     return Padding(
-      padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 35.0),
+      padding: EdgeInsetsDirectional.fromSTEB(16, 0, 16, 35),
       child: Container(
         width: double.infinity,
-        height: 54.0,
+        height: 54,
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(16.0),
+          borderRadius: BorderRadius.circular(16),
           border: Border.all(
             color: Color(0x4CFFFFFF),
           ),
         ),
         child: Align(
-          alignment: AlignmentDirectional(-1.0, 0.0),
+          alignment: AlignmentDirectional(-1, 0),
           child: Container(
             width: double.infinity,
             child: TextFormField(
               controller: _model.textController,
               focusNode: _model.textFieldFocusNode,
+              onFieldSubmitted: (_) async {
+                if (_model.textController.text != '') {
+                  FFAppState().addToModernFashionInfluenceComments(
+                      CreativeTrendBeatCollCommentsStruct(
+                    creativeTrendBeatCollCommentsContent:
+                        _model.textController.text,
+                    creativeTrendBeatCollCommentsCreateId:
+                        FFAppState().urbanTrendVisualCollaborationCurrent,
+                    creativeTrendBeatCollCommentsPostRef:
+                        widget.vemporarySoundStyleSharingArena,
+                    creativeTrendBeatCollCommentsCreateTime:
+                        getCurrentTimestamp,
+                  ));
+
+                  FFAppState().updateSneakerheadCultureConnectPostsAtIndex(
+                    widget.vemporarySoundStyleSharingArena!,
+                    (e) => e
+                      ..incrementCrossCultureTrendExchangeHubPostsComments(1),
+                  );
+
+                  FFAppState().update(() {});
+                  Navigator.pop(context);
+                }
+              },
               autofocus: true,
               textInputAction: TextInputAction.done,
               obscureText: false,
@@ -92,7 +121,7 @@ class _GlobalMusicDrivenTrendCommunityCommentWidgetState
                             FlutterFlowTheme.of(context).labelMedium.fontStyle,
                       ),
                       color: Color(0x80FFFFFF),
-                      fontSize: 16.0,
+                      fontSize: 16,
                       letterSpacing: 0.0,
                       fontWeight:
                           FlutterFlowTheme.of(context).labelMedium.fontWeight,
@@ -102,30 +131,30 @@ class _GlobalMusicDrivenTrendCommunityCommentWidgetState
                 enabledBorder: OutlineInputBorder(
                   borderSide: BorderSide(
                     color: Color(0x00000000),
-                    width: 1.0,
+                    width: 1,
                   ),
-                  borderRadius: BorderRadius.circular(16.0),
+                  borderRadius: BorderRadius.circular(16),
                 ),
                 focusedBorder: OutlineInputBorder(
                   borderSide: BorderSide(
                     color: Color(0x00000000),
-                    width: 1.0,
+                    width: 1,
                   ),
-                  borderRadius: BorderRadius.circular(16.0),
+                  borderRadius: BorderRadius.circular(16),
                 ),
                 errorBorder: OutlineInputBorder(
                   borderSide: BorderSide(
                     color: Color(0x00000000),
-                    width: 1.0,
+                    width: 1,
                   ),
-                  borderRadius: BorderRadius.circular(16.0),
+                  borderRadius: BorderRadius.circular(16),
                 ),
                 focusedErrorBorder: OutlineInputBorder(
                   borderSide: BorderSide(
                     color: Color(0x00000000),
-                    width: 1.0,
+                    width: 1,
                   ),
-                  borderRadius: BorderRadius.circular(16.0),
+                  borderRadius: BorderRadius.circular(16),
                 ),
               ),
               style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -136,7 +165,7 @@ class _GlobalMusicDrivenTrendCommunityCommentWidgetState
                           FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                     ),
                     color: FlutterFlowTheme.of(context).info,
-                    fontSize: 16.0,
+                    fontSize: 16,
                     letterSpacing: 0.0,
                     fontWeight:
                         FlutterFlowTheme.of(context).bodyMedium.fontWeight,

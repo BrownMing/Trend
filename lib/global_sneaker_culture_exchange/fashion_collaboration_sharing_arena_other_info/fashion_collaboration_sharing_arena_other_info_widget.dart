@@ -1,12 +1,9 @@
-import 'package:trend/global_sneaker_culture_exchange/trendsetter_wardrobe_showcase_empty/trendsetter_wardrobe_showcase_empty_widget.dart';
-
-import '/components/urban_culture_fusion_exploration_platform_image_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_video_player.dart';
 import '/hype_moment_circle_fashion_fusion_wall/world_youth_trend_inspiration_network_report_black/world_youth_trend_inspiration_network_report_black_widget.dart';
-
-import '/index.dart';
+import 'widgets/photo_grid_tab_widget.dart';
+import 'widgets/video_grid_tab_widget.dart';
+import 'widgets/posts_list_tab_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -134,11 +131,130 @@ class _FashionCollaborationSharingArenaOtherInfoWidgetState
                                           ),
                                         ),
                                       ),
+                                      if (widget
+                                              .streetStyleHubUrbanTrendShare !=
+                                          FFAppState()
+                                              .urbanTrendVisualCollaborationCurrent)
+                                        Align(
+                                          alignment: Alignment(1, -1),
+                                          child: Builder(
+                                            builder: (context) {
+                                              final currentUser = FFAppState()
+                                                  .urbanOutfitTrendSharingUsers
+                                                  .elementAtOrNull(FFAppState()
+                                                      .urbanTrendVisualCollaborationCurrent);
+
+                                              final isFollowing = currentUser
+                                                      ?.streetTrendEchoSharingUserFollowings
+                                                      .contains(widget
+                                                          .streetStyleHubUrbanTrendShare) ??
+                                                  false;
+
+                                              return GestureDetector(
+                                                onTap: () async {
+                                                  HapticFeedback.lightImpact();
+
+                                                  if (isFollowing) {
+                                                    FFAppState()
+                                                        .updateUrbanOutfitTrendSharingUsersAtIndex(
+                                                      FFAppState()
+                                                          .urbanTrendVisualCollaborationCurrent,
+                                                      (currentUserUpdate) =>
+                                                          currentUserUpdate
+                                                            ..updateStreetTrendEchoSharingUserFollowings(
+                                                              (followings) => followings
+                                                                  .remove(widget
+                                                                      .streetStyleHubUrbanTrendShare),
+                                                            ),
+                                                    );
+
+                                                    FFAppState()
+                                                        .updateUrbanOutfitTrendSharingUsersAtIndex(
+                                                      widget
+                                                          .streetStyleHubUrbanTrendShare!,
+                                                      (targetUserUpdate) =>
+                                                          targetUserUpdate
+                                                            ..updateStreetTrendEchoSharingUserFollowers(
+                                                              (followers) =>
+                                                                  followers.remove(
+                                                                      FFAppState()
+                                                                          .urbanTrendVisualCollaborationCurrent),
+                                                            ),
+                                                    );
+                                                  } else {
+                                                    FFAppState()
+                                                        .updateUrbanOutfitTrendSharingUsersAtIndex(
+                                                      FFAppState()
+                                                          .urbanTrendVisualCollaborationCurrent,
+                                                      (currentUserUpdate) =>
+                                                          currentUserUpdate
+                                                            ..updateStreetTrendEchoSharingUserFollowings(
+                                                              (followings) =>
+                                                                  followings.add(
+                                                                      widget
+                                                                          .streetStyleHubUrbanTrendShare!),
+                                                            ),
+                                                    );
+
+                                                    FFAppState()
+                                                        .updateUrbanOutfitTrendSharingUsersAtIndex(
+                                                      widget
+                                                          .streetStyleHubUrbanTrendShare!,
+                                                      (targetUserUpdate) =>
+                                                          targetUserUpdate
+                                                            ..updateStreetTrendEchoSharingUserFollowers(
+                                                              (followers) =>
+                                                                  followers.add(
+                                                                      FFAppState()
+                                                                          .urbanTrendVisualCollaborationCurrent),
+                                                            ),
+                                                    );
+                                                  }
+
+                                                  FFAppState().update(() {});
+                                                  setState(() {});
+                                                },
+                                                child: AnimatedContainer(
+                                                  duration: Duration(
+                                                      milliseconds: 200),
+                                                  curve: Curves.easeInOut,
+                                                  width: 36.0,
+                                                  height: 36.0,
+                                                  decoration: BoxDecoration(
+                                                    color: isFollowing
+                                                        ? Color(0xFF666666)
+                                                        : Color(0xFF696EFF),
+                                                    shape: BoxShape.circle,
+                                                    border: Border.all(
+                                                      color: Colors.white,
+                                                      width: 2.0,
+                                                    ),
+                                                    boxShadow: [
+                                                      BoxShadow(
+                                                        color: Colors.black
+                                                            .withOpacity(0.3),
+                                                        blurRadius: 4.0,
+                                                        offset: Offset(0, 2),
+                                                      ),
+                                                    ],
+                                                  ),
+                                                  child: Icon(
+                                                    isFollowing
+                                                        ? Icons.check
+                                                        : Icons.add,
+                                                    color: Colors.white,
+                                                    size: 20.0,
+                                                  ),
+                                                ),
+                                              );
+                                            },
+                                          ),
+                                        ),
                                     ],
                                   ),
                                 ),
                               ),
-                            ),
+                            )
                           ],
                         ),
                       ),
@@ -147,6 +263,7 @@ class _FashionCollaborationSharingArenaOtherInfoWidgetState
                             EdgeInsetsDirectional.fromSTEB(23.5, 90, 23.5, 0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Flexible(
                               child: Column(
@@ -178,6 +295,7 @@ class _FashionCollaborationSharingArenaOtherInfoWidgetState
                                   ),
                                   Text(
                                     '${FFAppState().urbanOutfitTrendSharingUsers.elementAtOrNull(widget.streetStyleHubUrbanTrendShare!)?.streetTrendEchoSharingUserDescribe}',
+                                    maxLines: 2,
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
@@ -206,6 +324,65 @@ class _FashionCollaborationSharingArenaOtherInfoWidgetState
                                 ].divide(SizedBox(height: 8)),
                               ),
                             ),
+                            GestureDetector(
+                              onTap: () async {
+                                await BirthdayMacaronAuroraHarbor
+                                    .easterBunnyCookieMoonlightCircle(
+                                  context: context,
+                                  targetUserId:
+                                      widget.streetStyleHubUrbanTrendShare!,
+                                  chatPageRouteName:
+                                      'FutureTrendCircleHypeSharingWorld_messages',
+                                  chatIdParamName:
+                                      'sreetPerformanceCultureCollecChat',
+                                  userIdParamName:
+                                      'popCultureVibeInnovationUserid',
+                                  initialMessage: "Hello! Welcome to chat!",
+                                );
+                              },
+                              child: Container(
+                                width: 111,
+                                height: 38,
+                                decoration: BoxDecoration(
+                                  gradient: LinearGradient(
+                                    colors: [
+                                      Color(0xFF696EFF),
+                                      Color(0xFFFF94FA)
+                                    ],
+                                    stops: [0, 1],
+                                    begin: AlignmentDirectional(1, 0),
+                                    end: AlignmentDirectional(-1, 0),
+                                  ),
+                                  borderRadius: BorderRadius.circular(19),
+                                ),
+                                child: Align(
+                                  alignment: AlignmentDirectional(0, 0),
+                                  child: Text(
+                                    'Chat',
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .override(
+                                          font: GoogleFonts.poppins(
+                                            fontWeight: FontWeight.w600,
+                                            fontStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyMedium
+                                                    .fontStyle,
+                                          ),
+                                          color:
+                                              FlutterFlowTheme.of(context).info,
+                                          fontSize: 16,
+                                          letterSpacing: 0.0,
+                                          fontWeight: FontWeight.w600,
+                                          fontStyle:
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyMedium
+                                                  .fontStyle,
+                                        ),
+                                  ),
+                                ),
+                              ),
+                            )
                           ],
                         ),
                       ),
@@ -554,761 +731,17 @@ class _FashionCollaborationSharingArenaOtherInfoWidgetState
                                 child: TabBarView(
                                   controller: _model.tabBarController,
                                   children: [
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          10, 16, 10, 0),
-                                      child: Builder(
-                                        builder: (context) {
-                                          final urbanLookShareVisualStyleFlow = FFAppState()
-                                                  .creativeWardrobeFusionCommunPostImages
-                                                  .where((e) =>
-                                                      widget
-                                                          .streetStyleHubUrbanTrendShare ==
-                                                      e.futureLifestyleSharingPostImageCreateId)
-                                                  .toList()
-                                                  .firstOrNull
-                                                  ?.futureLifestyleSharingPostImagePhoto
-                                                  .toList() ??
-                                              [];
-
-                                          return GridView.builder(
-                                            padding: EdgeInsets.fromLTRB(
-                                              0,
-                                              0,
-                                              0,
-                                              60,
-                                            ),
-                                            gridDelegate:
-                                                SliverGridDelegateWithFixedCrossAxisCount(
-                                              crossAxisCount: 3,
-                                              crossAxisSpacing: 4,
-                                              mainAxisSpacing: 4,
-                                              childAspectRatio: 1,
-                                            ),
-                                            scrollDirection: Axis.vertical,
-                                            itemCount:
-                                                urbanLookShareVisualStyleFlow
-                                                    .length,
-                                            itemBuilder: (context,
-                                                urbanLookShareVisualStyleFlowIndex) {
-                                              final urbanLookShareVisualStyleFlowItem =
-                                                  urbanLookShareVisualStyleFlow[
-                                                      urbanLookShareVisualStyleFlowIndex];
-                                              return ClipRRect(
-                                                borderRadius:
-                                                    BorderRadius.circular(8),
-                                                child: Image.asset(
-                                                  urbanLookShareVisualStyleFlowItem,
-                                                  width: 106,
-                                                  height: 106,
-                                                  fit: BoxFit.cover,
-                                                ),
-                                              );
-                                            },
-                                          );
-                                        },
-                                      ),
+                                    PhotoGridTabWidget(
+                                      userId:
+                                          widget.streetStyleHubUrbanTrendShare!,
                                     ),
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          10, 16, 10, 0),
-                                      child: Builder(
-                                        builder: (context) {
-                                          final designTrendVaultStreetArtLoop = FFAppState()
-                                              .sneakerheadCultureConnectPosts
-                                              .where((e) =>
-                                                  (e.crossCultureTrendExchangeHubPostsVideo !=
-                                                      '') &&
-                                                  (widget.streetStyleHubUrbanTrendShare ==
-                                                      e.crossCultureTrendExchangeHubPostsCreateId))
-                                              .toList();
-
-                                          return GridView.builder(
-                                            padding: EdgeInsets.fromLTRB(
-                                              0,
-                                              0,
-                                              0,
-                                              60,
-                                            ),
-                                            gridDelegate:
-                                                SliverGridDelegateWithFixedCrossAxisCount(
-                                              crossAxisCount: 3,
-                                              crossAxisSpacing: 10,
-                                              mainAxisSpacing: 10,
-                                              childAspectRatio: 0.63,
-                                            ),
-                                            scrollDirection: Axis.vertical,
-                                            itemCount:
-                                                designTrendVaultStreetArtLoop
-                                                    .length,
-                                            itemBuilder: (context,
-                                                designTrendVaultStreetArtLoopIndex) {
-                                              final designTrendVaultStreetArtLoopItem =
-                                                  designTrendVaultStreetArtLoop[
-                                                      designTrendVaultStreetArtLoopIndex];
-                                              return Container(
-                                                width: double.infinity,
-                                                height: double.infinity,
-                                                decoration: BoxDecoration(
-                                                  borderRadius:
-                                                      BorderRadius.circular(8),
-                                                ),
-                                                child: Stack(
-                                                  children: [
-                                                    GrapeMacaronCreationCirclePlayer(
-                                                      path: designTrendVaultStreetArtLoopItem
-                                                          .crossCultureTrendExchangeHubPostsVideo,
-                                                      autoPlay: false,
-                                                      looping: true,
-                                                      showControls: false,
-                                                    ),
-                                                    Align(
-                                                      alignment:
-                                                          AlignmentDirectional(
-                                                              0, 1),
-                                                      child: Padding(
-                                                        padding:
-                                                            EdgeInsetsDirectional
-                                                                .fromSTEB(
-                                                                    8, 0, 0, 8),
-                                                        child: Row(
-                                                          mainAxisSize:
-                                                              MainAxisSize.max,
-                                                          children: [
-                                                            Container(
-                                                              width: 14,
-                                                              height: 14,
-                                                              decoration:
-                                                                  BoxDecoration(
-                                                                image:
-                                                                    DecorationImage(
-                                                                  fit: BoxFit
-                                                                      .cover,
-                                                                  image: Image
-                                                                      .asset(
-                                                                    'assets/images/gdfghduhifhghouidfg_gvcyugsdfuiyagsydufig.png',
-                                                                  ).image,
-                                                                ),
-                                                              ),
-                                                            ),
-                                                            Text(
-                                                              '${designTrendVaultStreetArtLoopItem.crossCultureTrendExchangeHubPostsComments.toString()}',
-                                                              style: FlutterFlowTheme
-                                                                      .of(context)
-                                                                  .bodyMedium
-                                                                  .override(
-                                                                    font: GoogleFonts
-                                                                        .poppins(
-                                                                      fontWeight:
-                                                                          FontWeight
-                                                                              .bold,
-                                                                      fontStyle: FlutterFlowTheme.of(
-                                                                              context)
-                                                                          .bodyMedium
-                                                                          .fontStyle,
-                                                                    ),
-                                                                    color: FlutterFlowTheme.of(
-                                                                            context)
-                                                                        .info,
-                                                                    fontSize:
-                                                                        12,
-                                                                    letterSpacing:
-                                                                        0.0,
-                                                                    fontWeight:
-                                                                        FontWeight
-                                                                            .bold,
-                                                                    fontStyle: FlutterFlowTheme.of(
-                                                                            context)
-                                                                        .bodyMedium
-                                                                        .fontStyle,
-                                                                  ),
-                                                            ),
-                                                          ].divide(SizedBox(
-                                                              width: 4)),
-                                                        ),
-                                                      ),
-                                                    ),
-                                                  ],
-                                                ),
-                                              );
-                                            },
-                                          );
-                                        },
-                                      ),
+                                    VideoGridTabWidget(
+                                      userId:
+                                          widget.streetStyleHubUrbanTrendShare!,
                                     ),
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          10, 16, 10, 0),
-                                      child: Builder(
-                                        builder: (context) {
-                                          final styleVisionSpotAestheticVibeNet = FFAppState()
-                                              .sneakerheadCultureConnectPosts
-                                              .where((e) =>
-                                                  e.crossCultureTrendExchangeHubPostsPhoto
-                                                      .isNotEmpty &&
-                                                  e.crossCultureTrendExchangeHubPostsCreateId ==
-                                                      widget
-                                                          .streetStyleHubUrbanTrendShare)
-                                              .toList();
-                                          if (styleVisionSpotAestheticVibeNet
-                                              .isEmpty) {
-                                            return const TrendsetterWardrobeShowcaseEmptyWidget();
-                                          }
-                                          return ListView.separated(
-                                            padding: EdgeInsets.zero,
-                                            shrinkWrap: true,
-                                            scrollDirection: Axis.vertical,
-                                            itemCount:
-                                                styleVisionSpotAestheticVibeNet
-                                                    .length,
-                                            separatorBuilder: (_, __) =>
-                                                SizedBox(height: 24),
-                                            itemBuilder: (context,
-                                                styleVisionSpotAestheticVibeNetIndex) {
-                                              final styleVisionSpotAestheticVibeNetItem =
-                                                  styleVisionSpotAestheticVibeNet[
-                                                      styleVisionSpotAestheticVibeNetIndex];
-                                              return Padding(
-                                                padding: EdgeInsetsDirectional
-                                                    .fromSTEB(0, 16, 0, 0),
-                                                child: Column(
-                                                  mainAxisSize:
-                                                      MainAxisSize.max,
-                                                  crossAxisAlignment:
-                                                      CrossAxisAlignment.start,
-                                                  children: [
-                                                    Padding(
-                                                      padding:
-                                                          EdgeInsetsDirectional
-                                                              .fromSTEB(
-                                                                  24, 0, 24, 0),
-                                                      child: Row(
-                                                        mainAxisSize:
-                                                            MainAxisSize.max,
-                                                        children: [
-                                                          Container(
-                                                            width: 64,
-                                                            height: 64,
-                                                            clipBehavior:
-                                                                Clip.antiAlias,
-                                                            decoration:
-                                                                BoxDecoration(
-                                                              shape: BoxShape
-                                                                  .circle,
-                                                            ),
-                                                            child: Image.asset(
-                                                              FFAppState()
-                                                                  .urbanOutfitTrendSharingUsers
-                                                                  .elementAtOrNull(
-                                                                      styleVisionSpotAestheticVibeNetItem
-                                                                          .crossCultureTrendExchangeHubPostsCreateId)!
-                                                                  .streetTrendEchoSharingUserPhoto,
-                                                              fit: BoxFit.cover,
-                                                            ),
-                                                          ),
-                                                          Column(
-                                                            mainAxisSize:
-                                                                MainAxisSize
-                                                                    .max,
-                                                            crossAxisAlignment:
-                                                                CrossAxisAlignment
-                                                                    .start,
-                                                            children: [
-                                                              Text(
-                                                                '${FFAppState().urbanOutfitTrendSharingUsers.elementAtOrNull(styleVisionSpotAestheticVibeNetItem.crossCultureTrendExchangeHubPostsCreateId)?.streetTrendEchoSharingUserName}',
-                                                                style: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .bodyMedium
-                                                                    .override(
-                                                                      font: GoogleFonts
-                                                                          .poppins(
-                                                                        fontWeight:
-                                                                            FontWeight.w500,
-                                                                        fontStyle: FlutterFlowTheme.of(context)
-                                                                            .bodyMedium
-                                                                            .fontStyle,
-                                                                      ),
-                                                                      color: FlutterFlowTheme.of(
-                                                                              context)
-                                                                          .info,
-                                                                      fontSize:
-                                                                          18,
-                                                                      letterSpacing:
-                                                                          0.0,
-                                                                      fontWeight:
-                                                                          FontWeight
-                                                                              .w500,
-                                                                      fontStyle: FlutterFlowTheme.of(
-                                                                              context)
-                                                                          .bodyMedium
-                                                                          .fontStyle,
-                                                                    ),
-                                                              ),
-                                                              Text(
-                                                                dateTimeFormat(
-                                                                    "relative",
-                                                                    styleVisionSpotAestheticVibeNetItem
-                                                                        .crossCultureTrendExchangeHubPostsCreateTime!),
-                                                                style: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .bodyMedium
-                                                                    .override(
-                                                                      font: GoogleFonts
-                                                                          .poppins(
-                                                                        fontWeight: FlutterFlowTheme.of(context)
-                                                                            .bodyMedium
-                                                                            .fontWeight,
-                                                                        fontStyle: FlutterFlowTheme.of(context)
-                                                                            .bodyMedium
-                                                                            .fontStyle,
-                                                                      ),
-                                                                      color: Color(
-                                                                          0xCDFFFFFF),
-                                                                      fontSize:
-                                                                          16,
-                                                                      letterSpacing:
-                                                                          0.0,
-                                                                      fontWeight: FlutterFlowTheme.of(
-                                                                              context)
-                                                                          .bodyMedium
-                                                                          .fontWeight,
-                                                                      fontStyle: FlutterFlowTheme.of(
-                                                                              context)
-                                                                          .bodyMedium
-                                                                          .fontStyle,
-                                                                    ),
-                                                              ),
-                                                            ],
-                                                          ),
-                                                          Flexible(
-                                                            child: Align(
-                                                              alignment:
-                                                                  AlignmentDirectional(
-                                                                      1, 0),
-                                                              child: InkWell(
-                                                                splashColor: Colors
-                                                                    .transparent,
-                                                                focusColor: Colors
-                                                                    .transparent,
-                                                                hoverColor: Colors
-                                                                    .transparent,
-                                                                highlightColor:
-                                                                    Colors
-                                                                        .transparent,
-                                                                onTap:
-                                                                    () async {
-                                                                  context
-                                                                      .pushNamed(
-                                                                    UrbanStyleExpressionPlatformVideoChatWidget
-                                                                        .routeName,
-                                                                    queryParameters:
-                                                                        {
-                                                                      'uthTrendDanceCollaborationCircle':
-                                                                          serializeParam(
-                                                                        styleVisionSpotAestheticVibeNetItem
-                                                                            .crossCultureTrendExchangeHubPostsCreateId,
-                                                                        ParamType
-                                                                            .int,
-                                                                      ),
-                                                                    }.withoutNulls,
-                                                                    extra: <String,
-                                                                        dynamic>{
-                                                                      kTransitionInfoKey:
-                                                                          TransitionInfo(
-                                                                        hasTransition:
-                                                                            true,
-                                                                        transitionType:
-                                                                            PageTransitionType.rightToLeft,
-                                                                      ),
-                                                                    },
-                                                                  );
-                                                                },
-                                                                child:
-                                                                    Container(
-                                                                  width: 72,
-                                                                  height: 40,
-                                                                  decoration:
-                                                                      BoxDecoration(
-                                                                    image:
-                                                                        DecorationImage(
-                                                                      fit: BoxFit
-                                                                          .cover,
-                                                                      image: Image
-                                                                          .asset(
-                                                                        'assets/images/vgdstydfiuyds_sdasdgfyuisadfgyas.png',
-                                                                      ).image,
-                                                                    ),
-                                                                  ),
-                                                                ),
-                                                              ),
-                                                            ),
-                                                          ),
-                                                        ].divide(SizedBox(
-                                                            width: 16)),
-                                                      ),
-                                                    ),
-                                                    wrapWithModel(
-                                                      model: _model
-                                                          .urbanCultureFusionExplorationPlatformImageModels
-                                                          .getModel(
-                                                        styleVisionSpotAestheticVibeNetItem
-                                                            .crossCultureTrendExchangeHubPostsId
-                                                            .toString(),
-                                                        styleVisionSpotAestheticVibeNetIndex,
-                                                      ),
-                                                      updateCallback: () =>
-                                                          safeSetState(() {}),
-                                                      updateOnChange: true,
-                                                      child:
-                                                          UrbanCultureFusionExplorationPlatformImageWidget(
-                                                        key: Key(
-                                                          'Key8v9_${styleVisionSpotAestheticVibeNetItem.crossCultureTrendExchangeHubPostsId.toString()}',
-                                                        ),
-                                                        globalTrendLifestyle:
-                                                            styleVisionSpotAestheticVibeNetItem
-                                                                .crossCultureTrendExchangeHubPostsPhoto,
-                                                        sharingCommunity:
-                                                            styleVisionSpotAestheticVibeNetItem,
-                                                        popCultureVibeInnovationNetwork:
-                                                            styleVisionSpotAestheticVibeNetItem
-                                                                .crossCultureTrendExchangeHubPostsPhoto,
-                                                      ),
-                                                    ),
-                                                    Column(
-                                                      mainAxisSize:
-                                                          MainAxisSize.max,
-                                                      crossAxisAlignment:
-                                                          CrossAxisAlignment
-                                                              .start,
-                                                      children: [
-                                                        Padding(
-                                                          padding:
-                                                              EdgeInsetsDirectional
-                                                                  .fromSTEB(24,
-                                                                      24, 0, 0),
-                                                          child: Text(
-                                                            '${styleVisionSpotAestheticVibeNetItem.crossCultureTrendExchangeHubPostsDescribe}',
-                                                            maxLines: 2,
-                                                            style: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .bodyMedium
-                                                                .override(
-                                                                  font: GoogleFonts
-                                                                      .poppins(
-                                                                    fontWeight: FlutterFlowTheme.of(
-                                                                            context)
-                                                                        .bodyMedium
-                                                                        .fontWeight,
-                                                                    fontStyle: FlutterFlowTheme.of(
-                                                                            context)
-                                                                        .bodyMedium
-                                                                        .fontStyle,
-                                                                  ),
-                                                                  color: Color(
-                                                                      0xCCFFFFFF),
-                                                                  letterSpacing:
-                                                                      0.0,
-                                                                  fontWeight: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .bodyMedium
-                                                                      .fontWeight,
-                                                                  fontStyle: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .bodyMedium
-                                                                      .fontStyle,
-                                                                ),
-                                                          ),
-                                                        ),
-                                                        Padding(
-                                                          padding:
-                                                              EdgeInsetsDirectional
-                                                                  .fromSTEB(24,
-                                                                      18, 0, 0),
-                                                          child: Row(
-                                                            mainAxisSize:
-                                                                MainAxisSize
-                                                                    .max,
-                                                            children: [
-                                                              Row(
-                                                                mainAxisSize:
-                                                                    MainAxisSize
-                                                                        .max,
-                                                                children: [
-                                                                  Container(
-                                                                    width: 24,
-                                                                    height: 24,
-                                                                    decoration:
-                                                                        BoxDecoration(
-                                                                      image:
-                                                                          DecorationImage(
-                                                                        fit: BoxFit
-                                                                            .cover,
-                                                                        image: Image
-                                                                            .asset(
-                                                                          'assets/images/rgfyudgfsiudfgd_fvgdyfugsdyfgisdyfi.png',
-                                                                        ).image,
-                                                                      ),
-                                                                    ),
-                                                                  ),
-                                                                  Text(
-                                                                    '${styleVisionSpotAestheticVibeNetItem.crossCultureTrendExchangeHubPostsComments.toString()}',
-                                                                    style: FlutterFlowTheme.of(
-                                                                            context)
-                                                                        .bodyMedium
-                                                                        .override(
-                                                                          font:
-                                                                              GoogleFonts.poppins(
-                                                                            fontWeight:
-                                                                                FlutterFlowTheme.of(context).bodyMedium.fontWeight,
-                                                                            fontStyle:
-                                                                                FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                                                                          ),
-                                                                          color:
-                                                                              Color(0xFFCCCCCC),
-                                                                          letterSpacing:
-                                                                              0.0,
-                                                                          fontWeight: FlutterFlowTheme.of(context)
-                                                                              .bodyMedium
-                                                                              .fontWeight,
-                                                                          fontStyle: FlutterFlowTheme.of(context)
-                                                                              .bodyMedium
-                                                                              .fontStyle,
-                                                                        ),
-                                                                  ),
-                                                                ].divide(
-                                                                    SizedBox(
-                                                                        width:
-                                                                            4)),
-                                                              ),
-                                                              Padding(
-                                                                padding:
-                                                                    EdgeInsetsDirectional
-                                                                        .fromSTEB(
-                                                                            32,
-                                                                            0,
-                                                                            0,
-                                                                            0),
-                                                                child: Row(
-                                                                  mainAxisSize:
-                                                                      MainAxisSize
-                                                                          .max,
-                                                                  children: [
-                                                                    Builder(
-                                                                      builder:
-                                                                          (context) {
-                                                                        if (styleVisionSpotAestheticVibeNetItem
-                                                                            .crossCultureTrendExchangeHubPostsLikeUser
-                                                                            .contains(FFAppState().urbanTrendVisualCollaborationCurrent)) {
-                                                                          return InkWell(
-                                                                            splashColor:
-                                                                                Colors.transparent,
-                                                                            focusColor:
-                                                                                Colors.transparent,
-                                                                            hoverColor:
-                                                                                Colors.transparent,
-                                                                            highlightColor:
-                                                                                Colors.transparent,
-                                                                            onTap:
-                                                                                () async {
-                                                                              HapticFeedback.heavyImpact();
-                                                                              FFAppState().updateSneakerheadCultureConnectPostsAtIndex(
-                                                                                styleVisionSpotAestheticVibeNetItem.crossCultureTrendExchangeHubPostsId,
-                                                                                (e) => e
-                                                                                  ..updateCrossCultureTrendExchangeHubPostsLikeUser(
-                                                                                    (e) => e.remove(FFAppState().urbanTrendVisualCollaborationCurrent),
-                                                                                  ),
-                                                                              );
-                                                                              FFAppState().update(() {});
-                                                                            },
-                                                                            child:
-                                                                                AnimatedContainer(
-                                                                              duration: Duration(milliseconds: 400),
-                                                                              curve: Curves.easeInOut,
-                                                                              width: 24,
-                                                                              height: 24,
-                                                                              decoration: BoxDecoration(
-                                                                                image: DecorationImage(
-                                                                                  fit: BoxFit.cover,
-                                                                                  image: Image.asset(
-                                                                                    'assets/images/sdgvyfushdfysiudf_ciguvetdioueyfisudfgyis.png',
-                                                                                  ).image,
-                                                                                ),
-                                                                              ),
-                                                                            ),
-                                                                          );
-                                                                        } else {
-                                                                          return InkWell(
-                                                                            splashColor:
-                                                                                Colors.transparent,
-                                                                            focusColor:
-                                                                                Colors.transparent,
-                                                                            hoverColor:
-                                                                                Colors.transparent,
-                                                                            highlightColor:
-                                                                                Colors.transparent,
-                                                                            onTap:
-                                                                                () async {
-                                                                              HapticFeedback.heavyImpact();
-                                                                              FFAppState().updateSneakerheadCultureConnectPostsAtIndex(
-                                                                                styleVisionSpotAestheticVibeNetItem.crossCultureTrendExchangeHubPostsId,
-                                                                                (e) => e
-                                                                                  ..updateCrossCultureTrendExchangeHubPostsLikeUser(
-                                                                                    (e) => e.add(FFAppState().urbanTrendVisualCollaborationCurrent),
-                                                                                  ),
-                                                                              );
-                                                                              FFAppState().update(() {});
-                                                                            },
-                                                                            child:
-                                                                                AnimatedContainer(
-                                                                              duration: Duration(milliseconds: 400),
-                                                                              curve: Curves.easeInOut,
-                                                                              width: 24,
-                                                                              height: 24,
-                                                                              decoration: BoxDecoration(
-                                                                                image: DecorationImage(
-                                                                                  fit: BoxFit.cover,
-                                                                                  image: Image.asset(
-                                                                                    'assets/images/vdbysfugstudyiyfgeyui_ewfugyftusydfyagsif.png',
-                                                                                  ).image,
-                                                                                ),
-                                                                              ),
-                                                                            ),
-                                                                          );
-                                                                        }
-                                                                      },
-                                                                    ),
-                                                                    Text(
-                                                                      '${styleVisionSpotAestheticVibeNetItem.crossCultureTrendExchangeHubPostsLikeUser.length.toString()}',
-                                                                      style: FlutterFlowTheme.of(
-                                                                              context)
-                                                                          .bodyMedium
-                                                                          .override(
-                                                                            font:
-                                                                                GoogleFonts.poppins(
-                                                                              fontWeight: FlutterFlowTheme.of(context).bodyMedium.fontWeight,
-                                                                              fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                                                                            ),
-                                                                            color:
-                                                                                Color(0xFFCCCCCC),
-                                                                            letterSpacing:
-                                                                                0.0,
-                                                                            fontWeight:
-                                                                                FlutterFlowTheme.of(context).bodyMedium.fontWeight,
-                                                                            fontStyle:
-                                                                                FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                                                                          ),
-                                                                    ),
-                                                                  ].divide(
-                                                                      SizedBox(
-                                                                          width:
-                                                                              4)),
-                                                                ),
-                                                              ),
-                                                              if (FFAppState()
-                                                                      .urbanTrendVisualCollaborationCurrent !=
-                                                                  styleVisionSpotAestheticVibeNetItem
-                                                                      .crossCultureTrendExchangeHubPostsCreateId)
-                                                                Flexible(
-                                                                  child: Align(
-                                                                    alignment:
-                                                                        AlignmentDirectional(
-                                                                            1,
-                                                                            0),
-                                                                    child:
-                                                                        Padding(
-                                                                      padding: EdgeInsetsDirectional
-                                                                          .fromSTEB(
-                                                                              0,
-                                                                              0,
-                                                                              24,
-                                                                              0),
-                                                                      child:
-                                                                          InkWell(
-                                                                        splashColor:
-                                                                            Colors.transparent,
-                                                                        focusColor:
-                                                                            Colors.transparent,
-                                                                        hoverColor:
-                                                                            Colors.transparent,
-                                                                        highlightColor:
-                                                                            Colors.transparent,
-                                                                        onTap:
-                                                                            () async {
-                                                                          await showModalBottomSheet(
-                                                                            isScrollControlled:
-                                                                                true,
-                                                                            backgroundColor:
-                                                                                Colors.transparent,
-                                                                            enableDrag:
-                                                                                false,
-                                                                            context:
-                                                                                context,
-                                                                            builder:
-                                                                                (context) {
-                                                                              return GestureDetector(
-                                                                                onTap: () {
-                                                                                  FocusScope.of(context).unfocus();
-                                                                                  FocusManager.instance.primaryFocus?.unfocus();
-                                                                                },
-                                                                                child: Padding(
-                                                                                  padding: MediaQuery.viewInsetsOf(context),
-                                                                                  child: WorldYouthTrendInspirationNetworkReportBlackWidget(
-                                                                                    tureStyleCultureCollaborationGrid: styleVisionSpotAestheticVibeNetItem.crossCultureTrendExchangeHubPostsCreateId,
-                                                                                  ),
-                                                                                ),
-                                                                              );
-                                                                            },
-                                                                          ).then((value) =>
-                                                                              safeSetState(() {}));
-                                                                        },
-                                                                        child:
-                                                                            Container(
-                                                                          width:
-                                                                              24,
-                                                                          height:
-                                                                              24,
-                                                                          decoration:
-                                                                              BoxDecoration(
-                                                                            image:
-                                                                                DecorationImage(
-                                                                              fit: BoxFit.cover,
-                                                                              image: Image.asset(
-                                                                                'assets/images/cvyegfgyusgfi_erfuiygsdtyufwyiufy.png',
-                                                                              ).image,
-                                                                            ),
-                                                                          ),
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                  ),
-                                                                ),
-                                                            ],
-                                                          ),
-                                                        ),
-                                                      ],
-                                                    ),
-                                                    Padding(
-                                                      padding:
-                                                          EdgeInsetsDirectional
-                                                              .fromSTEB(
-                                                                  0, 24, 0, 0),
-                                                      child: Container(
-                                                        width: double.infinity,
-                                                        height: 1,
-                                                        decoration:
-                                                            BoxDecoration(
-                                                          color:
-                                                              Color(0x34FFFFFF),
-                                                        ),
-                                                      ),
-                                                    ),
-                                                  ],
-                                                ),
-                                              );
-                                            },
-                                          );
-                                        },
-                                      ),
+                                    PostsListTabWidget(
+                                      userId:
+                                          widget.streetStyleHubUrbanTrendShare!,
                                     ),
                                   ],
                                 ),
@@ -1323,7 +756,7 @@ class _FashionCollaborationSharingArenaOtherInfoWidgetState
               ],
             ),
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(16, 60, 16, 0),
+              padding: EdgeInsetsDirectional.fromSTEB(16.0, 60.0, 16.0, 0.0),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -1337,8 +770,8 @@ class _FashionCollaborationSharingArenaOtherInfoWidgetState
                       context.safePop();
                     },
                     child: Container(
-                      width: 36,
-                      height: 36,
+                      width: 36.0,
+                      height: 36.0,
                       decoration: BoxDecoration(
                         image: DecorationImage(
                           fit: BoxFit.cover,
@@ -1347,10 +780,10 @@ class _FashionCollaborationSharingArenaOtherInfoWidgetState
                           ).image,
                         ),
                         borderRadius: BorderRadius.only(
-                          bottomLeft: Radius.circular(0),
-                          bottomRight: Radius.circular(0),
-                          topLeft: Radius.circular(0),
-                          topRight: Radius.circular(0),
+                          bottomLeft: Radius.circular(0.0),
+                          bottomRight: Radius.circular(0.0),
+                          topLeft: Radius.circular(0.0),
+                          topRight: Radius.circular(0.0),
                         ),
                       ),
                     ),
@@ -1386,8 +819,8 @@ class _FashionCollaborationSharingArenaOtherInfoWidgetState
                       ).then((value) => safeSetState(() {}));
                     },
                     child: Container(
-                      width: 36,
-                      height: 36,
+                      width: 36.0,
+                      height: 36.0,
                       decoration: BoxDecoration(
                         image: DecorationImage(
                           fit: BoxFit.cover,

@@ -707,29 +707,14 @@ class _CrossoverStyleNetWorldZhuanshuDetailWidgetState
                                                             .fontStyle,
                                                   ),
                                             ),
-                                            Expanded(
-                                              child: Text(
-                                                lifestyleDesignFusionExperienceItem
-                                                    .creativeTrendBeatCollCommentsContent,
-                                                style: FlutterFlowTheme.of(
-                                                        context)
-                                                    .bodyMedium
-                                                    .override(
-                                                      font: GoogleFonts.poppins(
-                                                        fontWeight:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .bodyMedium
-                                                                .fontWeight,
-                                                        fontStyle:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .bodyMedium
-                                                                .fontStyle,
-                                                      ),
-                                                      color: Color(0xFFCCCCCC),
-                                                      fontSize: 12.0,
-                                                      letterSpacing: 0.0,
+                                            Text(
+                                              lifestyleDesignFusionExperienceItem
+                                                  .creativeTrendBeatCollCommentsContent,
+                                              style: FlutterFlowTheme.of(
+                                                      context)
+                                                  .bodyMedium
+                                                  .override(
+                                                    font: GoogleFonts.poppins(
                                                       fontWeight:
                                                           FlutterFlowTheme.of(
                                                                   context)
@@ -741,7 +726,20 @@ class _CrossoverStyleNetWorldZhuanshuDetailWidgetState
                                                               .bodyMedium
                                                               .fontStyle,
                                                     ),
-                                              ),
+                                                    color: Color(0xFFCCCCCC),
+                                                    fontSize: 12.0,
+                                                    letterSpacing: 0.0,
+                                                    fontWeight:
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .bodyMedium
+                                                            .fontWeight,
+                                                    fontStyle:
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .bodyMedium
+                                                            .fontStyle,
+                                                  ),
                                             ),
                                           ].divide(SizedBox(height: 2.0)),
                                         ),

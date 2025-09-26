@@ -1,9 +1,12 @@
 import '/backend/schema/structs/index.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/global_sneaker_culture_exchange/youth_culture_style_discovery_lab_notenough/youth_culture_style_discovery_lab_notenough_widget.dart';
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
+
 import 'hype_culture_radar_street_vibe_atlas_public_model.dart';
 export 'hype_culture_radar_street_vibe_atlas_public_model.dart';
 
@@ -59,7 +62,7 @@ class _HypeCultureRadarStreetVibeAtlasPublicWidgetState
               mainAxisSize: MainAxisSize.max,
               children: [
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(16.0, 60.0, 0.0, 0.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(16, 60, 0, 0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     children: [
@@ -72,8 +75,8 @@ class _HypeCultureRadarStreetVibeAtlasPublicWidgetState
                           context.safePop();
                         },
                         child: Container(
-                          width: 36.0,
-                          height: 36.0,
+                          width: 36,
+                          height: 36,
                           decoration: BoxDecoration(
                             image: DecorationImage(
                               fit: BoxFit.cover,
@@ -82,10 +85,10 @@ class _HypeCultureRadarStreetVibeAtlasPublicWidgetState
                               ).image,
                             ),
                             borderRadius: BorderRadius.only(
-                              bottomLeft: Radius.circular(0.0),
-                              bottomRight: Radius.circular(0.0),
-                              topLeft: Radius.circular(0.0),
-                              topRight: Radius.circular(0.0),
+                              bottomLeft: Radius.circular(0),
+                              bottomRight: Radius.circular(0),
+                              topLeft: Radius.circular(0),
+                              topRight: Radius.circular(0),
                             ),
                           ),
                         ),
@@ -95,15 +98,14 @@ class _HypeCultureRadarStreetVibeAtlasPublicWidgetState
                 ),
                 Expanded(
                   child: Padding(
-                    padding:
-                        EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 0.0),
+                    padding: EdgeInsetsDirectional.fromSTEB(16, 16, 16, 0),
                     child: SingleChildScrollView(
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Container(
                             width: double.infinity,
-                            height: 243.0,
+                            height: 243,
                             decoration: BoxDecoration(
                               image: DecorationImage(
                                 fit: BoxFit.fill,
@@ -118,7 +120,7 @@ class _HypeCultureRadarStreetVibeAtlasPublicWidgetState
                                   alignment: AlignmentDirectional(-1.1, -0.9),
                                   child: Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
-                                        5.0, 0.0, 0.0, 0.0),
+                                        5, 0, 0, 0),
                                     child: Container(
                                       width: double.infinity,
                                       child: TextFormField(
@@ -186,7 +188,7 @@ class _HypeCultureRadarStreetVibeAtlasPublicWidgetState
                                           enabledBorder: OutlineInputBorder(
                                             borderSide: BorderSide(
                                               color: Color(0x00000000),
-                                              width: 1.0,
+                                              width: 1,
                                             ),
                                             borderRadius:
                                                 const BorderRadius.only(
@@ -197,7 +199,7 @@ class _HypeCultureRadarStreetVibeAtlasPublicWidgetState
                                           focusedBorder: OutlineInputBorder(
                                             borderSide: BorderSide(
                                               color: Color(0x00000000),
-                                              width: 1.0,
+                                              width: 1,
                                             ),
                                             borderRadius:
                                                 const BorderRadius.only(
@@ -208,7 +210,7 @@ class _HypeCultureRadarStreetVibeAtlasPublicWidgetState
                                           errorBorder: OutlineInputBorder(
                                             borderSide: BorderSide(
                                               color: Color(0x00000000),
-                                              width: 1.0,
+                                              width: 1,
                                             ),
                                             borderRadius:
                                                 const BorderRadius.only(
@@ -220,7 +222,7 @@ class _HypeCultureRadarStreetVibeAtlasPublicWidgetState
                                               OutlineInputBorder(
                                             borderSide: BorderSide(
                                               color: Color(0x00000000),
-                                              width: 1.0,
+                                              width: 1,
                                             ),
                                             borderRadius:
                                                 const BorderRadius.only(
@@ -270,132 +272,339 @@ class _HypeCultureRadarStreetVibeAtlasPublicWidgetState
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
-                                0.0, 26.0, 0.0, 0.0),
+                            padding:
+                                EdgeInsetsDirectional.fromSTEB(0, 26, 0, 0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
                               children: [
-                                Container(
-                                  width: 116.0,
-                                  height: 116.0,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(8.0),
-                                  ),
-                                  child: Stack(
-                                    children: [
-                                      Align(
-                                        alignment:
-                                            AlignmentDirectional(1.1, -1.1),
-                                        child: InkWell(
-                                          splashColor: Colors.transparent,
-                                          focusColor: Colors.transparent,
-                                          hoverColor: Colors.transparent,
-                                          highlightColor: Colors.transparent,
-                                          onTap: () async {
-                                            _model.futureStyleCultureCollaboration =
-                                                null;
-                                            safeSetState(() {});
-                                          },
-                                          child: Container(
-                                            width: 16.0,
-                                            height: 16.0,
-                                            decoration: BoxDecoration(
-                                              image: DecorationImage(
-                                                fit: BoxFit.cover,
-                                                image: Image.asset(
-                                                  'assets/images/sdifaodfugiodi_erwuyiadghoiuygdfiu.png',
-                                                ).image,
+                                // 已上传的媒体预览区域
+                                if (_model.futureStyleCultureCollaboration !=
+                                        null &&
+                                    _model.futureStyleCultureCollaboration !=
+                                        '')
+                                  Container(
+                                    width: 116,
+                                    height: 116,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(8),
+                                      border: Border.all(
+                                        color: Color(0xFF696EFF),
+                                        width: 2,
+                                      ),
+                                    ),
+                                    child: Stack(
+                                      children: [
+                                        // 显示已上传媒体的占位符
+                                        Center(
+                                          child: Icon(
+                                            Icons.image,
+                                            color: Color(0xFF696EFF),
+                                            size: 40,
+                                          ),
+                                        ),
+                                        // 删除按钮
+                                        Align(
+                                          alignment:
+                                              AlignmentDirectional(1.1, -1.1),
+                                          child: InkWell(
+                                            splashColor: Colors.transparent,
+                                            focusColor: Colors.transparent,
+                                            hoverColor: Colors.transparent,
+                                            highlightColor: Colors.transparent,
+                                            onTap: () async {
+                                              _model.futureStyleCultureCollaboration =
+                                                  null;
+                                              safeSetState(() {});
+                                            },
+                                            child: Container(
+                                              width: 24,
+                                              height: 24,
+                                              decoration: BoxDecoration(
+                                                color: Colors.red,
+                                                shape: BoxShape.circle,
+                                              ),
+                                              child: Icon(
+                                                Icons.close,
+                                                color: Colors.white,
+                                                size: 16,
                                               ),
                                             ),
                                           ),
                                         ),
+                                      ],
+                                    ),
+                                  ),
+                                // 上传按钮（当没有媒体时显示）
+                                if (_model.futureStyleCultureCollaboration ==
+                                        null ||
+                                    _model.futureStyleCultureCollaboration ==
+                                        '')
+                                  InkWell(
+                                    splashColor: Colors.transparent,
+                                    focusColor: Colors.transparent,
+                                    hoverColor: Colors.transparent,
+                                    highlightColor: Colors.transparent,
+                                    onTap: () async {
+                                      // 模拟文件选择逻辑
+                                      // 在实际应用中，这里应该调用文件选择器
+                                      _model.futureStyleCultureCollaboration =
+                                          'uploaded_media_${DateTime.now().millisecondsSinceEpoch}';
+                                      safeSetState(() {});
+
+                                      // 显示成功提示
+                                      ScaffoldMessenger.of(context)
+                                          .showSnackBar(
+                                        SnackBar(
+                                          backgroundColor: Colors.green,
+                                          content: Text(
+                                            'Media uploaded successfully!',
+                                            style:
+                                                TextStyle(color: Colors.white),
+                                          ),
+                                          duration: Duration(seconds: 1),
+                                        ),
+                                      );
+                                    },
+                                    child: Container(
+                                      width: 116,
+                                      height: 116,
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(8),
+                                        border: Border.all(
+                                          color: Color(0x4CFFFFFF),
+                                          width: 2,
+                                        ),
                                       ),
-                                    ],
+                                      child: Column(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: [
+                                          Icon(
+                                            Icons.add_photo_alternate,
+                                            color: Color(0x80FFFFFF),
+                                            size: 32,
+                                          ),
+                                          SizedBox(height: 8),
+                                          Text(
+                                            'Upload\nPhoto/Video',
+                                            textAlign: TextAlign.center,
+                                            style: TextStyle(
+                                              color: Color(0x80FFFFFF),
+                                              fontSize: 12,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding:
+                                EdgeInsetsDirectional.fromSTEB(0, 200, 0, 16),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.max,
+                              children: [
+                                Text(
+                                  'Each Post cost 30',
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyMedium
+                                      .override(
+                                        font: GoogleFonts.poppins(
+                                          fontWeight:
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyMedium
+                                                  .fontWeight,
+                                          fontStyle:
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyMedium
+                                                  .fontStyle,
+                                        ),
+                                        color: Color(0xCCFFFFFF),
+                                        letterSpacing: 0.0,
+                                        fontWeight: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .fontWeight,
+                                        fontStyle: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .fontStyle,
+                                      ),
+                                ),
+                                Container(
+                                  width: 20,
+                                  height: 20,
+                                  decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                      fit: BoxFit.fill,
+                                      image: Image.asset(
+                                        'assets/images/gudhfgudsiofg_erifuhdsufghsdofug.png',
+                                      ).image,
+                                    ),
                                   ),
                                 ),
                               ],
                             ),
                           ),
-                          Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
-                                0.0, 200.0, 0.0, 0.0),
-                            child: InkWell(
-                              splashColor: Colors.transparent,
-                              focusColor: Colors.transparent,
-                              hoverColor: Colors.transparent,
-                              highlightColor: Colors.transparent,
-                              onTap: () async {
-                                if (_model.textController.text != '') {
-                                  if (_model.futureStyleCultureCollaboration !=
-                                          null &&
-                                      _model.futureStyleCultureCollaboration !=
-                                          '') {
-                                    FFAppState()
-                                        .addToSneakerheadCultureConnectPosts(
-                                            CrossCultureTrendExchangeHubPostsStruct(
-                                      crossCultureTrendExchangeHubPostsId:
-                                          FFAppState()
-                                              .sneakerheadCultureConnectPosts
-                                              .length,
-                                      crossCultureTrendExchangeHubPostsCreateId:
-                                          FFAppState()
-                                              .urbanTrendVisualCollaborationCurrent,
-                                      crossCultureTrendExchangeHubPostsDescribe:
-                                          _model.textController.text,
-                                      crossCultureTrendExchangeHubPostsComments:
-                                          0,
-                                      crossCultureTrendExchangeHubPostsCreateTime:
-                                          getCurrentTimestamp,
-                                      crossCultureTrendExchangeHubPostsPhoto: [
-                                        '1',
-                                        '2'
-                                      ],
-                                    ));
-                                    FFAppState().update(() {});
-                                    context.safePop();
-                                  }
-                                }
-                              },
-                              child: Container(
-                                width: double.infinity,
-                                height: 60.0,
-                                decoration: BoxDecoration(
-                                  gradient: LinearGradient(
-                                    colors: [
-                                      Color(0xFFFF94FA),
-                                      Color(0xFF696EFF)
-                                    ],
-                                    stops: [0.0, 1.0],
-                                    begin: AlignmentDirectional(-1.0, 0.34),
-                                    end: AlignmentDirectional(1.0, -0.34),
+                          InkWell(
+                            splashColor: Colors.transparent,
+                            focusColor: Colors.transparent,
+                            hoverColor: Colors.transparent,
+                            highlightColor: Colors.transparent,
+                            onTap: () async {
+                              // 第一步：检查是否上传了图片或视频
+                              if (_model.futureStyleCultureCollaboration ==
+                                      null ||
+                                  _model.futureStyleCultureCollaboration ==
+                                      '') {
+                                // 显示错误提示：请先上传图片或视频
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                  SnackBar(
+                                    backgroundColor: Colors.red,
+                                    content: Text(
+                                      'Please upload an image or video first',
+                                      style: TextStyle(color: Colors.white),
+                                    ),
+                                    duration: Duration(seconds: 2),
                                   ),
-                                  borderRadius: BorderRadius.circular(16.0),
+                                );
+                                return;
+                              }
+
+                              // 第二步：检查是否填写了内容
+                              if (_model.textController.text.trim().isEmpty) {
+                                // 显示错误提示：请填写内容
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                  SnackBar(
+                                    backgroundColor: Colors.red,
+                                    content: Text(
+                                      'Please enter content for your post',
+                                      style: TextStyle(color: Colors.white),
+                                    ),
+                                    duration: Duration(seconds: 2),
+                                  ),
+                                );
+                                return;
+                              }
+
+                              // 第三步：检查金币是否充足（每个帖子花费30金币）
+                              final currentUserBalance = FFAppState()
+                                      .urbanOutfitTrendSharingUsers
+                                      .elementAtOrNull(FFAppState()
+                                          .urbanTrendVisualCollaborationCurrent)
+                                      ?.streetTrendEchoSharingUserBalance ??
+                                  0;
+
+                              if (currentUserBalance < 30) {
+                                // 金币不足，弹出YouthCultureStyleDiscoveryLabNotenoughWidget
+                                await showDialog(
+                                  barrierColor: Color(0x7F17171F),
+                                  context: context,
+                                  builder: (dialogContext) {
+                                    return Dialog(
+                                      elevation: 0,
+                                      insetPadding: EdgeInsets.zero,
+                                      backgroundColor: Colors.transparent,
+                                      alignment: AlignmentDirectional(0.0, 0.0)
+                                          .resolve(Directionality.of(context)),
+                                      child: GestureDetector(
+                                        onTap: () {
+                                          FocusScope.of(dialogContext)
+                                              .unfocus();
+                                          FocusManager.instance.primaryFocus
+                                              ?.unfocus();
+                                        },
+                                        child:
+                                            YouthCultureStyleDiscoveryLabNotenoughWidget(),
+                                      ),
+                                    );
+                                  },
+                                );
+                                return;
+                              }
+
+                              // 所有验证通过，执行发布逻辑
+                              // 扣除金币
+                              FFAppState()
+                                  .urbanOutfitTrendSharingUsers[FFAppState()
+                                      .urbanTrendVisualCollaborationCurrent]
+                                  .streetTrendEchoSharingUserBalance -= 30;
+
+                              // 创建新帖子
+                              FFAppState().addToSneakerheadCultureConnectPosts(
+                                  CrossCultureTrendExchangeHubPostsStruct(
+                                crossCultureTrendExchangeHubPostsId:
+                                    FFAppState()
+                                        .sneakerheadCultureConnectPosts
+                                        .length,
+                                crossCultureTrendExchangeHubPostsCreateId:
+                                    FFAppState()
+                                        .urbanTrendVisualCollaborationCurrent,
+                                crossCultureTrendExchangeHubPostsDescribe:
+                                    _model.textController.text,
+                                crossCultureTrendExchangeHubPostsComments: 0,
+                                crossCultureTrendExchangeHubPostsCreateTime:
+                                    getCurrentTimestamp,
+                                crossCultureTrendExchangeHubPostsPhoto: [
+                                  _model.futureStyleCultureCollaboration!,
+                                ],
+                              ));
+
+                              FFAppState().update(() {});
+
+                              // 显示成功提示
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                SnackBar(
+                                  backgroundColor: Colors.green,
+                                  content: Text(
+                                    'Post published successfully! 30 coins deducted.',
+                                    style: TextStyle(color: Colors.white),
+                                  ),
+                                  duration: Duration(seconds: 2),
                                 ),
-                                child: Align(
-                                  alignment: AlignmentDirectional(0.0, 0.0),
-                                  child: Text(
-                                    'Send',
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .override(
-                                          font: GoogleFonts.roboto(
-                                            fontWeight: FontWeight.bold,
-                                            fontStyle:
-                                                FlutterFlowTheme.of(context)
-                                                    .bodyMedium
-                                                    .fontStyle,
-                                          ),
-                                          color:
-                                              FlutterFlowTheme.of(context).info,
-                                          fontSize: 24.0,
-                                          letterSpacing: 0.0,
+                              );
+
+                              // 返回上一页
+                              context.safePop();
+                            },
+                            child: Container(
+                              width: double.infinity,
+                              height: 60,
+                              decoration: BoxDecoration(
+                                gradient: LinearGradient(
+                                  colors: [
+                                    Color(0xFFFF94FA),
+                                    Color(0xFF696EFF)
+                                  ],
+                                  stops: [0, 1],
+                                  begin: AlignmentDirectional(-1, 0.34),
+                                  end: AlignmentDirectional(1, -0.34),
+                                ),
+                                borderRadius: BorderRadius.circular(16),
+                              ),
+                              child: Align(
+                                alignment: AlignmentDirectional(0, 0),
+                                child: Text(
+                                  'Send',
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyMedium
+                                      .override(
+                                        font: GoogleFonts.roboto(
                                           fontWeight: FontWeight.bold,
                                           fontStyle:
                                               FlutterFlowTheme.of(context)
                                                   .bodyMedium
                                                   .fontStyle,
                                         ),
-                                  ),
+                                        color:
+                                            FlutterFlowTheme.of(context).info,
+                                        fontSize: 24,
+                                        letterSpacing: 0.0,
+                                        fontWeight: FontWeight.bold,
+                                        fontStyle: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .fontStyle,
+                                      ),
                                 ),
                               ),
                             ),

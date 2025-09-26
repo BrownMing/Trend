@@ -1,5 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/street_trend_collective_urban_style_exchange/hype_culture_sharing_fashion_flowstart/hype_culture_sharing_fashion_flowstart_widget.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart'
     as smooth_page_indicator;
 import 'package:flutter/material.dart';
@@ -60,6 +61,7 @@ class _SneakerWaveHubStyleInfluenceBaseGuideWidgetState
                   child: Stack(
                     children: [
                       PageView.builder(
+                        physics: const NeverScrollableScrollPhysics(),
                         controller: _model.pageViewController ??=
                             PageController(
                                 initialPage: max(
@@ -131,16 +133,24 @@ class _SneakerWaveHubStyleInfluenceBaseGuideWidgetState
               alignment: AlignmentDirectional(0.0, 1.0),
               child: Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 58.0),
-                child: InkWell(
-                  splashColor: Colors.transparent,
-                  focusColor: Colors.transparent,
-                  hoverColor: Colors.transparent,
-                  highlightColor: Colors.transparent,
+                child: GestureDetector(
                   onTap: () async {
-                    await _model.pageViewController?.nextPage(
-                      duration: Duration(milliseconds: 300),
-                      curve: Curves.ease,
-                    );
+                    final currentPage =
+                        _model.pageViewController?.page?.round() ?? 0;
+                    final totalPages =
+                        _model.sreetStyleFusionExperiencePlatform.length;
+
+                    if (currentPage >= totalPages - 1) {
+                      // 已经是最后一页，跳转到目标页面
+                      context.pushNamed(
+                          HypeCultureSharingFashionFlowstartWidget.routeName);
+                    } else {
+                      // 不是最后一页，继续下一页
+                      await _model.pageViewController?.nextPage(
+                        duration: Duration(milliseconds: 300),
+                        curve: Curves.ease,
+                      );
+                    }
                   },
                   child: Container(
                     width: 315.0,
@@ -151,23 +161,37 @@ class _SneakerWaveHubStyleInfluenceBaseGuideWidgetState
                     ),
                     child: Align(
                       alignment: AlignmentDirectional(0.0, 0.0),
-                      child: Text(
-                        'Next',
-                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              font: GoogleFonts.poppins(
-                                fontWeight: FontWeight.w500,
-                                fontStyle: FlutterFlowTheme.of(context)
-                                    .bodyMedium
-                                    .fontStyle,
-                              ),
-                              color: Color(0xFF17171F),
-                              fontSize: 28.0,
-                              letterSpacing: 0.0,
-                              fontWeight: FontWeight.w500,
-                              fontStyle: FlutterFlowTheme.of(context)
-                                  .bodyMedium
-                                  .fontStyle,
-                            ),
+                      child: AnimatedBuilder(
+                        animation:
+                            _model.pageViewController ?? PageController(),
+                        builder: (context, child) {
+                          final currentPage =
+                              _model.pageViewController?.page?.round() ?? 0;
+                          final totalPages =
+                              _model.sreetStyleFusionExperiencePlatform.length;
+                          final isLastPage = currentPage >= totalPages - 1;
+
+                          return Text(
+                            isLastPage ? 'Get Started' : 'Next',
+                            style: FlutterFlowTheme.of(context)
+                                .bodyMedium
+                                .override(
+                                  font: GoogleFonts.poppins(
+                                    fontWeight: FontWeight.w500,
+                                    fontStyle: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .fontStyle,
+                                  ),
+                                  color: Color(0xFF17171F),
+                                  fontSize: 28.0,
+                                  letterSpacing: 0.0,
+                                  fontWeight: FontWeight.w500,
+                                  fontStyle: FlutterFlowTheme.of(context)
+                                      .bodyMedium
+                                      .fontStyle,
+                                ),
+                          );
+                        },
                       ),
                     ),
                   ),

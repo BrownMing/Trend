@@ -390,240 +390,241 @@ class _FutureTrendCircleHypeSharingWorldMessagesWidgetState
                                   return Column(
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
-                                      Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            0.0, 0.0, 0.0, 20.0),
-                                        child: Column(
-                                          mainAxisSize: MainAxisSize.max,
-                                          children: [
-                                            Row(
-                                              mainAxisSize: MainAxisSize.max,
-                                              crossAxisAlignment:
-                                                  CrossAxisAlignment.end,
-                                              children: [
-                                                Container(
-                                                  width: 48.0,
-                                                  height: 48.0,
-                                                  decoration: BoxDecoration(
-                                                    gradient: LinearGradient(
-                                                      colors: [
-                                                        Color(0xFFFF94FA),
-                                                        Color(0xFF696EFF)
-                                                      ],
-                                                      stops: [0.0, 1.0],
-                                                      begin:
-                                                          AlignmentDirectional(
-                                                              0.0, -1.0),
-                                                      end: AlignmentDirectional(
-                                                          0, 1.0),
-                                                    ),
-                                                    shape: BoxShape.circle,
-                                                  ),
-                                                  child: Stack(
-                                                    children: [
-                                                      Align(
-                                                        alignment:
-                                                            AlignmentDirectional(
-                                                                0.0, 0.0),
-                                                        child: Container(
-                                                          width: 44.0,
-                                                          height: 44.0,
-                                                          decoration:
-                                                              BoxDecoration(
-                                                            image:
-                                                                DecorationImage(
-                                                              fit: BoxFit.cover,
-                                                              image:
-                                                                  Image.asset(
-                                                                FFAppState()
-                                                                    .urbanOutfitTrendSharingUsers
-                                                                    .elementAtOrNull(
-                                                                        widget
-                                                                            .popCultureVibeInnovationUserid!)!
-                                                                    .streetTrendEchoSharingUserPhoto,
-                                                              ).image,
-                                                            ),
-                                                            shape:
-                                                                BoxShape.circle,
-                                                          ),
-                                                        ),
-                                                      ),
-                                                    ],
-                                                  ),
-                                                ),
-                                                Flexible(
-                                                  child: Container(
-                                                    constraints: BoxConstraints(
-                                                      maxWidth: 207.0,
-                                                    ),
+                                      if (widget
+                                              .popCultureVibeInnovationUserid ==
+                                          globalTrendLifestyleSharingCommItem
+                                              .globalHypeFashionExchangeMessageCreateId)
+                                        Padding(
+                                          padding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  0.0, 0.0, 0.0, 20.0),
+                                          child: Column(
+                                            mainAxisSize: MainAxisSize.max,
+                                            children: [
+                                              Row(
+                                                mainAxisSize: MainAxisSize.max,
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.end,
+                                                children: [
+                                                  Container(
+                                                    width: 48.0,
+                                                    height: 48.0,
                                                     decoration: BoxDecoration(
                                                       gradient: LinearGradient(
                                                         colors: [
-                                                          Color(0xFF696EFF),
-                                                          Color(0xFFFF94FA)
+                                                          Color(0xFFFF94FA),
+                                                          Color(0xFF696EFF)
                                                         ],
                                                         stops: [0.0, 1.0],
                                                         begin:
                                                             AlignmentDirectional(
-                                                                1.0, 0.0),
+                                                                0.0, -1.0),
                                                         end:
                                                             AlignmentDirectional(
-                                                                -1.0, 0),
+                                                                0, 1.0),
                                                       ),
-                                                      borderRadius:
-                                                          BorderRadius.only(
-                                                        bottomLeft:
-                                                            Radius.circular(
-                                                                0.0),
-                                                        bottomRight:
-                                                            Radius.circular(
-                                                                12.0),
-                                                        topLeft:
-                                                            Radius.circular(
-                                                                12.0),
-                                                        topRight:
-                                                            Radius.circular(
-                                                                20.0),
-                                                      ),
+                                                      shape: BoxShape.circle,
                                                     ),
-                                                    child: Padding(
-                                                      padding:
-                                                          EdgeInsets.all(1.5),
-                                                      child: Stack(
-                                                        children: [
-                                                          Container(
+                                                    child: Stack(
+                                                      children: [
+                                                        Align(
+                                                          alignment:
+                                                              AlignmentDirectional(
+                                                                  0.0, 0.0),
+                                                          child: Container(
+                                                            width: 44.0,
+                                                            height: 44.0,
                                                             decoration:
                                                                 BoxDecoration(
-                                                              color: Color(
-                                                                  0x7F696EFF),
-                                                              borderRadius:
-                                                                  BorderRadius
-                                                                      .only(
-                                                                bottomLeft: Radius
-                                                                    .circular(
-                                                                        0.0),
-                                                                bottomRight: Radius
-                                                                    .circular(
-                                                                        12.0),
-                                                                topLeft: Radius
-                                                                    .circular(
-                                                                        12.0),
-                                                                topRight: Radius
-                                                                    .circular(
-                                                                        20.0),
+                                                              image:
+                                                                  DecorationImage(
+                                                                fit: BoxFit
+                                                                    .cover,
+                                                                image:
+                                                                    Image.asset(
+                                                                  FFAppState()
+                                                                      .urbanOutfitTrendSharingUsers
+                                                                      .elementAtOrNull(
+                                                                          widget
+                                                                              .popCultureVibeInnovationUserid!)!
+                                                                      .streetTrendEchoSharingUserPhoto,
+                                                                ).image,
                                                               ),
-                                                            ),
-                                                            child: Padding(
-                                                              padding:
-                                                                  EdgeInsets
-                                                                      .all(
-                                                                          16.0),
-                                                              child: Text(
-                                                                globalTrendLifestyleSharingCommItem
-                                                                    .globalHypeFashionExchangeMessageContent,
-                                                                style: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .bodyMedium
-                                                                    .override(
-                                                                      font: GoogleFonts
-                                                                          .poppins(
-                                                                        fontWeight: FlutterFlowTheme.of(context)
-                                                                            .bodyMedium
-                                                                            .fontWeight,
-                                                                        fontStyle: FlutterFlowTheme.of(context)
-                                                                            .bodyMedium
-                                                                            .fontStyle,
-                                                                      ),
-                                                                      color: FlutterFlowTheme.of(
-                                                                              context)
-                                                                          .info,
-                                                                      letterSpacing:
-                                                                          0.0,
-                                                                      fontWeight: FlutterFlowTheme.of(
-                                                                              context)
-                                                                          .bodyMedium
-                                                                          .fontWeight,
-                                                                      fontStyle: FlutterFlowTheme.of(
-                                                                              context)
-                                                                          .bodyMedium
-                                                                          .fontStyle,
-                                                                    ),
-                                                              ),
+                                                              shape: BoxShape
+                                                                  .circle,
                                                             ),
                                                           ),
-                                                        ],
-                                                      ),
+                                                        ),
+                                                      ],
                                                     ),
                                                   ),
-                                                ),
-                                              ].divide(SizedBox(width: 12.0)),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                      Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            0.0, 0.0, 0.0, 20.0),
-                                        child: Column(
-                                          mainAxisSize: MainAxisSize.max,
-                                          children: [
-                                            Row(
-                                              mainAxisSize: MainAxisSize.max,
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.end,
-                                              crossAxisAlignment:
-                                                  CrossAxisAlignment.end,
-                                              children: [
-                                                Flexible(
-                                                  child: Container(
-                                                    constraints: BoxConstraints(
-                                                      maxWidth: 207.0,
-                                                    ),
-                                                    decoration: BoxDecoration(
-                                                      color: Color(0xFF696EFF),
-                                                      borderRadius:
-                                                          BorderRadius.only(
-                                                        bottomLeft:
-                                                            Radius.circular(
-                                                                12.0),
-                                                        bottomRight:
-                                                            Radius.circular(
-                                                                0.0),
-                                                        topLeft:
-                                                            Radius.circular(
-                                                                20.0),
-                                                        topRight:
-                                                            Radius.circular(
-                                                                12.0),
+                                                  if (globalTrendLifestyleSharingCommItem
+                                                      .globalHypeFashionExchangeMessageContent
+                                                      .isNotEmpty)
+                                                    Flexible(
+                                                      child: Container(
+                                                        constraints:
+                                                            BoxConstraints(
+                                                          maxWidth: 207.0,
+                                                        ),
+                                                        decoration:
+                                                            BoxDecoration(
+                                                          gradient:
+                                                              LinearGradient(
+                                                            colors: [
+                                                              Color(0xFF696EFF),
+                                                              Color(0xFFFF94FA)
+                                                            ],
+                                                            stops: [0.0, 1.0],
+                                                            begin:
+                                                                AlignmentDirectional(
+                                                                    1.0, 0.0),
+                                                            end:
+                                                                AlignmentDirectional(
+                                                                    -1.0, 0),
+                                                          ),
+                                                          borderRadius:
+                                                              BorderRadius.only(
+                                                            bottomLeft:
+                                                                Radius.circular(
+                                                                    0.0),
+                                                            bottomRight:
+                                                                Radius.circular(
+                                                                    12.0),
+                                                            topLeft:
+                                                                Radius.circular(
+                                                                    12.0),
+                                                            topRight:
+                                                                Radius.circular(
+                                                                    20.0),
+                                                          ),
+                                                        ),
+                                                        child: Padding(
+                                                          padding:
+                                                              EdgeInsets.all(
+                                                                  1.5),
+                                                          child: Stack(
+                                                            children: [
+                                                              Container(
+                                                                decoration:
+                                                                    BoxDecoration(
+                                                                  color: Color(
+                                                                      0x7F696EFF),
+                                                                  borderRadius:
+                                                                      BorderRadius
+                                                                          .only(
+                                                                    bottomLeft:
+                                                                        Radius.circular(
+                                                                            0.0),
+                                                                    bottomRight:
+                                                                        Radius.circular(
+                                                                            12.0),
+                                                                    topLeft: Radius
+                                                                        .circular(
+                                                                            12.0),
+                                                                    topRight: Radius
+                                                                        .circular(
+                                                                            20.0),
+                                                                  ),
+                                                                ),
+                                                                child: Padding(
+                                                                  padding:
+                                                                      EdgeInsets
+                                                                          .all(
+                                                                              16.0),
+                                                                  child: Text(
+                                                                    globalTrendLifestyleSharingCommItem
+                                                                        .globalHypeFashionExchangeMessageContent,
+                                                                    style: FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .bodyMedium
+                                                                        .override(
+                                                                          font:
+                                                                              GoogleFonts.poppins(
+                                                                            fontWeight:
+                                                                                FlutterFlowTheme.of(context).bodyMedium.fontWeight,
+                                                                            fontStyle:
+                                                                                FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                                                                          ),
+                                                                          color:
+                                                                              FlutterFlowTheme.of(context).info,
+                                                                          letterSpacing:
+                                                                              0.0,
+                                                                          fontWeight: FlutterFlowTheme.of(context)
+                                                                              .bodyMedium
+                                                                              .fontWeight,
+                                                                          fontStyle: FlutterFlowTheme.of(context)
+                                                                              .bodyMedium
+                                                                              .fontStyle,
+                                                                        ),
+                                                                  ),
+                                                                ),
+                                                              ),
+                                                            ],
+                                                          ),
+                                                        ),
                                                       ),
                                                     ),
-                                                    child: Padding(
-                                                      padding:
-                                                          EdgeInsets.all(16.0),
-                                                      child: Text(
-                                                        globalTrendLifestyleSharingCommItem
-                                                            .globalHypeFashionExchangeMessageContent,
-                                                        style:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .bodyMedium
-                                                                .override(
-                                                                  font: GoogleFonts
-                                                                      .poppins(
-                                                                    fontWeight: FlutterFlowTheme.of(
-                                                                            context)
-                                                                        .bodyMedium
-                                                                        .fontWeight,
-                                                                    fontStyle: FlutterFlowTheme.of(
-                                                                            context)
-                                                                        .bodyMedium
-                                                                        .fontStyle,
-                                                                  ),
-                                                                  color: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .info,
-                                                                  letterSpacing:
-                                                                      0.0,
+                                                ].divide(SizedBox(width: 12.0)),
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                      if (globalTrendLifestyleSharingCommItem
+                                              .globalHypeFashionExchangeMessageCreateId ==
+                                          FFAppState()
+                                              .urbanTrendVisualCollaborationCurrent)
+                                        Padding(
+                                          padding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  0.0, 0.0, 0.0, 20.0),
+                                          child: Column(
+                                            mainAxisSize: MainAxisSize.max,
+                                            children: [
+                                              Row(
+                                                mainAxisSize: MainAxisSize.max,
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment.end,
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.end,
+                                                children: [
+                                                  Flexible(
+                                                    child: Container(
+                                                      constraints:
+                                                          BoxConstraints(
+                                                        maxWidth: 207.0,
+                                                      ),
+                                                      decoration: BoxDecoration(
+                                                        color:
+                                                            Color(0xFF696EFF),
+                                                        borderRadius:
+                                                            BorderRadius.only(
+                                                          bottomLeft:
+                                                              Radius.circular(
+                                                                  12.0),
+                                                          bottomRight:
+                                                              Radius.circular(
+                                                                  0.0),
+                                                          topLeft:
+                                                              Radius.circular(
+                                                                  20.0),
+                                                          topRight:
+                                                              Radius.circular(
+                                                                  12.0),
+                                                        ),
+                                                      ),
+                                                      child: Padding(
+                                                        padding: EdgeInsets.all(
+                                                            16.0),
+                                                        child: Text(
+                                                          globalTrendLifestyleSharingCommItem
+                                                              .globalHypeFashionExchangeMessageContent,
+                                                          style: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .bodyMedium
+                                                              .override(
+                                                                font: GoogleFonts
+                                                                    .poppins(
                                                                   fontWeight: FlutterFlowTheme.of(
                                                                           context)
                                                                       .bodyMedium
@@ -633,15 +634,29 @@ class _FutureTrendCircleHypeSharingWorldMessagesWidgetState
                                                                       .bodyMedium
                                                                       .fontStyle,
                                                                 ),
+                                                                color: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .info,
+                                                                letterSpacing:
+                                                                    0.0,
+                                                                fontWeight: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyMedium
+                                                                    .fontWeight,
+                                                                fontStyle: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyMedium
+                                                                    .fontStyle,
+                                                              ),
+                                                        ),
                                                       ),
                                                     ),
                                                   ),
-                                                ),
-                                              ].divide(SizedBox(width: 12.0)),
-                                            ),
-                                          ],
+                                                ].divide(SizedBox(width: 12.0)),
+                                              ),
+                                            ],
+                                          ),
                                         ),
-                                      ),
                                     ],
                                   );
                                 },

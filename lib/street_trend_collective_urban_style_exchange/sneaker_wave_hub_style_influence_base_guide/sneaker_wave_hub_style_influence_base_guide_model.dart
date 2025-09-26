@@ -5,12 +5,10 @@ import 'package:flutter/material.dart';
 
 class SneakerWaveHubStyleInfluenceBaseGuideModel
     extends FlutterFlowModel<SneakerWaveHubStyleInfluenceBaseGuideWidget> {
-  ///  Local state fields for this page.
-
   List<String> sreetStyleFusionExperiencePlatform = [
-    'https://picsum.photos/seed/552/600',
-    'https://picsum.photos/seed/213/600',
-    'https://picsum.photos/seed/465/600'
+    'assets/images/cvdfhshdfhugidof_xvbsdfuiohsudiohdug.png',
+    'assets/images/fdghuiydhfugiodhfiuog_dfiuyguifdoygudhfguiou.png',
+    'assets/images/diufgdsihgudifog_eirfusdhdofygig.png'
   ];
   void addToSreetStyleFusionExperiencePlatform(String item) =>
       sreetStyleFusionExperiencePlatform.add(item);
@@ -26,16 +24,7 @@ class SneakerWaveHubStyleInfluenceBaseGuideModel
       sreetStyleFusionExperiencePlatform[index] =
           updateFn(sreetStyleFusionExperiencePlatform[index]);
 
-  ///  State fields for stateful widgets in this page.
-
-  // State field(s) for PageView widget.
   PageController? pageViewController;
-
-  int get pageViewCurrentIndex => pageViewController != null &&
-          pageViewController!.hasClients &&
-          pageViewController!.page != null
-      ? pageViewController!.page!.round()
-      : 0;
 
   @override
   void initState(BuildContext context) {}

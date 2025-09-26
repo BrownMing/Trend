@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 
 import '/backend/schema/structs/index.dart';
 
-import '../../flutter_flow/uploaded_file.dart';
 
 String dateTimeRangeToString(DateTimeRange dateTimeRange) {
   final startStr = dateTimeRange.start.millisecondsSinceEpoch.toString();
@@ -12,8 +11,6 @@ String dateTimeRangeToString(DateTimeRange dateTimeRange) {
   return '$startStr|$endStr';
 }
 
-String uploadedFileToString(FFUploadedFile uploadedFile) =>
-    uploadedFile.serialize();
 
 String? serializeParam(
   dynamic param,
@@ -48,9 +45,6 @@ String? serializeParam(
         data = dateTimeRangeToString(param as DateTimeRange);
       case ParamType.Color:
         data = (param as Color).toCssString();
-
-      case ParamType.FFUploadedFile:
-        data = uploadedFileToString(param as FFUploadedFile);
       case ParamType.JSON:
         data = json.encode(param);
 
@@ -75,9 +69,6 @@ DateTimeRange? dateTimeRangeFromString(String dateTimeRangeStr) {
   );
 }
 
-FFUploadedFile uploadedFileFromString(String uploadedFileStr) =>
-    FFUploadedFile.deserialize(uploadedFileStr);
-
 enum ParamType {
   int,
   double,
@@ -85,12 +76,8 @@ enum ParamType {
   bool,
   DateTime,
   DateTimeRange,
-
   Color,
-
-  FFUploadedFile,
   JSON,
-
   DataStruct,
 }
 
@@ -142,8 +129,7 @@ dynamic deserializeParam<T>(
       case ParamType.Color:
         return fromCssColor(param);
 
-      case ParamType.FFUploadedFile:
-        return uploadedFileFromString(param);
+
       case ParamType.JSON:
         return json.decode(param);
 

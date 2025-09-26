@@ -50,7 +50,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                 ),
               ),
             )
-          : HypeCultureSharingFashionFlowstartWidget(),
+          : SneakerWaveHubStyleInfluenceBaseGuideWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
@@ -69,7 +69,13 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                     ),
                   ),
                 )
-              : HypeCultureSharingFashionFlowstartWidget(),
+              : SneakerWaveHubStyleInfluenceBaseGuideWidget(),
+        ),
+        FFRoute(
+          name: SneakerWaveHubStyleInfluenceBaseGuideWidget.routeName,
+          path: SneakerWaveHubStyleInfluenceBaseGuideWidget.routePath,
+          builder: (context, params) =>
+              SneakerWaveHubStyleInfluenceBaseGuideWidget(),
         ),
         FFRoute(
           name: HypeCultureSharingFashionFlowstartWidget.routeName,
@@ -88,12 +94,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           path: UrbanCoolStreamRetroFutureFeedSignupWidget.routePath,
           builder: (context, params) =>
               UrbanCoolStreamRetroFutureFeedSignupWidget(),
-        ),
-        FFRoute(
-          name: SneakerWaveHubStyleInfluenceBaseGuideWidget.routeName,
-          path: SneakerWaveHubStyleInfluenceBaseGuideWidget.routePath,
-          builder: (context, params) =>
-              SneakerWaveHubStyleInfluenceBaseGuideWidget(),
         ),
         FFRoute(
           name: TrendSharingArenaTrendSharingArenaHomeWidget.routeName,
@@ -251,7 +251,16 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: LifestylePhotographyInspirationWallUploadFileWidget.routeName,
           path: LifestylePhotographyInspirationWallUploadFileWidget.routePath,
           builder: (context, params) =>
-              LifestylePhotographyInspirationWallUploadFileWidget(),
+              LifestylePhotographyInspirationWallUploadFileWidget(
+            streetFashionExperienceCommunityZoneEmail: params.getParam(
+              'streetFashionExperienceCommunityZoneEmail',
+              ParamType.String,
+            ),
+            streetFashionExperienceCommunityZonePassword: params.getParam(
+              'streetFashionExperienceCommunityZonePassword',
+              ParamType.String,
+            ),
+          ),
         ),
         FFRoute(
           name: FutureLifestyleSharingInnovationLabInfomationWidget.routeName,

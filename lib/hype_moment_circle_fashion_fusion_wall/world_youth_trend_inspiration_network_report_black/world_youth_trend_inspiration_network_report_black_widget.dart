@@ -83,11 +83,7 @@ class _WorldYouthTrendInspirationNetworkReportBlackWidgetState
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            InkWell(
-              splashColor: Colors.transparent,
-              focusColor: Colors.transparent,
-              hoverColor: Colors.transparent,
-              highlightColor: Colors.transparent,
+            GestureDetector(
               onTap: () async {
                 Navigator.pop(context);
               },
@@ -104,11 +100,7 @@ class _WorldYouthTrendInspirationNetworkReportBlackWidgetState
                 ),
               ),
             ),
-            InkWell(
-              splashColor: Colors.transparent,
-              focusColor: Colors.transparent,
-              hoverColor: Colors.transparent,
-              highlightColor: Colors.transparent,
+            GestureDetector(
               onTap: () async {
                 FFAppState().updateUrbanOutfitTrendSharingUsersAtIndex(
                   FFAppState().urbanTrendVisualCollaborationCurrent,

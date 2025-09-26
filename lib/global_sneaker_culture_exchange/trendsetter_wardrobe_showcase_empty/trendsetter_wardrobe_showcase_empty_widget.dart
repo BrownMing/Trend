@@ -61,7 +61,7 @@ class _TrendsetterWardrobeShowcaseEmptyWidgetState
       'assets/images/ruidfohidfgd_cviduiyfausiodigf.png',
       width: 150.0,
       height: 150.0,
-      fit: BoxFit.fill,
+      fit: BoxFit.cover,
     ).animateOnPageLoad(
         cultureStyleExchangeCommunity['GlobalStreetFashionInspirationHub']!);
   }

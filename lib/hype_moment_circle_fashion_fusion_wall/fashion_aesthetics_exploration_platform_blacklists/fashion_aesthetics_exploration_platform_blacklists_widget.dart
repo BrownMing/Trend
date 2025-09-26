@@ -1,3 +1,4 @@
+import '../../global_sneaker_culture_exchange/trendsetter_wardrobe_showcase_empty/trendsetter_wardrobe_showcase_empty_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
@@ -128,7 +129,11 @@ class _FashionAestheticsExplorationPlatformBlacklistsWidgetState
                                 ?.streetTrendEchoSharingUserBlacklist
                                 .toList() ??
                             [];
-
+                        if (streetVibeInspirationExchange.isEmpty) {
+                          return Center(
+                              child:
+                                  const TrendsetterWardrobeShowcaseEmptyWidget());
+                        }
                         return ListView.separated(
                           padding: EdgeInsets.zero,
                           shrinkWrap: true,
