@@ -106,7 +106,6 @@ class _TrendTalkSpaceStyleConnectGridTrendingDetailsWidgetState
               alignment: AlignmentDirectional(0.0, 1.0),
               child: Container(
                 width: double.infinity,
-                height: 277.0,
                 decoration: BoxDecoration(
                   gradient: LinearGradient(
                     colors: [Color(0xFFFF94FA), Color(0xFF696EFF)],
@@ -135,47 +134,59 @@ class _TrendTalkSpaceStyleConnectGridTrendingDetailsWidgetState
                     ),
                     child: Padding(
                       padding: EdgeInsets.all(24.0),
-                      child: Column(
-                        mainAxisSize: MainAxisSize.max,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Row(
-                            mainAxisSize: MainAxisSize.max,
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Column(
-                                mainAxisSize: MainAxisSize.max,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    '${widget.hipHopFashionExpressionSharingHub?.worldFashionSharingCollectiveTrendsTitle}',
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .override(
-                                          font: GoogleFonts.poppins(
+                      child: SingleChildScrollView(
+                        child: Column(
+                          mainAxisSize: MainAxisSize.max,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Row(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Column(
+                                  mainAxisSize: MainAxisSize.max,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      '${widget.hipHopFashionExpressionSharingHub?.worldFashionSharingCollectiveTrendsTitle}',
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyMedium
+                                          .override(
+                                            font: GoogleFonts.poppins(
+                                              fontWeight: FontWeight.bold,
+                                              fontStyle:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .fontStyle,
+                                            ),
+                                            color: FlutterFlowTheme.of(context)
+                                                .info,
+                                            fontSize: 16.0,
+                                            letterSpacing: 0.0,
                                             fontWeight: FontWeight.bold,
                                             fontStyle:
                                                 FlutterFlowTheme.of(context)
                                                     .bodyMedium
                                                     .fontStyle,
                                           ),
-                                          color:
-                                              FlutterFlowTheme.of(context).info,
-                                          fontSize: 16.0,
-                                          letterSpacing: 0.0,
-                                          fontWeight: FontWeight.bold,
-                                          fontStyle:
-                                              FlutterFlowTheme.of(context)
-                                                  .bodyMedium
-                                                  .fontStyle,
-                                        ),
-                                  ),
-                                  Text(
-                                    '${widget.hipHopFashionExpressionSharingHub?.worldFashionSharingCollectiveTrendsSmatilte}',
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .override(
-                                          font: GoogleFonts.poppins(
+                                    ),
+                                    Text(
+                                      '${widget.hipHopFashionExpressionSharingHub?.worldFashionSharingCollectiveTrendsSmatilte}',
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyMedium
+                                          .override(
+                                            font: GoogleFonts.poppins(
+                                              fontWeight:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .fontWeight,
+                                              fontStyle:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .fontStyle,
+                                            ),
+                                            color: Color(0xFFCCCCCC),
+                                            letterSpacing: 0.0,
                                             fontWeight:
                                                 FlutterFlowTheme.of(context)
                                                     .bodyMedium
@@ -185,159 +196,223 @@ class _TrendTalkSpaceStyleConnectGridTrendingDetailsWidgetState
                                                     .bodyMedium
                                                     .fontStyle,
                                           ),
-                                          color: Color(0xFFCCCCCC),
-                                          letterSpacing: 0.0,
-                                          fontWeight:
-                                              FlutterFlowTheme.of(context)
-                                                  .bodyMedium
-                                                  .fontWeight,
-                                          fontStyle:
-                                              FlutterFlowTheme.of(context)
-                                                  .bodyMedium
-                                                  .fontStyle,
-                                        ),
-                                  ),
-                                ],
-                              ),
-                              Builder(
-                                builder: (context) {
-                                  if (widget.hipHopFashionExpressionSharingHub
-                                          ?.worldFashionSharingCollectiveTrendsLikeUsers
-                                          .contains(FFAppState()
-                                              .urbanTrendVisualCollaborationCurrent) ??
-                                      false) {
-                                    return InkWell(
-                                      splashColor: Colors.transparent,
-                                      focusColor: Colors.transparent,
-                                      hoverColor: Colors.transparent,
-                                      highlightColor: Colors.transparent,
-                                      onTap: () async {
-                                        FFAppState()
-                                            .updateTrendDrivenStyleCollaborationTrendsAtIndex(
-                                          widget
-                                              .hipHopFashionExpressionSharingHub!
-                                              .worldFashionSharingCollectiveTrendsId,
-                                          (e) => e
-                                            ..updateWorldFashionSharingCollectiveTrendsLikeUsers(
-                                              (e) => e.remove(FFAppState()
-                                                  .urbanTrendVisualCollaborationCurrent),
-                                            ),
-                                        );
-                                        FFAppState().update(() {});
-                                      },
-                                      child: AnimatedContainer(
-                                        duration: Duration(milliseconds: 400),
-                                        curve: Curves.easeInOut,
-                                        width: 35.0,
-                                        height: 35.0,
-                                        decoration: BoxDecoration(
-                                          image: DecorationImage(
-                                            fit: BoxFit.cover,
-                                            image: Image.asset(
-                                              'assets/images/dfbouihodufsig_difgyudgfyuisdfg.png',
-                                            ).image,
-                                          ),
-                                        ),
-                                      ),
-                                    );
-                                  } else {
-                                    return AnimatedContainer(
-                                      duration: Duration(milliseconds: 400),
-                                      curve: Curves.easeInOut,
-                                      width: 35.0,
-                                      height: 35.0,
-                                      decoration: BoxDecoration(
-                                        image: DecorationImage(
-                                          fit: BoxFit.cover,
-                                          image: Image.asset(
-                                            'assets/images/gfyuhsduyfhsdiof_vbsdhfbsuydfgsiduftu.png',
-                                          ).image,
-                                        ),
-                                      ),
-                                    );
-                                  }
-                                },
-                              ),
-                            ],
-                          ),
-                          Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
-                                0.0, 12.0, 0.0, 0.0),
-                            child: RatingBar.builder(
-                              onRatingUpdate: (newValue) => safeSetState(
-                                  () => _model.ratingBarValue = newValue),
-                              itemBuilder: (context, index) => Icon(
-                                Icons.star_rounded,
-                                color: Color(0xFFFFBC54),
-                              ),
-                              direction: Axis.horizontal,
-                              initialRating: _model.ratingBarValue ??= widget
-                                  .hipHopFashionExpressionSharingHub!
-                                  .worldFashionSharingCollectiveTrendsStar,
-                              unratedColor: Color(0x59FFBC54),
-                              itemCount: 5,
-                              itemSize: 24.0,
-                              glowColor: Color(0xFFFFBC54),
-                            ),
-                          ),
-                          Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
-                                0.0, 16.0, 0.0, 0.0),
-                            child: Row(
-                              mainAxisSize: MainAxisSize.max,
-                              children: [
+                                    ),
+                                  ],
+                                ),
                                 Builder(
                                   builder: (context) {
-                                    final streetGroovePerformanceExchange = widget
-                                            .hipHopFashionExpressionSharingHub
-                                            ?.worldFashionSharingCollectiveTrendsJoinusers
-                                            .toList() ??
-                                        [];
+                                    // 获取实时数据源
+                                    final currentTrend = FFAppState()
+                                        .trendDrivenStyleCollaborationTrends
+                                        .firstWhere(
+                                          (trend) =>
+                                              trend
+                                                  .worldFashionSharingCollectiveTrendsId ==
+                                              widget
+                                                  .hipHopFashionExpressionSharingHub!
+                                                  .worldFashionSharingCollectiveTrendsId,
+                                          orElse: () => widget
+                                              .hipHopFashionExpressionSharingHub!,
+                                        );
 
-                                    return Stack(
-                                      children: List.generate(
-                                          streetGroovePerformanceExchange
-                                              .length,
-                                          (streetGroovePerformanceExchangeIndex) {
-                                        final streetGroovePerformanceExchangeItem =
-                                            streetGroovePerformanceExchange[
-                                                streetGroovePerformanceExchangeIndex];
-                                        return Container(
-                                          width: 36.0,
-                                          height: 36.0,
+                                    if (currentTrend
+                                        .worldFashionSharingCollectiveTrendsLikeUsers
+                                        .contains(FFAppState()
+                                            .urbanTrendVisualCollaborationCurrent)) {
+                                      return InkWell(
+                                        splashColor: Colors.transparent,
+                                        focusColor: Colors.transparent,
+                                        hoverColor: Colors.transparent,
+                                        highlightColor: Colors.transparent,
+                                        onTap: () async {
+                                          // 找到当前trend在数组中的正确索引
+                                          int trendIndex = FFAppState()
+                                              .trendDrivenStyleCollaborationTrends
+                                              .indexWhere((trend) =>
+                                                  trend
+                                                      .worldFashionSharingCollectiveTrendsId ==
+                                                  widget
+                                                      .hipHopFashionExpressionSharingHub!
+                                                      .worldFashionSharingCollectiveTrendsId);
+
+                                          if (trendIndex != -1) {
+                                            FFAppState()
+                                                .updateTrendDrivenStyleCollaborationTrendsAtIndex(
+                                              trendIndex, // 使用正确的索引
+                                              (e) => e
+                                                ..updateWorldFashionSharingCollectiveTrendsLikeUsers(
+                                                  (e) => e.remove(FFAppState()
+                                                      .urbanTrendVisualCollaborationCurrent),
+                                                ),
+                                            );
+                                            FFAppState().update(() {});
+                                            setState(() {}); // 触发UI更新
+                                          }
+                                        },
+                                        child: AnimatedContainer(
+                                          duration: Duration(milliseconds: 400),
+                                          curve: Curves.easeInOut,
+                                          width: 35.0,
+                                          height: 35.0,
                                           decoration: BoxDecoration(
                                             image: DecorationImage(
                                               fit: BoxFit.cover,
                                               image: Image.asset(
-                                                FFAppState()
-                                                    .urbanOutfitTrendSharingUsers
-                                                    .elementAtOrNull(
-                                                        streetGroovePerformanceExchangeItem)!
-                                                    .streetTrendEchoSharingUserPhoto,
+                                                'assets/images/dfbouihodufsig_difgyudgfyuisdfg.png',
                                               ).image,
                                             ),
-                                            shape: BoxShape.circle,
-                                            border: Border.all(
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .info,
-                                              width: 1.0,
+                                          ),
+                                        ),
+                                      );
+                                    } else {
+                                      return InkWell(
+                                        splashColor: Colors.transparent,
+                                        focusColor: Colors.transparent,
+                                        hoverColor: Colors.transparent,
+                                        highlightColor: Colors.transparent,
+                                        onTap: () async {
+                                          // 找到当前trend在数组中的正确索引
+                                          int trendIndex = FFAppState()
+                                              .trendDrivenStyleCollaborationTrends
+                                              .indexWhere((trend) =>
+                                                  trend
+                                                      .worldFashionSharingCollectiveTrendsId ==
+                                                  widget
+                                                      .hipHopFashionExpressionSharingHub!
+                                                      .worldFashionSharingCollectiveTrendsId);
+
+                                          if (trendIndex != -1) {
+                                            FFAppState()
+                                                .updateTrendDrivenStyleCollaborationTrendsAtIndex(
+                                              trendIndex, // 使用正确的索引
+                                              (e) => e
+                                                ..updateWorldFashionSharingCollectiveTrendsLikeUsers(
+                                                  (e) => e.add(FFAppState()
+                                                      .urbanTrendVisualCollaborationCurrent),
+                                                ),
+                                            );
+                                            FFAppState().update(() {});
+                                            setState(() {}); // 触发UI更新
+                                          }
+                                        },
+                                        child: AnimatedContainer(
+                                          duration: Duration(milliseconds: 400),
+                                          curve: Curves.easeInOut,
+                                          width: 35.0,
+                                          height: 35.0,
+                                          decoration: BoxDecoration(
+                                            image: DecorationImage(
+                                              fit: BoxFit.cover,
+                                              image: Image.asset(
+                                                'assets/images/gfyuhsduyfhsdiof_vbsdhfbsuydfgsiduftu.png',
+                                              ).image,
                                             ),
                                           ),
-                                        );
-                                      }),
-                                    );
+                                        ),
+                                      );
+                                    }
                                   },
                                 ),
-                                Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      12.0, 0.0, 0.0, 0.0),
-                                  child: Text(
-                                    '${widget.hipHopFashionExpressionSharingHub?.worldFashionSharingCollectiveTrendsJoinusers.length.toString()}Review',
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .override(
-                                          font: GoogleFonts.poppins(
+                              ],
+                            ),
+                            Padding(
+                              padding: EdgeInsetsDirectional.fromSTEB(
+                                  0.0, 12.0, 0.0, 0.0),
+                              child: RatingBar.builder(
+                                onRatingUpdate: (newValue) => safeSetState(
+                                    () => _model.ratingBarValue = newValue),
+                                itemBuilder: (context, index) => Icon(
+                                  Icons.star_rounded,
+                                  color: Color(0xFFFFBC54),
+                                ),
+                                direction: Axis.horizontal,
+                                initialRating: _model.ratingBarValue ??= widget
+                                    .hipHopFashionExpressionSharingHub!
+                                    .worldFashionSharingCollectiveTrendsStar,
+                                unratedColor: Color(0x59FFBC54),
+                                itemCount: 5,
+                                itemSize: 24.0,
+                                glowColor: Color(0xFFFFBC54),
+                              ),
+                            ),
+                            Padding(
+                              padding: EdgeInsetsDirectional.fromSTEB(
+                                  0.0, 16.0, 0.0, 0.0),
+                              child: Row(
+                                mainAxisSize: MainAxisSize.max,
+                                children: [
+                                  Builder(
+                                    builder: (context) {
+                                      final streetGroovePerformanceExchange = widget
+                                              .hipHopFashionExpressionSharingHub
+                                              ?.worldFashionSharingCollectiveTrendsJoinusers
+                                              .toList() ??
+                                          [];
+
+                                      return Stack(
+                                        children: List.generate(
+                                            streetGroovePerformanceExchange
+                                                .length,
+                                            (streetGroovePerformanceExchangeIndex) {
+                                          final streetGroovePerformanceExchangeItem =
+                                              streetGroovePerformanceExchange[
+                                                  streetGroovePerformanceExchangeIndex];
+                                          return Padding(
+                                            padding: EdgeInsets.fromLTRB(
+                                                streetGroovePerformanceExchangeIndex *
+                                                    26,
+                                                0,
+                                                0,
+                                                0),
+                                            child: Container(
+                                              width: 36.0,
+                                              height: 36.0,
+                                              decoration: BoxDecoration(
+                                                image: DecorationImage(
+                                                  fit: BoxFit.cover,
+                                                  image: Image.asset(
+                                                    FFAppState()
+                                                        .urbanOutfitTrendSharingUsers
+                                                        .elementAtOrNull(
+                                                            streetGroovePerformanceExchangeItem)!
+                                                        .streetTrendEchoSharingUserPhoto,
+                                                  ).image,
+                                                ),
+                                                shape: BoxShape.circle,
+                                                border: Border.all(
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .info,
+                                                  width: 1.0,
+                                                ),
+                                              ),
+                                            ),
+                                          );
+                                        }),
+                                      );
+                                    },
+                                  ),
+                                  Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        12.0, 0.0, 0.0, 0.0),
+                                    child: Text(
+                                      '${widget.hipHopFashionExpressionSharingHub?.worldFashionSharingCollectiveTrendsJoinusers.length.toString()}Review',
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyMedium
+                                          .override(
+                                            font: GoogleFonts.poppins(
+                                              fontWeight:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .fontWeight,
+                                              fontStyle:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .fontStyle,
+                                            ),
+                                            color: Color(0xFFCCCCCC),
+                                            fontSize: 10.0,
+                                            letterSpacing: 0.0,
                                             fontWeight:
                                                 FlutterFlowTheme.of(context)
                                                     .bodyMedium
@@ -347,32 +422,30 @@ class _TrendTalkSpaceStyleConnectGridTrendingDetailsWidgetState
                                                     .bodyMedium
                                                     .fontStyle,
                                           ),
-                                          color: Color(0xFFCCCCCC),
-                                          fontSize: 10.0,
-                                          letterSpacing: 0.0,
-                                          fontWeight:
-                                              FlutterFlowTheme.of(context)
-                                                  .bodyMedium
-                                                  .fontWeight,
-                                          fontStyle:
-                                              FlutterFlowTheme.of(context)
-                                                  .bodyMedium
-                                                  .fontStyle,
-                                        ),
+                                    ),
                                   ),
-                                ),
-                              ],
+                                ],
+                              ),
                             ),
-                          ),
-                          Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
-                                0.0, 16.0, 0.0, 0.0),
-                            child: Text(
-                              '${widget.hipHopFashionExpressionSharingHub?.worldFashionSharingCollectiveTrendsDescribe}',
-                              style: FlutterFlowTheme.of(context)
-                                  .bodyMedium
-                                  .override(
-                                    font: GoogleFonts.poppins(
+                            Padding(
+                              padding: EdgeInsetsDirectional.fromSTEB(
+                                  0.0, 16.0, 0.0, 0.0),
+                              child: Text(
+                                '${widget.hipHopFashionExpressionSharingHub?.worldFashionSharingCollectiveTrendsDescribe}',
+                                style: FlutterFlowTheme.of(context)
+                                    .bodyMedium
+                                    .override(
+                                      font: GoogleFonts.poppins(
+                                        fontWeight: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .fontWeight,
+                                        fontStyle: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .fontStyle,
+                                      ),
+                                      color: Color(0xFFCCCCCC),
+                                      fontSize: 12.0,
+                                      letterSpacing: 0.0,
                                       fontWeight: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .fontWeight,
@@ -380,19 +453,10 @@ class _TrendTalkSpaceStyleConnectGridTrendingDetailsWidgetState
                                           .bodyMedium
                                           .fontStyle,
                                     ),
-                                    color: Color(0xFFCCCCCC),
-                                    fontSize: 12.0,
-                                    letterSpacing: 0.0,
-                                    fontWeight: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .fontWeight,
-                                    fontStyle: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .fontStyle,
-                                  ),
+                              ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                     ),
                   ),

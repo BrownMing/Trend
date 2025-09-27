@@ -141,11 +141,9 @@ class _SneakerWaveHubStyleInfluenceBaseGuideWidgetState
                         _model.sreetStyleFusionExperiencePlatform.length;
 
                     if (currentPage >= totalPages - 1) {
-                      // 已经是最后一页，跳转到目标页面
                       context.pushNamed(
                           HypeCultureSharingFashionFlowstartWidget.routeName);
                     } else {
-                      // 不是最后一页，继续下一页
                       await _model.pageViewController?.nextPage(
                         duration: Duration(milliseconds: 300),
                         curve: Curves.ease,
@@ -196,41 +194,6 @@ class _SneakerWaveHubStyleInfluenceBaseGuideWidgetState
                     ),
                   ),
                 ),
-              ),
-            ),
-            Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(16.0, 60.0, 0.0, 0.0),
-              child: Row(
-                mainAxisSize: MainAxisSize.max,
-                children: [
-                  InkWell(
-                    splashColor: Colors.transparent,
-                    focusColor: Colors.transparent,
-                    hoverColor: Colors.transparent,
-                    highlightColor: Colors.transparent,
-                    onTap: () async {
-                      context.safePop();
-                    },
-                    child: Container(
-                      width: 36.0,
-                      height: 36.0,
-                      decoration: BoxDecoration(
-                        image: DecorationImage(
-                          fit: BoxFit.cover,
-                          image: Image.asset(
-                            'assets/images/hzvdvsgdyfuis_isudgsudgfyusdfi.png',
-                          ).image,
-                        ),
-                        borderRadius: BorderRadius.only(
-                          bottomLeft: Radius.circular(0.0),
-                          bottomRight: Radius.circular(0.0),
-                          topLeft: Radius.circular(0.0),
-                          topRight: Radius.circular(0.0),
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
               ),
             ),
           ],

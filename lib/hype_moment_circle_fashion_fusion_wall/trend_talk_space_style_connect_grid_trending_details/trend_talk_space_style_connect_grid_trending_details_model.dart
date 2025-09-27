@@ -6,9 +6,7 @@ import 'package:flutter/material.dart';
 class TrendTalkSpaceStyleConnectGridTrendingDetailsModel
     extends FlutterFlowModel<
         TrendTalkSpaceStyleConnectGridTrendingDetailsWidget> {
-  ///  State fields for stateful widgets in this page.
 
-  // State field(s) for RatingBar widget.
   double? ratingBarValue;
 
   @override

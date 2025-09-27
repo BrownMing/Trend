@@ -1,3 +1,5 @@
+import 'package:flutter/services.dart';
+
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
@@ -218,9 +220,7 @@ class _FashionCollaborationSharingArenaMywalletsWidgetState
                           child: Builder(
                             builder: (context) {
                               final fashionVibeCircleStyleFusionGrid =
-                                  FFAppState()
-                                      .urbanOutfitTrendSharingUsers
-                                      .toList();
+                                  streetAestheticsPhotographyExchange.toList();
 
                               return GridView.builder(
                                 padding: EdgeInsets.zero,
@@ -241,34 +241,55 @@ class _FashionCollaborationSharingArenaMywalletsWidgetState
                                   final fashionVibeCircleStyleFusionGridItem =
                                       fashionVibeCircleStyleFusionGrid[
                                           fashionVibeCircleStyleFusionGridIndex];
-                                  return Container(
-                                    width: double.infinity,
-                                    height: double.infinity,
-                                    decoration: BoxDecoration(
-                                      image: DecorationImage(
-                                        fit: BoxFit.fill,
-                                        image: Image.asset(
-                                          'assets/images/xcvbdifysadgfi_werigusdfgirthgyuifd.png',
-                                        ).image,
-                                      ),
-                                    ),
-                                    child: Column(
-                                      mainAxisSize: MainAxisSize.max,
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      children: [
-                                        Image.asset(
-                                          'assets/images/gudhfgudsiofg_erifuhdsufghsdofug.png',
-                                          width: 72.0,
-                                          height: 72.0,
-                                          fit: BoxFit.cover,
+                                  return GestureDetector(
+                                    onTap: () async {
+                                      HapticFeedback.heavyImpact();
+                                      safeSetState(() {
+                                        _model.moonlitPromiseOfDestinedLove =
+                                            fashionVibeCircleStyleFusionGridItem;
+                                        _model.radiantDreamsOfBoundlessUnion(
+                                            fashionVibeCircleStyleFusionGridItem
+                                                .modernWardrobeInnovationSharingSpace);
+                                      });
+                                    },
+                                    child: Container(
+                                      width: double.infinity,
+                                      height: double.infinity,
+                                      decoration: BoxDecoration(
+                                        image: DecorationImage(
+                                          fit: BoxFit.fill,
+                                          image: Image.asset(
+                                            'assets/images/xcvbdifysadgfi_werigusdfgirthgyuifd.png',
+                                          ).image,
                                         ),
-                                        Text(
-                                          '${fashionVibeCircleStyleFusionGridItem.streetTrendEchoSharingUserId.toString()}',
-                                          style: FlutterFlowTheme.of(context)
-                                              .bodyMedium
-                                              .override(
-                                                font: GoogleFonts.poppins(
+                                      ),
+                                      child: Column(
+                                        mainAxisSize: MainAxisSize.max,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: [
+                                          Image.asset(
+                                            'assets/images/gudhfgudsiofg_erifuhdsufghsdofug.png',
+                                            width: 72.0,
+                                            height: 72.0,
+                                            fit: BoxFit.cover,
+                                          ),
+                                          Text(
+                                            '${fashionVibeCircleStyleFusionGridItem.nextWaveFashionExpressionCommunity.toString()}',
+                                            style: FlutterFlowTheme.of(context)
+                                                .bodyMedium
+                                                .override(
+                                                  font: GoogleFonts.poppins(
+                                                    fontWeight: FontWeight.w600,
+                                                    fontStyle:
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .bodyMedium
+                                                            .fontStyle,
+                                                  ),
+                                                  color: Color(0xFFFEC031),
+                                                  fontSize: 24.0,
+                                                  letterSpacing: 0.0,
                                                   fontWeight: FontWeight.w600,
                                                   fontStyle:
                                                       FlutterFlowTheme.of(
@@ -276,22 +297,27 @@ class _FashionCollaborationSharingArenaMywalletsWidgetState
                                                           .bodyMedium
                                                           .fontStyle,
                                                 ),
-                                                color: Color(0xFFFEC031),
-                                                fontSize: 24.0,
-                                                letterSpacing: 0.0,
-                                                fontWeight: FontWeight.w600,
-                                                fontStyle:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyMedium
-                                                        .fontStyle,
-                                              ),
-                                        ),
-                                        Text(
-                                          '\$${fashionVibeCircleStyleFusionGridItem.streetTrendEchoSharingUserId.toString()}',
-                                          style: FlutterFlowTheme.of(context)
-                                              .bodyMedium
-                                              .override(
-                                                font: GoogleFonts.poppins(
+                                          ),
+                                          Text(
+                                            '\$${fashionVibeCircleStyleFusionGridItem.crossCulturalTrendFusionExperience.toString()}',
+                                            style: FlutterFlowTheme.of(context)
+                                                .bodyMedium
+                                                .override(
+                                                  font: GoogleFonts.poppins(
+                                                    fontWeight:
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .bodyMedium
+                                                            .fontWeight,
+                                                    fontStyle:
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .bodyMedium
+                                                            .fontStyle,
+                                                  ),
+                                                  color: Color(0xCCFFFFFF),
+                                                  fontSize: 12.0,
+                                                  letterSpacing: 0.0,
                                                   fontWeight:
                                                       FlutterFlowTheme.of(
                                                               context)
@@ -303,20 +329,9 @@ class _FashionCollaborationSharingArenaMywalletsWidgetState
                                                           .bodyMedium
                                                           .fontStyle,
                                                 ),
-                                                color: Color(0xCCFFFFFF),
-                                                fontSize: 12.0,
-                                                letterSpacing: 0.0,
-                                                fontWeight:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyMedium
-                                                        .fontWeight,
-                                                fontStyle:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyMedium
-                                                        .fontStyle,
-                                              ),
-                                        ),
-                                      ],
+                                          ),
+                                        ],
+                                      ),
                                     ),
                                   );
                                 },

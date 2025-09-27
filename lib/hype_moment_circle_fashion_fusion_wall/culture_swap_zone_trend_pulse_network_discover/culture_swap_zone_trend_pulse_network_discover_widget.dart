@@ -920,19 +920,28 @@ class _CultureSwapZoneTrendPulseNetworkDiscoverWidgetState
                                                                         () async {
                                                                       HapticFeedback
                                                                           .heavyImpact();
-                                                                      FFAppState()
-                                                                          .updateSneakerheadCultureConnectPostsAtIndex(
-                                                                        youthArtStyleDiscoveryPlatformItem
-                                                                            .crossCultureTrendExchangeHubPostsId,
-                                                                        (e) => e
-                                                                          ..updateCrossCultureTrendExchangeHubPostsLikeUser(
-                                                                            (e) =>
-                                                                                e.remove(FFAppState().urbanTrendVisualCollaborationCurrent),
-                                                                          ),
-                                                                      );
-                                                                      FFAppState()
-                                                                          .update(
-                                                                              () {});
+                                                                      // 找到当前post在数组中的正确索引
+                                                                      int postIndex = FFAppState()
+                                                                          .sneakerheadCultureConnectPosts
+                                                                          .indexWhere((post) =>
+                                                                              post.crossCultureTrendExchangeHubPostsId ==
+                                                                              youthArtStyleDiscoveryPlatformItem
+                                                                                  .crossCultureTrendExchangeHubPostsId);
+                                                                      
+                                                                      if (postIndex != -1) {
+                                                                        FFAppState()
+                                                                            .updateSneakerheadCultureConnectPostsAtIndex(
+                                                                          postIndex,
+                                                                          (e) => e
+                                                                            ..updateCrossCultureTrendExchangeHubPostsLikeUser(
+                                                                              (e) =>
+                                                                                  e.remove(FFAppState().urbanTrendVisualCollaborationCurrent),
+                                                                            ),
+                                                                        );
+                                                                        FFAppState()
+                                                                            .update(
+                                                                                () {});
+                                                                      }
                                                                     },
                                                                     child:
                                                                         AnimatedContainer(
@@ -977,19 +986,28 @@ class _CultureSwapZoneTrendPulseNetworkDiscoverWidgetState
                                                                         () async {
                                                                       HapticFeedback
                                                                           .heavyImpact();
-                                                                      FFAppState()
-                                                                          .updateSneakerheadCultureConnectPostsAtIndex(
-                                                                        youthArtStyleDiscoveryPlatformItem
-                                                                            .crossCultureTrendExchangeHubPostsId,
-                                                                        (e) => e
-                                                                          ..updateCrossCultureTrendExchangeHubPostsLikeUser(
-                                                                            (e) =>
-                                                                                e.add(FFAppState().urbanTrendVisualCollaborationCurrent),
-                                                                          ),
-                                                                      );
-                                                                      FFAppState()
-                                                                          .update(
-                                                                              () {});
+                                                                      // 找到当前post在数组中的正确索引
+                                                                      int postIndex = FFAppState()
+                                                                          .sneakerheadCultureConnectPosts
+                                                                          .indexWhere((post) =>
+                                                                              post.crossCultureTrendExchangeHubPostsId ==
+                                                                              youthArtStyleDiscoveryPlatformItem
+                                                                                  .crossCultureTrendExchangeHubPostsId);
+                                                                      
+                                                                      if (postIndex != -1) {
+                                                                        FFAppState()
+                                                                            .updateSneakerheadCultureConnectPostsAtIndex(
+                                                                          postIndex,
+                                                                          (e) => e
+                                                                            ..updateCrossCultureTrendExchangeHubPostsLikeUser(
+                                                                              (e) =>
+                                                                                  e.add(FFAppState().urbanTrendVisualCollaborationCurrent),
+                                                                            ),
+                                                                        );
+                                                                        FFAppState()
+                                                                            .update(
+                                                                                () {});
+                                                                      }
                                                                     },
                                                                     child:
                                                                         AnimatedContainer(
