@@ -1,5 +1,5 @@
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_theme.dart';
+import '../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_util.dart';
 import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -40,7 +40,7 @@ class _CreativeTrendVisualSharingCircleSettingsWidgetState
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
+    context.watch<StreetStyleViberaConnection>();
 
     return GestureDetector(
       onTap: () {
@@ -92,18 +92,20 @@ class _CreativeTrendVisualSharingCircleSettingsWidgetState
                       ),
                       Text(
                         'Settings',
-                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                        style: LimitedEditionViberaTheme.of(context)
+                            .bodyMedium
+                            .override(
                               font: GoogleFonts.poppins(
                                 fontWeight: FontWeight.bold,
-                                fontStyle: FlutterFlowTheme.of(context)
+                                fontStyle: LimitedEditionViberaTheme.of(context)
                                     .bodyMedium
                                     .fontStyle,
                               ),
-                              color: FlutterFlowTheme.of(context).info,
+                              color: LimitedEditionViberaTheme.of(context).info,
                               fontSize: 32.0,
                               letterSpacing: 0.0,
                               fontWeight: FontWeight.bold,
-                              fontStyle: FlutterFlowTheme.of(context)
+                              fontStyle: LimitedEditionViberaTheme.of(context)
                                   .bodyMedium
                                   .fontStyle,
                             ),
@@ -161,23 +163,26 @@ class _CreativeTrendVisualSharingCircleSettingsWidgetState
                                 children: [
                                   Text(
                                     'Privacy agreement',
-                                    style: FlutterFlowTheme.of(context)
+                                    style: LimitedEditionViberaTheme.of(context)
                                         .bodyMedium
                                         .override(
                                           font: GoogleFonts.poppins(
                                             fontWeight: FontWeight.w500,
                                             fontStyle:
-                                                FlutterFlowTheme.of(context)
+                                                LimitedEditionViberaTheme.of(
+                                                        context)
                                                     .bodyMedium
                                                     .fontStyle,
                                           ),
-                                          color:
-                                              FlutterFlowTheme.of(context).info,
+                                          color: LimitedEditionViberaTheme.of(
+                                                  context)
+                                              .info,
                                           fontSize: 20.0,
                                           letterSpacing: 0.0,
                                           fontWeight: FontWeight.w500,
                                           fontStyle:
-                                              FlutterFlowTheme.of(context)
+                                              LimitedEditionViberaTheme.of(
+                                                      context)
                                                   .bodyMedium
                                                   .fontStyle,
                                         ),
@@ -242,23 +247,26 @@ class _CreativeTrendVisualSharingCircleSettingsWidgetState
                                 children: [
                                   Text(
                                     'User agreement',
-                                    style: FlutterFlowTheme.of(context)
+                                    style: LimitedEditionViberaTheme.of(context)
                                         .bodyMedium
                                         .override(
                                           font: GoogleFonts.poppins(
                                             fontWeight: FontWeight.w500,
                                             fontStyle:
-                                                FlutterFlowTheme.of(context)
+                                                LimitedEditionViberaTheme.of(
+                                                        context)
                                                     .bodyMedium
                                                     .fontStyle,
                                           ),
-                                          color:
-                                              FlutterFlowTheme.of(context).info,
+                                          color: LimitedEditionViberaTheme.of(
+                                                  context)
+                                              .info,
                                           fontSize: 20.0,
                                           letterSpacing: 0.0,
                                           fontWeight: FontWeight.w500,
                                           fontStyle:
-                                              FlutterFlowTheme.of(context)
+                                              LimitedEditionViberaTheme.of(
+                                                      context)
                                                   .bodyMedium
                                                   .fontStyle,
                                         ),
@@ -293,14 +301,15 @@ class _CreativeTrendVisualSharingCircleSettingsWidgetState
                           hoverColor: Colors.transparent,
                           highlightColor: Colors.transparent,
                           onTap: () async {
-                            FFAppState()
+                            StreetStyleViberaConnection()
                                 .updateUrbanOutfitTrendSharingUsersAtIndex(
-                              FFAppState().urbanTrendVisualCollaborationCurrent,
+                              StreetStyleViberaConnection()
+                                  .urbanTrendVisualCollaborationCurrent,
                               (e) => e
                                 ..streetTrendEchoSharingUserEmail = null
                                 ..streetTrendEchoSharingUserPassword = null,
                             );
-                            FFAppState().update(() {});
+                            StreetStyleViberaConnection().update(() {});
                           },
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
@@ -312,13 +321,14 @@ class _CreativeTrendVisualSharingCircleSettingsWidgetState
                                 children: [
                                   Text(
                                     'Deletion of account',
-                                    style: FlutterFlowTheme.of(context)
+                                    style: LimitedEditionViberaTheme.of(context)
                                         .bodyMedium
                                         .override(
                                           font: GoogleFonts.poppins(
                                             fontWeight: FontWeight.w500,
                                             fontStyle:
-                                                FlutterFlowTheme.of(context)
+                                                LimitedEditionViberaTheme.of(
+                                                        context)
                                                     .bodyMedium
                                                     .fontStyle,
                                           ),
@@ -327,7 +337,8 @@ class _CreativeTrendVisualSharingCircleSettingsWidgetState
                                           letterSpacing: 0.0,
                                           fontWeight: FontWeight.w500,
                                           fontStyle:
-                                              FlutterFlowTheme.of(context)
+                                              LimitedEditionViberaTheme.of(
+                                                      context)
                                                   .bodyMedium
                                                   .fontStyle,
                                         ),

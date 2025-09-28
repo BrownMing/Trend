@@ -1,7 +1,8 @@
+import 'package:trend/viberaUrban_trendCelebration/viberaUrban_trendCelebration_player.dart';
+
 import '/backend/schema/structs/index.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_video_player.dart';
+import '../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_theme.dart';
+import '../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_util.dart';
 import '/hype_moment_circle_fashion_fusion_wall/world_youth_trend_inspiration_network_report_black/world_youth_trend_inspiration_network_report_black_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -49,7 +50,7 @@ class _GlobalTrendShareUrbanFusionMapHotdetailsWidgetState
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
+    context.watch<StreetStyleViberaConnection>();
 
     return GestureDetector(
       onTap: () {
@@ -118,27 +119,32 @@ class _GlobalTrendShareUrbanFusionMapHotdetailsWidgetState
                                       ),
                                       Text(
                                         '${widget.modernTrendVisualConnectionArena?.crossCultureTrendExchangeHubPostsComments.toString()}',
-                                        style: FlutterFlowTheme.of(context)
+                                        style: LimitedEditionViberaTheme.of(
+                                                context)
                                             .bodyMedium
                                             .override(
                                               font: GoogleFonts.poppins(
                                                 fontWeight:
-                                                    FlutterFlowTheme.of(context)
+                                                    LimitedEditionViberaTheme
+                                                            .of(context)
                                                         .bodyMedium
                                                         .fontWeight,
                                                 fontStyle:
-                                                    FlutterFlowTheme.of(context)
+                                                    LimitedEditionViberaTheme
+                                                            .of(context)
                                                         .bodyMedium
                                                         .fontStyle,
                                               ),
                                               color: Color(0xFFCCCCCC),
                                               letterSpacing: 0.0,
                                               fontWeight:
-                                                  FlutterFlowTheme.of(context)
+                                                  LimitedEditionViberaTheme.of(
+                                                          context)
                                                       .bodyMedium
                                                       .fontWeight,
                                               fontStyle:
-                                                  FlutterFlowTheme.of(context)
+                                                  LimitedEditionViberaTheme.of(
+                                                          context)
                                                       .bodyMedium
                                                       .fontStyle,
                                             ),
@@ -154,27 +160,29 @@ class _GlobalTrendShareUrbanFusionMapHotdetailsWidgetState
                                         Builder(
                                           builder: (context) {
                                             // 获取实时数据源
-                                            final currentPost = FFAppState()
-                                                .sneakerheadCultureConnectPosts
-                                                .firstWhere(
-                                                  (post) =>
-                                                      post.crossCultureTrendExchangeHubPostsId ==
-                                                      widget
-                                                          .modernTrendVisualConnectionArena!
-                                                          .crossCultureTrendExchangeHubPostsId,
-                                                  orElse: () => widget
-                                                      .modernTrendVisualConnectionArena!,
-                                                );
+                                            final currentPost =
+                                                StreetStyleViberaConnection()
+                                                    .sneakerheadCultureConnectPosts
+                                                    .firstWhere(
+                                                      (post) =>
+                                                          post.crossCultureTrendExchangeHubPostsId ==
+                                                          widget
+                                                              .modernTrendVisualConnectionArena!
+                                                              .crossCultureTrendExchangeHubPostsId,
+                                                      orElse: () => widget
+                                                          .modernTrendVisualConnectionArena!,
+                                                    );
 
                                             if (currentPost
                                                 .crossCultureTrendExchangeHubPostsLikeUser
-                                                .contains(FFAppState()
-                                                    .urbanTrendVisualCollaborationCurrent)) {
+                                                .contains(
+                                                    StreetStyleViberaConnection()
+                                                        .urbanTrendVisualCollaborationCurrent)) {
                                               return GestureDetector(
                                                 onTap: () async {
                                                   HapticFeedback.heavyImpact();
 
-                                                  int postIndex = FFAppState()
+                                                  int postIndex = StreetStyleViberaConnection()
                                                       .sneakerheadCultureConnectPosts
                                                       .indexWhere((post) =>
                                                           post.crossCultureTrendExchangeHubPostsId ==
@@ -183,17 +191,18 @@ class _GlobalTrendShareUrbanFusionMapHotdetailsWidgetState
                                                               .crossCultureTrendExchangeHubPostsId);
 
                                                   if (postIndex != -1) {
-                                                    FFAppState()
+                                                    StreetStyleViberaConnection()
                                                         .updateSneakerheadCultureConnectPostsAtIndex(
                                                       postIndex,
                                                       (e) => e
                                                         ..updateCrossCultureTrendExchangeHubPostsLikeUser(
                                                           (e) => e.remove(
-                                                              FFAppState()
+                                                              StreetStyleViberaConnection()
                                                                   .urbanTrendVisualCollaborationCurrent),
                                                         ),
                                                     );
-                                                    FFAppState().update(() {});
+                                                    StreetStyleViberaConnection()
+                                                        .update(() {});
                                                     setState(() {});
                                                   }
                                                 },
@@ -218,7 +227,7 @@ class _GlobalTrendShareUrbanFusionMapHotdetailsWidgetState
                                                 onTap: () async {
                                                   HapticFeedback.heavyImpact();
                                                   // 找到当前post在数组中的正确索引
-                                                  int postIndex = FFAppState()
+                                                  int postIndex = StreetStyleViberaConnection()
                                                       .sneakerheadCultureConnectPosts
                                                       .indexWhere((post) =>
                                                           post.crossCultureTrendExchangeHubPostsId ==
@@ -227,16 +236,18 @@ class _GlobalTrendShareUrbanFusionMapHotdetailsWidgetState
                                                               .crossCultureTrendExchangeHubPostsId);
 
                                                   if (postIndex != -1) {
-                                                    FFAppState()
+                                                    StreetStyleViberaConnection()
                                                         .updateSneakerheadCultureConnectPostsAtIndex(
                                                       postIndex,
                                                       (e) => e
                                                         ..updateCrossCultureTrendExchangeHubPostsLikeUser(
-                                                          (e) => e.add(FFAppState()
-                                                              .urbanTrendVisualCollaborationCurrent),
+                                                          (e) => e.add(
+                                                              StreetStyleViberaConnection()
+                                                                  .urbanTrendVisualCollaborationCurrent),
                                                         ),
                                                     );
-                                                    FFAppState().update(() {});
+                                                    StreetStyleViberaConnection()
+                                                        .update(() {});
                                                     setState(() {});
                                                   }
                                                 },
@@ -260,30 +271,33 @@ class _GlobalTrendShareUrbanFusionMapHotdetailsWidgetState
                                           },
                                         ),
                                         Text(
-                                          '${FFAppState().sneakerheadCultureConnectPosts.firstWhere((post) => post.crossCultureTrendExchangeHubPostsId == widget.modernTrendVisualConnectionArena!.crossCultureTrendExchangeHubPostsId, orElse: () => widget.modernTrendVisualConnectionArena!).crossCultureTrendExchangeHubPostsLikeUser.length.toString()}',
-                                          style: FlutterFlowTheme.of(context)
+                                          '${StreetStyleViberaConnection().sneakerheadCultureConnectPosts.firstWhere((post) => post.crossCultureTrendExchangeHubPostsId == widget.modernTrendVisualConnectionArena!.crossCultureTrendExchangeHubPostsId, orElse: () => widget.modernTrendVisualConnectionArena!).crossCultureTrendExchangeHubPostsLikeUser.length.toString()}',
+                                          style: LimitedEditionViberaTheme.of(
+                                                  context)
                                               .bodyMedium
                                               .override(
                                                 font: GoogleFonts.poppins(
                                                   fontWeight:
-                                                      FlutterFlowTheme.of(
-                                                              context)
+                                                      LimitedEditionViberaTheme
+                                                              .of(context)
                                                           .bodyMedium
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FlutterFlowTheme.of(
-                                                              context)
+                                                      LimitedEditionViberaTheme
+                                                              .of(context)
                                                           .bodyMedium
                                                           .fontStyle,
                                                 ),
                                                 color: Color(0xFFCCCCCC),
                                                 letterSpacing: 0.0,
                                                 fontWeight:
-                                                    FlutterFlowTheme.of(context)
+                                                    LimitedEditionViberaTheme
+                                                            .of(context)
                                                         .bodyMedium
                                                         .fontWeight,
                                                 fontStyle:
-                                                    FlutterFlowTheme.of(context)
+                                                    LimitedEditionViberaTheme
+                                                            .of(context)
                                                         .bodyMedium
                                                         .fontStyle,
                                               ),
@@ -291,7 +305,7 @@ class _GlobalTrendShareUrbanFusionMapHotdetailsWidgetState
                                       ].divide(SizedBox(width: 4.0)),
                                     ),
                                   ),
-                                  if (FFAppState()
+                                  if (StreetStyleViberaConnection()
                                           .urbanTrendVisualCollaborationCurrent !=
                                       widget.modernTrendVisualConnectionArena
                                           ?.crossCultureTrendExchangeHubPostsCreateId)

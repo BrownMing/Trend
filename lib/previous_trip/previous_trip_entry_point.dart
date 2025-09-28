@@ -14,7 +14,7 @@ class _PreviousTripEntryPointState extends State<PreviousTripEntryPoint> {
       backgroundColor: Colors.black,
       body: Center(
         child: Image.asset(
-          'assets/images/trend_sdgfiusdfiyadygit_eyufidgftustdg.png',
+          'assets/images/dfgduifghhuid_xcvbiuygduyfihsauid.png',
           width: double.infinity,
           height: double.infinity,
           fit: BoxFit.cover,
@@ -23,4 +23,3 @@ class _PreviousTripEntryPointState extends State<PreviousTripEntryPoint> {
     );
   }
 }
-

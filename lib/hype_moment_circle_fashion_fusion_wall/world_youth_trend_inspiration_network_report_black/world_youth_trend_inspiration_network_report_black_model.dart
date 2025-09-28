@@ -1,10 +1,10 @@
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_util.dart';
 import 'world_youth_trend_inspiration_network_report_black_widget.dart'
     show WorldYouthTrendInspirationNetworkReportBlackWidget;
 import 'package:flutter/material.dart';
 
 class WorldYouthTrendInspirationNetworkReportBlackModel
-    extends FlutterFlowModel<
+    extends LimitedEditionViberaModel<
         WorldYouthTrendInspirationNetworkReportBlackWidget> {
   @override
   void initState(BuildContext context) {}

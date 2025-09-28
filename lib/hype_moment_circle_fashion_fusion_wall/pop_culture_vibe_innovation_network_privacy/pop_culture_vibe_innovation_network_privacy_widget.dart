@@ -1,8 +1,8 @@
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import '/flutter_flow/flutter_flow_icon_button.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_icon_button.dart';
+import '../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_util.dart';
 import 'package:flutter/material.dart';
 import 'pop_culture_vibe_innovation_network_privacy_model.dart';
 export 'pop_culture_vibe_innovation_network_privacy_model.dart';
@@ -71,7 +71,7 @@ class _PopCultureVibeInnovationNetworkPrivacyWidgetState
           child: AppBar(
             backgroundColor: Color(0xFF333333),
             automaticallyImplyLeading: false,
-            leading: FlutterFlowIconButton(
+            leading: LimitedEditionViberaIconButton(
               borderColor: Colors.transparent,
               borderRadius: 30.0,
               borderWidth: 1.0,

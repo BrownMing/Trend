@@ -1,12 +1,12 @@
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_util.dart';
 import '/index.dart';
 import 'urban_cool_stream_retro_future_feed_signup_widget.dart'
     show UrbanCoolStreamRetroFutureFeedSignupWidget;
 import 'package:flutter/material.dart';
 
 class UrbanCoolStreamRetroFutureFeedSignupModel
-    extends FlutterFlowModel<UrbanCoolStreamRetroFutureFeedSignupWidget> {
-
+    extends LimitedEditionViberaModel<
+        UrbanCoolStreamRetroFutureFeedSignupWidget> {
   FocusNode? textFieldFocusNode1;
   TextEditingController? textController1;
   String? Function(BuildContext, String?)? textController1Validator;
@@ -19,6 +19,7 @@ class UrbanCoolStreamRetroFutureFeedSignupModel
   TextEditingController? textController3;
   String? Function(BuildContext, String?)? textController3Validator;
 
+  bool isAgreementAccepted = true;
   @override
   void initState(BuildContext context) {}
 

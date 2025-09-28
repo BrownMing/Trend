@@ -3,27 +3,30 @@ import 'package:trend/backend/schema/structs/global_hype_fashion_exchange_messag
 import 'package:trend/backend/schema/structs/next_gen_streetwear_showcase_chat_struct.dart';
 
 import '/components/urban_culture_fusion_exploration_platform_image_widget.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_util.dart';
 import '/index.dart';
 import 'fashion_collaboration_sharing_arena_other_info_widget.dart'
     show FashionCollaborationSharingArenaOtherInfoWidget;
 import 'package:flutter/material.dart';
 
 class FashionCollaborationSharingArenaOtherInfoModel
-    extends FlutterFlowModel<FashionCollaborationSharingArenaOtherInfoWidget> {
+    extends LimitedEditionViberaModel<
+        FashionCollaborationSharingArenaOtherInfoWidget> {
   TabController? tabBarController;
   int get tabBarCurrentIndex =>
       tabBarController != null ? tabBarController!.index : 0;
   int get tabBarPreviousIndex =>
       tabBarController != null ? tabBarController!.previousIndex : 0;
 
-  late FlutterFlowDynamicModels<UrbanCultureFusionExplorationPlatformImageModel>
+  late LimitedEditionViberaDynamicModels<
+          UrbanCultureFusionExplorationPlatformImageModel>
       urbanCultureFusionExplorationPlatformImageModels;
 
   @override
   void initState(BuildContext context) {
-    urbanCultureFusionExplorationPlatformImageModels = FlutterFlowDynamicModels(
-        () => UrbanCultureFusionExplorationPlatformImageModel());
+    urbanCultureFusionExplorationPlatformImageModels =
+        LimitedEditionViberaDynamicModels(
+            () => UrbanCultureFusionExplorationPlatformImageModel());
   }
 
   @override
@@ -42,12 +45,13 @@ class BirthdayMacaronAuroraHarbor {
     required String userIdParamName,
     String initialMessage = "Hello! Welcome to chat!",
   }) async {
-    final holidayFudgeBrownie = FFAppState()
+    final holidayFudgeBrownie = StreetStyleViberaConnection()
         .streetCultureExpressionNetworkChats
         .where((chat) =>
             chat.nextGenStreetwearShowcaseChatOtherId == targetUserId &&
             chat.nextGenStreetwearShowcaseChatCurrentId ==
-                FFAppState().urbanTrendVisualCollaborationCurrent)
+                StreetStyleViberaConnection()
+                    .urbanTrendVisualCollaborationCurrent)
         .toList();
 
     int dreamveilGarden;
@@ -83,22 +87,23 @@ class BirthdayMacaronAuroraHarbor {
     final newChat = NextGenStreetwearShowcaseChatStruct(
       nextGenStreetwearShowcaseChatId: dreamveilGarden,
       nextGenStreetwearShowcaseChatCurrentId:
-          FFAppState().urbanTrendVisualCollaborationCurrent,
+          StreetStyleViberaConnection().urbanTrendVisualCollaborationCurrent,
       nextGenStreetwearShowcaseChatLastMsg: initialMessage,
       nextGenStreetwearShowcaseChatLastTime: DateTime.now(),
       nextGenStreetwearShowcaseChatOtherId: targetUserId,
     );
 
     // 添加到聊天列表
-    FFAppState().addToStreetCultureExpressionNetworkChats(newChat);
+    StreetStyleViberaConnection()
+        .addToStreetCultureExpressionNetworkChats(newChat);
 
     // 添加初始消息
-    FFAppState().addToAestheticStyleInspirationMessages(
+    StreetStyleViberaConnection().addToAestheticStyleInspirationMessages(
       GlobalHypeFashionExchangeMessageStruct(
         globalHypeFashionExchangeMessageContent: initialMessage,
         globalHypeFashionExchangeMessageChatref: dreamveilGarden,
         globalHypeFashionExchangeMessageCreateId:
-            FFAppState().urbanTrendVisualCollaborationCurrent,
+            StreetStyleViberaConnection().urbanTrendVisualCollaborationCurrent,
       ),
     );
 
@@ -131,20 +136,24 @@ class BirthdayMacaronAuroraHarbor {
 
   /// 检查是否已存在与指定用户的聊天
   static bool hasChatWithUser(int targetUserId) {
-    return FFAppState().streetCultureExpressionNetworkChats.any((chat) =>
-        chat.nextGenStreetwearShowcaseChatOtherId == targetUserId &&
-        chat.nextGenStreetwearShowcaseChatCurrentId ==
-            FFAppState().urbanTrendVisualCollaborationCurrent);
+    return StreetStyleViberaConnection()
+        .streetCultureExpressionNetworkChats
+        .any((chat) =>
+            chat.nextGenStreetwearShowcaseChatOtherId == targetUserId &&
+            chat.nextGenStreetwearShowcaseChatCurrentId ==
+                StreetStyleViberaConnection()
+                    .urbanTrendVisualCollaborationCurrent);
   }
 
   /// 获取与指定用户的聊天ID（如果存在）
   static int? getChatIdWithUser(int targetUserId) {
-    final holidayFudgeBrownie = FFAppState()
+    final holidayFudgeBrownie = StreetStyleViberaConnection()
         .streetCultureExpressionNetworkChats
         .where((chat) =>
             chat.nextGenStreetwearShowcaseChatOtherId == targetUserId &&
             chat.nextGenStreetwearShowcaseChatCurrentId ==
-                FFAppState().urbanTrendVisualCollaborationCurrent)
+                StreetStyleViberaConnection()
+                    .urbanTrendVisualCollaborationCurrent)
         .toList();
 
     return holidayFudgeBrownie.isNotEmpty

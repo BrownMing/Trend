@@ -2,9 +2,9 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:trend/backend/schema/util/schema_util.dart';
-import 'package:trend/flutter_flow/flutter_flow_theme.dart';
+import 'package:trend/viberaUrban_trendCelebration/viberaUrban_trendCelebration_theme.dart';
 
-void emotionalNestAICareSphere(
+void hypebeastViberaOutfitShowcase(
   BuildContext context,
   String message,
   String type,
@@ -67,19 +67,22 @@ class RhythmVibeClubSoundTrendFlow extends StatelessWidget {
                 child: Text(
                   textAlign: TextAlign.center,
                   '$msg',
-                  style: FlutterFlowTheme.of(context).bodyMedium.override(
-                        font: GoogleFonts.ubuntu(
-                          fontWeight: FontWeight.bold,
-                          fontStyle:
-                              FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                        ),
-                        color: Colors.white,
-                        fontSize: 16.0,
-                        letterSpacing: 0.0,
-                        fontWeight: FontWeight.bold,
-                        fontStyle:
-                            FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                      ),
+                  style:
+                      LimitedEditionViberaTheme.of(context).bodyMedium.override(
+                            font: GoogleFonts.ubuntu(
+                              fontWeight: FontWeight.bold,
+                              fontStyle: LimitedEditionViberaTheme.of(context)
+                                  .bodyMedium
+                                  .fontStyle,
+                            ),
+                            color: Colors.white,
+                            fontSize: 16.0,
+                            letterSpacing: 0.0,
+                            fontWeight: FontWeight.bold,
+                            fontStyle: LimitedEditionViberaTheme.of(context)
+                                .bodyMedium
+                                .fontStyle,
+                          ),
                 ),
               ),
             ]),

@@ -1,6 +1,6 @@
 import '/backend/schema/structs/index.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_theme.dart';
+import '../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_util.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -50,7 +50,7 @@ class _GlobalMusicDrivenTrendCommunityCommentWidgetState
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
+    context.watch<StreetStyleViberaConnection>();
 
     return Padding(
       padding: EdgeInsetsDirectional.fromSTEB(16, 0, 16, 35),
@@ -72,25 +72,28 @@ class _GlobalMusicDrivenTrendCommunityCommentWidgetState
               focusNode: _model.textFieldFocusNode,
               onFieldSubmitted: (_) async {
                 if (_model.textController.text != '') {
-                  FFAppState().addToModernFashionInfluenceComments(
-                      CreativeTrendBeatCollCommentsStruct(
+                  StreetStyleViberaConnection()
+                      .addToModernFashionInfluenceComments(
+                          CreativeTrendBeatCollCommentsStruct(
                     creativeTrendBeatCollCommentsContent:
                         _model.textController.text,
                     creativeTrendBeatCollCommentsCreateId:
-                        FFAppState().urbanTrendVisualCollaborationCurrent,
+                        StreetStyleViberaConnection()
+                            .urbanTrendVisualCollaborationCurrent,
                     creativeTrendBeatCollCommentsPostRef:
                         widget.vemporarySoundStyleSharingArena,
                     creativeTrendBeatCollCommentsCreateTime:
                         getCurrentTimestamp,
                   ));
 
-                  FFAppState().updateSneakerheadCultureConnectPostsAtIndex(
+                  StreetStyleViberaConnection()
+                      .updateSneakerheadCultureConnectPostsAtIndex(
                     widget.vemporarySoundStyleSharingArena!,
                     (e) => e
                       ..incrementCrossCultureTrendExchangeHubPostsComments(1),
                   );
 
-                  FFAppState().update(() {});
+                  StreetStyleViberaConnection().update(() {});
                   Navigator.pop(context);
                 }
               },
@@ -99,35 +102,45 @@ class _GlobalMusicDrivenTrendCommunityCommentWidgetState
               obscureText: false,
               decoration: InputDecoration(
                 isDense: true,
-                labelStyle: FlutterFlowTheme.of(context).labelMedium.override(
-                      font: GoogleFonts.poppins(
-                        fontWeight:
-                            FlutterFlowTheme.of(context).labelMedium.fontWeight,
-                        fontStyle:
-                            FlutterFlowTheme.of(context).labelMedium.fontStyle,
-                      ),
-                      letterSpacing: 0.0,
-                      fontWeight:
-                          FlutterFlowTheme.of(context).labelMedium.fontWeight,
-                      fontStyle:
-                          FlutterFlowTheme.of(context).labelMedium.fontStyle,
-                    ),
+                labelStyle:
+                    LimitedEditionViberaTheme.of(context).labelMedium.override(
+                          font: GoogleFonts.poppins(
+                            fontWeight: LimitedEditionViberaTheme.of(context)
+                                .labelMedium
+                                .fontWeight,
+                            fontStyle: LimitedEditionViberaTheme.of(context)
+                                .labelMedium
+                                .fontStyle,
+                          ),
+                          letterSpacing: 0.0,
+                          fontWeight: LimitedEditionViberaTheme.of(context)
+                              .labelMedium
+                              .fontWeight,
+                          fontStyle: LimitedEditionViberaTheme.of(context)
+                              .labelMedium
+                              .fontStyle,
+                        ),
                 hintText: 'Please enter',
-                hintStyle: FlutterFlowTheme.of(context).labelMedium.override(
-                      font: GoogleFonts.poppins(
-                        fontWeight:
-                            FlutterFlowTheme.of(context).labelMedium.fontWeight,
-                        fontStyle:
-                            FlutterFlowTheme.of(context).labelMedium.fontStyle,
-                      ),
-                      color: Color(0x80FFFFFF),
-                      fontSize: 16,
-                      letterSpacing: 0.0,
-                      fontWeight:
-                          FlutterFlowTheme.of(context).labelMedium.fontWeight,
-                      fontStyle:
-                          FlutterFlowTheme.of(context).labelMedium.fontStyle,
-                    ),
+                hintStyle:
+                    LimitedEditionViberaTheme.of(context).labelMedium.override(
+                          font: GoogleFonts.poppins(
+                            fontWeight: LimitedEditionViberaTheme.of(context)
+                                .labelMedium
+                                .fontWeight,
+                            fontStyle: LimitedEditionViberaTheme.of(context)
+                                .labelMedium
+                                .fontStyle,
+                          ),
+                          color: Color(0x80FFFFFF),
+                          fontSize: 16,
+                          letterSpacing: 0.0,
+                          fontWeight: LimitedEditionViberaTheme.of(context)
+                              .labelMedium
+                              .fontWeight,
+                          fontStyle: LimitedEditionViberaTheme.of(context)
+                              .labelMedium
+                              .fontStyle,
+                        ),
                 enabledBorder: OutlineInputBorder(
                   borderSide: BorderSide(
                     color: Color(0x00000000),
@@ -157,22 +170,26 @@ class _GlobalMusicDrivenTrendCommunityCommentWidgetState
                   borderRadius: BorderRadius.circular(16),
                 ),
               ),
-              style: FlutterFlowTheme.of(context).bodyMedium.override(
+              style: LimitedEditionViberaTheme.of(context).bodyMedium.override(
                     font: GoogleFonts.poppins(
-                      fontWeight:
-                          FlutterFlowTheme.of(context).bodyMedium.fontWeight,
-                      fontStyle:
-                          FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                      fontWeight: LimitedEditionViberaTheme.of(context)
+                          .bodyMedium
+                          .fontWeight,
+                      fontStyle: LimitedEditionViberaTheme.of(context)
+                          .bodyMedium
+                          .fontStyle,
                     ),
-                    color: FlutterFlowTheme.of(context).info,
+                    color: LimitedEditionViberaTheme.of(context).info,
                     fontSize: 16,
                     letterSpacing: 0.0,
-                    fontWeight:
-                        FlutterFlowTheme.of(context).bodyMedium.fontWeight,
-                    fontStyle:
-                        FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                    fontWeight: LimitedEditionViberaTheme.of(context)
+                        .bodyMedium
+                        .fontWeight,
+                    fontStyle: LimitedEditionViberaTheme.of(context)
+                        .bodyMedium
+                        .fontStyle,
                   ),
-              cursorColor: FlutterFlowTheme.of(context).info,
+              cursorColor: LimitedEditionViberaTheme.of(context).info,
               enableInteractiveSelection: true,
               validator: _model.textControllerValidator.asValidator(context),
             ),

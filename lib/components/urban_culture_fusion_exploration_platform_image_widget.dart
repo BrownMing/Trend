@@ -1,6 +1,6 @@
 import '/backend/schema/structs/index.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '../viberaUrban_trendCelebration/viberaUrban_trendCelebration_theme.dart';
+import '../viberaUrban_trendCelebration/viberaUrban_trendCelebration_util.dart';
 import '/index.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart'
     as smooth_page_indicator;
@@ -126,7 +126,8 @@ class _UrbanCultureFusionExplorationPlatformImageWidgetState
                         dotWidth: 8.0,
                         dotHeight: 8.0,
                         dotColor: Color(0x80FFFFFF),
-                        activeDotColor: FlutterFlowTheme.of(context).info,
+                        activeDotColor:
+                            LimitedEditionViberaTheme.of(context).info,
                         paintStyle: PaintingStyle.fill,
                       ),
                     ),

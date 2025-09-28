@@ -1,7 +1,4 @@
-
-
-
 analyzer:
   exclude:
     - lib/custom_code/**
-    - lib/flutter_flow/custom_functions.dart
+    - lib/viberaUrban_trendCelebration/custom_functions.dart

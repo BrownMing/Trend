@@ -1,12 +1,12 @@
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/form_field_controller.dart';
+import '../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_util.dart';
+import '../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_form.dart';
 import 'modern_street_style_exchange_zone_edit_file_widget.dart'
     show ModernStreetStyleExchangeZoneEditFileWidget;
 import 'package:flutter/material.dart';
 
 class ModernStreetStyleExchangeZoneEditFileModel
-    extends FlutterFlowModel<ModernStreetStyleExchangeZoneEditFileWidget> {
-
+    extends LimitedEditionViberaModel<
+        ModernStreetStyleExchangeZoneEditFileWidget> {
   FocusNode? textFieldFocusNode;
   TextEditingController? textController;
   String? Function(BuildContext, String?)? textControllerValidator;

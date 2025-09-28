@@ -1,10 +1,11 @@
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_util.dart';
 import 'sneaker_wave_hub_style_influence_base_guide_widget.dart'
     show SneakerWaveHubStyleInfluenceBaseGuideWidget;
 import 'package:flutter/material.dart';
 
 class SneakerWaveHubStyleInfluenceBaseGuideModel
-    extends FlutterFlowModel<SneakerWaveHubStyleInfluenceBaseGuideWidget> {
+    extends LimitedEditionViberaModel<
+        SneakerWaveHubStyleInfluenceBaseGuideWidget> {
   List<String> sreetStyleFusionExperiencePlatform = [
     'assets/images/cvdfhshdfhugidof_xvbsdfuiohsudiohdug.png',
     'assets/images/fdghuiydhfugiodhfiuog_dfiuyguifdoygudhfguiou.png',

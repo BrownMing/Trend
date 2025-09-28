@@ -1,8 +1,7 @@
-import 'package:trend/flutter_flow/flutter_flow_widgets.dart';
-
+import 'package:trend/viberaUrban_trendCelebration/viberaUrban_trendCelebration_totast.dart';
 import '/backend/schema/structs/index.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_theme.dart';
+import '../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_util.dart';
 import '/global_sneaker_culture_exchange/youth_culture_style_discovery_lab_notenough/youth_culture_style_discovery_lab_notenough_widget.dart';
 
 import 'package:flutter/material.dart';
@@ -48,7 +47,7 @@ class _HypeCultureRadarStreetVibeAtlasPublicWidgetState
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
+    context.watch<StreetStyleViberaConnection>();
 
     return GestureDetector(
       onTap: () {
@@ -133,60 +132,66 @@ class _HypeCultureRadarStreetVibeAtlasPublicWidgetState
                                         obscureText: false,
                                         decoration: InputDecoration(
                                           isDense: true,
-                                          labelStyle: FlutterFlowTheme.of(
-                                                  context)
-                                              .labelMedium
-                                              .override(
-                                                font: GoogleFonts.poppins(
-                                                  fontWeight:
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .labelMedium
-                                                          .fontWeight,
-                                                  fontStyle:
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .labelMedium
-                                                          .fontStyle,
-                                                ),
-                                                letterSpacing: 0.0,
-                                                fontWeight:
-                                                    FlutterFlowTheme.of(context)
-                                                        .labelMedium
-                                                        .fontWeight,
-                                                fontStyle:
-                                                    FlutterFlowTheme.of(context)
-                                                        .labelMedium
-                                                        .fontStyle,
-                                              ),
+                                          labelStyle:
+                                              LimitedEditionViberaTheme.of(
+                                                      context)
+                                                  .labelMedium
+                                                  .override(
+                                                    font: GoogleFonts.poppins(
+                                                      fontWeight:
+                                                          LimitedEditionViberaTheme
+                                                                  .of(context)
+                                                              .labelMedium
+                                                              .fontWeight,
+                                                      fontStyle:
+                                                          LimitedEditionViberaTheme
+                                                                  .of(context)
+                                                              .labelMedium
+                                                              .fontStyle,
+                                                    ),
+                                                    letterSpacing: 0.0,
+                                                    fontWeight:
+                                                        LimitedEditionViberaTheme
+                                                                .of(context)
+                                                            .labelMedium
+                                                            .fontWeight,
+                                                    fontStyle:
+                                                        LimitedEditionViberaTheme
+                                                                .of(context)
+                                                            .labelMedium
+                                                            .fontStyle,
+                                                  ),
                                           hintText: 'Please enter',
-                                          hintStyle: FlutterFlowTheme.of(
-                                                  context)
-                                              .labelMedium
-                                              .override(
-                                                font: GoogleFonts.poppins(
-                                                  fontWeight:
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .labelMedium
-                                                          .fontWeight,
-                                                  fontStyle:
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .labelMedium
-                                                          .fontStyle,
-                                                ),
-                                                color: Color(0x80FFFFFF),
-                                                letterSpacing: 0.0,
-                                                fontWeight:
-                                                    FlutterFlowTheme.of(context)
-                                                        .labelMedium
-                                                        .fontWeight,
-                                                fontStyle:
-                                                    FlutterFlowTheme.of(context)
-                                                        .labelMedium
-                                                        .fontStyle,
-                                              ),
+                                          hintStyle:
+                                              LimitedEditionViberaTheme.of(
+                                                      context)
+                                                  .labelMedium
+                                                  .override(
+                                                    font: GoogleFonts.poppins(
+                                                      fontWeight:
+                                                          LimitedEditionViberaTheme
+                                                                  .of(context)
+                                                              .labelMedium
+                                                              .fontWeight,
+                                                      fontStyle:
+                                                          LimitedEditionViberaTheme
+                                                                  .of(context)
+                                                              .labelMedium
+                                                              .fontStyle,
+                                                    ),
+                                                    color: Color(0x80FFFFFF),
+                                                    letterSpacing: 0.0,
+                                                    fontWeight:
+                                                        LimitedEditionViberaTheme
+                                                                .of(context)
+                                                            .labelMedium
+                                                            .fontWeight,
+                                                    fontStyle:
+                                                        LimitedEditionViberaTheme
+                                                                .of(context)
+                                                            .labelMedium
+                                                            .fontStyle,
+                                                  ),
                                           enabledBorder: OutlineInputBorder(
                                             borderSide: BorderSide(
                                               color: Color(0x00000000),
@@ -233,35 +238,43 @@ class _HypeCultureRadarStreetVibeAtlasPublicWidgetState
                                             ),
                                           ),
                                         ),
-                                        style: FlutterFlowTheme.of(context)
+                                        style: LimitedEditionViberaTheme.of(
+                                                context)
                                             .bodyMedium
                                             .override(
                                               font: GoogleFonts.poppins(
                                                 fontWeight:
-                                                    FlutterFlowTheme.of(context)
+                                                    LimitedEditionViberaTheme
+                                                            .of(context)
                                                         .bodyMedium
                                                         .fontWeight,
                                                 fontStyle:
-                                                    FlutterFlowTheme.of(context)
+                                                    LimitedEditionViberaTheme
+                                                            .of(context)
                                                         .bodyMedium
                                                         .fontStyle,
                                               ),
                                               color:
-                                                  FlutterFlowTheme.of(context)
+                                                  LimitedEditionViberaTheme.of(
+                                                          context)
                                                       .info,
                                               letterSpacing: 0.0,
                                               fontWeight:
-                                                  FlutterFlowTheme.of(context)
+                                                  LimitedEditionViberaTheme.of(
+                                                          context)
                                                       .bodyMedium
                                                       .fontWeight,
                                               fontStyle:
-                                                  FlutterFlowTheme.of(context)
+                                                  LimitedEditionViberaTheme.of(
+                                                          context)
                                                       .bodyMedium
                                                       .fontStyle,
                                             ),
                                         maxLines: 8,
                                         cursorColor:
-                                            FlutterFlowTheme.of(context).info,
+                                            LimitedEditionViberaTheme.of(
+                                                    context)
+                                                .info,
                                         enableInteractiveSelection: true,
                                         validator: _model
                                             .textControllerValidator
@@ -417,25 +430,30 @@ class _HypeCultureRadarStreetVibeAtlasPublicWidgetState
                               children: [
                                 Text(
                                   'Each Post cost 30',
-                                  style: FlutterFlowTheme.of(context)
+                                  style: LimitedEditionViberaTheme.of(context)
                                       .bodyMedium
                                       .override(
                                         font: GoogleFonts.poppins(
                                           fontWeight:
-                                              FlutterFlowTheme.of(context)
+                                              LimitedEditionViberaTheme.of(
+                                                      context)
                                                   .bodyMedium
                                                   .fontWeight,
                                           fontStyle:
-                                              FlutterFlowTheme.of(context)
+                                              LimitedEditionViberaTheme.of(
+                                                      context)
                                                   .bodyMedium
                                                   .fontStyle,
                                         ),
                                         color: Color(0xCCFFFFFF),
                                         letterSpacing: 0.0,
-                                        fontWeight: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .fontWeight,
-                                        fontStyle: FlutterFlowTheme.of(context)
+                                        fontWeight:
+                                            LimitedEditionViberaTheme.of(
+                                                    context)
+                                                .bodyMedium
+                                                .fontWeight,
+                                        fontStyle: LimitedEditionViberaTheme.of(
+                                                context)
                                             .bodyMedium
                                             .fontStyle,
                                       ),
@@ -465,7 +483,7 @@ class _HypeCultureRadarStreetVibeAtlasPublicWidgetState
                                       null ||
                                   _model.futureStyleCultureCollaboration ==
                                       '') {
-                                emotionalNestAICareSphere(
+                                hypebeastViberaOutfitShowcase(
                                     context,
                                     'Please upload an image or video first',
                                     'error');
@@ -474,7 +492,7 @@ class _HypeCultureRadarStreetVibeAtlasPublicWidgetState
                               }
 
                               if (_model.textController.text.trim().isEmpty) {
-                                emotionalNestAICareSphere(
+                                hypebeastViberaOutfitShowcase(
                                     context,
                                     'Please enter content for your post',
                                     'error');
@@ -482,12 +500,14 @@ class _HypeCultureRadarStreetVibeAtlasPublicWidgetState
                                 return;
                               }
 
-                              final currentUserBalance = FFAppState()
-                                      .urbanOutfitTrendSharingUsers
-                                      .elementAtOrNull(FFAppState()
-                                          .urbanTrendVisualCollaborationCurrent)
-                                      ?.streetTrendEchoSharingUserBalance ??
-                                  0;
+                              final currentUserBalance =
+                                  StreetStyleViberaConnection()
+                                          .urbanOutfitTrendSharingUsers
+                                          .elementAtOrNull(
+                                              StreetStyleViberaConnection()
+                                                  .urbanTrendVisualCollaborationCurrent)
+                                          ?.streetTrendEchoSharingUserBalance ??
+                                      0;
 
                               if (currentUserBalance < 30) {
                                 await showDialog(
@@ -516,19 +536,21 @@ class _HypeCultureRadarStreetVibeAtlasPublicWidgetState
                                 return;
                               }
 
-                              FFAppState()
-                                  .urbanOutfitTrendSharingUsers[FFAppState()
-                                      .urbanTrendVisualCollaborationCurrent]
+                              StreetStyleViberaConnection()
+                                  .urbanOutfitTrendSharingUsers[
+                                      StreetStyleViberaConnection()
+                                          .urbanTrendVisualCollaborationCurrent]
                                   .streetTrendEchoSharingUserBalance -= 30;
 
-                              FFAppState().addToSneakerheadCultureConnectPosts(
-                                  CrossCultureTrendExchangeHubPostsStruct(
+                              StreetStyleViberaConnection()
+                                  .addToSneakerheadCultureConnectPosts(
+                                      CrossCultureTrendExchangeHubPostsStruct(
                                 crossCultureTrendExchangeHubPostsId:
-                                    FFAppState()
+                                    StreetStyleViberaConnection()
                                         .sneakerheadCultureConnectPosts
                                         .length,
                                 crossCultureTrendExchangeHubPostsCreateId:
-                                    FFAppState()
+                                    StreetStyleViberaConnection()
                                         .urbanTrendVisualCollaborationCurrent,
                                 crossCultureTrendExchangeHubPostsDescribe:
                                     _model.textController.text,
@@ -540,10 +562,10 @@ class _HypeCultureRadarStreetVibeAtlasPublicWidgetState
                                 ],
                               ));
 
-                              FFAppState().update(() {});
+                              StreetStyleViberaConnection().update(() {});
 
                               context.safePop();
-                              emotionalNestAICareSphere(context,
+                              hypebeastViberaOutfitShowcase(context,
                                   'Post published successfully!', 'success');
                             },
                             child: Container(
@@ -565,22 +587,25 @@ class _HypeCultureRadarStreetVibeAtlasPublicWidgetState
                                 alignment: AlignmentDirectional(0, 0),
                                 child: Text(
                                   'Send',
-                                  style: FlutterFlowTheme.of(context)
+                                  style: LimitedEditionViberaTheme.of(context)
                                       .bodyMedium
                                       .override(
                                         font: GoogleFonts.roboto(
                                           fontWeight: FontWeight.bold,
                                           fontStyle:
-                                              FlutterFlowTheme.of(context)
+                                              LimitedEditionViberaTheme.of(
+                                                      context)
                                                   .bodyMedium
                                                   .fontStyle,
                                         ),
-                                        color:
-                                            FlutterFlowTheme.of(context).info,
+                                        color: LimitedEditionViberaTheme.of(
+                                                context)
+                                            .info,
                                         fontSize: 24,
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.bold,
-                                        fontStyle: FlutterFlowTheme.of(context)
+                                        fontStyle: LimitedEditionViberaTheme.of(
+                                                context)
                                             .bodyMedium
                                             .fontStyle,
                                       ),

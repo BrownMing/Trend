@@ -1,5 +1,5 @@
-import '/flutter_flow/flutter_flow_animations.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_animations.dart';
+import '../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_util.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:provider/provider.dart';
@@ -64,7 +64,7 @@ class _WorldYouthTrendInspirationNetworkReportBlackWidgetState
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
+    context.watch<StreetStyleViberaConnection>();
 
     return Container(
       width: double.infinity,
@@ -102,14 +102,16 @@ class _WorldYouthTrendInspirationNetworkReportBlackWidgetState
             ),
             GestureDetector(
               onTap: () async {
-                FFAppState().updateUrbanOutfitTrendSharingUsersAtIndex(
-                  FFAppState().urbanTrendVisualCollaborationCurrent,
+                StreetStyleViberaConnection()
+                    .updateUrbanOutfitTrendSharingUsersAtIndex(
+                  StreetStyleViberaConnection()
+                      .urbanTrendVisualCollaborationCurrent,
                   (e) => e
                     ..updateStreetTrendEchoSharingUserBlacklist(
                       (e) => e.add(widget.tureStyleCultureCollaborationGrid!),
                     ),
                 );
-                FFAppState().update(() {});
+                StreetStyleViberaConnection().update(() {});
                 Navigator.pop(context, true);
               },
               child: Container(

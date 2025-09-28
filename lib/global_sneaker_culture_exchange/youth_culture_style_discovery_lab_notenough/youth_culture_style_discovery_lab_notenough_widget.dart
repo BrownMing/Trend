@@ -1,6 +1,6 @@
-import '/flutter_flow/flutter_flow_animations.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_animations.dart';
+import '../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_theme.dart';
+import '../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_util.dart';
 import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
@@ -79,20 +79,24 @@ class _YouthCultureStyleDiscoveryLabNotenoughWidgetState
             Text(
               'Not enough coins at the moment. You can get more by topping up.',
               textAlign: TextAlign.center,
-              style: FlutterFlowTheme.of(context).bodyMedium.override(
+              style: LimitedEditionViberaTheme.of(context).bodyMedium.override(
                     font: GoogleFonts.poppins(
-                      fontWeight:
-                          FlutterFlowTheme.of(context).bodyMedium.fontWeight,
-                      fontStyle:
-                          FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                      fontWeight: LimitedEditionViberaTheme.of(context)
+                          .bodyMedium
+                          .fontWeight,
+                      fontStyle: LimitedEditionViberaTheme.of(context)
+                          .bodyMedium
+                          .fontStyle,
                     ),
-                    color: FlutterFlowTheme.of(context).info,
+                    color: LimitedEditionViberaTheme.of(context).info,
                     fontSize: 16.0,
                     letterSpacing: 0.0,
-                    fontWeight:
-                        FlutterFlowTheme.of(context).bodyMedium.fontWeight,
-                    fontStyle:
-                        FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                    fontWeight: LimitedEditionViberaTheme.of(context)
+                        .bodyMedium
+                        .fontWeight,
+                    fontStyle: LimitedEditionViberaTheme.of(context)
+                        .bodyMedium
+                        .fontStyle,
                   ),
             ),
             Padding(
@@ -140,18 +144,20 @@ class _YouthCultureStyleDiscoveryLabNotenoughWidgetState
                     alignment: AlignmentDirectional(0.0, 0.0),
                     child: Text(
                       'Go',
-                      style: FlutterFlowTheme.of(context).bodyMedium.override(
+                      style: LimitedEditionViberaTheme.of(context)
+                          .bodyMedium
+                          .override(
                             font: GoogleFonts.roboto(
                               fontWeight: FontWeight.bold,
-                              fontStyle: FlutterFlowTheme.of(context)
+                              fontStyle: LimitedEditionViberaTheme.of(context)
                                   .bodyMedium
                                   .fontStyle,
                             ),
-                            color: FlutterFlowTheme.of(context).info,
+                            color: LimitedEditionViberaTheme.of(context).info,
                             fontSize: 24.0,
                             letterSpacing: 0.0,
                             fontWeight: FontWeight.bold,
-                            fontStyle: FlutterFlowTheme.of(context)
+                            fontStyle: LimitedEditionViberaTheme.of(context)
                                 .bodyMedium
                                 .fontStyle,
                           ),

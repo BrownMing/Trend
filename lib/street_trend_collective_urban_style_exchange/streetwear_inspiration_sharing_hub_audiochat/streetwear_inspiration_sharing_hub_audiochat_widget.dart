@@ -1,5 +1,5 @@
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_theme.dart';
+import '../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_util.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -44,7 +44,7 @@ class _StreetwearInspirationSharingHubAudiochatWidgetState
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
+    context.watch<StreetStyleViberaConnection>();
 
     return GestureDetector(
       onTap: () {
@@ -89,7 +89,7 @@ class _StreetwearInspirationSharingHubAudiochatWidgetState
                               image: DecorationImage(
                                 fit: BoxFit.cover,
                                 image: Image.asset(
-                                  FFAppState()
+                                  StreetStyleViberaConnection()
                                       .urbanOutfitTrendSharingUsers
                                       .elementAtOrNull(widget
                                           .ntWaveFashionExpressionCollective!)!
@@ -104,20 +104,23 @@ class _StreetwearInspirationSharingHubAudiochatWidgetState
                     ),
                   ),
                   Text(
-                    '${FFAppState().urbanOutfitTrendSharingUsers.elementAtOrNull(widget.ntWaveFashionExpressionCollective!)?.streetTrendEchoSharingUserName}',
-                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                    '${StreetStyleViberaConnection().urbanOutfitTrendSharingUsers.elementAtOrNull(widget.ntWaveFashionExpressionCollective!)?.streetTrendEchoSharingUserName}',
+                    style: LimitedEditionViberaTheme.of(context)
+                        .bodyMedium
+                        .override(
                           font: GoogleFonts.poppins(
                             fontWeight: FontWeight.bold,
-                            fontStyle: FlutterFlowTheme.of(context)
+                            fontStyle: LimitedEditionViberaTheme.of(context)
                                 .bodyMedium
                                 .fontStyle,
                           ),
-                          color: FlutterFlowTheme.of(context).info,
+                          color: LimitedEditionViberaTheme.of(context).info,
                           fontSize: 48.0,
                           letterSpacing: 0.0,
                           fontWeight: FontWeight.bold,
-                          fontStyle:
-                              FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                          fontStyle: LimitedEditionViberaTheme.of(context)
+                              .bodyMedium
+                              .fontStyle,
                         ),
                   ),
                 ].divide(SizedBox(height: 24.0)),

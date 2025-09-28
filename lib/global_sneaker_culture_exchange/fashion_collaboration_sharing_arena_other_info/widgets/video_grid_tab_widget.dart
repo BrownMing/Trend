@@ -1,7 +1,7 @@
+import 'package:trend/viberaUrban_trendCelebration/viberaUrban_trendCelebration_player.dart';
 import '../../trendsetter_wardrobe_showcase_empty/trendsetter_wardrobe_showcase_empty_widget.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_video_player.dart';
+import '../../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_theme.dart';
+import '../../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_util.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -16,13 +16,13 @@ class VideoGridTabWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
+    context.watch<StreetStyleViberaConnection>();
 
     return Padding(
       padding: EdgeInsetsDirectional.fromSTEB(10, 16, 10, 0),
       child: Builder(
         builder: (context) {
-          final designTrendVaultStreetArtLoop = FFAppState()
+          final designTrendVaultStreetArtLoop = StreetStyleViberaConnection()
               .sneakerheadCultureConnectPosts
               .where((e) =>
                   (e.crossCultureTrendExchangeHubPostsVideo != '') &&
@@ -83,22 +83,25 @@ class VideoGridTabWidget extends StatelessWidget {
                             ),
                             Text(
                               '${designTrendVaultStreetArtLoopItem.crossCultureTrendExchangeHubPostsComments.toString()}',
-                              style: FlutterFlowTheme.of(context)
+                              style: LimitedEditionViberaTheme.of(context)
                                   .bodyMedium
                                   .override(
                                     font: GoogleFonts.poppins(
                                       fontWeight: FontWeight.bold,
-                                      fontStyle: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .fontStyle,
+                                      fontStyle:
+                                          LimitedEditionViberaTheme.of(context)
+                                              .bodyMedium
+                                              .fontStyle,
                                     ),
-                                    color: FlutterFlowTheme.of(context).info,
+                                    color: LimitedEditionViberaTheme.of(context)
+                                        .info,
                                     fontSize: 8,
                                     letterSpacing: 0.0,
                                     fontWeight: FontWeight.bold,
-                                    fontStyle: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .fontStyle,
+                                    fontStyle:
+                                        LimitedEditionViberaTheme.of(context)
+                                            .bodyMedium
+                                            .fontStyle,
                                   ),
                             ),
                           ].divide(SizedBox(width: 2)),

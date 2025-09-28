@@ -1,5 +1,5 @@
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_theme.dart';
+import '../../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_util.dart';
 import '/global_sneaker_culture_exchange/trendsetter_wardrobe_showcase_empty/trendsetter_wardrobe_showcase_empty_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -15,9 +15,9 @@ class PostsListTabWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
+    context.watch<StreetStyleViberaConnection>();
 
-    final styleVisionSpotAestheticVibeNet = FFAppState()
+    final styleVisionSpotAestheticVibeNet = StreetStyleViberaConnection()
         .sneakerheadCultureConnectPosts
         .where(
             (e) => e.crossCultureTrendExchangeHubPostsLikeUser.contains(userId))
@@ -57,7 +57,7 @@ class PostsListTabWidget extends StatelessWidget {
                         shape: BoxShape.circle,
                       ),
                       child: Image.asset(
-                        FFAppState()
+                        StreetStyleViberaConnection()
                             .urbanOutfitTrendSharingUsers
                             .elementAtOrNull(styleVisionSpotAestheticVibeNetItem
                                 .crossCultureTrendExchangeHubPostsCreateId)!
@@ -70,49 +70,56 @@ class PostsListTabWidget extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          '${FFAppState().urbanOutfitTrendSharingUsers.elementAtOrNull(styleVisionSpotAestheticVibeNetItem.crossCultureTrendExchangeHubPostsCreateId)?.streetTrendEchoSharingUserName}',
-                          style:
-                              FlutterFlowTheme.of(context).bodyMedium.override(
-                                    font: GoogleFonts.poppins(
-                                      fontWeight: FontWeight.w500,
-                                      fontStyle: FlutterFlowTheme.of(context)
+                          '${StreetStyleViberaConnection().urbanOutfitTrendSharingUsers.elementAtOrNull(styleVisionSpotAestheticVibeNetItem.crossCultureTrendExchangeHubPostsCreateId)?.streetTrendEchoSharingUserName}',
+                          style: LimitedEditionViberaTheme.of(context)
+                              .bodyMedium
+                              .override(
+                                font: GoogleFonts.poppins(
+                                  fontWeight: FontWeight.w500,
+                                  fontStyle:
+                                      LimitedEditionViberaTheme.of(context)
                                           .bodyMedium
                                           .fontStyle,
-                                    ),
-                                    color: FlutterFlowTheme.of(context).info,
-                                    fontSize: 18,
-                                    letterSpacing: 0.0,
-                                    fontWeight: FontWeight.w500,
-                                    fontStyle: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .fontStyle,
-                                  ),
+                                ),
+                                color:
+                                    LimitedEditionViberaTheme.of(context).info,
+                                fontSize: 18,
+                                letterSpacing: 0.0,
+                                fontWeight: FontWeight.w500,
+                                fontStyle: LimitedEditionViberaTheme.of(context)
+                                    .bodyMedium
+                                    .fontStyle,
+                              ),
                         ),
                         Text(
                           dateTimeFormat(
                               "relative",
                               styleVisionSpotAestheticVibeNetItem
                                   .crossCultureTrendExchangeHubPostsCreateTime!),
-                          style:
-                              FlutterFlowTheme.of(context).bodyMedium.override(
-                                    font: GoogleFonts.poppins(
-                                      fontWeight: FlutterFlowTheme.of(context)
+                          style: LimitedEditionViberaTheme.of(context)
+                              .bodyMedium
+                              .override(
+                                font: GoogleFonts.poppins(
+                                  fontWeight:
+                                      LimitedEditionViberaTheme.of(context)
                                           .bodyMedium
                                           .fontWeight,
-                                      fontStyle: FlutterFlowTheme.of(context)
+                                  fontStyle:
+                                      LimitedEditionViberaTheme.of(context)
                                           .bodyMedium
                                           .fontStyle,
-                                    ),
-                                    color: Color(0x66FFFFFF),
-                                    fontSize: 12,
-                                    letterSpacing: 0.0,
-                                    fontWeight: FlutterFlowTheme.of(context)
+                                ),
+                                color: Color(0x66FFFFFF),
+                                fontSize: 12,
+                                letterSpacing: 0.0,
+                                fontWeight:
+                                    LimitedEditionViberaTheme.of(context)
                                         .bodyMedium
                                         .fontWeight,
-                                    fontStyle: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .fontStyle,
-                                  ),
+                                fontStyle: LimitedEditionViberaTheme.of(context)
+                                    .bodyMedium
+                                    .fontStyle,
+                              ),
                         ),
                       ].divide(SizedBox(height: 4)),
                     ),
@@ -143,22 +150,24 @@ class PostsListTabWidget extends StatelessWidget {
                     Text(
                       styleVisionSpotAestheticVibeNetItem
                           .crossCultureTrendExchangeHubPostsDescribe,
-                      style: FlutterFlowTheme.of(context).bodyMedium.override(
+                      style: LimitedEditionViberaTheme.of(context)
+                          .bodyMedium
+                          .override(
                             font: GoogleFonts.poppins(
-                              fontWeight: FlutterFlowTheme.of(context)
+                              fontWeight: LimitedEditionViberaTheme.of(context)
                                   .bodyMedium
                                   .fontWeight,
-                              fontStyle: FlutterFlowTheme.of(context)
+                              fontStyle: LimitedEditionViberaTheme.of(context)
                                   .bodyMedium
                                   .fontStyle,
                             ),
-                            color: FlutterFlowTheme.of(context).info,
+                            color: LimitedEditionViberaTheme.of(context).info,
                             fontSize: 16,
                             letterSpacing: 0.0,
-                            fontWeight: FlutterFlowTheme.of(context)
+                            fontWeight: LimitedEditionViberaTheme.of(context)
                                 .bodyMedium
                                 .fontWeight,
-                            fontStyle: FlutterFlowTheme.of(context)
+                            fontStyle: LimitedEditionViberaTheme.of(context)
                                 .bodyMedium
                                 .fontStyle,
                           ),
@@ -182,22 +191,25 @@ class PostsListTabWidget extends StatelessWidget {
                           ),
                           Text(
                             '${styleVisionSpotAestheticVibeNetItem.crossCultureTrendExchangeHubPostsLikeUser.length.toString()}',
-                            style: FlutterFlowTheme.of(context)
+                            style: LimitedEditionViberaTheme.of(context)
                                 .bodyMedium
                                 .override(
                                   font: GoogleFonts.poppins(
                                     fontWeight: FontWeight.w500,
-                                    fontStyle: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .fontStyle,
+                                    fontStyle:
+                                        LimitedEditionViberaTheme.of(context)
+                                            .bodyMedium
+                                            .fontStyle,
                                   ),
-                                  color: FlutterFlowTheme.of(context).info,
+                                  color: LimitedEditionViberaTheme.of(context)
+                                      .info,
                                   fontSize: 14,
                                   letterSpacing: 0.0,
                                   fontWeight: FontWeight.w500,
-                                  fontStyle: FlutterFlowTheme.of(context)
-                                      .bodyMedium
-                                      .fontStyle,
+                                  fontStyle:
+                                      LimitedEditionViberaTheme.of(context)
+                                          .bodyMedium
+                                          .fontStyle,
                                 ),
                           ),
                           Container(
@@ -214,22 +226,25 @@ class PostsListTabWidget extends StatelessWidget {
                           ),
                           Text(
                             '${styleVisionSpotAestheticVibeNetItem.crossCultureTrendExchangeHubPostsComments.toString()}',
-                            style: FlutterFlowTheme.of(context)
+                            style: LimitedEditionViberaTheme.of(context)
                                 .bodyMedium
                                 .override(
                                   font: GoogleFonts.poppins(
                                     fontWeight: FontWeight.w500,
-                                    fontStyle: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .fontStyle,
+                                    fontStyle:
+                                        LimitedEditionViberaTheme.of(context)
+                                            .bodyMedium
+                                            .fontStyle,
                                   ),
-                                  color: FlutterFlowTheme.of(context).info,
+                                  color: LimitedEditionViberaTheme.of(context)
+                                      .info,
                                   fontSize: 14,
                                   letterSpacing: 0.0,
                                   fontWeight: FontWeight.w500,
-                                  fontStyle: FlutterFlowTheme.of(context)
-                                      .bodyMedium
-                                      .fontStyle,
+                                  fontStyle:
+                                      LimitedEditionViberaTheme.of(context)
+                                          .bodyMedium
+                                          .fontStyle,
                                 ),
                           ),
                         ].divide(SizedBox(width: 8)),
@@ -245,4 +260,3 @@ class PostsListTabWidget extends StatelessWidget {
     );
   }
 }
-

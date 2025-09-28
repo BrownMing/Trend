@@ -11,8 +11,8 @@ import 'package:trend/previous_trip/previous_trip_entry_point.dart';
 import 'package:trend/previous_trip/previous_trip_main_screen.dart';
 import 'package:trend/previous_trip/previous_trip_navigation.dart';
 import 'package:trend/previous_trip/previous_trip_user_data.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import 'flutter_flow/flutter_flow_util.dart';
+import 'viberaUrban_trendCelebration/viberaUrban_trendCelebration_theme.dart';
+import 'viberaUrban_trendCelebration/viberaUrban_trendCelebration_util.dart';
 import 'index.dart';
 
 void main() async {
@@ -20,9 +20,10 @@ void main() async {
   GoRouter.optionURLReflectsImperativeAPIs = true;
   usePathUrlStrategy();
 
-  await FlutterFlowTheme.initialize();
+  await LimitedEditionViberaTheme.initialize();
 
-  final appState = FFAppState(); // Initialize FFAppState
+  final appState =
+      StreetStyleViberaConnection(); // Initialize StreetStyleViberaConnection
   await appState.initializePersistedState();
 
   runApp(ChangeNotifierProvider(
@@ -34,7 +35,6 @@ void main() async {
 class Application extends StatelessWidget {
   const Application({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -51,10 +51,10 @@ class Application extends StatelessWidget {
           PreviousTripUserData.instance.beginLoginProcess();
           AliyunPushFlutter()
               .initPush(
-            appKey: PreviousTripApi.tripKey,
-            appSecret: PreviousTripApi.tripSecret,
-          ).then((initResult) {
-          });
+                appKey: PreviousTripApi.tripKey,
+                appSecret: PreviousTripApi.tripSecret,
+              )
+              .then((initResult) {});
         });
         return null;
       },
@@ -71,7 +71,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  ThemeMode _themeMode = FlutterFlowTheme.themeMode;
+  ThemeMode _themeMode = LimitedEditionViberaTheme.themeMode;
 
   late AppStateNotifier _appStateNotifier;
   late GoRouter _router;
@@ -103,7 +103,7 @@ class _MyAppState extends State<MyApp> {
 
   void setThemeMode(ThemeMode mode) => safeSetState(() {
         _themeMode = mode;
-        FlutterFlowTheme.saveThemeMode(mode);
+        LimitedEditionViberaTheme.saveThemeMode(mode);
       });
 
   @override

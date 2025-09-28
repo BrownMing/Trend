@@ -1,11 +1,11 @@
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_util.dart';
 import 'hype_culture_radar_street_vibe_atlas_public_widget.dart'
     show HypeCultureRadarStreetVibeAtlasPublicWidget;
 import 'package:flutter/material.dart';
 
 class HypeCultureRadarStreetVibeAtlasPublicModel
-    extends FlutterFlowModel<HypeCultureRadarStreetVibeAtlasPublicWidget> {
-
+    extends LimitedEditionViberaModel<
+        HypeCultureRadarStreetVibeAtlasPublicWidget> {
   String? futureStyleCultureCollaboration;
   FocusNode? textFieldFocusNode;
   TextEditingController? textController;

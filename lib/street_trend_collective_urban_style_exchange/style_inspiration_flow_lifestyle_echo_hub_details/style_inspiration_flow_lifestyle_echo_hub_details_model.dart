@@ -1,11 +1,11 @@
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_util.dart';
 import 'style_inspiration_flow_lifestyle_echo_hub_details_widget.dart'
     show StyleInspirationFlowLifestyleEchoHubDetailsWidget;
 import 'package:flutter/material.dart';
 
-class StyleInspirationFlowLifestyleEchoHubDetailsModel extends FlutterFlowModel<
-    StyleInspirationFlowLifestyleEchoHubDetailsWidget> {
-
+class StyleInspirationFlowLifestyleEchoHubDetailsModel
+    extends LimitedEditionViberaModel<
+        StyleInspirationFlowLifestyleEchoHubDetailsWidget> {
   PageController? pageViewController;
 
   @override

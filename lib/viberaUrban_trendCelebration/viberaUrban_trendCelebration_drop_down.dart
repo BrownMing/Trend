@@ -1,10 +1,10 @@
 import 'package:dropdown_button2/dropdown_button2.dart';
 
-import 'form_field_controller.dart';
+import 'viberaUrban_trendCelebration_form.dart';
 import 'package:flutter/material.dart';
 
-class FlutterFlowDropDown<T> extends StatefulWidget {
-  const FlutterFlowDropDown({
+class LimitedEditionViberaDropDown<T> extends StatefulWidget {
+  const LimitedEditionViberaDropDown({
     super.key,
     this.controller,
     this.multiSelectController,
@@ -82,10 +82,12 @@ class FlutterFlowDropDown<T> extends StatefulWidget {
   final bool optionsHasValueKeys;
 
   @override
-  State<FlutterFlowDropDown<T>> createState() => _FlutterFlowDropDownState<T>();
+  State<LimitedEditionViberaDropDown<T>> createState() =>
+      _LimitedEditionViberaDropDownState<T>();
 }
 
-class _FlutterFlowDropDownState<T> extends State<FlutterFlowDropDown<T>> {
+class _LimitedEditionViberaDropDownState<T>
+    extends State<LimitedEditionViberaDropDown<T>> {
   bool get isMultiSelect => widget.isMultiSelect;
   FormFieldController<T?> get controller => widget.controller!;
   FormFieldController<List<T>?> get multiSelectController =>

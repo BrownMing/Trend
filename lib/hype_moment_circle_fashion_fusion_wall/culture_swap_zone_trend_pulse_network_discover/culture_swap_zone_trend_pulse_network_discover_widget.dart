@@ -1,8 +1,9 @@
+import 'package:trend/viberaUrban_trendCelebration/viberaUrban_trendCelebration_player.dart';
+
 import '/components/urban_culture_fusion_exploration_platform_image_widget.dart';
-import '/flutter_flow/flutter_flow_button_tabbar.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_video_player.dart';
+import '../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_button_tabbar.dart';
+import '../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_theme.dart';
+import '../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_util.dart';
 import '/hype_moment_circle_fashion_fusion_wall/world_youth_trend_inspiration_network_report_black/world_youth_trend_inspiration_network_report_black_widget.dart';
 import '/index.dart';
 import 'package:flutter/material.dart';
@@ -53,7 +54,7 @@ class _CultureSwapZoneTrendPulseNetworkDiscoverWidgetState
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
+    context.watch<StreetStyleViberaConnection>();
 
     return GestureDetector(
       onTap: () {
@@ -77,18 +78,20 @@ class _CultureSwapZoneTrendPulseNetworkDiscoverWidgetState
                     children: [
                       Text(
                         'Discover',
-                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                        style: LimitedEditionViberaTheme.of(context)
+                            .bodyMedium
+                            .override(
                               font: GoogleFonts.poppins(
                                 fontWeight: FontWeight.bold,
-                                fontStyle: FlutterFlowTheme.of(context)
+                                fontStyle: LimitedEditionViberaTheme.of(context)
                                     .bodyMedium
                                     .fontStyle,
                               ),
-                              color: FlutterFlowTheme.of(context).info,
+                              color: LimitedEditionViberaTheme.of(context).info,
                               fontSize: 32.0,
                               letterSpacing: 0.0,
                               fontWeight: FontWeight.bold,
-                              fontStyle: FlutterFlowTheme.of(context)
+                              fontStyle: LimitedEditionViberaTheme.of(context)
                                   .bodyMedium
                                   .fontStyle,
                             ),
@@ -142,45 +145,53 @@ class _CultureSwapZoneTrendPulseNetworkDiscoverWidgetState
                                     fit: BoxFit.fill,
                                     image: AssetImage(
                                         'assets/images/gdfguidfhghdhofgu_xcgvsdygfuasgdfius.png'))),
-                            child: FlutterFlowButtonTabBar(
+                            child: LimitedEditionViberaButtonTabBar(
                               useToggleButtonStyle: false,
-                              labelStyle: FlutterFlowTheme.of(context)
+                              labelStyle: LimitedEditionViberaTheme.of(context)
                                   .titleMedium
                                   .override(
                                     font: GoogleFonts.poppins(
-                                      fontWeight: FlutterFlowTheme.of(context)
-                                          .titleMedium
-                                          .fontWeight,
-                                      fontStyle: FlutterFlowTheme.of(context)
-                                          .titleMedium
-                                          .fontStyle,
+                                      fontWeight:
+                                          LimitedEditionViberaTheme.of(context)
+                                              .titleMedium
+                                              .fontWeight,
+                                      fontStyle:
+                                          LimitedEditionViberaTheme.of(context)
+                                              .titleMedium
+                                              .fontStyle,
                                     ),
                                     fontSize: 16.0,
                                     letterSpacing: 0.0,
-                                    fontWeight: FlutterFlowTheme.of(context)
-                                        .titleMedium
-                                        .fontWeight,
-                                    fontStyle: FlutterFlowTheme.of(context)
-                                        .titleMedium
-                                        .fontStyle,
+                                    fontWeight:
+                                        LimitedEditionViberaTheme.of(context)
+                                            .titleMedium
+                                            .fontWeight,
+                                    fontStyle:
+                                        LimitedEditionViberaTheme.of(context)
+                                            .titleMedium
+                                            .fontStyle,
                                   ),
-                              unselectedLabelStyle: FlutterFlowTheme.of(context)
+                              unselectedLabelStyle: LimitedEditionViberaTheme
+                                      .of(context)
                                   .titleMedium
                                   .override(
                                     font: GoogleFonts.poppins(
                                       fontWeight: FontWeight.normal,
-                                      fontStyle: FlutterFlowTheme.of(context)
-                                          .titleMedium
-                                          .fontStyle,
+                                      fontStyle:
+                                          LimitedEditionViberaTheme.of(context)
+                                              .titleMedium
+                                              .fontStyle,
                                     ),
                                     fontSize: 16.0,
                                     letterSpacing: 0.0,
                                     fontWeight: FontWeight.normal,
-                                    fontStyle: FlutterFlowTheme.of(context)
-                                        .titleMedium
-                                        .fontStyle,
+                                    fontStyle:
+                                        LimitedEditionViberaTheme.of(context)
+                                            .titleMedium
+                                            .fontStyle,
                                   ),
-                              labelColor: FlutterFlowTheme.of(context).info,
+                              labelColor:
+                                  LimitedEditionViberaTheme.of(context).info,
                               unselectedLabelColor: Color(0x98FFFFFF),
                               backgroundColor: Colors.transparent,
                               selectedGradient: LinearGradient(
@@ -222,16 +233,18 @@ class _CultureSwapZoneTrendPulseNetworkDiscoverWidgetState
                                     16.0, 0.0, 16.0, 0.0),
                                 child: Builder(
                                   builder: (context) {
-                                    final culturalVisualStorytellingCommunity = FFAppState()
-                                        .sneakerheadCultureConnectPosts
-                                        .where((e) => !FFAppState()
-                                            .urbanOutfitTrendSharingUsers
-                                            .elementAtOrNull(FFAppState()
-                                                .urbanTrendVisualCollaborationCurrent)!
-                                            .streetTrendEchoSharingUserBlacklist
-                                            .contains(e
-                                                .crossCultureTrendExchangeHubPostsCreateId))
-                                        .toList();
+                                    final culturalVisualStorytellingCommunity =
+                                        StreetStyleViberaConnection()
+                                            .sneakerheadCultureConnectPosts
+                                            .where((e) => !StreetStyleViberaConnection()
+                                                .urbanOutfitTrendSharingUsers
+                                                .elementAtOrNull(
+                                                    StreetStyleViberaConnection()
+                                                        .urbanTrendVisualCollaborationCurrent)!
+                                                .streetTrendEchoSharingUserBlacklist
+                                                .contains(e
+                                                    .crossCultureTrendExchangeHubPostsCreateId))
+                                            .toList();
 
                                     return MasonryGridView.builder(
                                       gridDelegate:
@@ -371,7 +384,7 @@ class _CultureSwapZoneTrendPulseNetworkDiscoverWidgetState
                                                             MainAxisAlignment
                                                                 .spaceBetween,
                                                         children: [
-                                                          if (FFAppState()
+                                                          if (StreetStyleViberaConnection()
                                                                   .urbanTrendVisualCollaborationCurrent !=
                                                               culturalVisualStorytellingCommunityItem
                                                                   .crossCultureTrendExchangeHubPostsCreateId)
@@ -492,7 +505,7 @@ class _CultureSwapZoneTrendPulseNetworkDiscoverWidgetState
                                                                   .circle,
                                                             ),
                                                             child: Image.asset(
-                                                              FFAppState()
+                                                              StreetStyleViberaConnection()
                                                                   .urbanOutfitTrendSharingUsers
                                                                   .elementAtOrNull(
                                                                       culturalVisualStorytellingCommunityItem
@@ -502,8 +515,8 @@ class _CultureSwapZoneTrendPulseNetworkDiscoverWidgetState
                                                             ),
                                                           ),
                                                           Text(
-                                                            '${FFAppState().urbanOutfitTrendSharingUsers.elementAtOrNull(culturalVisualStorytellingCommunityItem.crossCultureTrendExchangeHubPostsCreateId)?.streetTrendEchoSharingUserName}',
-                                                            style: FlutterFlowTheme
+                                                            '${StreetStyleViberaConnection().urbanOutfitTrendSharingUsers.elementAtOrNull(culturalVisualStorytellingCommunityItem.crossCultureTrendExchangeHubPostsCreateId)?.streetTrendEchoSharingUserName}',
+                                                            style: LimitedEditionViberaTheme
                                                                     .of(context)
                                                                 .bodyMedium
                                                                 .override(
@@ -512,12 +525,12 @@ class _CultureSwapZoneTrendPulseNetworkDiscoverWidgetState
                                                                     fontWeight:
                                                                         FontWeight
                                                                             .w500,
-                                                                    fontStyle: FlutterFlowTheme.of(
+                                                                    fontStyle: LimitedEditionViberaTheme.of(
                                                                             context)
                                                                         .bodyMedium
                                                                         .fontStyle,
                                                                   ),
-                                                                  color: FlutterFlowTheme.of(
+                                                                  color: LimitedEditionViberaTheme.of(
                                                                           context)
                                                                       .info,
                                                                   fontSize:
@@ -527,7 +540,7 @@ class _CultureSwapZoneTrendPulseNetworkDiscoverWidgetState
                                                                   fontWeight:
                                                                       FontWeight
                                                                           .w500,
-                                                                  fontStyle: FlutterFlowTheme.of(
+                                                                  fontStyle: LimitedEditionViberaTheme.of(
                                                                           context)
                                                                       .bodyMedium
                                                                       .fontStyle,
@@ -550,19 +563,20 @@ class _CultureSwapZoneTrendPulseNetworkDiscoverWidgetState
                               ),
                               Builder(
                                 builder: (context) {
-                                  final youthArtStyleDiscoveryPlatform = FFAppState()
-                                      .sneakerheadCultureConnectPosts
-                                      .where((e) =>
-                                          e.crossCultureTrendExchangeHubPostsPhoto
-                                              .isNotEmpty &&
-                                          !FFAppState()
-                                              .urbanOutfitTrendSharingUsers[
-                                                  FFAppState()
-                                                      .urbanTrendVisualCollaborationCurrent]
-                                              .streetTrendEchoSharingUserBlacklist
-                                              .contains(e
-                                                  .crossCultureTrendExchangeHubPostsCreateId))
-                                      .toList();
+                                  final youthArtStyleDiscoveryPlatform =
+                                      StreetStyleViberaConnection()
+                                          .sneakerheadCultureConnectPosts
+                                          .where((e) =>
+                                              e.crossCultureTrendExchangeHubPostsPhoto
+                                                  .isNotEmpty &&
+                                              !StreetStyleViberaConnection()
+                                                  .urbanOutfitTrendSharingUsers[
+                                                      StreetStyleViberaConnection()
+                                                          .urbanTrendVisualCollaborationCurrent]
+                                                  .streetTrendEchoSharingUserBlacklist
+                                                  .contains(e
+                                                      .crossCultureTrendExchangeHubPostsCreateId))
+                                          .toList();
 
                                   return ListView.separated(
                                     padding: EdgeInsets.zero,
@@ -601,7 +615,7 @@ class _CultureSwapZoneTrendPulseNetworkDiscoverWidgetState
                                                       shape: BoxShape.circle,
                                                     ),
                                                     child: Image.asset(
-                                                      FFAppState()
+                                                      StreetStyleViberaConnection()
                                                           .urbanOutfitTrendSharingUsers
                                                           .elementAtOrNull(
                                                               youthArtStyleDiscoveryPlatformItem
@@ -618,10 +632,10 @@ class _CultureSwapZoneTrendPulseNetworkDiscoverWidgetState
                                                             .start,
                                                     children: [
                                                       Text(
-                                                        '${FFAppState().urbanOutfitTrendSharingUsers.elementAtOrNull(youthArtStyleDiscoveryPlatformItem.crossCultureTrendExchangeHubPostsCreateId)?.streetTrendEchoSharingUserName}',
+                                                        '${StreetStyleViberaConnection().urbanOutfitTrendSharingUsers.elementAtOrNull(youthArtStyleDiscoveryPlatformItem.crossCultureTrendExchangeHubPostsCreateId)?.streetTrendEchoSharingUserName}',
                                                         style:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
+                                                            LimitedEditionViberaTheme
+                                                                    .of(context)
                                                                 .bodyMedium
                                                                 .override(
                                                                   font: GoogleFonts
@@ -629,12 +643,12 @@ class _CultureSwapZoneTrendPulseNetworkDiscoverWidgetState
                                                                     fontWeight:
                                                                         FontWeight
                                                                             .w500,
-                                                                    fontStyle: FlutterFlowTheme.of(
+                                                                    fontStyle: LimitedEditionViberaTheme.of(
                                                                             context)
                                                                         .bodyMedium
                                                                         .fontStyle,
                                                                   ),
-                                                                  color: FlutterFlowTheme.of(
+                                                                  color: LimitedEditionViberaTheme.of(
                                                                           context)
                                                                       .info,
                                                                   fontSize:
@@ -644,7 +658,7 @@ class _CultureSwapZoneTrendPulseNetworkDiscoverWidgetState
                                                                   fontWeight:
                                                                       FontWeight
                                                                           .w500,
-                                                                  fontStyle: FlutterFlowTheme.of(
+                                                                  fontStyle: LimitedEditionViberaTheme.of(
                                                                           context)
                                                                       .bodyMedium
                                                                       .fontStyle,
@@ -656,17 +670,17 @@ class _CultureSwapZoneTrendPulseNetworkDiscoverWidgetState
                                                             youthArtStyleDiscoveryPlatformItem
                                                                 .crossCultureTrendExchangeHubPostsCreateTime!),
                                                         style:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
+                                                            LimitedEditionViberaTheme
+                                                                    .of(context)
                                                                 .bodyMedium
                                                                 .override(
                                                                   font: GoogleFonts
                                                                       .poppins(
-                                                                    fontWeight: FlutterFlowTheme.of(
+                                                                    fontWeight: LimitedEditionViberaTheme.of(
                                                                             context)
                                                                         .bodyMedium
                                                                         .fontWeight,
-                                                                    fontStyle: FlutterFlowTheme.of(
+                                                                    fontStyle: LimitedEditionViberaTheme.of(
                                                                             context)
                                                                         .bodyMedium
                                                                         .fontStyle,
@@ -677,11 +691,11 @@ class _CultureSwapZoneTrendPulseNetworkDiscoverWidgetState
                                                                       16.0,
                                                                   letterSpacing:
                                                                       0.0,
-                                                                  fontWeight: FlutterFlowTheme.of(
+                                                                  fontWeight: LimitedEditionViberaTheme.of(
                                                                           context)
                                                                       .bodyMedium
                                                                       .fontWeight,
-                                                                  fontStyle: FlutterFlowTheme.of(
+                                                                  fontStyle: LimitedEditionViberaTheme.of(
                                                                           context)
                                                                       .bodyMedium
                                                                       .fontStyle,
@@ -788,37 +802,37 @@ class _CultureSwapZoneTrendPulseNetworkDiscoverWidgetState
                                                   child: Text(
                                                     '${youthArtStyleDiscoveryPlatformItem.crossCultureTrendExchangeHubPostsDescribe}',
                                                     maxLines: 2,
-                                                    style: FlutterFlowTheme.of(
-                                                            context)
-                                                        .bodyMedium
-                                                        .override(
-                                                          font: GoogleFonts
-                                                              .poppins(
-                                                            fontWeight:
-                                                                FlutterFlowTheme.of(
+                                                    style:
+                                                        LimitedEditionViberaTheme
+                                                                .of(context)
+                                                            .bodyMedium
+                                                            .override(
+                                                              font: GoogleFonts
+                                                                  .poppins(
+                                                                fontWeight: LimitedEditionViberaTheme.of(
                                                                         context)
                                                                     .bodyMedium
                                                                     .fontWeight,
-                                                            fontStyle:
-                                                                FlutterFlowTheme.of(
+                                                                fontStyle: LimitedEditionViberaTheme.of(
                                                                         context)
                                                                     .bodyMedium
                                                                     .fontStyle,
-                                                          ),
-                                                          color:
-                                                              Color(0xCCFFFFFF),
-                                                          letterSpacing: 0.0,
-                                                          fontWeight:
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .bodyMedium
-                                                                  .fontWeight,
-                                                          fontStyle:
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .bodyMedium
-                                                                  .fontStyle,
-                                                        ),
+                                                              ),
+                                                              color: Color(
+                                                                  0xCCFFFFFF),
+                                                              letterSpacing:
+                                                                  0.0,
+                                                              fontWeight:
+                                                                  LimitedEditionViberaTheme.of(
+                                                                          context)
+                                                                      .bodyMedium
+                                                                      .fontWeight,
+                                                              fontStyle:
+                                                                  LimitedEditionViberaTheme.of(
+                                                                          context)
+                                                                      .bodyMedium
+                                                                      .fontStyle,
+                                                            ),
                                                   ),
                                                 ),
                                                 Padding(
@@ -851,17 +865,17 @@ class _CultureSwapZoneTrendPulseNetworkDiscoverWidgetState
                                                           ),
                                                           Text(
                                                             '${youthArtStyleDiscoveryPlatformItem.crossCultureTrendExchangeHubPostsComments.toString()}',
-                                                            style: FlutterFlowTheme
+                                                            style: LimitedEditionViberaTheme
                                                                     .of(context)
                                                                 .bodyMedium
                                                                 .override(
                                                                   font: GoogleFonts
                                                                       .poppins(
-                                                                    fontWeight: FlutterFlowTheme.of(
+                                                                    fontWeight: LimitedEditionViberaTheme.of(
                                                                             context)
                                                                         .bodyMedium
                                                                         .fontWeight,
-                                                                    fontStyle: FlutterFlowTheme.of(
+                                                                    fontStyle: LimitedEditionViberaTheme.of(
                                                                             context)
                                                                         .bodyMedium
                                                                         .fontStyle,
@@ -870,11 +884,11 @@ class _CultureSwapZoneTrendPulseNetworkDiscoverWidgetState
                                                                       0xFFCCCCCC),
                                                                   letterSpacing:
                                                                       0.0,
-                                                                  fontWeight: FlutterFlowTheme.of(
+                                                                  fontWeight: LimitedEditionViberaTheme.of(
                                                                           context)
                                                                       .bodyMedium
                                                                       .fontWeight,
-                                                                  fontStyle: FlutterFlowTheme.of(
+                                                                  fontStyle: LimitedEditionViberaTheme.of(
                                                                           context)
                                                                       .bodyMedium
                                                                       .fontStyle,
@@ -901,7 +915,7 @@ class _CultureSwapZoneTrendPulseNetworkDiscoverWidgetState
                                                                 if (youthArtStyleDiscoveryPlatformItem
                                                                     .crossCultureTrendExchangeHubPostsLikeUser
                                                                     .contains(
-                                                                        FFAppState()
+                                                                        StreetStyleViberaConnection()
                                                                             .urbanTrendVisualCollaborationCurrent)) {
                                                                   return InkWell(
                                                                     splashColor:
@@ -921,26 +935,24 @@ class _CultureSwapZoneTrendPulseNetworkDiscoverWidgetState
                                                                       HapticFeedback
                                                                           .heavyImpact();
                                                                       // 找到当前post在数组中的正确索引
-                                                                      int postIndex = FFAppState()
+                                                                      int postIndex = StreetStyleViberaConnection()
                                                                           .sneakerheadCultureConnectPosts
                                                                           .indexWhere((post) =>
                                                                               post.crossCultureTrendExchangeHubPostsId ==
-                                                                              youthArtStyleDiscoveryPlatformItem
-                                                                                  .crossCultureTrendExchangeHubPostsId);
-                                                                      
-                                                                      if (postIndex != -1) {
-                                                                        FFAppState()
+                                                                              youthArtStyleDiscoveryPlatformItem.crossCultureTrendExchangeHubPostsId);
+
+                                                                      if (postIndex !=
+                                                                          -1) {
+                                                                        StreetStyleViberaConnection()
                                                                             .updateSneakerheadCultureConnectPostsAtIndex(
                                                                           postIndex,
                                                                           (e) => e
                                                                             ..updateCrossCultureTrendExchangeHubPostsLikeUser(
-                                                                              (e) =>
-                                                                                  e.remove(FFAppState().urbanTrendVisualCollaborationCurrent),
+                                                                              (e) => e.remove(StreetStyleViberaConnection().urbanTrendVisualCollaborationCurrent),
                                                                             ),
                                                                         );
-                                                                        FFAppState()
-                                                                            .update(
-                                                                                () {});
+                                                                        StreetStyleViberaConnection()
+                                                                            .update(() {});
                                                                       }
                                                                     },
                                                                     child:
@@ -987,26 +999,24 @@ class _CultureSwapZoneTrendPulseNetworkDiscoverWidgetState
                                                                       HapticFeedback
                                                                           .heavyImpact();
                                                                       // 找到当前post在数组中的正确索引
-                                                                      int postIndex = FFAppState()
+                                                                      int postIndex = StreetStyleViberaConnection()
                                                                           .sneakerheadCultureConnectPosts
                                                                           .indexWhere((post) =>
                                                                               post.crossCultureTrendExchangeHubPostsId ==
-                                                                              youthArtStyleDiscoveryPlatformItem
-                                                                                  .crossCultureTrendExchangeHubPostsId);
-                                                                      
-                                                                      if (postIndex != -1) {
-                                                                        FFAppState()
+                                                                              youthArtStyleDiscoveryPlatformItem.crossCultureTrendExchangeHubPostsId);
+
+                                                                      if (postIndex !=
+                                                                          -1) {
+                                                                        StreetStyleViberaConnection()
                                                                             .updateSneakerheadCultureConnectPostsAtIndex(
                                                                           postIndex,
                                                                           (e) => e
                                                                             ..updateCrossCultureTrendExchangeHubPostsLikeUser(
-                                                                              (e) =>
-                                                                                  e.add(FFAppState().urbanTrendVisualCollaborationCurrent),
+                                                                              (e) => e.add(StreetStyleViberaConnection().urbanTrendVisualCollaborationCurrent),
                                                                             ),
                                                                         );
-                                                                        FFAppState()
-                                                                            .update(
-                                                                                () {});
+                                                                        StreetStyleViberaConnection()
+                                                                            .update(() {});
                                                                       }
                                                                     },
                                                                     child:
@@ -1039,17 +1049,17 @@ class _CultureSwapZoneTrendPulseNetworkDiscoverWidgetState
                                                             ),
                                                             Text(
                                                               '${youthArtStyleDiscoveryPlatformItem.crossCultureTrendExchangeHubPostsLikeUser.length.toString()}',
-                                                              style: FlutterFlowTheme
+                                                              style: LimitedEditionViberaTheme
                                                                       .of(context)
                                                                   .bodyMedium
                                                                   .override(
                                                                     font: GoogleFonts
                                                                         .poppins(
-                                                                      fontWeight: FlutterFlowTheme.of(
+                                                                      fontWeight: LimitedEditionViberaTheme.of(
                                                                               context)
                                                                           .bodyMedium
                                                                           .fontWeight,
-                                                                      fontStyle: FlutterFlowTheme.of(
+                                                                      fontStyle: LimitedEditionViberaTheme.of(
                                                                               context)
                                                                           .bodyMedium
                                                                           .fontStyle,
@@ -1058,11 +1068,11 @@ class _CultureSwapZoneTrendPulseNetworkDiscoverWidgetState
                                                                         0xFFCCCCCC),
                                                                     letterSpacing:
                                                                         0.0,
-                                                                    fontWeight: FlutterFlowTheme.of(
+                                                                    fontWeight: LimitedEditionViberaTheme.of(
                                                                             context)
                                                                         .bodyMedium
                                                                         .fontWeight,
-                                                                    fontStyle: FlutterFlowTheme.of(
+                                                                    fontStyle: LimitedEditionViberaTheme.of(
                                                                             context)
                                                                         .bodyMedium
                                                                         .fontStyle,
@@ -1072,7 +1082,7 @@ class _CultureSwapZoneTrendPulseNetworkDiscoverWidgetState
                                                               width: 4.0)),
                                                         ),
                                                       ),
-                                                      if (FFAppState()
+                                                      if (StreetStyleViberaConnection()
                                                               .urbanTrendVisualCollaborationCurrent !=
                                                           youthArtStyleDiscoveryPlatformItem
                                                               .crossCultureTrendExchangeHubPostsCreateId)

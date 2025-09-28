@@ -181,7 +181,7 @@ class _TabBarScrollPosition extends ScrollPositionWithSingleContext {
           oldPosition: oldPosition,
         );
 
-  final _FlutterFlowButtonTabBarState tabBar;
+  final _LimitedEditionViberaButtonTabBarState tabBar;
 
   bool _viewportDimensionWasNonZero = false;
 
@@ -221,7 +221,7 @@ class _TabBarScrollPosition extends ScrollPositionWithSingleContext {
 class _TabBarScrollController extends ScrollController {
   _TabBarScrollController(this.tabBar);
 
-  final _FlutterFlowButtonTabBarState tabBar;
+  final _LimitedEditionViberaButtonTabBarState tabBar;
 
   @override
   ScrollPosition createScrollPosition(ScrollPhysics physics,
@@ -235,8 +235,8 @@ class _TabBarScrollController extends ScrollController {
   }
 }
 
-/// A Flutterflow Design widget that displays a horizontal row of tabs.
-class FlutterFlowButtonTabBar extends StatefulWidget
+/// A LimitedEditionVibera Design widget that displays a horizontal row of tabs.
+class LimitedEditionViberaButtonTabBar extends StatefulWidget
     implements PreferredSizeWidget {
   /// The [tabs] argument must not be null and its length must match the [controller]'s
   /// [TabController.length].
@@ -244,7 +244,7 @@ class FlutterFlowButtonTabBar extends StatefulWidget
   /// If a [TabController] is not provided, then there must be a
   /// [DefaultTabController] ancestor.
   ///
-  const FlutterFlowButtonTabBar({
+  const LimitedEditionViberaButtonTabBar({
     Key? key,
     required this.tabs,
     this.controller,
@@ -288,7 +288,7 @@ class FlutterFlowButtonTabBar extends StatefulWidget
   /// Whether this tab bar can be scrolled horizontally.
   ///
   /// If [isScrollable] is true, then each tab is as wide as needed for its label
-  /// and the entire [FlutterFlowButtonTabBar] is scrollable. Otherwise each tab gets an equal
+  /// and the entire [LimitedEditionViberaButtonTabBar] is scrollable. Otherwise each tab gets an equal
   /// share of the available space.
   final bool isScrollable;
 
@@ -388,11 +388,12 @@ class FlutterFlowButtonTabBar extends StatefulWidget
   }
 
   @override
-  State<FlutterFlowButtonTabBar> createState() =>
-      _FlutterFlowButtonTabBarState();
+  State<LimitedEditionViberaButtonTabBar> createState() =>
+      _LimitedEditionViberaButtonTabBarState();
 }
 
-class _FlutterFlowButtonTabBarState extends State<FlutterFlowButtonTabBar>
+class _LimitedEditionViberaButtonTabBarState
+    extends State<LimitedEditionViberaButtonTabBar>
     with TickerProviderStateMixin {
   ScrollController? _scrollController;
   TabController? _controller;
@@ -486,7 +487,7 @@ class _FlutterFlowButtonTabBarState extends State<FlutterFlowButtonTabBar>
   }
 
   @override
-  void didUpdateWidget(FlutterFlowButtonTabBar oldWidget) {
+  void didUpdateWidget(LimitedEditionViberaButtonTabBar oldWidget) {
     super.didUpdateWidget(oldWidget);
     if (widget.controller != oldWidget.controller) {
       _updateTabController();
@@ -669,9 +670,12 @@ class _FlutterFlowButtonTabBarState extends State<FlutterFlowButtonTabBar>
 
     BoxDecoration? boxDecoration = BoxDecoration.lerp(
         BoxDecoration(
-          color: (widget.unselectedGradient != null || widget.unselectedDecoration?.gradient != null) 
-              ? null 
-              : (widget.unselectedDecoration?.color ?? widget.unselectedBackgroundColor ?? Colors.transparent),
+          color: (widget.unselectedGradient != null ||
+                  widget.unselectedDecoration?.gradient != null)
+              ? null
+              : (widget.unselectedDecoration?.color ??
+                  widget.unselectedBackgroundColor ??
+                  Colors.transparent),
           boxShadow: widget.unselectedDecoration?.boxShadow,
           gradient: widget.unselectedGradient ??
               widget.unselectedDecoration?.gradient,
@@ -681,9 +685,12 @@ class _FlutterFlowButtonTabBarState extends State<FlutterFlowButtonTabBar>
           image: widget.unselectedDecoration?.image,
         ),
         BoxDecoration(
-          color: (widget.selectedGradient != null || widget.decoration?.gradient != null) 
-              ? null 
-              : (widget.decoration?.color ?? widget.backgroundColor ?? Colors.transparent),
+          color: (widget.selectedGradient != null ||
+                  widget.decoration?.gradient != null)
+              ? null
+              : (widget.decoration?.color ??
+                  widget.backgroundColor ??
+                  Colors.transparent),
           boxShadow: widget.decoration?.boxShadow,
           gradient: widget.selectedGradient ?? widget.decoration?.gradient,
           borderRadius: widget.useToggleButtonStyle

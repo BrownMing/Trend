@@ -1,6 +1,6 @@
 import '/backend/schema/structs/index.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_theme.dart';
+import '../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_util.dart';
 
 import 'package:smooth_page_indicator/smooth_page_indicator.dart'
     as smooth_page_indicator;
@@ -50,7 +50,7 @@ class _StyleInspirationFlowLifestyleEchoHubDetailsWidgetState
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
+    context.watch<StreetStyleViberaConnection>();
 
     return GestureDetector(
       onTap: () {
@@ -133,7 +133,8 @@ class _StyleInspirationFlowLifestyleEchoHubDetailsWidgetState
                               dotWidth: 79,
                               dotHeight: 8,
                               dotColor: Color(0x3FFFFFFF),
-                              activeDotColor: FlutterFlowTheme.of(context).info,
+                              activeDotColor:
+                                  LimitedEditionViberaTheme.of(context).info,
                               paintStyle: PaintingStyle.fill,
                             ),
                           ),
@@ -182,35 +183,39 @@ class _StyleInspirationFlowLifestyleEchoHubDetailsWidgetState
                           children: [
                             Builder(
                               builder: (context) {
-                                final currentPost = FFAppState()
-                                    .creativeWardrobeFusionCommunPostImages
-                                    .firstWhere(
-                                      (post) =>
-                                          post.futureLifestyleSharingPostImageId ==
-                                          widget.wardrobeCultureConnectionHub
-                                              ?.futureLifestyleSharingPostImageId,
-                                      orElse: () =>
-                                          widget.wardrobeCultureConnectionHub!,
-                                    );
+                                final currentPost =
+                                    StreetStyleViberaConnection()
+                                        .creativeWardrobeFusionCommunPostImages
+                                        .firstWhere(
+                                          (post) =>
+                                              post.futureLifestyleSharingPostImageId ==
+                                              widget
+                                                  .wardrobeCultureConnectionHub
+                                                  ?.futureLifestyleSharingPostImageId,
+                                          orElse: () => widget
+                                              .wardrobeCultureConnectionHub!,
+                                        );
 
                                 if (currentPost
                                     .futureLifestyleSharingPostImageLikeUsers
-                                    .contains(FFAppState()
+                                    .contains(StreetStyleViberaConnection()
                                         .urbanTrendVisualCollaborationCurrent)) {
                                   return GestureDetector(
                                     onTap: () async {
                                       HapticFeedback.heavyImpact();
-                                      FFAppState()
+                                      StreetStyleViberaConnection()
                                           .updateCreativeWardrobeFusionCommunPostImagesAtIndex(
                                         widget.wardrobeCultureConnectionHub!
                                             .futureLifestyleSharingPostImageId,
                                         (e) => e
                                           ..updateFutureLifestyleSharingPostImageLikeUsers(
-                                            (e) => e.remove(FFAppState()
-                                                .urbanTrendVisualCollaborationCurrent),
+                                            (e) => e.remove(
+                                                StreetStyleViberaConnection()
+                                                    .urbanTrendVisualCollaborationCurrent),
                                           ),
                                       );
-                                      FFAppState().update(() {});
+                                      StreetStyleViberaConnection()
+                                          .update(() {});
                                       setState(() {});
                                     },
                                     child: AnimatedContainer(
@@ -232,17 +237,19 @@ class _StyleInspirationFlowLifestyleEchoHubDetailsWidgetState
                                   return GestureDetector(
                                     onTap: () async {
                                       HapticFeedback.heavyImpact();
-                                      FFAppState()
+                                      StreetStyleViberaConnection()
                                           .updateCreativeWardrobeFusionCommunPostImagesAtIndex(
                                         widget.wardrobeCultureConnectionHub!
                                             .futureLifestyleSharingPostImageId,
                                         (e) => e
                                           ..updateFutureLifestyleSharingPostImageLikeUsers(
-                                            (e) => e.add(FFAppState()
-                                                .urbanTrendVisualCollaborationCurrent),
+                                            (e) => e.add(
+                                                StreetStyleViberaConnection()
+                                                    .urbanTrendVisualCollaborationCurrent),
                                           ),
                                       );
-                                      FFAppState().update(() {});
+                                      StreetStyleViberaConnection()
+                                          .update(() {});
                                       setState(() {});
                                     },
                                     child: AnimatedContainer(
@@ -266,39 +273,47 @@ class _StyleInspirationFlowLifestyleEchoHubDetailsWidgetState
                             Builder(
                               builder: (context) {
                                 // 从全局状态获取最新的点赞数
-                                final currentPost = FFAppState()
-                                    .creativeWardrobeFusionCommunPostImages
-                                    .firstWhere(
-                                      (post) =>
-                                          post.futureLifestyleSharingPostImageId ==
-                                          widget.wardrobeCultureConnectionHub
-                                              ?.futureLifestyleSharingPostImageId,
-                                      orElse: () =>
-                                          widget.wardrobeCultureConnectionHub!,
-                                    );
+                                final currentPost =
+                                    StreetStyleViberaConnection()
+                                        .creativeWardrobeFusionCommunPostImages
+                                        .firstWhere(
+                                          (post) =>
+                                              post.futureLifestyleSharingPostImageId ==
+                                              widget
+                                                  .wardrobeCultureConnectionHub
+                                                  ?.futureLifestyleSharingPostImageId,
+                                          orElse: () => widget
+                                              .wardrobeCultureConnectionHub!,
+                                        );
                                 return Text(
                                   '${currentPost.futureLifestyleSharingPostImageLikeUsers.length.toString()}',
-                                  style: FlutterFlowTheme.of(context)
+                                  style: LimitedEditionViberaTheme.of(context)
                                       .bodyMedium
                                       .override(
                                         font: GoogleFonts.poppins(
                                           fontWeight:
-                                              FlutterFlowTheme.of(context)
+                                              LimitedEditionViberaTheme.of(
+                                                      context)
                                                   .bodyMedium
                                                   .fontWeight,
                                           fontStyle:
-                                              FlutterFlowTheme.of(context)
+                                              LimitedEditionViberaTheme.of(
+                                                      context)
                                                   .bodyMedium
                                                   .fontStyle,
                                         ),
-                                        color:
-                                            FlutterFlowTheme.of(context).info,
+                                        color: LimitedEditionViberaTheme.of(
+                                                context)
+                                            .info,
                                         fontSize: 12,
                                         letterSpacing: 0.0,
-                                        fontWeight: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .fontWeight,
-                                        fontStyle: FlutterFlowTheme.of(context)
+                                        fontWeight:
+                                            LimitedEditionViberaTheme.of(
+                                                    context)
+                                                .bodyMedium
+                                                .fontWeight,
+                                        fontStyle: LimitedEditionViberaTheme.of(
+                                                context)
                                             .bodyMedium
                                             .fontStyle,
                                       ),
@@ -324,40 +339,47 @@ class _StyleInspirationFlowLifestyleEchoHubDetailsWidgetState
                             ),
                             Builder(
                               builder: (context) {
-                       
-                                final currentPost = FFAppState()
-                                    .creativeWardrobeFusionCommunPostImages
-                                    .firstWhere(
-                                      (post) =>
-                                          post.futureLifestyleSharingPostImageId ==
-                                          widget.wardrobeCultureConnectionHub
-                                              ?.futureLifestyleSharingPostImageId,
-                                      orElse: () =>
-                                          widget.wardrobeCultureConnectionHub!,
-                                    );
+                                final currentPost =
+                                    StreetStyleViberaConnection()
+                                        .creativeWardrobeFusionCommunPostImages
+                                        .firstWhere(
+                                          (post) =>
+                                              post.futureLifestyleSharingPostImageId ==
+                                              widget
+                                                  .wardrobeCultureConnectionHub
+                                                  ?.futureLifestyleSharingPostImageId,
+                                          orElse: () => widget
+                                              .wardrobeCultureConnectionHub!,
+                                        );
                                 return Text(
                                   '${currentPost.futureLifestyleSharingPostImageComment.toString()}',
-                                  style: FlutterFlowTheme.of(context)
+                                  style: LimitedEditionViberaTheme.of(context)
                                       .bodyMedium
                                       .override(
                                         font: GoogleFonts.poppins(
                                           fontWeight:
-                                              FlutterFlowTheme.of(context)
+                                              LimitedEditionViberaTheme.of(
+                                                      context)
                                                   .bodyMedium
                                                   .fontWeight,
                                           fontStyle:
-                                              FlutterFlowTheme.of(context)
+                                              LimitedEditionViberaTheme.of(
+                                                      context)
                                                   .bodyMedium
                                                   .fontStyle,
                                         ),
-                                        color:
-                                            FlutterFlowTheme.of(context).info,
+                                        color: LimitedEditionViberaTheme.of(
+                                                context)
+                                            .info,
                                         fontSize: 12,
                                         letterSpacing: 0.0,
-                                        fontWeight: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .fontWeight,
-                                        fontStyle: FlutterFlowTheme.of(context)
+                                        fontWeight:
+                                            LimitedEditionViberaTheme.of(
+                                                    context)
+                                                .bodyMedium
+                                                .fontWeight,
+                                        fontStyle: LimitedEditionViberaTheme.of(
+                                                context)
                                             .bodyMedium
                                             .fontStyle,
                                       ),
@@ -403,7 +425,7 @@ class _StyleInspirationFlowLifestyleEchoHubDetailsWidgetState
                                                 image: DecorationImage(
                                                   fit: BoxFit.cover,
                                                   image: Image.asset(
-                                                    FFAppState()
+                                                    StreetStyleViberaConnection()
                                                         .urbanOutfitTrendSharingUsers
                                                         .elementAtOrNull(widget
                                                             .wardrobeCultureConnectionHub!
@@ -419,24 +441,28 @@ class _StyleInspirationFlowLifestyleEchoHubDetailsWidgetState
                                       ),
                                     ),
                                     Text(
-                                      '${FFAppState().urbanOutfitTrendSharingUsers.elementAtOrNull(widget.wardrobeCultureConnectionHub!.futureLifestyleSharingPostImageCreateId)?.streetTrendEchoSharingUserName}',
-                                      style: FlutterFlowTheme.of(context)
+                                      '${StreetStyleViberaConnection().urbanOutfitTrendSharingUsers.elementAtOrNull(widget.wardrobeCultureConnectionHub!.futureLifestyleSharingPostImageCreateId)?.streetTrendEchoSharingUserName}',
+                                      style: LimitedEditionViberaTheme.of(
+                                              context)
                                           .bodyMedium
                                           .override(
                                             font: GoogleFonts.poppins(
                                               fontWeight: FontWeight.w600,
                                               fontStyle:
-                                                  FlutterFlowTheme.of(context)
+                                                  LimitedEditionViberaTheme.of(
+                                                          context)
                                                       .bodyMedium
                                                       .fontStyle,
                                             ),
-                                            color: FlutterFlowTheme.of(context)
+                                            color: LimitedEditionViberaTheme.of(
+                                                    context)
                                                 .info,
                                             fontSize: 20,
                                             letterSpacing: 0.0,
                                             fontWeight: FontWeight.w600,
                                             fontStyle:
-                                                FlutterFlowTheme.of(context)
+                                                LimitedEditionViberaTheme.of(
+                                                        context)
                                                     .bodyMedium
                                                     .fontStyle,
                                           ),
@@ -445,26 +471,31 @@ class _StyleInspirationFlowLifestyleEchoHubDetailsWidgetState
                                 ),
                                 Text(
                                   '${widget.wardrobeCultureConnectionHub?.futureLifestyleSharingPostImageDescribe}',
-                                  style: FlutterFlowTheme.of(context)
+                                  style: LimitedEditionViberaTheme.of(context)
                                       .bodyMedium
                                       .override(
                                         font: GoogleFonts.poppins(
                                           fontWeight:
-                                              FlutterFlowTheme.of(context)
+                                              LimitedEditionViberaTheme.of(
+                                                      context)
                                                   .bodyMedium
                                                   .fontWeight,
                                           fontStyle:
-                                              FlutterFlowTheme.of(context)
+                                              LimitedEditionViberaTheme.of(
+                                                      context)
                                                   .bodyMedium
                                                   .fontStyle,
                                         ),
                                         color: Color(0xE5FFFFFF),
                                         fontSize: 20,
                                         letterSpacing: 0.0,
-                                        fontWeight: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .fontWeight,
-                                        fontStyle: FlutterFlowTheme.of(context)
+                                        fontWeight:
+                                            LimitedEditionViberaTheme.of(
+                                                    context)
+                                                .bodyMedium
+                                                .fontWeight,
+                                        fontStyle: LimitedEditionViberaTheme.of(
+                                                context)
                                             .bodyMedium
                                             .fontStyle,
                                       ),

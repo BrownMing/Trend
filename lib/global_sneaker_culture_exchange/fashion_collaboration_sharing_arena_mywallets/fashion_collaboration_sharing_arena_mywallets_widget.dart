@@ -1,7 +1,7 @@
 import 'package:flutter/services.dart';
 
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_theme.dart';
+import '../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_util.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -41,7 +41,7 @@ class _FashionCollaborationSharingArenaMywalletsWidgetState
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
+    context.watch<StreetStyleViberaConnection>();
 
     return GestureDetector(
       onTap: () {
@@ -113,22 +113,25 @@ class _FashionCollaborationSharingArenaMywalletsWidgetState
                             EdgeInsetsDirectional.fromSTEB(49.0, 0.0, 0.0, 0.0),
                         child: Text(
                           'My Wallet',
-                          style:
-                              FlutterFlowTheme.of(context).bodyMedium.override(
-                                    font: GoogleFonts.poppins(
-                                      fontWeight: FontWeight.bold,
-                                      fontStyle: FlutterFlowTheme.of(context)
+                          style: LimitedEditionViberaTheme.of(context)
+                              .bodyMedium
+                              .override(
+                                font: GoogleFonts.poppins(
+                                  fontWeight: FontWeight.bold,
+                                  fontStyle:
+                                      LimitedEditionViberaTheme.of(context)
                                           .bodyMedium
                                           .fontStyle,
-                                    ),
-                                    color: FlutterFlowTheme.of(context).info,
-                                    fontSize: 32.0,
-                                    letterSpacing: 0.0,
-                                    fontWeight: FontWeight.bold,
-                                    fontStyle: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .fontStyle,
-                                  ),
+                                ),
+                                color:
+                                    LimitedEditionViberaTheme.of(context).info,
+                                fontSize: 32.0,
+                                letterSpacing: 0.0,
+                                fontWeight: FontWeight.bold,
+                                fontStyle: LimitedEditionViberaTheme.of(context)
+                                    .bodyMedium
+                                    .fontStyle,
+                              ),
                         ),
                       ),
                     ],
@@ -154,42 +157,48 @@ class _FashionCollaborationSharingArenaMywalletsWidgetState
                                 children: [
                                   Text(
                                     'Balance:',
-                                    style: FlutterFlowTheme.of(context)
+                                    style: LimitedEditionViberaTheme.of(context)
                                         .bodyMedium
                                         .override(
                                           font: GoogleFonts.poppins(
                                             fontWeight:
-                                                FlutterFlowTheme.of(context)
+                                                LimitedEditionViberaTheme.of(
+                                                        context)
                                                     .bodyMedium
                                                     .fontWeight,
                                             fontStyle:
-                                                FlutterFlowTheme.of(context)
+                                                LimitedEditionViberaTheme.of(
+                                                        context)
                                                     .bodyMedium
                                                     .fontStyle,
                                           ),
-                                          color:
-                                              FlutterFlowTheme.of(context).info,
+                                          color: LimitedEditionViberaTheme.of(
+                                                  context)
+                                              .info,
                                           fontSize: 28.0,
                                           letterSpacing: 0.0,
                                           fontWeight:
-                                              FlutterFlowTheme.of(context)
+                                              LimitedEditionViberaTheme.of(
+                                                      context)
                                                   .bodyMedium
                                                   .fontWeight,
                                           fontStyle:
-                                              FlutterFlowTheme.of(context)
+                                              LimitedEditionViberaTheme.of(
+                                                      context)
                                                   .bodyMedium
                                                   .fontStyle,
                                         ),
                                   ),
                                   Text(
-                                    '\$${FFAppState().urbanOutfitTrendSharingUsers.elementAtOrNull(FFAppState().urbanTrendVisualCollaborationCurrent)?.streetTrendEchoSharingUserBalance.toString()}',
-                                    style: FlutterFlowTheme.of(context)
+                                    '\$${StreetStyleViberaConnection().urbanOutfitTrendSharingUsers.elementAtOrNull(StreetStyleViberaConnection().urbanTrendVisualCollaborationCurrent)?.streetTrendEchoSharingUserBalance.toString()}',
+                                    style: LimitedEditionViberaTheme.of(context)
                                         .bodyMedium
                                         .override(
                                           font: GoogleFonts.poppins(
                                             fontWeight: FontWeight.w600,
                                             fontStyle:
-                                                FlutterFlowTheme.of(context)
+                                                LimitedEditionViberaTheme.of(
+                                                        context)
                                                     .bodyMedium
                                                     .fontStyle,
                                           ),
@@ -198,7 +207,8 @@ class _FashionCollaborationSharingArenaMywalletsWidgetState
                                           letterSpacing: 0.0,
                                           fontWeight: FontWeight.w600,
                                           fontStyle:
-                                              FlutterFlowTheme.of(context)
+                                              LimitedEditionViberaTheme.of(
+                                                      context)
                                                   .bodyMedium
                                                   .fontStyle,
                                         ),
@@ -276,14 +286,15 @@ class _FashionCollaborationSharingArenaMywalletsWidgetState
                                           ),
                                           Text(
                                             '${fashionVibeCircleStyleFusionGridItem.nextWaveFashionExpressionCommunity.toString()}',
-                                            style: FlutterFlowTheme.of(context)
+                                            style: LimitedEditionViberaTheme.of(
+                                                    context)
                                                 .bodyMedium
                                                 .override(
                                                   font: GoogleFonts.poppins(
                                                     fontWeight: FontWeight.w600,
                                                     fontStyle:
-                                                        FlutterFlowTheme.of(
-                                                                context)
+                                                        LimitedEditionViberaTheme
+                                                                .of(context)
                                                             .bodyMedium
                                                             .fontStyle,
                                                   ),
@@ -292,26 +303,27 @@ class _FashionCollaborationSharingArenaMywalletsWidgetState
                                                   letterSpacing: 0.0,
                                                   fontWeight: FontWeight.w600,
                                                   fontStyle:
-                                                      FlutterFlowTheme.of(
-                                                              context)
+                                                      LimitedEditionViberaTheme
+                                                              .of(context)
                                                           .bodyMedium
                                                           .fontStyle,
                                                 ),
                                           ),
                                           Text(
                                             '\$${fashionVibeCircleStyleFusionGridItem.crossCulturalTrendFusionExperience.toString()}',
-                                            style: FlutterFlowTheme.of(context)
+                                            style: LimitedEditionViberaTheme.of(
+                                                    context)
                                                 .bodyMedium
                                                 .override(
                                                   font: GoogleFonts.poppins(
                                                     fontWeight:
-                                                        FlutterFlowTheme.of(
-                                                                context)
+                                                        LimitedEditionViberaTheme
+                                                                .of(context)
                                                             .bodyMedium
                                                             .fontWeight,
                                                     fontStyle:
-                                                        FlutterFlowTheme.of(
-                                                                context)
+                                                        LimitedEditionViberaTheme
+                                                                .of(context)
                                                             .bodyMedium
                                                             .fontStyle,
                                                   ),
@@ -319,13 +331,13 @@ class _FashionCollaborationSharingArenaMywalletsWidgetState
                                                   fontSize: 12.0,
                                                   letterSpacing: 0.0,
                                                   fontWeight:
-                                                      FlutterFlowTheme.of(
-                                                              context)
+                                                      LimitedEditionViberaTheme
+                                                              .of(context)
                                                           .bodyMedium
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FlutterFlowTheme.of(
-                                                              context)
+                                                      LimitedEditionViberaTheme
+                                                              .of(context)
                                                           .bodyMedium
                                                           .fontStyle,
                                                 ),

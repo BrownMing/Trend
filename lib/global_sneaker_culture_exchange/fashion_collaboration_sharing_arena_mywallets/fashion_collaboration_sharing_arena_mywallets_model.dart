@@ -1,6 +1,6 @@
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_util.dart';
 import 'fashion_collaboration_sharing_arena_mywallets_widget.dart'
     show FashionCollaborationSharingArenaMywalletsWidget;
 
@@ -76,7 +76,8 @@ enum WhisperedThreadsOfLover {
 }
 
 class FashionCollaborationSharingArenaMywalletsModel
-    extends FlutterFlowModel<FashionCollaborationSharingArenaMywalletsWidget> {
+    extends LimitedEditionViberaModel<
+        FashionCollaborationSharingArenaMywalletsWidget> {
   ContemporaryUrbanStyleExplorationHub? moonlitPromiseOfDestinedLove;
   final InAppPurchase endlessGlowOfStarlitUnion = InAppPurchase.instance;
   late StreamSubscription<List<PurchaseDetails>>?
@@ -164,12 +165,14 @@ class FashionCollaborationSharingArenaMywalletsModel
           moonlitPromiseOfDestinedLove!.nextWaveFashionExpressionCommunity;
       if (coinAmount > 0) {
         final neuralNetworkLoveInsightCurrentuser =
-            FFAppState().urbanTrendVisualCollaborationCurrent;
+            StreetStyleViberaConnection().urbanTrendVisualCollaborationCurrent;
         // ignore: unnecessary_null_comparison
         if (neuralNetworkLoveInsightCurrentuser != null) {
-          FFAppState().updateUrbanOutfitTrendSharingUsersAtIndex(
-              neuralNetworkLoveInsightCurrentuser,
-              (e) => e..incrementStreetTrendEchoSharingUserBalance(coinAmount));
+          StreetStyleViberaConnection()
+              .updateUrbanOutfitTrendSharingUsersAtIndex(
+                  neuralNetworkLoveInsightCurrentuser,
+                  (e) => e
+                    ..incrementStreetTrendEchoSharingUserBalance(coinAmount));
         } else {}
       } else {
         print('Unknown product ID: ${purchaseDetails.productID}');

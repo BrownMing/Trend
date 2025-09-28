@@ -1,5 +1,5 @@
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_theme.dart';
+import '../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_util.dart';
 import '/street_trend_collective_urban_style_exchange/hype_culture_sharing_fashion_flowstart/hype_culture_sharing_fashion_flowstart_widget.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart'
     as smooth_page_indicator;
@@ -154,7 +154,7 @@ class _SneakerWaveHubStyleInfluenceBaseGuideWidgetState
                     width: 315.0,
                     height: 65.0,
                     decoration: BoxDecoration(
-                      color: FlutterFlowTheme.of(context).info,
+                      color: LimitedEditionViberaTheme.of(context).info,
                       borderRadius: BorderRadius.circular(16.0),
                     ),
                     child: Align(
@@ -171,22 +171,24 @@ class _SneakerWaveHubStyleInfluenceBaseGuideWidgetState
 
                           return Text(
                             isLastPage ? 'Get Started' : 'Next',
-                            style: FlutterFlowTheme.of(context)
+                            style: LimitedEditionViberaTheme.of(context)
                                 .bodyMedium
                                 .override(
                                   font: GoogleFonts.poppins(
                                     fontWeight: FontWeight.w500,
-                                    fontStyle: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .fontStyle,
+                                    fontStyle:
+                                        LimitedEditionViberaTheme.of(context)
+                                            .bodyMedium
+                                            .fontStyle,
                                   ),
                                   color: Color(0xFF17171F),
                                   fontSize: 28.0,
                                   letterSpacing: 0.0,
                                   fontWeight: FontWeight.w500,
-                                  fontStyle: FlutterFlowTheme.of(context)
-                                      .bodyMedium
-                                      .fontStyle,
+                                  fontStyle:
+                                      LimitedEditionViberaTheme.of(context)
+                                          .bodyMedium
+                                          .fontStyle,
                                 ),
                           );
                         },

@@ -1,5 +1,5 @@
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_theme.dart';
+import '../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_util.dart';
 import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -41,7 +41,7 @@ class _FutureLifestyleSharingInnovationLabInfomationWidgetState
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
+    context.watch<StreetStyleViberaConnection>();
 
     return GestureDetector(
       onTap: () {
@@ -71,18 +71,20 @@ class _FutureLifestyleSharingInnovationLabInfomationWidgetState
                     children: [
                       Text(
                         'Profile',
-                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                        style: LimitedEditionViberaTheme.of(context)
+                            .bodyMedium
+                            .override(
                               font: GoogleFonts.poppins(
                                 fontWeight: FontWeight.bold,
-                                fontStyle: FlutterFlowTheme.of(context)
+                                fontStyle: LimitedEditionViberaTheme.of(context)
                                     .bodyMedium
                                     .fontStyle,
                               ),
-                              color: FlutterFlowTheme.of(context).info,
+                              color: LimitedEditionViberaTheme.of(context).info,
                               fontSize: 32.0,
                               letterSpacing: 0.0,
                               fontWeight: FontWeight.bold,
-                              fontStyle: FlutterFlowTheme.of(context)
+                              fontStyle: LimitedEditionViberaTheme.of(context)
                                   .bodyMedium
                                   .fontStyle,
                             ),
@@ -121,10 +123,11 @@ class _FutureLifestyleSharingInnovationLabInfomationWidgetState
                                       image: DecorationImage(
                                         fit: BoxFit.cover,
                                         image: Image.asset(
-                                          FFAppState()
+                                          StreetStyleViberaConnection()
                                               .urbanOutfitTrendSharingUsers
-                                              .elementAtOrNull(FFAppState()
-                                                  .urbanTrendVisualCollaborationCurrent)!
+                                              .elementAtOrNull(
+                                                  StreetStyleViberaConnection()
+                                                      .urbanTrendVisualCollaborationCurrent)!
                                               .streetTrendEchoSharingUserPhoto,
                                         ).image,
                                       ),
@@ -143,47 +146,56 @@ class _FutureLifestyleSharingInnovationLabInfomationWidgetState
                             mainAxisSize: MainAxisSize.max,
                             children: [
                               Text(
-                                '${FFAppState().urbanOutfitTrendSharingUsers.elementAtOrNull(FFAppState().urbanTrendVisualCollaborationCurrent)?.streetTrendEchoSharingUserName}',
-                                style: FlutterFlowTheme.of(context)
+                                '${StreetStyleViberaConnection().urbanOutfitTrendSharingUsers.elementAtOrNull(StreetStyleViberaConnection().urbanTrendVisualCollaborationCurrent)?.streetTrendEchoSharingUserName}',
+                                style: LimitedEditionViberaTheme.of(context)
                                     .bodyMedium
                                     .override(
                                       font: GoogleFonts.poppins(
                                         fontWeight: FontWeight.w600,
-                                        fontStyle: FlutterFlowTheme.of(context)
+                                        fontStyle: LimitedEditionViberaTheme.of(
+                                                context)
                                             .bodyMedium
                                             .fontStyle,
                                       ),
-                                      color: FlutterFlowTheme.of(context).info,
+                                      color:
+                                          LimitedEditionViberaTheme.of(context)
+                                              .info,
                                       fontSize: 24.0,
                                       letterSpacing: 0.0,
                                       fontWeight: FontWeight.w600,
-                                      fontStyle: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .fontStyle,
+                                      fontStyle:
+                                          LimitedEditionViberaTheme.of(context)
+                                              .bodyMedium
+                                              .fontStyle,
                                     ),
                               ),
                               Text(
-                                'ID: ${FFAppState().urbanOutfitTrendSharingUsers.elementAtOrNull(FFAppState().urbanTrendVisualCollaborationCurrent)?.streetTrendEchoSharingUserCreateTime?.millisecondsSinceEpoch}',
-                                style: FlutterFlowTheme.of(context)
+                                'ID: ${StreetStyleViberaConnection().urbanOutfitTrendSharingUsers.elementAtOrNull(StreetStyleViberaConnection().urbanTrendVisualCollaborationCurrent)?.streetTrendEchoSharingUserCreateTime?.millisecondsSinceEpoch}',
+                                style: LimitedEditionViberaTheme.of(context)
                                     .bodyMedium
                                     .override(
                                       font: GoogleFonts.poppins(
-                                        fontWeight: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .fontWeight,
-                                        fontStyle: FlutterFlowTheme.of(context)
+                                        fontWeight:
+                                            LimitedEditionViberaTheme.of(
+                                                    context)
+                                                .bodyMedium
+                                                .fontWeight,
+                                        fontStyle: LimitedEditionViberaTheme.of(
+                                                context)
                                             .bodyMedium
                                             .fontStyle,
                                       ),
                                       color: Color(0x99FFFFFF),
                                       fontSize: 18.0,
                                       letterSpacing: 0.0,
-                                      fontWeight: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .fontWeight,
-                                      fontStyle: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .fontStyle,
+                                      fontWeight:
+                                          LimitedEditionViberaTheme.of(context)
+                                              .bodyMedium
+                                              .fontWeight,
+                                      fontStyle:
+                                          LimitedEditionViberaTheme.of(context)
+                                              .bodyMedium
+                                              .fontStyle,
                                     ),
                               ),
                             ].divide(SizedBox(height: 4.0)),
@@ -288,6 +300,37 @@ class _FutureLifestyleSharingInnovationLabInfomationWidgetState
                                   ),
                                 ),
                               ),
+                              InkWell(
+                                splashColor: Colors.transparent,
+                                focusColor: Colors.transparent,
+                                hoverColor: Colors.transparent,
+                                highlightColor: Colors.transparent,
+                                onTap: () async {
+                                  context.pushNamed(
+                                    FashionCollaborationSharingArenaMywalletsWidget
+                                        .routeName,
+                                    extra: <String, dynamic>{
+                                      kTransitionInfoKey: TransitionInfo(
+                                        hasTransition: true,
+                                        transitionType:
+                                            PageTransitionType.rightToLeft,
+                                      ),
+                                    },
+                                  );
+                                },
+                                child: Container(
+                                  width: double.infinity,
+                                  height: 54.0,
+                                  decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                      fit: BoxFit.fill,
+                                      image: Image.asset(
+                                        'assets/images/dfgdsfhguidof_vcxbhufdishguyiadfg.png',
+                                      ).image,
+                                    ),
+                                  ),
+                                ),
+                              ),
                             ].divide(SizedBox(height: 24.0)),
                           ),
                         ),
@@ -331,22 +374,25 @@ class _FutureLifestyleSharingInnovationLabInfomationWidgetState
                                 alignment: AlignmentDirectional(0.0, 0.0),
                                 child: Text(
                                   'Log out',
-                                  style: FlutterFlowTheme.of(context)
+                                  style: LimitedEditionViberaTheme.of(context)
                                       .bodyMedium
                                       .override(
                                         font: GoogleFonts.roboto(
                                           fontWeight: FontWeight.bold,
                                           fontStyle:
-                                              FlutterFlowTheme.of(context)
+                                              LimitedEditionViberaTheme.of(
+                                                      context)
                                                   .bodyMedium
                                                   .fontStyle,
                                         ),
-                                        color:
-                                            FlutterFlowTheme.of(context).info,
+                                        color: LimitedEditionViberaTheme.of(
+                                                context)
+                                            .info,
                                         fontSize: 24.0,
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.bold,
-                                        fontStyle: FlutterFlowTheme.of(context)
+                                        fontStyle: LimitedEditionViberaTheme.of(
+                                                context)
                                             .bodyMedium
                                             .fontStyle,
                                       ),

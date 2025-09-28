@@ -6,7 +6,7 @@ import 'package:provider/provider.dart';
 import '/backend/schema/structs/index.dart';
 
 import '/main.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '../viberaUrban_trendCelebration_util.dart';
 
 import '/index.dart';
 
@@ -42,7 +42,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                 color: Colors.transparent,
                 child: Center(
                   child: Image.asset(
-                    'assets/images/trend_sdgfiusdfiyadygit_eyufidgftustdg.png',
+                    'assets/images/dfgduifghhuid_xcvbiuygduyfihsauid.png',
                     width: double.infinity,
                     height: double.infinity,
                     fit: BoxFit.cover,
@@ -52,7 +52,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             )
           : SneakerWaveHubStyleInfluenceBaseGuideWidget(),
       routes: [
-        FFRoute(
+        ViberaAuthentic(
           name: '_initialize',
           path: '/',
           builder: (context, _) => appStateNotifier.showSplashImage
@@ -61,7 +61,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                     color: Colors.transparent,
                     child: Center(
                       child: Image.asset(
-                        'assets/images/trend_sdgfiusdfiyadygit_eyufidgftustdg.png',
+                        'assets/images/dfgduifghhuid_xcvbiuygduyfihsauid.png',
                         width: double.infinity,
                         height: double.infinity,
                         fit: BoxFit.cover,
@@ -71,31 +71,31 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                 )
               : SneakerWaveHubStyleInfluenceBaseGuideWidget(),
         ),
-        FFRoute(
+        ViberaAuthentic(
           name: SneakerWaveHubStyleInfluenceBaseGuideWidget.routeName,
           path: SneakerWaveHubStyleInfluenceBaseGuideWidget.routePath,
           builder: (context, params) =>
               SneakerWaveHubStyleInfluenceBaseGuideWidget(),
         ),
-        FFRoute(
+        ViberaAuthentic(
           name: HypeCultureSharingFashionFlowstartWidget.routeName,
           path: HypeCultureSharingFashionFlowstartWidget.routePath,
           builder: (context, params) =>
               HypeCultureSharingFashionFlowstartWidget(),
         ),
-        FFRoute(
+        ViberaAuthentic(
           name: TrendyVibeNetworkTrendyVibeNetworkLoginWidget.routeName,
           path: TrendyVibeNetworkTrendyVibeNetworkLoginWidget.routePath,
           builder: (context, params) =>
               TrendyVibeNetworkTrendyVibeNetworkLoginWidget(),
         ),
-        FFRoute(
+        ViberaAuthentic(
           name: UrbanCoolStreamRetroFutureFeedSignupWidget.routeName,
           path: UrbanCoolStreamRetroFutureFeedSignupWidget.routePath,
           builder: (context, params) =>
               UrbanCoolStreamRetroFutureFeedSignupWidget(),
         ),
-        FFRoute(
+        ViberaAuthentic(
           name: TrendSharingArenaTrendSharingArenaHomeWidget.routeName,
           path: TrendSharingArenaTrendSharingArenaHomeWidget.routePath,
           builder: (context, params) => params.isEmpty
@@ -103,7 +103,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                   initialPage: 'TrendSharingArenaTrendSharingArena_home')
               : TrendSharingArenaTrendSharingArenaHomeWidget(),
         ),
-        FFRoute(
+        ViberaAuthentic(
           name: StyleInspirationFlowLifestyleEchoHubDetailsWidget.routeName,
           path: StyleInspirationFlowLifestyleEchoHubDetailsWidget.routePath,
           builder: (context, params) =>
@@ -117,7 +117,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             ),
           ),
         ),
-        FFRoute(
+        ViberaAuthentic(
           name: TrendTalkSpaceStyleConnectGridTrendingDetailsWidget.routeName,
           path: TrendTalkSpaceStyleConnectGridTrendingDetailsWidget.routePath,
           builder: (context, params) =>
@@ -131,7 +131,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             ),
           ),
         ),
-        FFRoute(
+        ViberaAuthentic(
           name: CultureSwapZoneTrendPulseNetworkDiscoverWidget.routeName,
           path: CultureSwapZoneTrendPulseNetworkDiscoverWidget.routePath,
           builder: (context, params) => params.isEmpty
@@ -139,7 +139,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                   initialPage: 'CultureSwapZoneTrendPulseNetwork_discover')
               : CultureSwapZoneTrendPulseNetworkDiscoverWidget(),
         ),
-        FFRoute(
+        ViberaAuthentic(
           name: GlobalTrendShareUrbanFusionMapHotdetailsWidget.routeName,
           path: GlobalTrendShareUrbanFusionMapHotdetailsWidget.routePath,
           builder: (context, params) =>
@@ -153,7 +153,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             ),
           ),
         ),
-        FFRoute(
+        ViberaAuthentic(
           name: CrossoverStyleNetWorldZhuanshuDetailWidget.routeName,
           path: CrossoverStyleNetWorldZhuanshuDetailWidget.routePath,
           builder: (context, params) =>
@@ -167,13 +167,13 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             ),
           ),
         ),
-        FFRoute(
+        ViberaAuthentic(
           name: HypeCultureRadarStreetVibeAtlasPublicWidget.routeName,
           path: HypeCultureRadarStreetVibeAtlasPublicWidget.routePath,
           builder: (context, params) =>
               HypeCultureRadarStreetVibeAtlasPublicWidget(),
         ),
-        FFRoute(
+        ViberaAuthentic(
           name: TrendWaveArchiveModernStyleArenaChatroomsWidget.routeName,
           path: TrendWaveArchiveModernStyleArenaChatroomsWidget.routePath,
           builder: (context, params) => params.isEmpty
@@ -181,7 +181,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                   initialPage: 'TrendWaveArchiveModernStyleArena_chatrooms')
               : TrendWaveArchiveModernStyleArenaChatroomsWidget(),
         ),
-        FFRoute(
+        ViberaAuthentic(
           name: FutureTrendCircleHypeSharingWorldMessagesWidget.routeName,
           path: FutureTrendCircleHypeSharingWorldMessagesWidget.routePath,
           builder: (context, params) =>
@@ -196,7 +196,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             ),
           ),
         ),
-        FFRoute(
+        ViberaAuthentic(
           name: StreetwearInspirationSharingHubAudiochatWidget.routeName,
           path: StreetwearInspirationSharingHubAudiochatWidget.routePath,
           builder: (context, params) =>
@@ -207,7 +207,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             ),
           ),
         ),
-        FFRoute(
+        ViberaAuthentic(
           name: UrbanStyleExpressionPlatformVideoChatWidget.routeName,
           path: UrbanStyleExpressionPlatformVideoChatWidget.routePath,
           builder: (context, params) =>
@@ -218,7 +218,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             ),
           ),
         ),
-        FFRoute(
+        ViberaAuthentic(
           name: FashionCollaborationSharingArenaOtherInfoWidget.routeName,
           path: FashionCollaborationSharingArenaOtherInfoWidget.routePath,
           builder: (context, params) =>
@@ -229,25 +229,25 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             ),
           ),
         ),
-        FFRoute(
+        ViberaAuthentic(
           name: FashionCollaborationSharingArenaMywalletsWidget.routeName,
           path: FashionCollaborationSharingArenaMywalletsWidget.routePath,
           builder: (context, params) =>
               FashionCollaborationSharingArenaMywalletsWidget(),
         ),
-        FFRoute(
+        ViberaAuthentic(
           name: ModernStreetStyleExchangeZoneEditFileWidget.routeName,
           path: ModernStreetStyleExchangeZoneEditFileWidget.routePath,
           builder: (context, params) =>
               ModernStreetStyleExchangeZoneEditFileWidget(),
         ),
-        FFRoute(
+        ViberaAuthentic(
           name: CreativeTrendVisualSharingCircleSettingsWidget.routeName,
           path: CreativeTrendVisualSharingCircleSettingsWidget.routePath,
           builder: (context, params) =>
               CreativeTrendVisualSharingCircleSettingsWidget(),
         ),
-        FFRoute(
+        ViberaAuthentic(
           name: LifestylePhotographyInspirationWallUploadFileWidget.routeName,
           path: LifestylePhotographyInspirationWallUploadFileWidget.routePath,
           builder: (context, params) =>
@@ -262,7 +262,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             ),
           ),
         ),
-        FFRoute(
+        ViberaAuthentic(
           name: FutureLifestyleSharingInnovationLabInfomationWidget.routeName,
           path: FutureLifestyleSharingInnovationLabInfomationWidget.routePath,
           builder: (context, params) => params.isEmpty
@@ -270,13 +270,13 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                   initialPage: 'FutureLifestyleSharingInnovationLab_infomation')
               : FutureLifestyleSharingInnovationLabInfomationWidget(),
         ),
-        FFRoute(
+        ViberaAuthentic(
           name: FashionAestheticsExplorationPlatformBlacklistsWidget.routeName,
           path: FashionAestheticsExplorationPlatformBlacklistsWidget.routePath,
           builder: (context, params) =>
               FashionAestheticsExplorationPlatformBlacklistsWidget(),
         ),
-        FFRoute(
+        ViberaAuthentic(
           name: StreetVibeInnovationConnectionHubPrivacyWidget.routeName,
           path: StreetVibeInnovationConnectionHubPrivacyWidget.routePath,
           builder: (context, params) =>
@@ -287,7 +287,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             ),
           ),
         ),
-        FFRoute(
+        ViberaAuthentic(
           name: PopCultureVibeInnovationNetworkPrivacyWidget.routeName,
           path: PopCultureVibeInnovationNetworkPrivacyWidget.routePath,
           builder: (context, params) =>
@@ -392,8 +392,8 @@ class FFParameters {
   }
 }
 
-class FFRoute {
-  const FFRoute({
+class ViberaAuthentic {
+  const ViberaAuthentic({
     required this.name,
     required this.path,
     required this.builder,

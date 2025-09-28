@@ -1,6 +1,6 @@
 import '/backend/schema/structs/index.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_theme.dart';
+import '../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_util.dart';
 import '/global_sneaker_culture_exchange/global_music_driven_trend_community_comment/global_music_driven_trend_community_comment_widget.dart';
 import '/hype_moment_circle_fashion_fusion_wall/world_youth_trend_inspiration_network_report_black/world_youth_trend_inspiration_network_report_black_widget.dart';
 import '/index.dart';
@@ -50,7 +50,7 @@ class _CrossoverStyleNetWorldZhuanshuDetailWidgetState
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
+    context.watch<StreetStyleViberaConnection>();
 
     return GestureDetector(
       onTap: () {
@@ -156,7 +156,7 @@ class _CrossoverStyleNetWorldZhuanshuDetailWidgetState
                                   shape: BoxShape.circle,
                                 ),
                                 child: Image.asset(
-                                  FFAppState()
+                                  StreetStyleViberaConnection()
                                       .urbanOutfitTrendSharingUsers
                                       .elementAtOrNull(widget
                                           .urbanVisualExpressionSharingref!
@@ -170,24 +170,27 @@ class _CrossoverStyleNetWorldZhuanshuDetailWidgetState
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
-                                    '${FFAppState().urbanOutfitTrendSharingUsers.elementAtOrNull(widget.urbanVisualExpressionSharingref!.crossCultureTrendExchangeHubPostsCreateId)?.streetTrendEchoSharingUserName}',
-                                    style: FlutterFlowTheme.of(context)
+                                    '${StreetStyleViberaConnection().urbanOutfitTrendSharingUsers.elementAtOrNull(widget.urbanVisualExpressionSharingref!.crossCultureTrendExchangeHubPostsCreateId)?.streetTrendEchoSharingUserName}',
+                                    style: LimitedEditionViberaTheme.of(context)
                                         .bodyMedium
                                         .override(
                                           font: GoogleFonts.poppins(
                                             fontWeight: FontWeight.w500,
                                             fontStyle:
-                                                FlutterFlowTheme.of(context)
+                                                LimitedEditionViberaTheme.of(
+                                                        context)
                                                     .bodyMedium
                                                     .fontStyle,
                                           ),
-                                          color:
-                                              FlutterFlowTheme.of(context).info,
+                                          color: LimitedEditionViberaTheme.of(
+                                                  context)
+                                              .info,
                                           fontSize: 18.0,
                                           letterSpacing: 0.0,
                                           fontWeight: FontWeight.w500,
                                           fontStyle:
-                                              FlutterFlowTheme.of(context)
+                                              LimitedEditionViberaTheme.of(
+                                                      context)
                                                   .bodyMedium
                                                   .fontStyle,
                                         ),
@@ -197,16 +200,18 @@ class _CrossoverStyleNetWorldZhuanshuDetailWidgetState
                                         "relative",
                                         widget.urbanVisualExpressionSharingref!
                                             .crossCultureTrendExchangeHubPostsCreateTime!),
-                                    style: FlutterFlowTheme.of(context)
+                                    style: LimitedEditionViberaTheme.of(context)
                                         .bodyMedium
                                         .override(
                                           font: GoogleFonts.poppins(
                                             fontWeight:
-                                                FlutterFlowTheme.of(context)
+                                                LimitedEditionViberaTheme.of(
+                                                        context)
                                                     .bodyMedium
                                                     .fontWeight,
                                             fontStyle:
-                                                FlutterFlowTheme.of(context)
+                                                LimitedEditionViberaTheme.of(
+                                                        context)
                                                     .bodyMedium
                                                     .fontStyle,
                                           ),
@@ -214,11 +219,13 @@ class _CrossoverStyleNetWorldZhuanshuDetailWidgetState
                                           fontSize: 16.0,
                                           letterSpacing: 0.0,
                                           fontWeight:
-                                              FlutterFlowTheme.of(context)
+                                              LimitedEditionViberaTheme.of(
+                                                      context)
                                                   .bodyMedium
                                                   .fontWeight,
                                           fontStyle:
-                                              FlutterFlowTheme.of(context)
+                                              LimitedEditionViberaTheme.of(
+                                                      context)
                                                   .bodyMedium
                                                   .fontStyle,
                                         ),
@@ -278,25 +285,29 @@ class _CrossoverStyleNetWorldZhuanshuDetailWidgetState
                               24.0, 24.0, 0.0, 0.0),
                           child: Text(
                             '${widget.urbanVisualExpressionSharingref?.crossCultureTrendExchangeHubPostsDescribe}',
-                            style: FlutterFlowTheme.of(context)
+                            style: LimitedEditionViberaTheme.of(context)
                                 .bodyMedium
                                 .override(
                                   font: GoogleFonts.poppins(
-                                    fontWeight: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .fontWeight,
-                                    fontStyle: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .fontStyle,
+                                    fontWeight:
+                                        LimitedEditionViberaTheme.of(context)
+                                            .bodyMedium
+                                            .fontWeight,
+                                    fontStyle:
+                                        LimitedEditionViberaTheme.of(context)
+                                            .bodyMedium
+                                            .fontStyle,
                                   ),
                                   color: Color(0xCCFFFFFF),
                                   letterSpacing: 0.0,
-                                  fontWeight: FlutterFlowTheme.of(context)
-                                      .bodyMedium
-                                      .fontWeight,
-                                  fontStyle: FlutterFlowTheme.of(context)
-                                      .bodyMedium
-                                      .fontStyle,
+                                  fontWeight:
+                                      LimitedEditionViberaTheme.of(context)
+                                          .bodyMedium
+                                          .fontWeight,
+                                  fontStyle:
+                                      LimitedEditionViberaTheme.of(context)
+                                          .bodyMedium
+                                          .fontStyle,
                                 ),
                           ),
                         ),
@@ -358,40 +369,46 @@ class _CrossoverStyleNetWorldZhuanshuDetailWidgetState
                                   Builder(
                                     builder: (context) {
                                       // 从全局状态获取最新的评论数
-                                      final currentPost = FFAppState()
-                                          .sneakerheadCultureConnectPosts
-                                          .firstWhere(
-                                            (post) =>
-                                                post.crossCultureTrendExchangeHubPostsId ==
-                                                widget
-                                                    .urbanVisualExpressionSharingref
-                                                    ?.crossCultureTrendExchangeHubPostsId,
-                                            orElse: () => widget
-                                                .urbanVisualExpressionSharingref!,
-                                          );
+                                      final currentPost =
+                                          StreetStyleViberaConnection()
+                                              .sneakerheadCultureConnectPosts
+                                              .firstWhere(
+                                                (post) =>
+                                                    post.crossCultureTrendExchangeHubPostsId ==
+                                                    widget
+                                                        .urbanVisualExpressionSharingref
+                                                        ?.crossCultureTrendExchangeHubPostsId,
+                                                orElse: () => widget
+                                                    .urbanVisualExpressionSharingref!,
+                                              );
                                       return Text(
                                         '${currentPost.crossCultureTrendExchangeHubPostsComments.toString()}',
-                                        style: FlutterFlowTheme.of(context)
+                                        style: LimitedEditionViberaTheme.of(
+                                                context)
                                             .bodyMedium
                                             .override(
                                               font: GoogleFonts.poppins(
                                                 fontWeight:
-                                                    FlutterFlowTheme.of(context)
+                                                    LimitedEditionViberaTheme
+                                                            .of(context)
                                                         .bodyMedium
                                                         .fontWeight,
                                                 fontStyle:
-                                                    FlutterFlowTheme.of(context)
+                                                    LimitedEditionViberaTheme
+                                                            .of(context)
                                                         .bodyMedium
                                                         .fontStyle,
                                               ),
                                               color: Color(0xFFCCCCCC),
                                               letterSpacing: 0.0,
                                               fontWeight:
-                                                  FlutterFlowTheme.of(context)
+                                                  LimitedEditionViberaTheme.of(
+                                                          context)
                                                       .bodyMedium
                                                       .fontWeight,
                                               fontStyle:
-                                                  FlutterFlowTheme.of(context)
+                                                  LimitedEditionViberaTheme.of(
+                                                          context)
                                                       .bodyMedium
                                                       .fontStyle,
                                             ),
@@ -409,21 +426,22 @@ class _CrossoverStyleNetWorldZhuanshuDetailWidgetState
                                     Builder(
                                       builder: (context) {
                                         // 从全局状态获取最新的数据
-                                        final currentPost = FFAppState()
-                                            .sneakerheadCultureConnectPosts
-                                            .firstWhere(
-                                              (post) =>
-                                                  post.crossCultureTrendExchangeHubPostsId ==
-                                                  widget
-                                                      .urbanVisualExpressionSharingref
-                                                      ?.crossCultureTrendExchangeHubPostsId,
-                                              orElse: () => widget
-                                                  .urbanVisualExpressionSharingref!,
-                                            );
+                                        final currentPost =
+                                            StreetStyleViberaConnection()
+                                                .sneakerheadCultureConnectPosts
+                                                .firstWhere(
+                                                  (post) =>
+                                                      post.crossCultureTrendExchangeHubPostsId ==
+                                                      widget
+                                                          .urbanVisualExpressionSharingref
+                                                          ?.crossCultureTrendExchangeHubPostsId,
+                                                  orElse: () => widget
+                                                      .urbanVisualExpressionSharingref!,
+                                                );
 
                                         if (currentPost
                                             .crossCultureTrendExchangeHubPostsLikeUser
-                                            .contains(FFAppState()
+                                            .contains(StreetStyleViberaConnection()
                                                 .urbanTrendVisualCollaborationCurrent)) {
                                           return InkWell(
                                             splashColor: Colors.transparent,
@@ -433,25 +451,27 @@ class _CrossoverStyleNetWorldZhuanshuDetailWidgetState
                                             onTap: () async {
                                               HapticFeedback.heavyImpact();
                                               // 找到当前post在数组中的正确索引
-                                              int postIndex = FFAppState()
+                                              int postIndex = StreetStyleViberaConnection()
                                                   .sneakerheadCultureConnectPosts
                                                   .indexWhere((post) =>
                                                       post.crossCultureTrendExchangeHubPostsId ==
                                                       widget
                                                           .urbanVisualExpressionSharingref!
                                                           .crossCultureTrendExchangeHubPostsId);
-                                              
+
                                               if (postIndex != -1) {
-                                                FFAppState()
+                                                StreetStyleViberaConnection()
                                                     .updateSneakerheadCultureConnectPostsAtIndex(
                                                   postIndex,
                                                   (e) => e
                                                     ..updateCrossCultureTrendExchangeHubPostsLikeUser(
-                                                      (e) => e.remove(FFAppState()
-                                                          .urbanTrendVisualCollaborationCurrent),
+                                                      (e) => e.remove(
+                                                          StreetStyleViberaConnection()
+                                                              .urbanTrendVisualCollaborationCurrent),
                                                     ),
                                                 );
-                                                FFAppState().update(() {});
+                                                StreetStyleViberaConnection()
+                                                    .update(() {});
                                                 setState(() {}); // 强制刷新UI
                                               }
                                             },
@@ -480,25 +500,27 @@ class _CrossoverStyleNetWorldZhuanshuDetailWidgetState
                                             onTap: () async {
                                               HapticFeedback.heavyImpact();
                                               // 找到当前post在数组中的正确索引
-                                              int postIndex = FFAppState()
+                                              int postIndex = StreetStyleViberaConnection()
                                                   .sneakerheadCultureConnectPosts
                                                   .indexWhere((post) =>
                                                       post.crossCultureTrendExchangeHubPostsId ==
                                                       widget
                                                           .urbanVisualExpressionSharingref!
                                                           .crossCultureTrendExchangeHubPostsId);
-                                              
+
                                               if (postIndex != -1) {
-                                                FFAppState()
+                                                StreetStyleViberaConnection()
                                                     .updateSneakerheadCultureConnectPostsAtIndex(
                                                   postIndex,
                                                   (e) => e
                                                     ..updateCrossCultureTrendExchangeHubPostsLikeUser(
-                                                      (e) => e.add(FFAppState()
-                                                          .urbanTrendVisualCollaborationCurrent),
+                                                      (e) => e.add(
+                                                          StreetStyleViberaConnection()
+                                                              .urbanTrendVisualCollaborationCurrent),
                                                     ),
                                                 );
-                                                FFAppState().update(() {});
+                                                StreetStyleViberaConnection()
+                                                    .update(() {});
                                                 setState(() {}); // 强制刷新UI
                                               }
                                             },
@@ -524,42 +546,46 @@ class _CrossoverStyleNetWorldZhuanshuDetailWidgetState
                                     Builder(
                                       builder: (context) {
                                         // 从全局状态获取最新的点赞数
-                                        final currentPost = FFAppState()
-                                            .sneakerheadCultureConnectPosts
-                                            .firstWhere(
-                                              (post) =>
-                                                  post.crossCultureTrendExchangeHubPostsId ==
-                                                  widget
-                                                      .urbanVisualExpressionSharingref
-                                                      ?.crossCultureTrendExchangeHubPostsId,
-                                              orElse: () => widget
-                                                  .urbanVisualExpressionSharingref!,
-                                            );
+                                        final currentPost =
+                                            StreetStyleViberaConnection()
+                                                .sneakerheadCultureConnectPosts
+                                                .firstWhere(
+                                                  (post) =>
+                                                      post.crossCultureTrendExchangeHubPostsId ==
+                                                      widget
+                                                          .urbanVisualExpressionSharingref
+                                                          ?.crossCultureTrendExchangeHubPostsId,
+                                                  orElse: () => widget
+                                                      .urbanVisualExpressionSharingref!,
+                                                );
                                         return Text(
                                           '${currentPost.crossCultureTrendExchangeHubPostsLikeUser.length.toString()}',
-                                          style: FlutterFlowTheme.of(context)
+                                          style: LimitedEditionViberaTheme.of(
+                                                  context)
                                               .bodyMedium
                                               .override(
                                                 font: GoogleFonts.poppins(
                                                   fontWeight:
-                                                      FlutterFlowTheme.of(
-                                                              context)
+                                                      LimitedEditionViberaTheme
+                                                              .of(context)
                                                           .bodyMedium
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FlutterFlowTheme.of(
-                                                              context)
+                                                      LimitedEditionViberaTheme
+                                                              .of(context)
                                                           .bodyMedium
                                                           .fontStyle,
                                                 ),
                                                 color: Color(0xFFCCCCCC),
                                                 letterSpacing: 0.0,
                                                 fontWeight:
-                                                    FlutterFlowTheme.of(context)
+                                                    LimitedEditionViberaTheme
+                                                            .of(context)
                                                         .bodyMedium
                                                         .fontWeight,
                                                 fontStyle:
-                                                    FlutterFlowTheme.of(context)
+                                                    LimitedEditionViberaTheme
+                                                            .of(context)
                                                         .bodyMedium
                                                         .fontStyle,
                                               ),
@@ -571,7 +597,7 @@ class _CrossoverStyleNetWorldZhuanshuDetailWidgetState
                               ),
                               if (widget.urbanVisualExpressionSharingref
                                       ?.crossCultureTrendExchangeHubPostsCreateId !=
-                                  FFAppState()
+                                  StreetStyleViberaConnection()
                                       .urbanTrendVisualCollaborationCurrent)
                                 Flexible(
                                   child: Align(
@@ -650,13 +676,14 @@ class _CrossoverStyleNetWorldZhuanshuDetailWidgetState
                               24.0, 26.5, 24.0, 0.0),
                           child: Builder(
                             builder: (context) {
-                              final lifestyleDesignFusionExperience = FFAppState()
-                                  .modernFashionInfluenceComments
-                                  .where((e) =>
-                                      e.creativeTrendBeatCollCommentsPostRef ==
-                                      widget.urbanVisualExpressionSharingref
-                                          ?.crossCultureTrendExchangeHubPostsId)
-                                  .toList();
+                              final lifestyleDesignFusionExperience =
+                                  StreetStyleViberaConnection()
+                                      .modernFashionInfluenceComments
+                                      .where((e) =>
+                                          e.creativeTrendBeatCollCommentsPostRef ==
+                                          widget.urbanVisualExpressionSharingref
+                                              ?.crossCultureTrendExchangeHubPostsId)
+                                      .toList();
 
                               return ListView.separated(
                                 padding: EdgeInsets.zero,
@@ -683,7 +710,7 @@ class _CrossoverStyleNetWorldZhuanshuDetailWidgetState
                                           shape: BoxShape.circle,
                                         ),
                                         child: Image.asset(
-                                          FFAppState()
+                                          StreetStyleViberaConnection()
                                               .urbanOutfitTrendSharingUsers
                                               .elementAtOrNull(
                                                   lifestyleDesignFusionExperienceItem
@@ -699,28 +726,29 @@ class _CrossoverStyleNetWorldZhuanshuDetailWidgetState
                                               CrossAxisAlignment.start,
                                           children: [
                                             Text(
-                                              '${FFAppState().urbanOutfitTrendSharingUsers.elementAtOrNull(lifestyleDesignFusionExperienceItem.creativeTrendBeatCollCommentsCreateId)?.streetTrendEchoSharingUserName}',
-                                              style: FlutterFlowTheme.of(
-                                                      context)
+                                              '${StreetStyleViberaConnection().urbanOutfitTrendSharingUsers.elementAtOrNull(lifestyleDesignFusionExperienceItem.creativeTrendBeatCollCommentsCreateId)?.streetTrendEchoSharingUserName}',
+                                              style: LimitedEditionViberaTheme
+                                                      .of(context)
                                                   .bodyMedium
                                                   .override(
                                                     font: GoogleFonts.poppins(
                                                       fontWeight:
                                                           FontWeight.w500,
                                                       fontStyle:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
+                                                          LimitedEditionViberaTheme
+                                                                  .of(context)
                                                               .bodyMedium
                                                               .fontStyle,
                                                     ),
-                                                    color: FlutterFlowTheme.of(
-                                                            context)
-                                                        .info,
+                                                    color:
+                                                        LimitedEditionViberaTheme
+                                                                .of(context)
+                                                            .info,
                                                     letterSpacing: 0.0,
                                                     fontWeight: FontWeight.w500,
                                                     fontStyle:
-                                                        FlutterFlowTheme.of(
-                                                                context)
+                                                        LimitedEditionViberaTheme
+                                                                .of(context)
                                                             .bodyMedium
                                                             .fontStyle,
                                                   ),
@@ -728,19 +756,19 @@ class _CrossoverStyleNetWorldZhuanshuDetailWidgetState
                                             Text(
                                               lifestyleDesignFusionExperienceItem
                                                   .creativeTrendBeatCollCommentsContent,
-                                              style: FlutterFlowTheme.of(
-                                                      context)
+                                              style: LimitedEditionViberaTheme
+                                                      .of(context)
                                                   .bodyMedium
                                                   .override(
                                                     font: GoogleFonts.poppins(
                                                       fontWeight:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
+                                                          LimitedEditionViberaTheme
+                                                                  .of(context)
                                                               .bodyMedium
                                                               .fontWeight,
                                                       fontStyle:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
+                                                          LimitedEditionViberaTheme
+                                                                  .of(context)
                                                               .bodyMedium
                                                               .fontStyle,
                                                     ),
@@ -748,13 +776,13 @@ class _CrossoverStyleNetWorldZhuanshuDetailWidgetState
                                                     fontSize: 12.0,
                                                     letterSpacing: 0.0,
                                                     fontWeight:
-                                                        FlutterFlowTheme.of(
-                                                                context)
+                                                        LimitedEditionViberaTheme
+                                                                .of(context)
                                                             .bodyMedium
                                                             .fontWeight,
                                                     fontStyle:
-                                                        FlutterFlowTheme.of(
-                                                                context)
+                                                        LimitedEditionViberaTheme
+                                                                .of(context)
                                                             .bodyMedium
                                                             .fontStyle,
                                                   ),

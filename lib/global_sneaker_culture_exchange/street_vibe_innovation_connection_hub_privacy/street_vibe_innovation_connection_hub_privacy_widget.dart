@@ -1,4 +1,4 @@
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_util.dart';
 import 'package:flutter/material.dart';
 import 'street_vibe_innovation_connection_hub_privacy_model.dart';
 export 'street_vibe_innovation_connection_hub_privacy_model.dart';

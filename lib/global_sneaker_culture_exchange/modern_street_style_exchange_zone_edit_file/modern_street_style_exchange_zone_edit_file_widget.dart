@@ -1,7 +1,7 @@
-import '/flutter_flow/flutter_flow_drop_down.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/form_field_controller.dart';
+import '../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_drop_down.dart';
+import '../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_theme.dart';
+import '../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_util.dart';
+import '../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_form.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -44,7 +44,7 @@ class _ModernStreetStyleExchangeZoneEditFileWidgetState
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
+    context.watch<StreetStyleViberaConnection>();
 
     return GestureDetector(
       onTap: () {
@@ -98,22 +98,25 @@ class _ModernStreetStyleExchangeZoneEditFileWidgetState
                             EdgeInsetsDirectional.fromSTEB(49.0, 0.0, 0.0, 0.0),
                         child: Text(
                           'Edit Profile',
-                          style:
-                              FlutterFlowTheme.of(context).bodyMedium.override(
-                                    font: GoogleFonts.poppins(
-                                      fontWeight: FontWeight.bold,
-                                      fontStyle: FlutterFlowTheme.of(context)
+                          style: LimitedEditionViberaTheme.of(context)
+                              .bodyMedium
+                              .override(
+                                font: GoogleFonts.poppins(
+                                  fontWeight: FontWeight.bold,
+                                  fontStyle:
+                                      LimitedEditionViberaTheme.of(context)
                                           .bodyMedium
                                           .fontStyle,
-                                    ),
-                                    color: FlutterFlowTheme.of(context).info,
-                                    fontSize: 32.0,
-                                    letterSpacing: 0.0,
-                                    fontWeight: FontWeight.bold,
-                                    fontStyle: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .fontStyle,
-                                  ),
+                                ),
+                                color:
+                                    LimitedEditionViberaTheme.of(context).info,
+                                fontSize: 32.0,
+                                letterSpacing: 0.0,
+                                fontWeight: FontWeight.bold,
+                                fontStyle: LimitedEditionViberaTheme.of(context)
+                                    .bodyMedium
+                                    .fontStyle,
+                              ),
                         ),
                       ),
                     ],
@@ -160,10 +163,11 @@ class _ModernStreetStyleExchangeZoneEditFileWidgetState
                                           image: DecorationImage(
                                             fit: BoxFit.cover,
                                             image: Image.asset(
-                                              FFAppState()
+                                              StreetStyleViberaConnection()
                                                   .urbanOutfitTrendSharingUsers
-                                                  .elementAtOrNull(FFAppState()
-                                                      .urbanTrendVisualCollaborationCurrent)!
+                                                  .elementAtOrNull(
+                                                      StreetStyleViberaConnection()
+                                                          .urbanTrendVisualCollaborationCurrent)!
                                                   .streetTrendEchoSharingUserPhoto,
                                             ).image,
                                           ),
@@ -196,22 +200,25 @@ class _ModernStreetStyleExchangeZoneEditFileWidgetState
                                 0.0, 16.0, 0.0, 0.0),
                             child: Text(
                               'Profile Photo',
-                              style: FlutterFlowTheme.of(context)
+                              style: LimitedEditionViberaTheme.of(context)
                                   .bodyMedium
                                   .override(
                                     font: GoogleFonts.poppins(
                                       fontWeight: FontWeight.w600,
-                                      fontStyle: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .fontStyle,
+                                      fontStyle:
+                                          LimitedEditionViberaTheme.of(context)
+                                              .bodyMedium
+                                              .fontStyle,
                                     ),
-                                    color: FlutterFlowTheme.of(context).info,
+                                    color: LimitedEditionViberaTheme.of(context)
+                                        .info,
                                     fontSize: 20.0,
                                     letterSpacing: 0.0,
                                     fontWeight: FontWeight.w600,
-                                    fontStyle: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .fontStyle,
+                                    fontStyle:
+                                        LimitedEditionViberaTheme.of(context)
+                                            .bodyMedium
+                                            .fontStyle,
                                   ),
                             ),
                           ),
@@ -224,22 +231,25 @@ class _ModernStreetStyleExchangeZoneEditFileWidgetState
                               children: [
                                 Text(
                                   'Nickname',
-                                  style: FlutterFlowTheme.of(context)
+                                  style: LimitedEditionViberaTheme.of(context)
                                       .bodyMedium
                                       .override(
                                         font: GoogleFonts.poppins(
                                           fontWeight: FontWeight.w500,
                                           fontStyle:
-                                              FlutterFlowTheme.of(context)
+                                              LimitedEditionViberaTheme.of(
+                                                      context)
                                                   .bodyMedium
                                                   .fontStyle,
                                         ),
-                                        color:
-                                            FlutterFlowTheme.of(context).info,
+                                        color: LimitedEditionViberaTheme.of(
+                                                context)
+                                            .info,
                                         fontSize: 20.0,
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.w500,
-                                        fontStyle: FlutterFlowTheme.of(context)
+                                        fontStyle: LimitedEditionViberaTheme.of(
+                                                context)
                                             .bodyMedium
                                             .fontStyle,
                                       ),
@@ -266,62 +276,68 @@ class _ModernStreetStyleExchangeZoneEditFileWidgetState
                                         obscureText: false,
                                         decoration: InputDecoration(
                                           isDense: true,
-                                          labelStyle: FlutterFlowTheme.of(
-                                                  context)
-                                              .labelMedium
-                                              .override(
-                                                font: GoogleFonts.poppins(
-                                                  fontWeight:
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .labelMedium
-                                                          .fontWeight,
-                                                  fontStyle:
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .labelMedium
-                                                          .fontStyle,
-                                                ),
-                                                letterSpacing: 0.0,
-                                                fontWeight:
-                                                    FlutterFlowTheme.of(context)
-                                                        .labelMedium
-                                                        .fontWeight,
-                                                fontStyle:
-                                                    FlutterFlowTheme.of(context)
-                                                        .labelMedium
-                                                        .fontStyle,
-                                              ),
+                                          labelStyle:
+                                              LimitedEditionViberaTheme.of(
+                                                      context)
+                                                  .labelMedium
+                                                  .override(
+                                                    font: GoogleFonts.poppins(
+                                                      fontWeight:
+                                                          LimitedEditionViberaTheme
+                                                                  .of(context)
+                                                              .labelMedium
+                                                              .fontWeight,
+                                                      fontStyle:
+                                                          LimitedEditionViberaTheme
+                                                                  .of(context)
+                                                              .labelMedium
+                                                              .fontStyle,
+                                                    ),
+                                                    letterSpacing: 0.0,
+                                                    fontWeight:
+                                                        LimitedEditionViberaTheme
+                                                                .of(context)
+                                                            .labelMedium
+                                                            .fontWeight,
+                                                    fontStyle:
+                                                        LimitedEditionViberaTheme
+                                                                .of(context)
+                                                            .labelMedium
+                                                            .fontStyle,
+                                                  ),
                                           hintText:
-                                              '${FFAppState().urbanOutfitTrendSharingUsers.elementAtOrNull(FFAppState().urbanTrendVisualCollaborationCurrent)?.streetTrendEchoSharingUserName}',
-                                          hintStyle: FlutterFlowTheme.of(
-                                                  context)
-                                              .labelMedium
-                                              .override(
-                                                font: GoogleFonts.poppins(
-                                                  fontWeight:
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .labelMedium
-                                                          .fontWeight,
-                                                  fontStyle:
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .labelMedium
-                                                          .fontStyle,
-                                                ),
-                                                color: Color(0x7FFFFFFF),
-                                                fontSize: 16.0,
-                                                letterSpacing: 0.0,
-                                                fontWeight:
-                                                    FlutterFlowTheme.of(context)
-                                                        .labelMedium
-                                                        .fontWeight,
-                                                fontStyle:
-                                                    FlutterFlowTheme.of(context)
-                                                        .labelMedium
-                                                        .fontStyle,
-                                              ),
+                                              '${StreetStyleViberaConnection().urbanOutfitTrendSharingUsers.elementAtOrNull(StreetStyleViberaConnection().urbanTrendVisualCollaborationCurrent)?.streetTrendEchoSharingUserName}',
+                                          hintStyle:
+                                              LimitedEditionViberaTheme.of(
+                                                      context)
+                                                  .labelMedium
+                                                  .override(
+                                                    font: GoogleFonts.poppins(
+                                                      fontWeight:
+                                                          LimitedEditionViberaTheme
+                                                                  .of(context)
+                                                              .labelMedium
+                                                              .fontWeight,
+                                                      fontStyle:
+                                                          LimitedEditionViberaTheme
+                                                                  .of(context)
+                                                              .labelMedium
+                                                              .fontStyle,
+                                                    ),
+                                                    color: Color(0x7FFFFFFF),
+                                                    fontSize: 16.0,
+                                                    letterSpacing: 0.0,
+                                                    fontWeight:
+                                                        LimitedEditionViberaTheme
+                                                                .of(context)
+                                                            .labelMedium
+                                                            .fontWeight,
+                                                    fontStyle:
+                                                        LimitedEditionViberaTheme
+                                                                .of(context)
+                                                            .labelMedium
+                                                            .fontStyle,
+                                                  ),
                                           enabledBorder: OutlineInputBorder(
                                             borderSide: BorderSide(
                                               color: Color(0x00000000),
@@ -356,35 +372,43 @@ class _ModernStreetStyleExchangeZoneEditFileWidgetState
                                                 BorderRadius.circular(16.0),
                                           ),
                                         ),
-                                        style: FlutterFlowTheme.of(context)
+                                        style: LimitedEditionViberaTheme.of(
+                                                context)
                                             .bodyMedium
                                             .override(
                                               font: GoogleFonts.poppins(
                                                 fontWeight:
-                                                    FlutterFlowTheme.of(context)
+                                                    LimitedEditionViberaTheme
+                                                            .of(context)
                                                         .bodyMedium
                                                         .fontWeight,
                                                 fontStyle:
-                                                    FlutterFlowTheme.of(context)
+                                                    LimitedEditionViberaTheme
+                                                            .of(context)
                                                         .bodyMedium
                                                         .fontStyle,
                                               ),
                                               color:
-                                                  FlutterFlowTheme.of(context)
+                                                  LimitedEditionViberaTheme.of(
+                                                          context)
                                                       .info,
                                               fontSize: 16.0,
                                               letterSpacing: 0.0,
                                               fontWeight:
-                                                  FlutterFlowTheme.of(context)
+                                                  LimitedEditionViberaTheme.of(
+                                                          context)
                                                       .bodyMedium
                                                       .fontWeight,
                                               fontStyle:
-                                                  FlutterFlowTheme.of(context)
+                                                  LimitedEditionViberaTheme.of(
+                                                          context)
                                                       .bodyMedium
                                                       .fontStyle,
                                             ),
                                         cursorColor:
-                                            FlutterFlowTheme.of(context).info,
+                                            LimitedEditionViberaTheme.of(
+                                                    context)
+                                                .info,
                                         enableInteractiveSelection: true,
                                         validator: _model
                                             .textControllerValidator
@@ -405,22 +429,25 @@ class _ModernStreetStyleExchangeZoneEditFileWidgetState
                               children: [
                                 Text(
                                   'Gender',
-                                  style: FlutterFlowTheme.of(context)
+                                  style: LimitedEditionViberaTheme.of(context)
                                       .bodyMedium
                                       .override(
                                         font: GoogleFonts.poppins(
                                           fontWeight: FontWeight.w500,
                                           fontStyle:
-                                              FlutterFlowTheme.of(context)
+                                              LimitedEditionViberaTheme.of(
+                                                      context)
                                                   .bodyMedium
                                                   .fontStyle,
                                         ),
-                                        color:
-                                            FlutterFlowTheme.of(context).info,
+                                        color: LimitedEditionViberaTheme.of(
+                                                context)
+                                            .info,
                                         fontSize: 20.0,
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.w500,
-                                        fontStyle: FlutterFlowTheme.of(context)
+                                        fontStyle: LimitedEditionViberaTheme.of(
+                                                context)
                                             .bodyMedium
                                             .fontStyle,
                                       ),
@@ -435,7 +462,7 @@ class _ModernStreetStyleExchangeZoneEditFileWidgetState
                                       width: 2.0,
                                     ),
                                   ),
-                                  child: FlutterFlowDropDown<String>(
+                                  child: LimitedEditionViberaDropDown<String>(
                                     controller:
                                         _model.dropDownValueController1 ??=
                                             FormFieldController<String>(null),
@@ -444,16 +471,19 @@ class _ModernStreetStyleExchangeZoneEditFileWidgetState
                                         () => _model.dropDownValue1 = val),
                                     width: double.infinity,
                                     height: double.infinity,
-                                    textStyle: FlutterFlowTheme.of(context)
+                                    textStyle: LimitedEditionViberaTheme.of(
+                                            context)
                                         .bodyMedium
                                         .override(
                                           font: GoogleFonts.poppins(
                                             fontWeight:
-                                                FlutterFlowTheme.of(context)
+                                                LimitedEditionViberaTheme.of(
+                                                        context)
                                                     .bodyMedium
                                                     .fontWeight,
                                             fontStyle:
-                                                FlutterFlowTheme.of(context)
+                                                LimitedEditionViberaTheme.of(
+                                                        context)
                                                     .bodyMedium
                                                     .fontStyle,
                                           ),
@@ -461,20 +491,23 @@ class _ModernStreetStyleExchangeZoneEditFileWidgetState
                                           fontSize: 16.0,
                                           letterSpacing: 0.0,
                                           fontWeight:
-                                              FlutterFlowTheme.of(context)
+                                              LimitedEditionViberaTheme.of(
+                                                      context)
                                                   .bodyMedium
                                                   .fontWeight,
                                           fontStyle:
-                                              FlutterFlowTheme.of(context)
+                                              LimitedEditionViberaTheme.of(
+                                                      context)
                                                   .bodyMedium
                                                   .fontStyle,
                                         ),
                                     hintText:
-                                        '${FFAppState().urbanOutfitTrendSharingUsers.elementAtOrNull(FFAppState().urbanTrendVisualCollaborationCurrent)?.streetTrendEchoSharingUserGender}',
+                                        '${StreetStyleViberaConnection().urbanOutfitTrendSharingUsers.elementAtOrNull(StreetStyleViberaConnection().urbanTrendVisualCollaborationCurrent)?.streetTrendEchoSharingUserGender}',
                                     icon: Icon(
                                       Icons.chevron_right,
-                                      color: FlutterFlowTheme.of(context)
-                                          .secondaryText,
+                                      color:
+                                          LimitedEditionViberaTheme.of(context)
+                                              .secondaryText,
                                       size: 24.0,
                                     ),
                                     elevation: 2.0,
@@ -501,22 +534,25 @@ class _ModernStreetStyleExchangeZoneEditFileWidgetState
                               children: [
                                 Text(
                                   'Date of Birth',
-                                  style: FlutterFlowTheme.of(context)
+                                  style: LimitedEditionViberaTheme.of(context)
                                       .bodyMedium
                                       .override(
                                         font: GoogleFonts.poppins(
                                           fontWeight: FontWeight.w500,
                                           fontStyle:
-                                              FlutterFlowTheme.of(context)
+                                              LimitedEditionViberaTheme.of(
+                                                      context)
                                                   .bodyMedium
                                                   .fontStyle,
                                         ),
-                                        color:
-                                            FlutterFlowTheme.of(context).info,
+                                        color: LimitedEditionViberaTheme.of(
+                                                context)
+                                            .info,
                                         fontSize: 20.0,
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.w500,
-                                        fontStyle: FlutterFlowTheme.of(context)
+                                        fontStyle: LimitedEditionViberaTheme.of(
+                                                context)
                                             .bodyMedium
                                             .fontStyle,
                                       ),
@@ -531,7 +567,7 @@ class _ModernStreetStyleExchangeZoneEditFileWidgetState
                                       width: 2.0,
                                     ),
                                   ),
-                                  child: FlutterFlowDropDown<String>(
+                                  child: LimitedEditionViberaDropDown<String>(
                                     controller:
                                         _model.dropDownValueController2 ??=
                                             FormFieldController<String>(null),
@@ -540,16 +576,19 @@ class _ModernStreetStyleExchangeZoneEditFileWidgetState
                                         () => _model.dropDownValue2 = val),
                                     width: double.infinity,
                                     height: double.infinity,
-                                    textStyle: FlutterFlowTheme.of(context)
+                                    textStyle: LimitedEditionViberaTheme.of(
+                                            context)
                                         .bodyMedium
                                         .override(
                                           font: GoogleFonts.poppins(
                                             fontWeight:
-                                                FlutterFlowTheme.of(context)
+                                                LimitedEditionViberaTheme.of(
+                                                        context)
                                                     .bodyMedium
                                                     .fontWeight,
                                             fontStyle:
-                                                FlutterFlowTheme.of(context)
+                                                LimitedEditionViberaTheme.of(
+                                                        context)
                                                     .bodyMedium
                                                     .fontStyle,
                                           ),
@@ -557,20 +596,23 @@ class _ModernStreetStyleExchangeZoneEditFileWidgetState
                                           fontSize: 16.0,
                                           letterSpacing: 0.0,
                                           fontWeight:
-                                              FlutterFlowTheme.of(context)
+                                              LimitedEditionViberaTheme.of(
+                                                      context)
                                                   .bodyMedium
                                                   .fontWeight,
                                           fontStyle:
-                                              FlutterFlowTheme.of(context)
+                                              LimitedEditionViberaTheme.of(
+                                                      context)
                                                   .bodyMedium
                                                   .fontStyle,
                                         ),
                                     hintText:
-                                        '${FFAppState().urbanOutfitTrendSharingUsers.elementAtOrNull(FFAppState().urbanTrendVisualCollaborationCurrent)?.streetTrendEchoSharingUserDatebirth}',
+                                        '${StreetStyleViberaConnection().urbanOutfitTrendSharingUsers.elementAtOrNull(StreetStyleViberaConnection().urbanTrendVisualCollaborationCurrent)?.streetTrendEchoSharingUserDatebirth}',
                                     icon: Icon(
                                       Icons.chevron_right,
-                                      color: FlutterFlowTheme.of(context)
-                                          .secondaryText,
+                                      color:
+                                          LimitedEditionViberaTheme.of(context)
+                                              .secondaryText,
                                       size: 24.0,
                                     ),
                                     elevation: 2.0,
@@ -610,22 +652,25 @@ class _ModernStreetStyleExchangeZoneEditFileWidgetState
                                 alignment: AlignmentDirectional(0.0, 0.0),
                                 child: Text(
                                   'Done',
-                                  style: FlutterFlowTheme.of(context)
+                                  style: LimitedEditionViberaTheme.of(context)
                                       .bodyMedium
                                       .override(
                                         font: GoogleFonts.roboto(
                                           fontWeight: FontWeight.bold,
                                           fontStyle:
-                                              FlutterFlowTheme.of(context)
+                                              LimitedEditionViberaTheme.of(
+                                                      context)
                                                   .bodyMedium
                                                   .fontStyle,
                                         ),
-                                        color:
-                                            FlutterFlowTheme.of(context).info,
+                                        color: LimitedEditionViberaTheme.of(
+                                                context)
+                                            .info,
                                         fontSize: 24.0,
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.bold,
-                                        fontStyle: FlutterFlowTheme.of(context)
+                                        fontStyle: LimitedEditionViberaTheme.of(
+                                                context)
                                             .bodyMedium
                                             .fontStyle,
                                       ),

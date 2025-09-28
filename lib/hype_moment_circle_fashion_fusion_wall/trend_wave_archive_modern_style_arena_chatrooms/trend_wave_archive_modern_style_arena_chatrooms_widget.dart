@@ -1,6 +1,6 @@
 import '../../global_sneaker_culture_exchange/trendsetter_wardrobe_showcase_empty/trendsetter_wardrobe_showcase_empty_widget.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_theme.dart';
+import '../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_util.dart';
 import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -41,7 +41,7 @@ class _TrendWaveArchiveModernStyleArenaChatroomsWidgetState
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
+    context.watch<StreetStyleViberaConnection>();
 
     return GestureDetector(
       onTap: () {
@@ -65,18 +65,20 @@ class _TrendWaveArchiveModernStyleArenaChatroomsWidgetState
                     children: [
                       Text(
                         'Messages',
-                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                        style: LimitedEditionViberaTheme.of(context)
+                            .bodyMedium
+                            .override(
                               font: GoogleFonts.poppins(
                                 fontWeight: FontWeight.bold,
-                                fontStyle: FlutterFlowTheme.of(context)
+                                fontStyle: LimitedEditionViberaTheme.of(context)
                                     .bodyMedium
                                     .fontStyle,
                               ),
-                              color: FlutterFlowTheme.of(context).info,
+                              color: LimitedEditionViberaTheme.of(context).info,
                               fontSize: 32.0,
                               letterSpacing: 0.0,
                               fontWeight: FontWeight.bold,
-                              fontStyle: FlutterFlowTheme.of(context)
+                              fontStyle: LimitedEditionViberaTheme.of(context)
                                   .bodyMedium
                                   .fontStyle,
                             ),
@@ -90,19 +92,21 @@ class _TrendWaveArchiveModernStyleArenaChatroomsWidgetState
                         EdgeInsetsDirectional.fromSTEB(24.0, 24.0, 24.0, 0.0),
                     child: Builder(
                       builder: (context) {
-                        final urbanCultureFusionExplorationPlatform = FFAppState()
-                            .streetCultureExpressionNetworkChats
-                            .where((e) =>
-                                e.nextGenStreetwearShowcaseChatCurrentId ==
-                                    FFAppState()
-                                        .urbanTrendVisualCollaborationCurrent &&
-                                !FFAppState()
-                                    .urbanOutfitTrendSharingUsers[FFAppState()
-                                        .urbanTrendVisualCollaborationCurrent]
-                                    .streetTrendEchoSharingUserBlacklist
-                                    .contains(
-                                        e.nextGenStreetwearShowcaseChatOtherId))
-                            .toList();
+                        final urbanCultureFusionExplorationPlatform =
+                            StreetStyleViberaConnection()
+                                .streetCultureExpressionNetworkChats
+                                .where((e) =>
+                                    e.nextGenStreetwearShowcaseChatCurrentId ==
+                                        StreetStyleViberaConnection()
+                                            .urbanTrendVisualCollaborationCurrent &&
+                                    !StreetStyleViberaConnection()
+                                        .urbanOutfitTrendSharingUsers[
+                                            StreetStyleViberaConnection()
+                                                .urbanTrendVisualCollaborationCurrent]
+                                        .streetTrendEchoSharingUserBlacklist
+                                        .contains(e
+                                            .nextGenStreetwearShowcaseChatOtherId))
+                                .toList();
                         if (urbanCultureFusionExplorationPlatform.isEmpty) {
                           return Align(
                               alignment: Alignment(0, -0.5),
@@ -188,7 +192,7 @@ class _TrendWaveArchiveModernStyleArenaChatroomsWidgetState
                                                   image: DecorationImage(
                                                     fit: BoxFit.cover,
                                                     image: Image.asset(
-                                                      FFAppState()
+                                                      StreetStyleViberaConnection()
                                                           .urbanOutfitTrendSharingUsers
                                                           .elementAtOrNull(
                                                               urbanCultureFusionExplorationPlatformItem
@@ -214,63 +218,63 @@ class _TrendWaveArchiveModernStyleArenaChatroomsWidgetState
                                                 CrossAxisAlignment.start,
                                             children: [
                                               Text(
-                                                '${FFAppState().urbanOutfitTrendSharingUsers.elementAtOrNull(urbanCultureFusionExplorationPlatformItem.nextGenStreetwearShowcaseChatOtherId)?.streetTrendEchoSharingUserName}',
-                                                style: FlutterFlowTheme.of(
-                                                        context)
+                                                '${StreetStyleViberaConnection().urbanOutfitTrendSharingUsers.elementAtOrNull(urbanCultureFusionExplorationPlatformItem.nextGenStreetwearShowcaseChatOtherId)?.streetTrendEchoSharingUserName}',
+                                                style: LimitedEditionViberaTheme
+                                                        .of(context)
                                                     .bodyMedium
                                                     .override(
                                                       font: GoogleFonts.poppins(
                                                         fontWeight:
                                                             FontWeight.w500,
                                                         fontStyle:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
+                                                            LimitedEditionViberaTheme
+                                                                    .of(context)
                                                                 .bodyMedium
                                                                 .fontStyle,
                                                       ),
                                                       color:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
+                                                          LimitedEditionViberaTheme
+                                                                  .of(context)
                                                               .info,
                                                       fontSize: 20.0,
                                                       letterSpacing: 0.0,
                                                       fontWeight:
                                                           FontWeight.w500,
                                                       fontStyle:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
+                                                          LimitedEditionViberaTheme
+                                                                  .of(context)
                                                               .bodyMedium
                                                               .fontStyle,
                                                     ),
                                               ),
                                               Text(
                                                 '${urbanCultureFusionExplorationPlatformItem.nextGenStreetwearShowcaseChatLastMsg}',
-                                                style: FlutterFlowTheme.of(
-                                                        context)
+                                                style: LimitedEditionViberaTheme
+                                                        .of(context)
                                                     .bodyMedium
                                                     .override(
                                                       font: GoogleFonts.poppins(
                                                         fontWeight:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
+                                                            LimitedEditionViberaTheme
+                                                                    .of(context)
                                                                 .bodyMedium
                                                                 .fontWeight,
                                                         fontStyle:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
+                                                            LimitedEditionViberaTheme
+                                                                    .of(context)
                                                                 .bodyMedium
                                                                 .fontStyle,
                                                       ),
                                                       color: Color(0x99FFFFFF),
                                                       letterSpacing: 0.0,
                                                       fontWeight:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
+                                                          LimitedEditionViberaTheme
+                                                                  .of(context)
                                                               .bodyMedium
                                                               .fontWeight,
                                                       fontStyle:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
+                                                          LimitedEditionViberaTheme
+                                                                  .of(context)
                                                               .bodyMedium
                                                               .fontStyle,
                                                     ),
@@ -284,27 +288,32 @@ class _TrendWaveArchiveModernStyleArenaChatroomsWidgetState
                                             "jm",
                                             urbanCultureFusionExplorationPlatformItem
                                                 .nextGenStreetwearShowcaseChatLastTime!),
-                                        style: FlutterFlowTheme.of(context)
+                                        style: LimitedEditionViberaTheme.of(
+                                                context)
                                             .bodyMedium
                                             .override(
                                               font: GoogleFonts.poppins(
                                                 fontWeight:
-                                                    FlutterFlowTheme.of(context)
+                                                    LimitedEditionViberaTheme
+                                                            .of(context)
                                                         .bodyMedium
                                                         .fontWeight,
                                                 fontStyle:
-                                                    FlutterFlowTheme.of(context)
+                                                    LimitedEditionViberaTheme
+                                                            .of(context)
                                                         .bodyMedium
                                                         .fontStyle,
                                               ),
                                               color: Color(0x98FFFFFF),
                                               letterSpacing: 0.0,
                                               fontWeight:
-                                                  FlutterFlowTheme.of(context)
+                                                  LimitedEditionViberaTheme.of(
+                                                          context)
                                                       .bodyMedium
                                                       .fontWeight,
                                               fontStyle:
-                                                  FlutterFlowTheme.of(context)
+                                                  LimitedEditionViberaTheme.of(
+                                                          context)
                                                       .bodyMedium
                                                       .fontStyle,
                                             ),

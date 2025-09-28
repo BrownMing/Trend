@@ -1,19 +1,20 @@
 import 'package:flutter/material.dart';
 import '/backend/schema/structs/index.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'flutter_flow/flutter_flow_util.dart';
+import 'viberaUrban_trendCelebration/viberaUrban_trendCelebration_util.dart';
 
-class FFAppState extends ChangeNotifier {
-  static FFAppState _instance = FFAppState._internal();
+class StreetStyleViberaConnection extends ChangeNotifier {
+  static StreetStyleViberaConnection _instance =
+      StreetStyleViberaConnection._internal();
 
-  factory FFAppState() {
+  factory StreetStyleViberaConnection() {
     return _instance;
   }
 
-  FFAppState._internal();
+  StreetStyleViberaConnection._internal();
 
   static void reset() {
-    _instance = FFAppState._internal();
+    _instance = StreetStyleViberaConnection._internal();
   }
 
   Future initializePersistedState() async {

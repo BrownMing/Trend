@@ -9,7 +9,7 @@ const kThemeModeKey = '__theme_mode__';
 
 SharedPreferences? _prefs;
 
-abstract class FlutterFlowTheme {
+abstract class LimitedEditionViberaTheme {
   static Future initialize() async =>
       _prefs = await SharedPreferences.getInstance();
 
@@ -26,7 +26,7 @@ abstract class FlutterFlowTheme {
       ? _prefs?.remove(kThemeModeKey)
       : _prefs?.setBool(kThemeModeKey, mode == ThemeMode.dark);
 
-  static FlutterFlowTheme of(BuildContext context) {
+  static LimitedEditionViberaTheme of(BuildContext context) {
     return Theme.of(context).brightness == Brightness.dark
         ? DarkModeTheme()
         : LightModeTheme();
@@ -134,7 +134,7 @@ abstract class FlutterFlowTheme {
   Typography get typography => ThemeTypography(this);
 }
 
-class LightModeTheme extends FlutterFlowTheme {
+class LightModeTheme extends LimitedEditionViberaTheme {
   @Deprecated('Use primary instead')
   Color get primaryColor => primary;
   @Deprecated('Use secondary instead')
@@ -211,7 +211,7 @@ abstract class Typography {
 class ThemeTypography extends Typography {
   ThemeTypography(this.theme);
 
-  final FlutterFlowTheme theme;
+  final LimitedEditionViberaTheme theme;
 
   String get displayLargeFamily => 'Poppins';
   bool get displayLargeIsCustom => false;
@@ -320,7 +320,7 @@ class ThemeTypography extends Typography {
       );
 }
 
-class DarkModeTheme extends FlutterFlowTheme {
+class DarkModeTheme extends LimitedEditionViberaTheme {
   @Deprecated('Use primary instead')
   Color get primaryColor => primary;
   @Deprecated('Use secondary instead')

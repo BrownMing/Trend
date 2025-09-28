@@ -1,5 +1,5 @@
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_theme.dart';
+import '../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_util.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'urban_style_expression_platform_video_chat_model.dart';
@@ -43,7 +43,7 @@ class _UrbanStyleExpressionPlatformVideoChatWidgetState
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
+    context.watch<StreetStyleViberaConnection>();
 
     return GestureDetector(
       onTap: () {
@@ -55,7 +55,7 @@ class _UrbanStyleExpressionPlatformVideoChatWidgetState
         body: Stack(
           children: [
             Image.asset(
-              FFAppState()
+              StreetStyleViberaConnection()
                   .urbanOutfitTrendSharingUsers
                   .elementAtOrNull(widget.uthTrendDanceCollaborationCircle!)!
                   .streetTrendEchoSharingUserPhoto,
@@ -69,7 +69,8 @@ class _UrbanStyleExpressionPlatformVideoChatWidgetState
                 width: 130.0,
                 height: 175.0,
                 decoration: BoxDecoration(
-                  color: FlutterFlowTheme.of(context).secondaryBackground,
+                  color:
+                      LimitedEditionViberaTheme.of(context).secondaryBackground,
                   borderRadius: BorderRadius.circular(12.0),
                 ),
               ),

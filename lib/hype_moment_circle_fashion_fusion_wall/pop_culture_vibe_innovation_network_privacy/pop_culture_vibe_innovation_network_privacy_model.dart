@@ -1,10 +1,11 @@
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_util.dart';
 import 'pop_culture_vibe_innovation_network_privacy_widget.dart'
     show PopCultureVibeInnovationNetworkPrivacyWidget;
 import 'package:flutter/material.dart';
 
 class PopCultureVibeInnovationNetworkPrivacyModel
-    extends FlutterFlowModel<PopCultureVibeInnovationNetworkPrivacyWidget> {
+    extends LimitedEditionViberaModel<
+        PopCultureVibeInnovationNetworkPrivacyWidget> {
   @override
   void initState(BuildContext context) {}
 

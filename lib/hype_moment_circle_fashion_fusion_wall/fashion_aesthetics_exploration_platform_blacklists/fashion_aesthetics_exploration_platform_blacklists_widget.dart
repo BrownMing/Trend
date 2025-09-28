@@ -1,6 +1,6 @@
 import '../../global_sneaker_culture_exchange/trendsetter_wardrobe_showcase_empty/trendsetter_wardrobe_showcase_empty_widget.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_theme.dart';
+import '../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_util.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -41,7 +41,7 @@ class _FashionAestheticsExplorationPlatformBlacklistsWidgetState
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
+    context.watch<StreetStyleViberaConnection>();
 
     return GestureDetector(
       onTap: () {
@@ -92,18 +92,20 @@ class _FashionAestheticsExplorationPlatformBlacklistsWidgetState
                       ),
                       Text(
                         'Blacklists',
-                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                        style: LimitedEditionViberaTheme.of(context)
+                            .bodyMedium
+                            .override(
                               font: GoogleFonts.poppins(
                                 fontWeight: FontWeight.bold,
-                                fontStyle: FlutterFlowTheme.of(context)
+                                fontStyle: LimitedEditionViberaTheme.of(context)
                                     .bodyMedium
                                     .fontStyle,
                               ),
-                              color: FlutterFlowTheme.of(context).info,
+                              color: LimitedEditionViberaTheme.of(context).info,
                               fontSize: 32.0,
                               letterSpacing: 0.0,
                               fontWeight: FontWeight.bold,
-                              fontStyle: FlutterFlowTheme.of(context)
+                              fontStyle: LimitedEditionViberaTheme.of(context)
                                   .bodyMedium
                                   .fontStyle,
                             ),
@@ -122,13 +124,14 @@ class _FashionAestheticsExplorationPlatformBlacklistsWidgetState
                         EdgeInsetsDirectional.fromSTEB(0.0, 24.0, 0.0, 0.0),
                     child: Builder(
                       builder: (context) {
-                        final streetVibeInspirationExchange = FFAppState()
-                                .urbanOutfitTrendSharingUsers
-                                .elementAtOrNull(FFAppState()
-                                    .urbanTrendVisualCollaborationCurrent)
-                                ?.streetTrendEchoSharingUserBlacklist
-                                .toList() ??
-                            [];
+                        final streetVibeInspirationExchange =
+                            StreetStyleViberaConnection()
+                                    .urbanOutfitTrendSharingUsers
+                                    .elementAtOrNull(StreetStyleViberaConnection()
+                                        .urbanTrendVisualCollaborationCurrent)
+                                    ?.streetTrendEchoSharingUserBlacklist
+                                    .toList() ??
+                                [];
                         if (streetVibeInspirationExchange.isEmpty) {
                           return Center(
                               child:
@@ -181,7 +184,7 @@ class _FashionAestheticsExplorationPlatformBlacklistsWidgetState
                                                   image: DecorationImage(
                                                     fit: BoxFit.cover,
                                                     image: Image.asset(
-                                                      FFAppState()
+                                                      StreetStyleViberaConnection()
                                                           .urbanOutfitTrendSharingUsers
                                                           .elementAtOrNull(
                                                               streetVibeInspirationExchangeItem)!
@@ -206,47 +209,47 @@ class _FashionAestheticsExplorationPlatformBlacklistsWidgetState
                                                 CrossAxisAlignment.start,
                                             children: [
                                               Text(
-                                                '${FFAppState().urbanOutfitTrendSharingUsers.elementAtOrNull(streetVibeInspirationExchangeItem)?.streetTrendEchoSharingUserName}',
-                                                style: FlutterFlowTheme.of(
-                                                        context)
+                                                '${StreetStyleViberaConnection().urbanOutfitTrendSharingUsers.elementAtOrNull(streetVibeInspirationExchangeItem)?.streetTrendEchoSharingUserName}',
+                                                style: LimitedEditionViberaTheme
+                                                        .of(context)
                                                     .bodyMedium
                                                     .override(
                                                       font: GoogleFonts.poppins(
                                                         fontWeight:
                                                             FontWeight.w500,
                                                         fontStyle:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
+                                                            LimitedEditionViberaTheme
+                                                                    .of(context)
                                                                 .bodyMedium
                                                                 .fontStyle,
                                                       ),
                                                       color:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
+                                                          LimitedEditionViberaTheme
+                                                                  .of(context)
                                                               .info,
                                                       fontSize: 20.0,
                                                       letterSpacing: 0.0,
                                                       fontWeight:
                                                           FontWeight.w500,
                                                       fontStyle:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
+                                                          LimitedEditionViberaTheme
+                                                                  .of(context)
                                                               .bodyMedium
                                                               .fontStyle,
                                                     ),
                                               ),
                                               Text(
                                                 'Sent${dateTimeFormat("relative", getCurrentTimestamp)}',
-                                                style: FlutterFlowTheme.of(
-                                                        context)
+                                                style: LimitedEditionViberaTheme
+                                                        .of(context)
                                                     .bodyMedium
                                                     .override(
                                                       font: GoogleFonts.poppins(
                                                         fontWeight:
                                                             FontWeight.normal,
                                                         fontStyle:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
+                                                            LimitedEditionViberaTheme
+                                                                    .of(context)
                                                                 .bodyMedium
                                                                 .fontStyle,
                                                       ),
@@ -255,8 +258,8 @@ class _FashionAestheticsExplorationPlatformBlacklistsWidgetState
                                                       fontWeight:
                                                           FontWeight.normal,
                                                       fontStyle:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
+                                                          LimitedEditionViberaTheme
+                                                                  .of(context)
                                                               .bodyMedium
                                                               .fontStyle,
                                                     ),
@@ -271,9 +274,9 @@ class _FashionAestheticsExplorationPlatformBlacklistsWidgetState
                                         hoverColor: Colors.transparent,
                                         highlightColor: Colors.transparent,
                                         onTap: () async {
-                                          FFAppState()
+                                          StreetStyleViberaConnection()
                                               .updateUrbanOutfitTrendSharingUsersAtIndex(
-                                            FFAppState()
+                                            StreetStyleViberaConnection()
                                                 .urbanTrendVisualCollaborationCurrent,
                                             (e) => e
                                               ..updateStreetTrendEchoSharingUserBlacklist(
@@ -281,7 +284,8 @@ class _FashionAestheticsExplorationPlatformBlacklistsWidgetState
                                                     streetVibeInspirationExchangeItem),
                                               ),
                                           );
-                                          FFAppState().update(() {});
+                                          StreetStyleViberaConnection()
+                                              .update(() {});
                                         },
                                         child: Container(
                                           width: 24.0,

@@ -1,5 +1,5 @@
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_theme.dart';
+import '../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_util.dart';
 import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -95,22 +95,25 @@ class _HypeCultureSharingFashionFlowstartWidgetState
                           alignment: AlignmentDirectional(0.0, 0.0),
                           child: Text(
                             'Sign In',
-                            style: FlutterFlowTheme.of(context)
+                            style: LimitedEditionViberaTheme.of(context)
                                 .bodyMedium
                                 .override(
                                   font: GoogleFonts.roboto(
                                     fontWeight: FontWeight.bold,
-                                    fontStyle: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .fontStyle,
+                                    fontStyle:
+                                        LimitedEditionViberaTheme.of(context)
+                                            .bodyMedium
+                                            .fontStyle,
                                   ),
-                                  color: FlutterFlowTheme.of(context).info,
+                                  color: LimitedEditionViberaTheme.of(context)
+                                      .info,
                                   fontSize: 24.0,
                                   letterSpacing: 0.0,
                                   fontWeight: FontWeight.bold,
-                                  fontStyle: FlutterFlowTheme.of(context)
-                                      .bodyMedium
-                                      .fontStyle,
+                                  fontStyle:
+                                      LimitedEditionViberaTheme.of(context)
+                                          .bodyMedium
+                                          .fontStyle,
                                 ),
                           ),
                         ),

@@ -1,11 +1,10 @@
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:trend/flutter_flow/flutter_flow_widgets.dart';
-
+import 'package:trend/viberaUrban_trendCelebration/viberaUrban_trendCelebration_totast.dart';
 import '../../previous_trip/previous_trip_api.dart';
 import '../../previous_trip/previous_trip_user_data.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_theme.dart';
+import '../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_util.dart';
 import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -42,6 +41,7 @@ class _TrendyVibeNetworkTrendyVibeNetworkLoginWidgetState
       }).catchError((error) {});
     }
   }
+
   @override
   void initState() {
     super.initState();
@@ -64,25 +64,33 @@ class _TrendyVibeNetworkTrendyVibeNetworkLoginWidgetState
 
   Future<void> _urbanVibeLabTrendLifeGrid(BuildContext context) async {
     if (_model.textController1.text.isEmpty) {
-      emotionalNestAICareSphere(
+      hypebeastViberaOutfitShowcase(
           context, 'Please enter your email address!', '');
       safeSetState(() {});
       return;
     }
 
     if (_model.textController2.text.isEmpty) {
-      emotionalNestAICareSphere(context, 'Please enter the password!', '');
+      hypebeastViberaOutfitShowcase(context, 'Please enter the password!', '');
+      safeSetState(() {});
+      return;
+    }
+
+    if (!_model.isAgreementAccepted) {
+      hypebeastViberaOutfitShowcase(
+          context, 'Please accept the User Agreement and Privacy Policy!', '');
       safeSetState(() {});
       return;
     }
 
     try {
-      final matchingUsers = FFAppState().urbanOutfitTrendSharingUsers.where(
-          (e) =>
+      final matchingUsers = StreetStyleViberaConnection()
+          .urbanOutfitTrendSharingUsers
+          .where((e) =>
               _model.textController1.text == e.streetTrendEchoSharingUserEmail);
 
       if (matchingUsers.isEmpty) {
-        emotionalNestAICareSphere(
+        hypebeastViberaOutfitShowcase(
             context, 'The account does not exist!', 'error');
         _model.textController1?.clear();
         _model.textController2?.clear();
@@ -93,15 +101,15 @@ class _TrendyVibeNetworkTrendyVibeNetworkLoginWidgetState
       final futureStyleNet = matchingUsers.first;
       if (futureStyleNet.streetTrendEchoSharingUserPassword !=
           _model.textController2.text) {
-        emotionalNestAICareSphere(context, 'Password error!', 'error');
+        hypebeastViberaOutfitShowcase(context, 'Password error!', 'error');
         _model.textController2?.clear();
         safeSetState(() {});
         return;
       }
 
-      FFAppState().urbanTrendVisualCollaborationCurrent =
+      StreetStyleViberaConnection().urbanTrendVisualCollaborationCurrent =
           futureStyleNet.streetTrendEchoSharingUserId;
-      FFAppState().update(() {});
+      StreetStyleViberaConnection().update(() {});
       SmartDialog.showLoading(
           msg: 'Loading...', animationType: SmartAnimationType.scale);
       await Future.delayed(const Duration(seconds: 2));
@@ -194,7 +202,6 @@ class _TrendyVibeNetworkTrendyVibeNetworkLoginWidgetState
                                 fit: BoxFit.cover,
                               ),
                             ),
-
                           ),
                           Column(
                             mainAxisSize: MainAxisSize.max,
@@ -202,22 +209,26 @@ class _TrendyVibeNetworkTrendyVibeNetworkLoginWidgetState
                             children: [
                               Text(
                                 'Email',
-                                style: FlutterFlowTheme.of(context)
+                                style: LimitedEditionViberaTheme.of(context)
                                     .bodyMedium
                                     .override(
                                       font: GoogleFonts.poppins(
                                         fontWeight: FontWeight.w600,
-                                        fontStyle: FlutterFlowTheme.of(context)
+                                        fontStyle: LimitedEditionViberaTheme.of(
+                                                context)
                                             .bodyMedium
                                             .fontStyle,
                                       ),
-                                      color: FlutterFlowTheme.of(context).info,
+                                      color:
+                                          LimitedEditionViberaTheme.of(context)
+                                              .info,
                                       fontSize: 20.0,
                                       letterSpacing: 0.0,
                                       fontWeight: FontWeight.w600,
-                                      fontStyle: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .fontStyle,
+                                      fontStyle:
+                                          LimitedEditionViberaTheme.of(context)
+                                              .bodyMedium
+                                              .fontStyle,
                                     ),
                               ),
                               Container(
@@ -241,40 +252,48 @@ class _TrendyVibeNetworkTrendyVibeNetworkLoginWidgetState
                                       obscureText: false,
                                       decoration: InputDecoration(
                                         isDense: true,
-                                        labelStyle: FlutterFlowTheme.of(context)
+                                        labelStyle: LimitedEditionViberaTheme
+                                                .of(context)
                                             .labelMedium
                                             .override(
                                               font: GoogleFonts.poppins(
                                                 fontWeight:
-                                                    FlutterFlowTheme.of(context)
+                                                    LimitedEditionViberaTheme
+                                                            .of(context)
                                                         .labelMedium
                                                         .fontWeight,
                                                 fontStyle:
-                                                    FlutterFlowTheme.of(context)
+                                                    LimitedEditionViberaTheme
+                                                            .of(context)
                                                         .labelMedium
                                                         .fontStyle,
                                               ),
                                               letterSpacing: 0.0,
                                               fontWeight:
-                                                  FlutterFlowTheme.of(context)
+                                                  LimitedEditionViberaTheme.of(
+                                                          context)
                                                       .labelMedium
                                                       .fontWeight,
                                               fontStyle:
-                                                  FlutterFlowTheme.of(context)
+                                                  LimitedEditionViberaTheme.of(
+                                                          context)
                                                       .labelMedium
                                                       .fontStyle,
                                             ),
                                         hintText: 'Please enter',
-                                        hintStyle: FlutterFlowTheme.of(context)
+                                        hintStyle: LimitedEditionViberaTheme.of(
+                                                context)
                                             .labelMedium
                                             .override(
                                               font: GoogleFonts.poppins(
                                                 fontWeight:
-                                                    FlutterFlowTheme.of(context)
+                                                    LimitedEditionViberaTheme
+                                                            .of(context)
                                                         .labelMedium
                                                         .fontWeight,
                                                 fontStyle:
-                                                    FlutterFlowTheme.of(context)
+                                                    LimitedEditionViberaTheme
+                                                            .of(context)
                                                         .labelMedium
                                                         .fontStyle,
                                               ),
@@ -282,11 +301,13 @@ class _TrendyVibeNetworkTrendyVibeNetworkLoginWidgetState
                                               fontSize: 16.0,
                                               letterSpacing: 0.0,
                                               fontWeight:
-                                                  FlutterFlowTheme.of(context)
+                                                  LimitedEditionViberaTheme.of(
+                                                          context)
                                                       .labelMedium
                                                       .fontWeight,
                                               fontStyle:
-                                                  FlutterFlowTheme.of(context)
+                                                  LimitedEditionViberaTheme.of(
+                                                          context)
                                                       .labelMedium
                                                       .fontStyle,
                                             ),
@@ -323,34 +344,41 @@ class _TrendyVibeNetworkTrendyVibeNetworkLoginWidgetState
                                               BorderRadius.circular(16.0),
                                         ),
                                       ),
-                                      style: FlutterFlowTheme.of(context)
+                                      style: LimitedEditionViberaTheme.of(
+                                              context)
                                           .bodyMedium
                                           .override(
                                             font: GoogleFonts.poppins(
                                               fontWeight:
-                                                  FlutterFlowTheme.of(context)
+                                                  LimitedEditionViberaTheme.of(
+                                                          context)
                                                       .bodyMedium
                                                       .fontWeight,
                                               fontStyle:
-                                                  FlutterFlowTheme.of(context)
+                                                  LimitedEditionViberaTheme.of(
+                                                          context)
                                                       .bodyMedium
                                                       .fontStyle,
                                             ),
-                                            color: FlutterFlowTheme.of(context)
+                                            color: LimitedEditionViberaTheme.of(
+                                                    context)
                                                 .info,
                                             fontSize: 16.0,
                                             letterSpacing: 0.0,
                                             fontWeight:
-                                                FlutterFlowTheme.of(context)
+                                                LimitedEditionViberaTheme.of(
+                                                        context)
                                                     .bodyMedium
                                                     .fontWeight,
                                             fontStyle:
-                                                FlutterFlowTheme.of(context)
+                                                LimitedEditionViberaTheme.of(
+                                                        context)
                                                     .bodyMedium
                                                     .fontStyle,
                                           ),
                                       cursorColor:
-                                          FlutterFlowTheme.of(context).info,
+                                          LimitedEditionViberaTheme.of(context)
+                                              .info,
                                       enableInteractiveSelection: true,
                                       validator: _model.textController1Validator
                                           .asValidator(context),
@@ -369,22 +397,25 @@ class _TrendyVibeNetworkTrendyVibeNetworkLoginWidgetState
                               children: [
                                 Text(
                                   'Password',
-                                  style: FlutterFlowTheme.of(context)
+                                  style: LimitedEditionViberaTheme.of(context)
                                       .bodyMedium
                                       .override(
                                         font: GoogleFonts.poppins(
                                           fontWeight: FontWeight.w600,
                                           fontStyle:
-                                              FlutterFlowTheme.of(context)
+                                              LimitedEditionViberaTheme.of(
+                                                      context)
                                                   .bodyMedium
                                                   .fontStyle,
                                         ),
-                                        color:
-                                            FlutterFlowTheme.of(context).info,
+                                        color: LimitedEditionViberaTheme.of(
+                                                context)
+                                            .info,
                                         fontSize: 20.0,
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.w600,
-                                        fontStyle: FlutterFlowTheme.of(context)
+                                        fontStyle: LimitedEditionViberaTheme.of(
+                                                context)
                                             .bodyMedium
                                             .fontStyle,
                                       ),
@@ -410,61 +441,67 @@ class _TrendyVibeNetworkTrendyVibeNetworkLoginWidgetState
                                         obscureText: true,
                                         decoration: InputDecoration(
                                           isDense: true,
-                                          labelStyle: FlutterFlowTheme.of(
-                                                  context)
-                                              .labelMedium
-                                              .override(
-                                                font: GoogleFonts.poppins(
-                                                  fontWeight:
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .labelMedium
-                                                          .fontWeight,
-                                                  fontStyle:
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .labelMedium
-                                                          .fontStyle,
-                                                ),
-                                                letterSpacing: 0.0,
-                                                fontWeight:
-                                                    FlutterFlowTheme.of(context)
-                                                        .labelMedium
-                                                        .fontWeight,
-                                                fontStyle:
-                                                    FlutterFlowTheme.of(context)
-                                                        .labelMedium
-                                                        .fontStyle,
-                                              ),
+                                          labelStyle:
+                                              LimitedEditionViberaTheme.of(
+                                                      context)
+                                                  .labelMedium
+                                                  .override(
+                                                    font: GoogleFonts.poppins(
+                                                      fontWeight:
+                                                          LimitedEditionViberaTheme
+                                                                  .of(context)
+                                                              .labelMedium
+                                                              .fontWeight,
+                                                      fontStyle:
+                                                          LimitedEditionViberaTheme
+                                                                  .of(context)
+                                                              .labelMedium
+                                                              .fontStyle,
+                                                    ),
+                                                    letterSpacing: 0.0,
+                                                    fontWeight:
+                                                        LimitedEditionViberaTheme
+                                                                .of(context)
+                                                            .labelMedium
+                                                            .fontWeight,
+                                                    fontStyle:
+                                                        LimitedEditionViberaTheme
+                                                                .of(context)
+                                                            .labelMedium
+                                                            .fontStyle,
+                                                  ),
                                           hintText: 'Please enter',
-                                          hintStyle: FlutterFlowTheme.of(
-                                                  context)
-                                              .labelMedium
-                                              .override(
-                                                font: GoogleFonts.poppins(
-                                                  fontWeight:
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .labelMedium
-                                                          .fontWeight,
-                                                  fontStyle:
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .labelMedium
-                                                          .fontStyle,
-                                                ),
-                                                color: Color(0x80FFFFFF),
-                                                fontSize: 16.0,
-                                                letterSpacing: 0.0,
-                                                fontWeight:
-                                                    FlutterFlowTheme.of(context)
-                                                        .labelMedium
-                                                        .fontWeight,
-                                                fontStyle:
-                                                    FlutterFlowTheme.of(context)
-                                                        .labelMedium
-                                                        .fontStyle,
-                                              ),
+                                          hintStyle:
+                                              LimitedEditionViberaTheme.of(
+                                                      context)
+                                                  .labelMedium
+                                                  .override(
+                                                    font: GoogleFonts.poppins(
+                                                      fontWeight:
+                                                          LimitedEditionViberaTheme
+                                                                  .of(context)
+                                                              .labelMedium
+                                                              .fontWeight,
+                                                      fontStyle:
+                                                          LimitedEditionViberaTheme
+                                                                  .of(context)
+                                                              .labelMedium
+                                                              .fontStyle,
+                                                    ),
+                                                    color: Color(0x80FFFFFF),
+                                                    fontSize: 16.0,
+                                                    letterSpacing: 0.0,
+                                                    fontWeight:
+                                                        LimitedEditionViberaTheme
+                                                                .of(context)
+                                                            .labelMedium
+                                                            .fontWeight,
+                                                    fontStyle:
+                                                        LimitedEditionViberaTheme
+                                                                .of(context)
+                                                            .labelMedium
+                                                            .fontStyle,
+                                                  ),
                                           enabledBorder: OutlineInputBorder(
                                             borderSide: BorderSide(
                                               color: Color(0x00000000),
@@ -499,35 +536,43 @@ class _TrendyVibeNetworkTrendyVibeNetworkLoginWidgetState
                                                 BorderRadius.circular(16.0),
                                           ),
                                         ),
-                                        style: FlutterFlowTheme.of(context)
+                                        style: LimitedEditionViberaTheme.of(
+                                                context)
                                             .bodyMedium
                                             .override(
                                               font: GoogleFonts.poppins(
                                                 fontWeight:
-                                                    FlutterFlowTheme.of(context)
+                                                    LimitedEditionViberaTheme
+                                                            .of(context)
                                                         .bodyMedium
                                                         .fontWeight,
                                                 fontStyle:
-                                                    FlutterFlowTheme.of(context)
+                                                    LimitedEditionViberaTheme
+                                                            .of(context)
                                                         .bodyMedium
                                                         .fontStyle,
                                               ),
                                               color:
-                                                  FlutterFlowTheme.of(context)
+                                                  LimitedEditionViberaTheme.of(
+                                                          context)
                                                       .info,
                                               fontSize: 16.0,
                                               letterSpacing: 0.0,
                                               fontWeight:
-                                                  FlutterFlowTheme.of(context)
+                                                  LimitedEditionViberaTheme.of(
+                                                          context)
                                                       .bodyMedium
                                                       .fontWeight,
                                               fontStyle:
-                                                  FlutterFlowTheme.of(context)
+                                                  LimitedEditionViberaTheme.of(
+                                                          context)
                                                       .bodyMedium
                                                       .fontStyle,
                                             ),
                                         cursorColor:
-                                            FlutterFlowTheme.of(context).info,
+                                            LimitedEditionViberaTheme.of(
+                                                    context)
+                                                .info,
                                         enableInteractiveSelection: true,
                                         validator: _model
                                             .textController2Validator
@@ -541,7 +586,110 @@ class _TrendyVibeNetworkTrendyVibeNetworkLoginWidgetState
                           ),
                           Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(
-                                0.0, 142.0, 0.0, 0.0),
+                                0.0, 40.0, 0.0, 0.0),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.max,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Theme(
+                                  data: ThemeData(
+                                    checkboxTheme: CheckboxThemeData(
+                                      visualDensity: VisualDensity.compact,
+                                      materialTapTargetSize:
+                                          MaterialTapTargetSize.shrinkWrap,
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius:
+                                            BorderRadius.circular(4.0),
+                                      ),
+                                    ),
+                                    unselectedWidgetColor: Color(0x80FFFFFF),
+                                  ),
+                                  child: Checkbox(
+                                    value: _model.isAgreementAccepted,
+                                    onChanged: (newValue) async {
+                                      safeSetState(() => _model
+                                          .isAgreementAccepted = newValue!);
+                                    },
+                                    side: BorderSide(
+                                      width: 2,
+                                      color: Color(0x80FFFFFF),
+                                    ),
+                                    activeColor: Color(0xFFFF94FA),
+                                    checkColor: Colors.white,
+                                  ),
+                                ),
+                                Expanded(
+                                  child: Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        8.0, 0.0, 0.0, 0.0),
+                                    child: RichText(
+                                      textScaler:
+                                          MediaQuery.of(context).textScaler,
+                                      text: TextSpan(
+                                        children: [
+                                          TextSpan(
+                                            text: 'I agree to the ',
+                                            style: LimitedEditionViberaTheme.of(
+                                                    context)
+                                                .bodyMedium
+                                                .override(
+                                                  font: GoogleFonts.poppins(),
+                                                  color: Color(0x80FFFFFF),
+                                                  fontSize: 14.0,
+                                                  letterSpacing: 0.0,
+                                                ),
+                                          ),
+                                          TextSpan(
+                                            text: 'User Agreement',
+                                            style: LimitedEditionViberaTheme.of(
+                                                    context)
+                                                .bodyMedium
+                                                .override(
+                                                  font: GoogleFonts.poppins(),
+                                                  color: Color(0xFFFF94FA),
+                                                  fontSize: 14.0,
+                                                  letterSpacing: 0.0,
+                                                  decoration:
+                                                      TextDecoration.underline,
+                                                ),
+                                          ),
+                                          TextSpan(
+                                            text: ' and ',
+                                            style: LimitedEditionViberaTheme.of(
+                                                    context)
+                                                .bodyMedium
+                                                .override(
+                                                  font: GoogleFonts.poppins(),
+                                                  color: Color(0x80FFFFFF),
+                                                  fontSize: 14.0,
+                                                  letterSpacing: 0.0,
+                                                ),
+                                          ),
+                                          TextSpan(
+                                            text: 'Privacy Policy',
+                                            style: LimitedEditionViberaTheme.of(
+                                                    context)
+                                                .bodyMedium
+                                                .override(
+                                                  font: GoogleFonts.poppins(),
+                                                  color: Color(0xFFFF94FA),
+                                                  fontSize: 14.0,
+                                                  letterSpacing: 0.0,
+                                                  decoration:
+                                                      TextDecoration.underline,
+                                                ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                0.0, 30.0, 0.0, 0.0),
                             child: InkWell(
                               splashColor: Colors.transparent,
                               focusColor: Colors.transparent,
@@ -569,23 +717,26 @@ class _TrendyVibeNetworkTrendyVibeNetworkLoginWidgetState
                                   alignment: AlignmentDirectional(0.0, 0.0),
                                   child: Text(
                                     'Sign In',
-                                    style: FlutterFlowTheme.of(context)
+                                    style: LimitedEditionViberaTheme.of(context)
                                         .bodyMedium
                                         .override(
                                           font: GoogleFonts.roboto(
                                             fontWeight: FontWeight.bold,
                                             fontStyle:
-                                                FlutterFlowTheme.of(context)
+                                                LimitedEditionViberaTheme.of(
+                                                        context)
                                                     .bodyMedium
                                                     .fontStyle,
                                           ),
-                                          color:
-                                              FlutterFlowTheme.of(context).info,
+                                          color: LimitedEditionViberaTheme.of(
+                                                  context)
+                                              .info,
                                           fontSize: 24.0,
                                           letterSpacing: 0.0,
                                           fontWeight: FontWeight.bold,
                                           fontStyle:
-                                              FlutterFlowTheme.of(context)
+                                              LimitedEditionViberaTheme.of(
+                                                      context)
                                                   .bodyMedium
                                                   .fontStyle,
                                         ),

@@ -1,12 +1,12 @@
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_util.dart';
 import '/index.dart';
 import 'trend_sharing_arena_trend_sharing_arena_home_widget.dart'
     show TrendSharingArenaTrendSharingArenaHomeWidget;
 import 'package:flutter/material.dart';
 
 class TrendSharingArenaTrendSharingArenaHomeModel
-    extends FlutterFlowModel<TrendSharingArenaTrendSharingArenaHomeWidget> {
-
+    extends LimitedEditionViberaModel<
+        TrendSharingArenaTrendSharingArenaHomeWidget> {
   TabController? tabBarController;
 
   @override

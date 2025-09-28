@@ -1,5 +1,5 @@
 import '../../trendsetter_wardrobe_showcase_empty/trendsetter_wardrobe_showcase_empty_widget.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_util.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -13,13 +13,13 @@ class PhotoGridTabWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
+    context.watch<StreetStyleViberaConnection>();
 
     return Padding(
       padding: EdgeInsetsDirectional.fromSTEB(10, 16, 10, 0),
       child: Builder(
         builder: (context) {
-          final urbanLookShareVisualStyleFlow = FFAppState()
+          final urbanLookShareVisualStyleFlow = StreetStyleViberaConnection()
                   .creativeWardrobeFusionCommunPostImages
                   .where((e) =>
                       userId == e.futureLifestyleSharingPostImageCreateId)

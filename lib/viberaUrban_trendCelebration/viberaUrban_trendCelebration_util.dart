@@ -12,11 +12,11 @@ import 'package:url_launcher/url_launcher.dart';
 
 import '../main.dart';
 
-export 'lat_lng.dart';
-export 'uploaded_file.dart';
+export 'viberaUrban_trendCelebration_navbar.dart';
+export 'viberaUrban_trendCelebration_upload.dart';
 export '../app_state.dart';
 export '../app_constants.dart';
-export 'flutter_flow_model.dart';
+export 'viberaUrban_trendCelebration_model.dart';
 export 'dart:math' show min, max;
 export 'dart:typed_data' show Uint8List;
 export 'dart:convert' show jsonEncode, jsonDecode;
@@ -215,7 +215,6 @@ const kBreakpointSmall = 479.0;
 const kBreakpointMedium = 767.0;
 const kBreakpointLarge = 991.0;
 
-
 extension FFTextEditingControllerExt on TextEditingController? {
   String get text => this == null ? '' : this!.text;
   set text(String newText) => this?.text = newText;
@@ -241,7 +240,6 @@ extension IterableExt<T> on Iterable<T> {
 
 void setDarkModeSetting(BuildContext context, ThemeMode themeMode) =>
     MyApp.of(context).setThemeMode(themeMode);
-
 
 extension FFStringExt on String {
   String maybeHandleOverflow({int? maxChars, String replacement = ''}) =>
@@ -314,6 +312,7 @@ extension StatefulWidgetExtensions on State<StatefulWidget> {
     }
   }
 }
+
 Brightness? _lastBrightness;
 void fixStatusBarOniOS16AndBelow(BuildContext context) {
   if (!isiOS) {

@@ -1,13 +1,10 @@
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
-import 'package:trend/flutter_flow/flutter_flow_widgets.dart';
-
-import '/flutter_flow/flutter_flow_drop_down.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/form_field_controller.dart';
-import '/flutter_flow/uploaded_file.dart';
+import 'package:trend/viberaUrban_trendCelebration/viberaUrban_trendCelebration_totast.dart';
+import '../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_drop_down.dart';
+import '../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_theme.dart';
+import '../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_util.dart';
+import '../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_form.dart';
 import '/backend/schema/structs/index.dart';
-import '/app_state.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'lifestyle_photography_inspiration_wall_upload_file_model.dart';
@@ -106,22 +103,25 @@ class _LifestylePhotographyInspirationWallUploadFileWidgetState
                             EdgeInsetsDirectional.fromSTEB(49.0, 0.0, 0.0, 0.0),
                         child: Text(
                           'Edit Profile',
-                          style:
-                              FlutterFlowTheme.of(context).bodyMedium.override(
-                                    font: GoogleFonts.poppins(
-                                      fontWeight: FontWeight.bold,
-                                      fontStyle: FlutterFlowTheme.of(context)
+                          style: LimitedEditionViberaTheme.of(context)
+                              .bodyMedium
+                              .override(
+                                font: GoogleFonts.poppins(
+                                  fontWeight: FontWeight.bold,
+                                  fontStyle:
+                                      LimitedEditionViberaTheme.of(context)
                                           .bodyMedium
                                           .fontStyle,
-                                    ),
-                                    color: FlutterFlowTheme.of(context).info,
-                                    fontSize: 32.0,
-                                    letterSpacing: 0.0,
-                                    fontWeight: FontWeight.bold,
-                                    fontStyle: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .fontStyle,
-                                  ),
+                                ),
+                                color:
+                                    LimitedEditionViberaTheme.of(context).info,
+                                fontSize: 32.0,
+                                letterSpacing: 0.0,
+                                fontWeight: FontWeight.bold,
+                                fontStyle: LimitedEditionViberaTheme.of(context)
+                                    .bodyMedium
+                                    .fontStyle,
+                              ),
                         ),
                       ),
                     ],
@@ -239,22 +239,25 @@ class _LifestylePhotographyInspirationWallUploadFileWidgetState
                                 0.0, 16.0, 0.0, 0.0),
                             child: Text(
                               'Profile Photo',
-                              style: FlutterFlowTheme.of(context)
+                              style: LimitedEditionViberaTheme.of(context)
                                   .bodyMedium
                                   .override(
                                     font: GoogleFonts.poppins(
                                       fontWeight: FontWeight.w600,
-                                      fontStyle: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .fontStyle,
+                                      fontStyle:
+                                          LimitedEditionViberaTheme.of(context)
+                                              .bodyMedium
+                                              .fontStyle,
                                     ),
-                                    color: FlutterFlowTheme.of(context).info,
+                                    color: LimitedEditionViberaTheme.of(context)
+                                        .info,
                                     fontSize: 20.0,
                                     letterSpacing: 0.0,
                                     fontWeight: FontWeight.w600,
-                                    fontStyle: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .fontStyle,
+                                    fontStyle:
+                                        LimitedEditionViberaTheme.of(context)
+                                            .bodyMedium
+                                            .fontStyle,
                                   ),
                             ),
                           ),
@@ -267,22 +270,25 @@ class _LifestylePhotographyInspirationWallUploadFileWidgetState
                               children: [
                                 Text(
                                   'Nickname',
-                                  style: FlutterFlowTheme.of(context)
+                                  style: LimitedEditionViberaTheme.of(context)
                                       .bodyMedium
                                       .override(
                                         font: GoogleFonts.poppins(
                                           fontWeight: FontWeight.w500,
                                           fontStyle:
-                                              FlutterFlowTheme.of(context)
+                                              LimitedEditionViberaTheme.of(
+                                                      context)
                                                   .bodyMedium
                                                   .fontStyle,
                                         ),
-                                        color:
-                                            FlutterFlowTheme.of(context).info,
+                                        color: LimitedEditionViberaTheme.of(
+                                                context)
+                                            .info,
                                         fontSize: 20.0,
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.w500,
-                                        fontStyle: FlutterFlowTheme.of(context)
+                                        fontStyle: LimitedEditionViberaTheme.of(
+                                                context)
                                             .bodyMedium
                                             .fontStyle,
                                       ),
@@ -309,61 +315,67 @@ class _LifestylePhotographyInspirationWallUploadFileWidgetState
                                         obscureText: false,
                                         decoration: InputDecoration(
                                           isDense: true,
-                                          labelStyle: FlutterFlowTheme.of(
-                                                  context)
-                                              .labelMedium
-                                              .override(
-                                                font: GoogleFonts.poppins(
-                                                  fontWeight:
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .labelMedium
-                                                          .fontWeight,
-                                                  fontStyle:
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .labelMedium
-                                                          .fontStyle,
-                                                ),
-                                                letterSpacing: 0.0,
-                                                fontWeight:
-                                                    FlutterFlowTheme.of(context)
-                                                        .labelMedium
-                                                        .fontWeight,
-                                                fontStyle:
-                                                    FlutterFlowTheme.of(context)
-                                                        .labelMedium
-                                                        .fontStyle,
-                                              ),
+                                          labelStyle:
+                                              LimitedEditionViberaTheme.of(
+                                                      context)
+                                                  .labelMedium
+                                                  .override(
+                                                    font: GoogleFonts.poppins(
+                                                      fontWeight:
+                                                          LimitedEditionViberaTheme
+                                                                  .of(context)
+                                                              .labelMedium
+                                                              .fontWeight,
+                                                      fontStyle:
+                                                          LimitedEditionViberaTheme
+                                                                  .of(context)
+                                                              .labelMedium
+                                                              .fontStyle,
+                                                    ),
+                                                    letterSpacing: 0.0,
+                                                    fontWeight:
+                                                        LimitedEditionViberaTheme
+                                                                .of(context)
+                                                            .labelMedium
+                                                            .fontWeight,
+                                                    fontStyle:
+                                                        LimitedEditionViberaTheme
+                                                                .of(context)
+                                                            .labelMedium
+                                                            .fontStyle,
+                                                  ),
                                           hintText: 'Please enter',
-                                          hintStyle: FlutterFlowTheme.of(
-                                                  context)
-                                              .labelMedium
-                                              .override(
-                                                font: GoogleFonts.poppins(
-                                                  fontWeight:
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .labelMedium
-                                                          .fontWeight,
-                                                  fontStyle:
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .labelMedium
-                                                          .fontStyle,
-                                                ),
-                                                color: Color(0x7FFFFFFF),
-                                                fontSize: 16.0,
-                                                letterSpacing: 0.0,
-                                                fontWeight:
-                                                    FlutterFlowTheme.of(context)
-                                                        .labelMedium
-                                                        .fontWeight,
-                                                fontStyle:
-                                                    FlutterFlowTheme.of(context)
-                                                        .labelMedium
-                                                        .fontStyle,
-                                              ),
+                                          hintStyle:
+                                              LimitedEditionViberaTheme.of(
+                                                      context)
+                                                  .labelMedium
+                                                  .override(
+                                                    font: GoogleFonts.poppins(
+                                                      fontWeight:
+                                                          LimitedEditionViberaTheme
+                                                                  .of(context)
+                                                              .labelMedium
+                                                              .fontWeight,
+                                                      fontStyle:
+                                                          LimitedEditionViberaTheme
+                                                                  .of(context)
+                                                              .labelMedium
+                                                              .fontStyle,
+                                                    ),
+                                                    color: Color(0x7FFFFFFF),
+                                                    fontSize: 16.0,
+                                                    letterSpacing: 0.0,
+                                                    fontWeight:
+                                                        LimitedEditionViberaTheme
+                                                                .of(context)
+                                                            .labelMedium
+                                                            .fontWeight,
+                                                    fontStyle:
+                                                        LimitedEditionViberaTheme
+                                                                .of(context)
+                                                            .labelMedium
+                                                            .fontStyle,
+                                                  ),
                                           enabledBorder: OutlineInputBorder(
                                             borderSide: BorderSide(
                                               color: Color(0x00000000),
@@ -398,35 +410,43 @@ class _LifestylePhotographyInspirationWallUploadFileWidgetState
                                                 BorderRadius.circular(16.0),
                                           ),
                                         ),
-                                        style: FlutterFlowTheme.of(context)
+                                        style: LimitedEditionViberaTheme.of(
+                                                context)
                                             .bodyMedium
                                             .override(
                                               font: GoogleFonts.poppins(
                                                 fontWeight:
-                                                    FlutterFlowTheme.of(context)
+                                                    LimitedEditionViberaTheme
+                                                            .of(context)
                                                         .bodyMedium
                                                         .fontWeight,
                                                 fontStyle:
-                                                    FlutterFlowTheme.of(context)
+                                                    LimitedEditionViberaTheme
+                                                            .of(context)
                                                         .bodyMedium
                                                         .fontStyle,
                                               ),
                                               color:
-                                                  FlutterFlowTheme.of(context)
+                                                  LimitedEditionViberaTheme.of(
+                                                          context)
                                                       .info,
                                               fontSize: 16.0,
                                               letterSpacing: 0.0,
                                               fontWeight:
-                                                  FlutterFlowTheme.of(context)
+                                                  LimitedEditionViberaTheme.of(
+                                                          context)
                                                       .bodyMedium
                                                       .fontWeight,
                                               fontStyle:
-                                                  FlutterFlowTheme.of(context)
+                                                  LimitedEditionViberaTheme.of(
+                                                          context)
                                                       .bodyMedium
                                                       .fontStyle,
                                             ),
                                         cursorColor:
-                                            FlutterFlowTheme.of(context).info,
+                                            LimitedEditionViberaTheme.of(
+                                                    context)
+                                                .info,
                                         enableInteractiveSelection: true,
                                         validator: _model
                                             .textControllerValidator
@@ -447,22 +467,25 @@ class _LifestylePhotographyInspirationWallUploadFileWidgetState
                               children: [
                                 Text(
                                   'Gender',
-                                  style: FlutterFlowTheme.of(context)
+                                  style: LimitedEditionViberaTheme.of(context)
                                       .bodyMedium
                                       .override(
                                         font: GoogleFonts.poppins(
                                           fontWeight: FontWeight.w500,
                                           fontStyle:
-                                              FlutterFlowTheme.of(context)
+                                              LimitedEditionViberaTheme.of(
+                                                      context)
                                                   .bodyMedium
                                                   .fontStyle,
                                         ),
-                                        color:
-                                            FlutterFlowTheme.of(context).info,
+                                        color: LimitedEditionViberaTheme.of(
+                                                context)
+                                            .info,
                                         fontSize: 20.0,
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.w500,
-                                        fontStyle: FlutterFlowTheme.of(context)
+                                        fontStyle: LimitedEditionViberaTheme.of(
+                                                context)
                                             .bodyMedium
                                             .fontStyle,
                                       ),
@@ -477,7 +500,7 @@ class _LifestylePhotographyInspirationWallUploadFileWidgetState
                                       width: 2.0,
                                     ),
                                   ),
-                                  child: FlutterFlowDropDown<String>(
+                                  child: LimitedEditionViberaDropDown<String>(
                                     controller:
                                         _model.dropDownValueController1 ??=
                                             FormFieldController<String>(null),
@@ -486,16 +509,19 @@ class _LifestylePhotographyInspirationWallUploadFileWidgetState
                                         () => _model.dropDownValue1 = val),
                                     width: double.infinity,
                                     height: double.infinity,
-                                    textStyle: FlutterFlowTheme.of(context)
+                                    textStyle: LimitedEditionViberaTheme.of(
+                                            context)
                                         .bodyMedium
                                         .override(
                                           font: GoogleFonts.poppins(
                                             fontWeight:
-                                                FlutterFlowTheme.of(context)
+                                                LimitedEditionViberaTheme.of(
+                                                        context)
                                                     .bodyMedium
                                                     .fontWeight,
                                             fontStyle:
-                                                FlutterFlowTheme.of(context)
+                                                LimitedEditionViberaTheme.of(
+                                                        context)
                                                     .bodyMedium
                                                     .fontStyle,
                                           ),
@@ -503,19 +529,22 @@ class _LifestylePhotographyInspirationWallUploadFileWidgetState
                                           fontSize: 16.0,
                                           letterSpacing: 0.0,
                                           fontWeight:
-                                              FlutterFlowTheme.of(context)
+                                              LimitedEditionViberaTheme.of(
+                                                      context)
                                                   .bodyMedium
                                                   .fontWeight,
                                           fontStyle:
-                                              FlutterFlowTheme.of(context)
+                                              LimitedEditionViberaTheme.of(
+                                                      context)
                                                   .bodyMedium
                                                   .fontStyle,
                                         ),
                                     hintText: 'Please enter',
                                     icon: Icon(
                                       Icons.chevron_right,
-                                      color: FlutterFlowTheme.of(context)
-                                          .secondaryText,
+                                      color:
+                                          LimitedEditionViberaTheme.of(context)
+                                              .secondaryText,
                                       size: 24.0,
                                     ),
                                     elevation: 2.0,
@@ -542,22 +571,25 @@ class _LifestylePhotographyInspirationWallUploadFileWidgetState
                               children: [
                                 Text(
                                   'Date of Birth',
-                                  style: FlutterFlowTheme.of(context)
+                                  style: LimitedEditionViberaTheme.of(context)
                                       .bodyMedium
                                       .override(
                                         font: GoogleFonts.poppins(
                                           fontWeight: FontWeight.w500,
                                           fontStyle:
-                                              FlutterFlowTheme.of(context)
+                                              LimitedEditionViberaTheme.of(
+                                                      context)
                                                   .bodyMedium
                                                   .fontStyle,
                                         ),
-                                        color:
-                                            FlutterFlowTheme.of(context).info,
+                                        color: LimitedEditionViberaTheme.of(
+                                                context)
+                                            .info,
                                         fontSize: 20.0,
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.w500,
-                                        fontStyle: FlutterFlowTheme.of(context)
+                                        fontStyle: LimitedEditionViberaTheme.of(
+                                                context)
                                             .bodyMedium
                                             .fontStyle,
                                       ),
@@ -572,7 +604,7 @@ class _LifestylePhotographyInspirationWallUploadFileWidgetState
                                       width: 2.0,
                                     ),
                                   ),
-                                  child: FlutterFlowDropDown<String>(
+                                  child: LimitedEditionViberaDropDown<String>(
                                     controller:
                                         _model.dropDownValueController2 ??=
                                             FormFieldController<String>(null),
@@ -583,16 +615,19 @@ class _LifestylePhotographyInspirationWallUploadFileWidgetState
                                     width: double.infinity,
                                     height: double.infinity,
                                     maxHeight: 250,
-                                    textStyle: FlutterFlowTheme.of(context)
+                                    textStyle: LimitedEditionViberaTheme.of(
+                                            context)
                                         .bodyMedium
                                         .override(
                                           font: GoogleFonts.poppins(
                                             fontWeight:
-                                                FlutterFlowTheme.of(context)
+                                                LimitedEditionViberaTheme.of(
+                                                        context)
                                                     .bodyMedium
                                                     .fontWeight,
                                             fontStyle:
-                                                FlutterFlowTheme.of(context)
+                                                LimitedEditionViberaTheme.of(
+                                                        context)
                                                     .bodyMedium
                                                     .fontStyle,
                                           ),
@@ -600,19 +635,22 @@ class _LifestylePhotographyInspirationWallUploadFileWidgetState
                                           fontSize: 16.0,
                                           letterSpacing: 0.0,
                                           fontWeight:
-                                              FlutterFlowTheme.of(context)
+                                              LimitedEditionViberaTheme.of(
+                                                      context)
                                                   .bodyMedium
                                                   .fontWeight,
                                           fontStyle:
-                                              FlutterFlowTheme.of(context)
+                                              LimitedEditionViberaTheme.of(
+                                                      context)
                                                   .bodyMedium
                                                   .fontStyle,
                                         ),
                                     hintText: 'Please enter',
                                     icon: Icon(
                                       Icons.chevron_right,
-                                      color: FlutterFlowTheme.of(context)
-                                          .secondaryText,
+                                      color:
+                                          LimitedEditionViberaTheme.of(context)
+                                              .secondaryText,
                                       size: 24.0,
                                     ),
                                     elevation: 2.0,
@@ -663,26 +701,26 @@ class _LifestylePhotographyInspirationWallUploadFileWidgetState
                                       .streetFashionExperienceCommunityZonePassword;
 
                                   if (nickname.isEmpty) {
-                                    emotionalNestAICareSphere(context,
+                                    hypebeastViberaOutfitShowcase(context,
                                         'Please enter a nickname!', '');
 
                                     return;
                                   }
                                   if (gender.isEmpty) {
-                                    emotionalNestAICareSphere(
+                                    hypebeastViberaOutfitShowcase(
                                         context, 'Please select gender!', '');
 
                                     return;
                                   }
                                   if (age.isEmpty) {
-                                    emotionalNestAICareSphere(
+                                    hypebeastViberaOutfitShowcase(
                                         context, 'Please select age!', '');
 
                                     return;
                                   }
 
-                                  final users =
-                                      FFAppState().urbanOutfitTrendSharingUsers;
+                                  final users = StreetStyleViberaConnection()
+                                      .urbanOutfitTrendSharingUsers;
                                   final newUserId = users.length;
 
                                   final newUser =
@@ -708,11 +746,11 @@ class _LifestylePhotographyInspirationWallUploadFileWidgetState
                                   SmartDialog.showLoading(
                                       msg: 'Loading...',
                                       animationType: SmartAnimationType.scale);
-                                  FFAppState().update(() {
-                                    FFAppState()
+                                  StreetStyleViberaConnection().update(() {
+                                    StreetStyleViberaConnection()
                                         .addToUrbanOutfitTrendSharingUsers(
                                             newUser);
-                                    FFAppState()
+                                    StreetStyleViberaConnection()
                                             .urbanTrendVisualCollaborationCurrent =
                                         newUserId;
                                   });
@@ -728,23 +766,26 @@ class _LifestylePhotographyInspirationWallUploadFileWidgetState
                                   alignment: AlignmentDirectional(0.0, 0.0),
                                   child: Text(
                                     'Done',
-                                    style: FlutterFlowTheme.of(context)
+                                    style: LimitedEditionViberaTheme.of(context)
                                         .bodyMedium
                                         .override(
                                           font: GoogleFonts.roboto(
                                             fontWeight: FontWeight.bold,
                                             fontStyle:
-                                                FlutterFlowTheme.of(context)
+                                                LimitedEditionViberaTheme.of(
+                                                        context)
                                                     .bodyMedium
                                                     .fontStyle,
                                           ),
-                                          color:
-                                              FlutterFlowTheme.of(context).info,
+                                          color: LimitedEditionViberaTheme.of(
+                                                  context)
+                                              .info,
                                           fontSize: 24.0,
                                           letterSpacing: 0.0,
                                           fontWeight: FontWeight.bold,
                                           fontStyle:
-                                              FlutterFlowTheme.of(context)
+                                              LimitedEditionViberaTheme.of(
+                                                      context)
                                                   .bodyMedium
                                                   .fontStyle,
                                         ),

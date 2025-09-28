@@ -1,6 +1,6 @@
-import '/flutter_flow/flutter_flow_button_tabbar.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
+import '../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_button_tabbar.dart';
+import '../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_theme.dart';
+import '../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_util.dart';
 import '/global_sneaker_culture_exchange/youth_culture_style_discovery_lab_notenough/youth_culture_style_discovery_lab_notenough_widget.dart';
 import '/hype_moment_circle_fashion_fusion_wall/world_youth_trend_inspiration_network_report_black/world_youth_trend_inspiration_network_report_black_widget.dart';
 import '/index.dart';
@@ -50,7 +50,7 @@ class _TrendSharingArenaTrendSharingArenaHomeWidgetState
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
+    context.watch<StreetStyleViberaConnection>();
 
     return GestureDetector(
       onTap: () {
@@ -91,48 +91,56 @@ class _TrendSharingArenaTrendSharingArenaHomeWidgetState
                               children: [
                                 Text(
                                   '${dateTimeFormat("EEEE", getCurrentTimestamp)}, 6 DEC',
-                                  style: FlutterFlowTheme.of(context)
+                                  style: LimitedEditionViberaTheme.of(context)
                                       .bodyMedium
                                       .override(
                                         font: GoogleFonts.poppins(
                                           fontWeight:
-                                              FlutterFlowTheme.of(context)
+                                              LimitedEditionViberaTheme.of(
+                                                      context)
                                                   .bodyMedium
                                                   .fontWeight,
                                           fontStyle:
-                                              FlutterFlowTheme.of(context)
+                                              LimitedEditionViberaTheme.of(
+                                                      context)
                                                   .bodyMedium
                                                   .fontStyle,
                                         ),
                                         color: Color(0x99FFFFFF),
                                         fontSize: 12.0,
                                         letterSpacing: 0.0,
-                                        fontWeight: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .fontWeight,
-                                        fontStyle: FlutterFlowTheme.of(context)
+                                        fontWeight:
+                                            LimitedEditionViberaTheme.of(
+                                                    context)
+                                                .bodyMedium
+                                                .fontWeight,
+                                        fontStyle: LimitedEditionViberaTheme.of(
+                                                context)
                                             .bodyMedium
                                             .fontStyle,
                                       ),
                                 ),
                                 Text(
                                   'Hello!',
-                                  style: FlutterFlowTheme.of(context)
+                                  style: LimitedEditionViberaTheme.of(context)
                                       .bodyMedium
                                       .override(
                                         font: GoogleFonts.poppins(
                                           fontWeight: FontWeight.bold,
                                           fontStyle:
-                                              FlutterFlowTheme.of(context)
+                                              LimitedEditionViberaTheme.of(
+                                                      context)
                                                   .bodyMedium
                                                   .fontStyle,
                                         ),
-                                        color:
-                                            FlutterFlowTheme.of(context).info,
+                                        color: LimitedEditionViberaTheme.of(
+                                                context)
+                                            .info,
                                         fontSize: 32.0,
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.bold,
-                                        fontStyle: FlutterFlowTheme.of(context)
+                                        fontStyle: LimitedEditionViberaTheme.of(
+                                                context)
                                             .bodyMedium
                                             .fontStyle,
                                       ),
@@ -147,9 +155,9 @@ class _TrendSharingArenaTrendSharingArenaHomeWidgetState
                                 shape: BoxShape.circle,
                               ),
                               child: Image.asset(
-                                FFAppState()
+                                StreetStyleViberaConnection()
                                     .urbanOutfitTrendSharingUsers
-                                    .elementAtOrNull(FFAppState()
+                                    .elementAtOrNull(StreetStyleViberaConnection()
                                         .urbanTrendVisualCollaborationCurrent)!
                                     .streetTrendEchoSharingUserPhoto,
                                 fit: BoxFit.cover,
@@ -164,11 +172,11 @@ class _TrendSharingArenaTrendSharingArenaHomeWidgetState
                         child: Builder(
                           builder: (context) {
                             final contemporaryOutfitInspirationArena =
-                                FFAppState()
+                                StreetStyleViberaConnection()
                                     .urbanOutfitTrendSharingUsers
                                     .where((e) =>
                                         e.streetTrendEchoSharingUserId !=
-                                        FFAppState()
+                                        StreetStyleViberaConnection()
                                             .urbanTrendVisualCollaborationCurrent)
                                     .toList();
 
@@ -219,7 +227,7 @@ class _TrendSharingArenaTrendSharingArenaHomeWidgetState
                                             shape: BoxShape.circle,
                                           ),
                                           child: Image.asset(
-                                            FFAppState()
+                                            StreetStyleViberaConnection()
                                                 .urbanOutfitTrendSharingUsers
                                                 .elementAtOrNull(
                                                     contemporaryOutfitInspirationArenaItem
@@ -229,30 +237,33 @@ class _TrendSharingArenaTrendSharingArenaHomeWidgetState
                                           ),
                                         ),
                                         Text(
-                                          '${FFAppState().urbanOutfitTrendSharingUsers.elementAtOrNull(contemporaryOutfitInspirationArenaItem.streetTrendEchoSharingUserId)?.streetTrendEchoSharingUserName}',
-                                          style: FlutterFlowTheme.of(context)
+                                          '${StreetStyleViberaConnection().urbanOutfitTrendSharingUsers.elementAtOrNull(contemporaryOutfitInspirationArenaItem.streetTrendEchoSharingUserId)?.streetTrendEchoSharingUserName}',
+                                          style: LimitedEditionViberaTheme.of(
+                                                  context)
                                               .bodyMedium
                                               .override(
                                                 font: GoogleFonts.poppins(
                                                   fontWeight:
-                                                      FlutterFlowTheme.of(
-                                                              context)
+                                                      LimitedEditionViberaTheme
+                                                              .of(context)
                                                           .bodyMedium
                                                           .fontWeight,
                                                   fontStyle:
-                                                      FlutterFlowTheme.of(
-                                                              context)
+                                                      LimitedEditionViberaTheme
+                                                              .of(context)
                                                           .bodyMedium
                                                           .fontStyle,
                                                 ),
                                                 color: Color(0xCCFFFFFF),
                                                 letterSpacing: 0.0,
                                                 fontWeight:
-                                                    FlutterFlowTheme.of(context)
+                                                    LimitedEditionViberaTheme
+                                                            .of(context)
                                                         .bodyMedium
                                                         .fontWeight,
                                                 fontStyle:
-                                                    FlutterFlowTheme.of(context)
+                                                    LimitedEditionViberaTheme
+                                                            .of(context)
                                                         .bodyMedium
                                                         .fontStyle,
                                               ),
@@ -285,45 +296,53 @@ class _TrendSharingArenaTrendSharingArenaHomeWidgetState
                                     fit: BoxFit.fill,
                                     image: AssetImage(
                                         'assets/images/gdfguidfhghdhofgu_xcgvsdygfuasgdfius.png'))),
-                            child: FlutterFlowButtonTabBar(
+                            child: LimitedEditionViberaButtonTabBar(
                               useToggleButtonStyle: false,
-                              labelStyle: FlutterFlowTheme.of(context)
+                              labelStyle: LimitedEditionViberaTheme.of(context)
                                   .titleMedium
                                   .override(
                                     font: GoogleFonts.poppins(
-                                      fontWeight: FlutterFlowTheme.of(context)
-                                          .titleMedium
-                                          .fontWeight,
-                                      fontStyle: FlutterFlowTheme.of(context)
-                                          .titleMedium
-                                          .fontStyle,
+                                      fontWeight:
+                                          LimitedEditionViberaTheme.of(context)
+                                              .titleMedium
+                                              .fontWeight,
+                                      fontStyle:
+                                          LimitedEditionViberaTheme.of(context)
+                                              .titleMedium
+                                              .fontStyle,
                                     ),
                                     fontSize: 16.0,
                                     letterSpacing: 0.0,
-                                    fontWeight: FlutterFlowTheme.of(context)
-                                        .titleMedium
-                                        .fontWeight,
-                                    fontStyle: FlutterFlowTheme.of(context)
-                                        .titleMedium
-                                        .fontStyle,
+                                    fontWeight:
+                                        LimitedEditionViberaTheme.of(context)
+                                            .titleMedium
+                                            .fontWeight,
+                                    fontStyle:
+                                        LimitedEditionViberaTheme.of(context)
+                                            .titleMedium
+                                            .fontStyle,
                                   ),
-                              unselectedLabelStyle: FlutterFlowTheme.of(context)
+                              unselectedLabelStyle: LimitedEditionViberaTheme
+                                      .of(context)
                                   .titleMedium
                                   .override(
                                     font: GoogleFonts.poppins(
                                       fontWeight: FontWeight.normal,
-                                      fontStyle: FlutterFlowTheme.of(context)
-                                          .titleMedium
-                                          .fontStyle,
+                                      fontStyle:
+                                          LimitedEditionViberaTheme.of(context)
+                                              .titleMedium
+                                              .fontStyle,
                                     ),
                                     fontSize: 16.0,
                                     letterSpacing: 0.0,
                                     fontWeight: FontWeight.normal,
-                                    fontStyle: FlutterFlowTheme.of(context)
-                                        .titleMedium
-                                        .fontStyle,
+                                    fontStyle:
+                                        LimitedEditionViberaTheme.of(context)
+                                            .titleMedium
+                                            .fontStyle,
                                   ),
-                              labelColor: FlutterFlowTheme.of(context).info,
+                              labelColor:
+                                  LimitedEditionViberaTheme.of(context).info,
                               unselectedLabelColor: Color(0x98FFFFFF),
                               backgroundColor: Colors.transparent,
                               selectedGradient: LinearGradient(
@@ -365,15 +384,15 @@ class _TrendSharingArenaTrendSharingArenaHomeWidgetState
                                     16.0, 16.0, 16.0, 0.0),
                                 child: Builder(
                                   builder: (context) {
-                                    final globalStreetwearInfluenceExchange = FFAppState()
+                                    final globalStreetwearInfluenceExchange = StreetStyleViberaConnection()
                                         .creativeWardrobeFusionCommunPostImages
                                         .where((e) =>
                                             e.futureLifestyleSharingPostImageCreateId !=
-                                                FFAppState()
+                                                StreetStyleViberaConnection()
                                                     .urbanTrendVisualCollaborationCurrent &&
-                                            !FFAppState()
+                                            !StreetStyleViberaConnection()
                                                 .urbanOutfitTrendSharingUsers[
-                                                    FFAppState()
+                                                    StreetStyleViberaConnection()
                                                         .urbanTrendVisualCollaborationCurrent]
                                                 .streetTrendEchoSharingUserBlacklist
                                                 .contains(e
@@ -460,7 +479,7 @@ class _TrendSharingArenaTrendSharingArenaHomeWidgetState
                                                               DecorationImage(
                                                             fit: BoxFit.cover,
                                                             image: Image.asset(
-                                                              FFAppState()
+                                                              StreetStyleViberaConnection()
                                                                   .urbanOutfitTrendSharingUsers
                                                                   .elementAtOrNull(
                                                                       globalStreetwearInfluenceExchangeItem
@@ -478,10 +497,10 @@ class _TrendSharingArenaTrendSharingArenaHomeWidgetState
                                                         ),
                                                       ),
                                                       Text(
-                                                        '${FFAppState().urbanOutfitTrendSharingUsers.elementAtOrNull(globalStreetwearInfluenceExchangeItem.futureLifestyleSharingPostImageCreateId)?.streetTrendEchoSharingUserName}',
+                                                        '${StreetStyleViberaConnection().urbanOutfitTrendSharingUsers.elementAtOrNull(globalStreetwearInfluenceExchangeItem.futureLifestyleSharingPostImageCreateId)?.streetTrendEchoSharingUserName}',
                                                         style:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
+                                                            LimitedEditionViberaTheme
+                                                                    .of(context)
                                                                 .bodyMedium
                                                                 .override(
                                                                   font: GoogleFonts
@@ -489,12 +508,12 @@ class _TrendSharingArenaTrendSharingArenaHomeWidgetState
                                                                     fontWeight:
                                                                         FontWeight
                                                                             .w600,
-                                                                    fontStyle: FlutterFlowTheme.of(
+                                                                    fontStyle: LimitedEditionViberaTheme.of(
                                                                             context)
                                                                         .bodyMedium
                                                                         .fontStyle,
                                                                   ),
-                                                                  color: FlutterFlowTheme.of(
+                                                                  color: LimitedEditionViberaTheme.of(
                                                                           context)
                                                                       .info,
                                                                   fontSize:
@@ -504,7 +523,7 @@ class _TrendSharingArenaTrendSharingArenaHomeWidgetState
                                                                   fontWeight:
                                                                       FontWeight
                                                                           .w600,
-                                                                  fontStyle: FlutterFlowTheme.of(
+                                                                  fontStyle: LimitedEditionViberaTheme.of(
                                                                           context)
                                                                       .bodyMedium
                                                                       .fontStyle,
@@ -568,7 +587,7 @@ class _TrendSharingArenaTrendSharingArenaHomeWidgetState
                                                             child: Icon(
                                                               Icons
                                                                   .keyboard_control,
-                                                              color: FlutterFlowTheme
+                                                              color: LimitedEditionViberaTheme
                                                                       .of(context)
                                                                   .info,
                                                               size: 28.0,
@@ -594,17 +613,17 @@ class _TrendSharingArenaTrendSharingArenaHomeWidgetState
                                                       Text(
                                                         '${globalStreetwearInfluenceExchangeItem.futureLifestyleSharingPostImageDescribe}',
                                                         style:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
+                                                            LimitedEditionViberaTheme
+                                                                    .of(context)
                                                                 .bodyMedium
                                                                 .override(
                                                                   font: GoogleFonts
                                                                       .poppins(
-                                                                    fontWeight: FlutterFlowTheme.of(
+                                                                    fontWeight: LimitedEditionViberaTheme.of(
                                                                             context)
                                                                         .bodyMedium
                                                                         .fontWeight,
-                                                                    fontStyle: FlutterFlowTheme.of(
+                                                                    fontStyle: LimitedEditionViberaTheme.of(
                                                                             context)
                                                                         .bodyMedium
                                                                         .fontStyle,
@@ -615,11 +634,11 @@ class _TrendSharingArenaTrendSharingArenaHomeWidgetState
                                                                       20.0,
                                                                   letterSpacing:
                                                                       0.0,
-                                                                  fontWeight: FlutterFlowTheme.of(
+                                                                  fontWeight: LimitedEditionViberaTheme.of(
                                                                           context)
                                                                       .bodyMedium
                                                                       .fontWeight,
-                                                                  fontStyle: FlutterFlowTheme.of(
+                                                                  fontStyle: LimitedEditionViberaTheme.of(
                                                                           context)
                                                                       .bodyMedium
                                                                       .fontStyle,
@@ -666,7 +685,7 @@ class _TrendSharingArenaTrendSharingArenaHomeWidgetState
                                                                               8.0),
                                                                   border: Border
                                                                       .all(
-                                                                    color: FlutterFlowTheme.of(
+                                                                    color: LimitedEditionViberaTheme.of(
                                                                             context)
                                                                         .info,
                                                                     width: 1.0,
@@ -696,7 +715,7 @@ class _TrendSharingArenaTrendSharingArenaHomeWidgetState
                                 child: Builder(
                                   builder: (context) {
                                     final trendDrivenStyleDiscoveryCircle =
-                                        FFAppState()
+                                        StreetStyleViberaConnection()
                                             .trendDrivenStyleCollaborationTrends
                                             .toList();
 
@@ -725,12 +744,13 @@ class _TrendSharingArenaTrendSharingArenaHomeWidgetState
                                             hoverColor: Colors.transparent,
                                             highlightColor: Colors.transparent,
                                             onTap: () async {
-                                              if (FFAppState()
+                                              if (StreetStyleViberaConnection()
                                                   .trendDrivenStyleCollaborationTrends
                                                   .where((e) => e
                                                       .worldFashionSharingCollectiveTrendsUnlock
-                                                      .contains(FFAppState()
-                                                          .urbanTrendVisualCollaborationCurrent))
+                                                      .contains(
+                                                          StreetStyleViberaConnection()
+                                                              .urbanTrendVisualCollaborationCurrent))
                                                   .toList()
                                                   .isNotEmpty) {
                                                 context.pushNamed(
@@ -754,28 +774,31 @@ class _TrendSharingArenaTrendSharingArenaHomeWidgetState
                                                   },
                                                 );
                                               } else {
-                                                if (FFAppState()
+                                                if (StreetStyleViberaConnection()
                                                         .urbanOutfitTrendSharingUsers
                                                         .elementAtOrNull(
-                                                            FFAppState()
+                                                            StreetStyleViberaConnection()
                                                                 .urbanTrendVisualCollaborationCurrent)!
                                                         .streetTrendEchoSharingUserBalance >
                                                     99) {
-                                                  FFAppState().update(() {
-                                                    FFAppState().updateUrbanOutfitTrendSharingUsersAtIndex(
-                                                        FFAppState()
-                                                            .urbanTrendVisualCollaborationCurrent,
-                                                        (e) => e
-                                                          ..incrementStreetTrendEchoSharingUserBalance(
-                                                              -99));
-                                                    FFAppState()
+                                                  StreetStyleViberaConnection()
+                                                      .update(() {
+                                                    StreetStyleViberaConnection()
+                                                        .updateUrbanOutfitTrendSharingUsersAtIndex(
+                                                            StreetStyleViberaConnection()
+                                                                .urbanTrendVisualCollaborationCurrent,
+                                                            (e) => e
+                                                              ..incrementStreetTrendEchoSharingUserBalance(
+                                                                  -99));
+                                                    StreetStyleViberaConnection()
                                                         .updateTrendDrivenStyleCollaborationTrendsAtIndex(
                                                       trendDrivenStyleDiscoveryCircleItem
                                                           .worldFashionSharingCollectiveTrendsId,
                                                       (e) => e
                                                         ..updateWorldFashionSharingCollectiveTrendsUnlock(
-                                                          (e) => e.add(FFAppState()
-                                                              .urbanTrendVisualCollaborationCurrent),
+                                                          (e) => e.add(
+                                                              StreetStyleViberaConnection()
+                                                                  .urbanTrendVisualCollaborationCurrent),
                                                         ),
                                                     );
                                                   });
@@ -886,7 +909,7 @@ class _TrendSharingArenaTrendSharingArenaHomeWidgetState
                                                                       .cover,
                                                                   image: Image
                                                                       .asset(
-                                                                    FFAppState()
+                                                                    StreetStyleViberaConnection()
                                                                         .urbanOutfitTrendSharingUsers
                                                                         .elementAtOrNull(
                                                                             trendDrivenStyleDiscoveryCircleItem.worldFashionSharingCollectiveTrendsCreateid)!
@@ -905,7 +928,7 @@ class _TrendSharingArenaTrendSharingArenaHomeWidgetState
                                                             ),
                                                             Text(
                                                               '${trendDrivenStyleDiscoveryCircleItem.worldFashionSharingCollectiveTrendsTitle}',
-                                                              style: FlutterFlowTheme
+                                                              style: LimitedEditionViberaTheme
                                                                       .of(context)
                                                                   .bodyMedium
                                                                   .override(
@@ -914,12 +937,12 @@ class _TrendSharingArenaTrendSharingArenaHomeWidgetState
                                                                       fontWeight:
                                                                           FontWeight
                                                                               .w600,
-                                                                      fontStyle: FlutterFlowTheme.of(
+                                                                      fontStyle: LimitedEditionViberaTheme.of(
                                                                               context)
                                                                           .bodyMedium
                                                                           .fontStyle,
                                                                     ),
-                                                                    color: FlutterFlowTheme.of(
+                                                                    color: LimitedEditionViberaTheme.of(
                                                                             context)
                                                                         .info,
                                                                     fontSize:
@@ -929,7 +952,7 @@ class _TrendSharingArenaTrendSharingArenaHomeWidgetState
                                                                     fontWeight:
                                                                         FontWeight
                                                                             .w600,
-                                                                    fontStyle: FlutterFlowTheme.of(
+                                                                    fontStyle: LimitedEditionViberaTheme.of(
                                                                             context)
                                                                         .bodyMedium
                                                                         .fontStyle,
@@ -957,7 +980,7 @@ class _TrendSharingArenaTrendSharingArenaHomeWidgetState
                                                             Text(
                                                               trendDrivenStyleDiscoveryCircleItem
                                                                   .worldFashionSharingCollectiveTrendsSmatilte,
-                                                              style: FlutterFlowTheme
+                                                              style: LimitedEditionViberaTheme
                                                                       .of(context)
                                                                   .bodyMedium
                                                                   .override(
@@ -966,12 +989,12 @@ class _TrendSharingArenaTrendSharingArenaHomeWidgetState
                                                                       fontWeight:
                                                                           FontWeight
                                                                               .w600,
-                                                                      fontStyle: FlutterFlowTheme.of(
+                                                                      fontStyle: LimitedEditionViberaTheme.of(
                                                                               context)
                                                                           .bodyMedium
                                                                           .fontStyle,
                                                                     ),
-                                                                    color: FlutterFlowTheme.of(
+                                                                    color: LimitedEditionViberaTheme.of(
                                                                             context)
                                                                         .info,
                                                                     fontSize:
@@ -981,7 +1004,7 @@ class _TrendSharingArenaTrendSharingArenaHomeWidgetState
                                                                     fontWeight:
                                                                         FontWeight
                                                                             .w600,
-                                                                    fontStyle: FlutterFlowTheme.of(
+                                                                    fontStyle: LimitedEditionViberaTheme.of(
                                                                             context)
                                                                         .bodyMedium
                                                                         .fontStyle,
@@ -1005,18 +1028,18 @@ class _TrendSharingArenaTrendSharingArenaHomeWidgetState
                                                                           (context) {
                                                                         if (trendDrivenStyleDiscoveryCircleItem
                                                                             .worldFashionSharingCollectiveTrendsLikeUsers
-                                                                            .contains(FFAppState().urbanTrendVisualCollaborationCurrent)) {
+                                                                            .contains(StreetStyleViberaConnection().urbanTrendVisualCollaborationCurrent)) {
                                                                           return GestureDetector(
                                                                             onTap:
                                                                                 () async {
-                                                                              FFAppState().updateTrendDrivenStyleCollaborationTrendsAtIndex(
+                                                                              StreetStyleViberaConnection().updateTrendDrivenStyleCollaborationTrendsAtIndex(
                                                                                 trendDrivenStyleDiscoveryCircleItem.worldFashionSharingCollectiveTrendsId,
                                                                                 (e) => e
                                                                                   ..updateWorldFashionSharingCollectiveTrendsLikeUsers(
-                                                                                    (e) => e.remove(FFAppState().urbanTrendVisualCollaborationCurrent),
+                                                                                    (e) => e.remove(StreetStyleViberaConnection().urbanTrendVisualCollaborationCurrent),
                                                                                   ),
                                                                               );
-                                                                              FFAppState().update(() {});
+                                                                              StreetStyleViberaConnection().update(() {});
                                                                             },
                                                                             child:
                                                                                 AnimatedContainer(
@@ -1038,14 +1061,14 @@ class _TrendSharingArenaTrendSharingArenaHomeWidgetState
                                                                           return GestureDetector(
                                                                             onTap:
                                                                                 () async {
-                                                                              FFAppState().updateTrendDrivenStyleCollaborationTrendsAtIndex(
+                                                                              StreetStyleViberaConnection().updateTrendDrivenStyleCollaborationTrendsAtIndex(
                                                                                 trendDrivenStyleDiscoveryCircleItem.worldFashionSharingCollectiveTrendsId,
                                                                                 (e) => e
                                                                                   ..updateWorldFashionSharingCollectiveTrendsLikeUsers(
-                                                                                    (e) => e.add(FFAppState().urbanTrendVisualCollaborationCurrent),
+                                                                                    (e) => e.add(StreetStyleViberaConnection().urbanTrendVisualCollaborationCurrent),
                                                                                   ),
                                                                               );
-                                                                              FFAppState().update(() {});
+                                                                              StreetStyleViberaConnection().update(() {});
                                                                             },
                                                                             child:
                                                                                 AnimatedContainer(
@@ -1074,23 +1097,23 @@ class _TrendSharingArenaTrendSharingArenaHomeWidgetState
                                                                         formatType:
                                                                             FormatType.compact,
                                                                       )}',
-                                                                      style: FlutterFlowTheme.of(
+                                                                      style: LimitedEditionViberaTheme.of(
                                                                               context)
                                                                           .bodyMedium
                                                                           .override(
                                                                             font:
                                                                                 GoogleFonts.poppins(
-                                                                              fontWeight: FlutterFlowTheme.of(context).bodyMedium.fontWeight,
-                                                                              fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                                                                              fontWeight: LimitedEditionViberaTheme.of(context).bodyMedium.fontWeight,
+                                                                              fontStyle: LimitedEditionViberaTheme.of(context).bodyMedium.fontStyle,
                                                                             ),
                                                                             color:
                                                                                 Color(0xFFCCCCCC),
                                                                             letterSpacing:
                                                                                 0.0,
                                                                             fontWeight:
-                                                                                FlutterFlowTheme.of(context).bodyMedium.fontWeight,
+                                                                                LimitedEditionViberaTheme.of(context).bodyMedium.fontWeight,
                                                                             fontStyle:
-                                                                                FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                                                                                LimitedEditionViberaTheme.of(context).bodyMedium.fontStyle,
                                                                           ),
                                                                     ),
                                                                   ].divide(SizedBox(
@@ -1127,23 +1150,23 @@ class _TrendSharingArenaTrendSharingArenaHomeWidgetState
                                                                         formatType:
                                                                             FormatType.compact,
                                                                       )}',
-                                                                      style: FlutterFlowTheme.of(
+                                                                      style: LimitedEditionViberaTheme.of(
                                                                               context)
                                                                           .bodyMedium
                                                                           .override(
                                                                             font:
                                                                                 GoogleFonts.poppins(
-                                                                              fontWeight: FlutterFlowTheme.of(context).bodyMedium.fontWeight,
-                                                                              fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                                                                              fontWeight: LimitedEditionViberaTheme.of(context).bodyMedium.fontWeight,
+                                                                              fontStyle: LimitedEditionViberaTheme.of(context).bodyMedium.fontStyle,
                                                                             ),
                                                                             color:
                                                                                 Color(0xFFCCCCCC),
                                                                             letterSpacing:
                                                                                 0.0,
                                                                             fontWeight:
-                                                                                FlutterFlowTheme.of(context).bodyMedium.fontWeight,
+                                                                                LimitedEditionViberaTheme.of(context).bodyMedium.fontWeight,
                                                                             fontStyle:
-                                                                                FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                                                                                LimitedEditionViberaTheme.of(context).bodyMedium.fontStyle,
                                                                           ),
                                                                     ),
                                                                   ].divide(SizedBox(
@@ -1160,8 +1183,9 @@ class _TrendSharingArenaTrendSharingArenaHomeWidgetState
                                                   ),
                                                   if (!trendDrivenStyleDiscoveryCircleItem
                                                       .worldFashionSharingCollectiveTrendsUnlock
-                                                      .contains(FFAppState()
-                                                          .urbanTrendVisualCollaborationCurrent))
+                                                      .contains(
+                                                          StreetStyleViberaConnection()
+                                                              .urbanTrendVisualCollaborationCurrent))
                                                     Align(
                                                       alignment:
                                                           AlignmentDirectional(
