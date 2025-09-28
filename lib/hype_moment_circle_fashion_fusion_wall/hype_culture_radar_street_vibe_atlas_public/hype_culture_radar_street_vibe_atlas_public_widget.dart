@@ -1,3 +1,5 @@
+import 'package:trend/flutter_flow/flutter_flow_widgets.dart';
+
 import '/backend/schema/structs/index.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -277,7 +279,6 @@ class _HypeCultureRadarStreetVibeAtlasPublicWidgetState
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
                               children: [
-                                // 已上传的媒体预览区域
                                 if (_model.futureStyleCultureCollaboration !=
                                         null &&
                                     _model.futureStyleCultureCollaboration !=
@@ -294,7 +295,6 @@ class _HypeCultureRadarStreetVibeAtlasPublicWidgetState
                                     ),
                                     child: Stack(
                                       children: [
-                                        // 显示已上传媒体的占位符
                                         Center(
                                           child: Icon(
                                             Icons.image,
@@ -302,7 +302,6 @@ class _HypeCultureRadarStreetVibeAtlasPublicWidgetState
                                             size: 40,
                                           ),
                                         ),
-                                        // 删除按钮
                                         Align(
                                           alignment:
                                               AlignmentDirectional(1.1, -1.1),
@@ -334,7 +333,6 @@ class _HypeCultureRadarStreetVibeAtlasPublicWidgetState
                                       ],
                                     ),
                                   ),
-                                // 上传按钮（当没有媒体时显示）
                                 if (_model.futureStyleCultureCollaboration ==
                                         null ||
                                     _model.futureStyleCultureCollaboration ==
@@ -345,25 +343,36 @@ class _HypeCultureRadarStreetVibeAtlasPublicWidgetState
                                     hoverColor: Colors.transparent,
                                     highlightColor: Colors.transparent,
                                     onTap: () async {
-                                      // 模拟文件选择逻辑
-                                      // 在实际应用中，这里应该调用文件选择器
-                                      _model.futureStyleCultureCollaboration =
-                                          'uploaded_media_${DateTime.now().millisecondsSinceEpoch}';
-                                      safeSetState(() {});
-
-                                      // 显示成功提示
-                                      ScaffoldMessenger.of(context)
-                                          .showSnackBar(
-                                        SnackBar(
-                                          backgroundColor: Colors.green,
-                                          content: Text(
-                                            'Media uploaded successfully!',
-                                            style:
-                                                TextStyle(color: Colors.white),
-                                          ),
-                                          duration: Duration(seconds: 1),
-                                        ),
-                                      );
+                                      await showModalBottomSheet(
+                                        isScrollControlled: true,
+                                        backgroundColor: Colors.transparent,
+                                        enableDrag: false,
+                                        context: context,
+                                        builder: (context) {
+                                          return GestureDetector(
+                                            onTap: () {
+                                              FocusScope.of(context).unfocus();
+                                              FocusManager.instance.primaryFocus
+                                                  ?.unfocus();
+                                            },
+                                            child: Padding(
+                                              padding: MediaQuery.viewInsetsOf(
+                                                  context),
+                                              child:
+                                                  ButterCookieDreamveilStudioUploadMedia(
+                                                allowVideoUpload: false,
+                                                onMediaSelected: (String path,
+                                                    MediaType type) {
+                                                  setState(() {
+                                                    _model.futureStyleCultureCollaboration =
+                                                        path;
+                                                  });
+                                                },
+                                              ),
+                                            ),
+                                          );
+                                        },
+                                      ).then((value) => safeSetState(() {}));
                                     },
                                     child: Container(
                                       width: 116,
@@ -452,42 +461,27 @@ class _HypeCultureRadarStreetVibeAtlasPublicWidgetState
                             hoverColor: Colors.transparent,
                             highlightColor: Colors.transparent,
                             onTap: () async {
-                              // 第一步：检查是否上传了图片或视频
                               if (_model.futureStyleCultureCollaboration ==
                                       null ||
                                   _model.futureStyleCultureCollaboration ==
                                       '') {
-                                // 显示错误提示：请先上传图片或视频
-                                ScaffoldMessenger.of(context).showSnackBar(
-                                  SnackBar(
-                                    backgroundColor: Colors.red,
-                                    content: Text(
-                                      'Please upload an image or video first',
-                                      style: TextStyle(color: Colors.white),
-                                    ),
-                                    duration: Duration(seconds: 2),
-                                  ),
-                                );
+                                emotionalNestAICareSphere(
+                                    context,
+                                    'Please upload an image or video first',
+                                    'error');
+
                                 return;
                               }
 
-                              // 第二步：检查是否填写了内容
                               if (_model.textController.text.trim().isEmpty) {
-                                // 显示错误提示：请填写内容
-                                ScaffoldMessenger.of(context).showSnackBar(
-                                  SnackBar(
-                                    backgroundColor: Colors.red,
-                                    content: Text(
-                                      'Please enter content for your post',
-                                      style: TextStyle(color: Colors.white),
-                                    ),
-                                    duration: Duration(seconds: 2),
-                                  ),
-                                );
+                                emotionalNestAICareSphere(
+                                    context,
+                                    'Please enter content for your post',
+                                    'error');
+
                                 return;
                               }
 
-                              // 第三步：检查金币是否充足（每个帖子花费30金币）
                               final currentUserBalance = FFAppState()
                                       .urbanOutfitTrendSharingUsers
                                       .elementAtOrNull(FFAppState()
@@ -496,7 +490,6 @@ class _HypeCultureRadarStreetVibeAtlasPublicWidgetState
                                   0;
 
                               if (currentUserBalance < 30) {
-                                // 金币不足，弹出YouthCultureStyleDiscoveryLabNotenoughWidget
                                 await showDialog(
                                   barrierColor: Color(0x7F17171F),
                                   context: context,
@@ -523,14 +516,11 @@ class _HypeCultureRadarStreetVibeAtlasPublicWidgetState
                                 return;
                               }
 
-                              // 所有验证通过，执行发布逻辑
-                              // 扣除金币
                               FFAppState()
                                   .urbanOutfitTrendSharingUsers[FFAppState()
                                       .urbanTrendVisualCollaborationCurrent]
                                   .streetTrendEchoSharingUserBalance -= 30;
 
-                              // 创建新帖子
                               FFAppState().addToSneakerheadCultureConnectPosts(
                                   CrossCultureTrendExchangeHubPostsStruct(
                                 crossCultureTrendExchangeHubPostsId:
@@ -552,20 +542,9 @@ class _HypeCultureRadarStreetVibeAtlasPublicWidgetState
 
                               FFAppState().update(() {});
 
-                              // 显示成功提示
-                              ScaffoldMessenger.of(context).showSnackBar(
-                                SnackBar(
-                                  backgroundColor: Colors.green,
-                                  content: Text(
-                                    'Post published successfully! 30 coins deducted.',
-                                    style: TextStyle(color: Colors.white),
-                                  ),
-                                  duration: Duration(seconds: 2),
-                                ),
-                              );
-
-                              // 返回上一页
                               context.safePop();
+                              emotionalNestAICareSphere(context,
+                                  'Post published successfully!', 'success');
                             },
                             child: Container(
                               width: double.infinity,

@@ -110,7 +110,7 @@ class _WorldYouthTrendInspirationNetworkReportBlackWidgetState
                     ),
                 );
                 FFAppState().update(() {});
-                Navigator.pop(context);
+                Navigator.pop(context, true);
               },
               child: Container(
                 width: double.infinity,

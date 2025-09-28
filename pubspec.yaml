@@ -93,7 +93,8 @@ flutter_launcher_icons:
   web:
     generate: true
   image_path: "assets/images/gsdyfisdhguidhfo_vgbysuidghfygdifuy.png"
-
+flutter_native_splash:
+  background_image: "assets/images/trend_sdgfiusdfiyadygit_eyufidgftustdg.png"
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 

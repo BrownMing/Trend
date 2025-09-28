@@ -1,3 +1,4 @@
+import '../../global_sneaker_culture_exchange/trendsetter_wardrobe_showcase_empty/trendsetter_wardrobe_showcase_empty_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/index.dart';
@@ -102,7 +103,12 @@ class _TrendWaveArchiveModernStyleArenaChatroomsWidgetState
                                     .contains(
                                         e.nextGenStreetwearShowcaseChatOtherId))
                             .toList();
-
+                        if (urbanCultureFusionExplorationPlatform.isEmpty) {
+                          return Align(
+                              alignment: Alignment(0, -0.5),
+                              child:
+                                  const TrendsetterWardrobeShowcaseEmptyWidget());
+                        }
                         return ListView.separated(
                           padding: EdgeInsets.zero,
                           shrinkWrap: true,

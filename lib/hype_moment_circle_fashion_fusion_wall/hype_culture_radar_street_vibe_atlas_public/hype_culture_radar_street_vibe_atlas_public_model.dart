@@ -5,13 +5,8 @@ import 'package:flutter/material.dart';
 
 class HypeCultureRadarStreetVibeAtlasPublicModel
     extends FlutterFlowModel<HypeCultureRadarStreetVibeAtlasPublicWidget> {
-  ///  Local state fields for this page.
 
   String? futureStyleCultureCollaboration;
-
-  ///  State fields for stateful widgets in this page.
-
-  // State field(s) for TextField widget.
   FocusNode? textFieldFocusNode;
   TextEditingController? textController;
   String? Function(BuildContext, String?)? textControllerValidator;

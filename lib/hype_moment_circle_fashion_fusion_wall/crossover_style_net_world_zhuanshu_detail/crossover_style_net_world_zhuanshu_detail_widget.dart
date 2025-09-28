@@ -432,19 +432,28 @@ class _CrossoverStyleNetWorldZhuanshuDetailWidgetState
                                             highlightColor: Colors.transparent,
                                             onTap: () async {
                                               HapticFeedback.heavyImpact();
-                                              FFAppState()
-                                                  .updateSneakerheadCultureConnectPostsAtIndex(
-                                                widget
-                                                    .urbanVisualExpressionSharingref!
-                                                    .crossCultureTrendExchangeHubPostsId,
-                                                (e) => e
-                                                  ..updateCrossCultureTrendExchangeHubPostsLikeUser(
-                                                    (e) => e.remove(FFAppState()
-                                                        .urbanTrendVisualCollaborationCurrent),
-                                                  ),
-                                              );
-                                              FFAppState().update(() {});
-                                              setState(() {}); // 强制刷新UI
+                                              // 找到当前post在数组中的正确索引
+                                              int postIndex = FFAppState()
+                                                  .sneakerheadCultureConnectPosts
+                                                  .indexWhere((post) =>
+                                                      post.crossCultureTrendExchangeHubPostsId ==
+                                                      widget
+                                                          .urbanVisualExpressionSharingref!
+                                                          .crossCultureTrendExchangeHubPostsId);
+                                              
+                                              if (postIndex != -1) {
+                                                FFAppState()
+                                                    .updateSneakerheadCultureConnectPostsAtIndex(
+                                                  postIndex,
+                                                  (e) => e
+                                                    ..updateCrossCultureTrendExchangeHubPostsLikeUser(
+                                                      (e) => e.remove(FFAppState()
+                                                          .urbanTrendVisualCollaborationCurrent),
+                                                    ),
+                                                );
+                                                FFAppState().update(() {});
+                                                setState(() {}); // 强制刷新UI
+                                              }
                                             },
                                             child: AnimatedContainer(
                                               duration:
@@ -470,19 +479,28 @@ class _CrossoverStyleNetWorldZhuanshuDetailWidgetState
                                             highlightColor: Colors.transparent,
                                             onTap: () async {
                                               HapticFeedback.heavyImpact();
-                                              FFAppState()
-                                                  .updateSneakerheadCultureConnectPostsAtIndex(
-                                                widget
-                                                    .urbanVisualExpressionSharingref!
-                                                    .crossCultureTrendExchangeHubPostsId,
-                                                (e) => e
-                                                  ..updateCrossCultureTrendExchangeHubPostsLikeUser(
-                                                    (e) => e.add(FFAppState()
-                                                        .urbanTrendVisualCollaborationCurrent),
-                                                  ),
-                                              );
-                                              FFAppState().update(() {});
-                                              setState(() {}); // 强制刷新UI
+                                              // 找到当前post在数组中的正确索引
+                                              int postIndex = FFAppState()
+                                                  .sneakerheadCultureConnectPosts
+                                                  .indexWhere((post) =>
+                                                      post.crossCultureTrendExchangeHubPostsId ==
+                                                      widget
+                                                          .urbanVisualExpressionSharingref!
+                                                          .crossCultureTrendExchangeHubPostsId);
+                                              
+                                              if (postIndex != -1) {
+                                                FFAppState()
+                                                    .updateSneakerheadCultureConnectPostsAtIndex(
+                                                  postIndex,
+                                                  (e) => e
+                                                    ..updateCrossCultureTrendExchangeHubPostsLikeUser(
+                                                      (e) => e.add(FFAppState()
+                                                          .urbanTrendVisualCollaborationCurrent),
+                                                    ),
+                                                );
+                                                FFAppState().update(() {});
+                                                setState(() {}); // 强制刷新UI
+                                              }
                                             },
                                             child: AnimatedContainer(
                                               duration:

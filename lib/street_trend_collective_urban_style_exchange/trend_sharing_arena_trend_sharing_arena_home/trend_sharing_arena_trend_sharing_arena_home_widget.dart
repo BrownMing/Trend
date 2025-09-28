@@ -761,6 +761,25 @@ class _TrendSharingArenaTrendSharingArenaHomeWidgetState
                                                                 .urbanTrendVisualCollaborationCurrent)!
                                                         .streetTrendEchoSharingUserBalance >
                                                     99) {
+                                                  FFAppState().update(() {
+                                                    FFAppState().updateUrbanOutfitTrendSharingUsersAtIndex(
+                                                        FFAppState()
+                                                            .urbanTrendVisualCollaborationCurrent,
+                                                        (e) => e
+                                                          ..incrementStreetTrendEchoSharingUserBalance(
+                                                              -99));
+                                                    FFAppState()
+                                                        .updateTrendDrivenStyleCollaborationTrendsAtIndex(
+                                                      trendDrivenStyleDiscoveryCircleItem
+                                                          .worldFashionSharingCollectiveTrendsId,
+                                                      (e) => e
+                                                        ..updateWorldFashionSharingCollectiveTrendsUnlock(
+                                                          (e) => e.add(FFAppState()
+                                                              .urbanTrendVisualCollaborationCurrent),
+                                                        ),
+                                                    );
+                                                  });
+
                                                   context.pushNamed(
                                                     TrendTalkSpaceStyleConnectGridTrendingDetailsWidget
                                                         .routeName,
@@ -987,42 +1006,60 @@ class _TrendSharingArenaTrendSharingArenaHomeWidgetState
                                                                         if (trendDrivenStyleDiscoveryCircleItem
                                                                             .worldFashionSharingCollectiveTrendsLikeUsers
                                                                             .contains(FFAppState().urbanTrendVisualCollaborationCurrent)) {
-                                                                          return AnimatedContainer(
-                                                                            duration:
-                                                                                Duration(milliseconds: 400),
-                                                                            curve:
-                                                                                Curves.easeInOut,
-                                                                            width:
-                                                                                24.0,
-                                                                            height:
-                                                                                24.0,
-                                                                            decoration:
-                                                                                BoxDecoration(
-                                                                              image: DecorationImage(
-                                                                                fit: BoxFit.cover,
-                                                                                image: Image.asset(
-                                                                                  'assets/images/sdgvyfushdfysiudf_ciguvetdioueyfisudfgyis.png',
-                                                                                ).image,
+                                                                          return GestureDetector(
+                                                                            onTap:
+                                                                                () async {
+                                                                              FFAppState().updateTrendDrivenStyleCollaborationTrendsAtIndex(
+                                                                                trendDrivenStyleDiscoveryCircleItem.worldFashionSharingCollectiveTrendsId,
+                                                                                (e) => e
+                                                                                  ..updateWorldFashionSharingCollectiveTrendsLikeUsers(
+                                                                                    (e) => e.remove(FFAppState().urbanTrendVisualCollaborationCurrent),
+                                                                                  ),
+                                                                              );
+                                                                              FFAppState().update(() {});
+                                                                            },
+                                                                            child:
+                                                                                AnimatedContainer(
+                                                                              duration: Duration(milliseconds: 400),
+                                                                              curve: Curves.easeInOut,
+                                                                              width: 24.0,
+                                                                              height: 24.0,
+                                                                              decoration: BoxDecoration(
+                                                                                image: DecorationImage(
+                                                                                  fit: BoxFit.cover,
+                                                                                  image: Image.asset(
+                                                                                    'assets/images/sdgvyfushdfysiudf_ciguvetdioueyfisudfgyis.png',
+                                                                                  ).image,
+                                                                                ),
                                                                               ),
                                                                             ),
                                                                           );
                                                                         } else {
-                                                                          return AnimatedContainer(
-                                                                            duration:
-                                                                                Duration(milliseconds: 400),
-                                                                            curve:
-                                                                                Curves.easeInOut,
-                                                                            width:
-                                                                                24.0,
-                                                                            height:
-                                                                                24.0,
-                                                                            decoration:
-                                                                                BoxDecoration(
-                                                                              image: DecorationImage(
-                                                                                fit: BoxFit.cover,
-                                                                                image: Image.asset(
-                                                                                  'assets/images/vdbysfugstudyiyfgeyui_ewfugyftusydfyagsif.png',
-                                                                                ).image,
+                                                                          return GestureDetector(
+                                                                            onTap:
+                                                                                () async {
+                                                                              FFAppState().updateTrendDrivenStyleCollaborationTrendsAtIndex(
+                                                                                trendDrivenStyleDiscoveryCircleItem.worldFashionSharingCollectiveTrendsId,
+                                                                                (e) => e
+                                                                                  ..updateWorldFashionSharingCollectiveTrendsLikeUsers(
+                                                                                    (e) => e.add(FFAppState().urbanTrendVisualCollaborationCurrent),
+                                                                                  ),
+                                                                              );
+                                                                              FFAppState().update(() {});
+                                                                            },
+                                                                            child:
+                                                                                AnimatedContainer(
+                                                                              duration: Duration(milliseconds: 400),
+                                                                              curve: Curves.easeInOut,
+                                                                              width: 24.0,
+                                                                              height: 24.0,
+                                                                              decoration: BoxDecoration(
+                                                                                image: DecorationImage(
+                                                                                  fit: BoxFit.cover,
+                                                                                  image: Image.asset(
+                                                                                    'assets/images/vdbysfugstudyiyfgeyui_ewfugyftusydfyagsif.png',
+                                                                                  ).image,
+                                                                                ),
                                                                               ),
                                                                             ),
                                                                           );
@@ -1121,38 +1158,44 @@ class _TrendSharingArenaTrendSharingArenaHomeWidgetState
                                                       ),
                                                     ],
                                                   ),
-                                                  Align(
-                                                    alignment:
-                                                        AlignmentDirectional(
-                                                            1.0, -1.0),
-                                                    child: Container(
-                                                      width: 75.0,
-                                                      height: 28.0,
-                                                      decoration: BoxDecoration(
-                                                        image: DecorationImage(
-                                                          fit: BoxFit.cover,
-                                                          image: Image.asset(
-                                                            'assets/images/dfguiyuihsaogud_vcxyhdgfiuyadgfiuv.png',
-                                                          ).image,
-                                                        ),
-                                                        borderRadius:
-                                                            BorderRadius.only(
-                                                          bottomLeft:
-                                                              Radius.circular(
-                                                                  20.0),
-                                                          bottomRight:
-                                                              Radius.circular(
-                                                                  0.0),
-                                                          topLeft:
-                                                              Radius.circular(
-                                                                  0.0),
-                                                          topRight:
-                                                              Radius.circular(
-                                                                  20.0),
+                                                  if (!trendDrivenStyleDiscoveryCircleItem
+                                                      .worldFashionSharingCollectiveTrendsUnlock
+                                                      .contains(FFAppState()
+                                                          .urbanTrendVisualCollaborationCurrent))
+                                                    Align(
+                                                      alignment:
+                                                          AlignmentDirectional(
+                                                              1.0, -1.0),
+                                                      child: Container(
+                                                        width: 75.0,
+                                                        height: 28.0,
+                                                        decoration:
+                                                            BoxDecoration(
+                                                          image:
+                                                              DecorationImage(
+                                                            fit: BoxFit.cover,
+                                                            image: Image.asset(
+                                                              'assets/images/dfguiyuihsaogud_vcxyhdgfiuyadgfiuv.png',
+                                                            ).image,
+                                                          ),
+                                                          borderRadius:
+                                                              BorderRadius.only(
+                                                            bottomLeft:
+                                                                Radius.circular(
+                                                                    20.0),
+                                                            bottomRight:
+                                                                Radius.circular(
+                                                                    0.0),
+                                                            topLeft:
+                                                                Radius.circular(
+                                                                    0.0),
+                                                            topRight:
+                                                                Radius.circular(
+                                                                    20.0),
+                                                          ),
                                                         ),
                                                       ),
                                                     ),
-                                                  ),
                                                 ],
                                               ),
                                             ),

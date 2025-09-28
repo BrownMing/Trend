@@ -816,7 +816,13 @@ class _FashionCollaborationSharingArenaOtherInfoWidgetState
                             ),
                           );
                         },
-                      ).then((value) => safeSetState(() {}));
+                      ).then((value) => safeSetState(() {
+                            if (value == true) {
+                              Future.delayed(Duration(milliseconds: 1900), () {
+                                Navigator.pop(context);
+                              });
+                            }
+                          }));
                     },
                     child: Container(
                       width: 36.0,

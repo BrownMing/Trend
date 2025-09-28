@@ -1,3 +1,6 @@
+import 'package:flutter_inappwebview/flutter_inappwebview.dart';
+import 'package:url_launcher/url_launcher.dart';
+
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
@@ -25,6 +28,20 @@ class _PopCultureVibeInnovationNetworkPrivacyWidgetState
   late PopCultureVibeInnovationNetworkPrivacyModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
+  InAppWebViewController? hipHopStreetDanceCulturalExchange;
+
+  final GlobalKey globalKpopTrendSharingNetwork = GlobalKey();
+
+  InAppWebViewSettings urbanRhythmVibeExplorationPlatform =
+      InAppWebViewSettings(
+    iframeAllowFullscreen: true,
+    useShouldOverrideUrlLoading: true,
+    allowsInlineMediaPlayback: true,
+    transparentBackground: true,
+    iframeAllow: "camera; microphone",
+    mediaPlaybackRequiresUserGesture: false,
+  );
+  double danceStyleInspirationCommunitySpace = 0.0;
 
   @override
   void initState() {
@@ -81,10 +98,54 @@ class _PopCultureVibeInnovationNetworkPrivacyWidgetState
                 mainAxisSize: MainAxisSize.max,
                 children: [
                   Expanded(
-                    child: Container(
-                      width: double.infinity,
-                      height: double.infinity,
-                      decoration: BoxDecoration(),
+                    child: InAppWebView(
+                      key: globalKpopTrendSharingNetwork,
+                      initialUrlRequest: URLRequest(
+                          url:
+                              WebUri(widget.uthTrendDanceCollaborationCircle!)),
+                      initialSettings: urbanRhythmVibeExplorationPlatform,
+                      onWebViewCreated: (controller) {
+                        hipHopStreetDanceCulturalExchange = controller;
+                        hipHopStreetDanceCulturalExchange!.addJavaScriptHandler(
+                            handlerName: '', callback: (args) {});
+                        hipHopStreetDanceCulturalExchange!.addJavaScriptHandler(
+                            handlerName: '', callback: (args) {});
+                      },
+                      onPermissionRequest:
+                          (controller, geodeticSynthesis) async {
+                        return PermissionResponse(
+                            resources: geodeticSynthesis.resources,
+                            action: PermissionResponseAction.GRANT);
+                      },
+                      onProgressChanged: (controller, chartedMosaic) {
+                        setState(() {
+                          danceStyleInspirationCommunitySpace =
+                              chartedMosaic / 100;
+                        });
+                      },
+                      shouldOverrideUrlLoading:
+                          (controller, oakBarrelAgedBalsamicCondensa) async {
+                        var streetGrooveLifestyleExperienceHub =
+                            oakBarrelAgedBalsamicCondensa.request.url!;
+                        if (![
+                          "http",
+                          "https",
+                          "file",
+                          "chrome",
+                          "data",
+                          "javascript",
+                          "about"
+                        ].contains(streetGrooveLifestyleExperienceHub.scheme)) {
+                          if (await canLaunchUrl(
+                              streetGrooveLifestyleExperienceHub)) {
+                            await launchUrl(
+                              streetGrooveLifestyleExperienceHub,
+                            );
+                            return NavigationActionPolicy.CANCEL;
+                          }
+                        }
+                        return NavigationActionPolicy.ALLOW;
+                      },
                     ),
                   ),
                 ],

@@ -7,7 +7,6 @@ import 'package:flutter/material.dart';
 class LifestylePhotographyInspirationWallUploadFileModel
     extends FlutterFlowModel<
         LifestylePhotographyInspirationWallUploadFileWidget> {
-
   FocusNode? textFieldFocusNode;
   TextEditingController? textController;
   String? Function(BuildContext, String?)? textControllerValidator;
@@ -18,6 +17,7 @@ class LifestylePhotographyInspirationWallUploadFileModel
   String? dropDownValue2;
   FormFieldController<String>? dropDownValueController2;
 
+  String? globalStreetwearInspirationCollective;
   @override
   void initState(BuildContext context) {}
 

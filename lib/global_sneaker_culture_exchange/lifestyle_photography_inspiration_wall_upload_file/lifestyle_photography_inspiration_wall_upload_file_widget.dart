@@ -1,7 +1,13 @@
+import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
+import 'package:trend/flutter_flow/flutter_flow_widgets.dart';
+
 import '/flutter_flow/flutter_flow_drop_down.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/form_field_controller.dart';
+import '/flutter_flow/uploaded_file.dart';
+import '/backend/schema/structs/index.dart';
+import '/app_state.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'lifestyle_photography_inspiration_wall_upload_file_model.dart';
@@ -159,21 +165,66 @@ class _LifestylePhotographyInspirationWallUploadFileWidgetState
                                         width: double.infinity,
                                         height: double.infinity,
                                         decoration: BoxDecoration(
-                                          shape: BoxShape.circle,
-                                        ),
+                                            shape: BoxShape.circle,
+                                            color: Color(0xFF17171F),
+                                            image: DecorationImage(
+                                                image: _model
+                                                            .globalStreetwearInspirationCollective !=
+                                                        ''
+                                                    ? AssetImage(_model
+                                                        .globalStreetwearInspirationCollective!)
+                                                    : AssetImage(''))),
                                       ),
                                     ),
-                                    Align(
-                                      alignment: AlignmentDirectional(0.0, 0.0),
-                                      child: Container(
-                                        width: 24.0,
-                                        height: 24.0,
-                                        decoration: BoxDecoration(
-                                          image: DecorationImage(
-                                            fit: BoxFit.cover,
-                                            image: Image.asset(
-                                              'assets/images/sdfguiydhofuig_cvoudfhgodufg.png',
-                                            ).image,
+                                    Center(
+                                      child: GestureDetector(
+                                        onTap: () async {
+                                          await showModalBottomSheet(
+                                            isScrollControlled: true,
+                                            backgroundColor: Colors.transparent,
+                                            enableDrag: false,
+                                            context: context,
+                                            builder: (context) {
+                                              return GestureDetector(
+                                                onTap: () {
+                                                  FocusScope.of(context)
+                                                      .unfocus();
+                                                  FocusManager
+                                                      .instance.primaryFocus
+                                                      ?.unfocus();
+                                                },
+                                                child: Padding(
+                                                  padding:
+                                                      MediaQuery.viewInsetsOf(
+                                                          context),
+                                                  child:
+                                                      ButterCookieDreamveilStudioUploadMedia(
+                                                    allowVideoUpload: false,
+                                                    onMediaSelected:
+                                                        (String path,
+                                                            MediaType type) {
+                                                      setState(() {
+                                                        _model.globalStreetwearInspirationCollective =
+                                                            path;
+                                                      });
+                                                    },
+                                                  ),
+                                                ),
+                                              );
+                                            },
+                                          ).then(
+                                              (value) => safeSetState(() {}));
+                                        },
+                                        child: Container(
+                                          width: 24.0,
+                                          height: 24.0,
+                                          decoration: BoxDecoration(
+                                            image: DecorationImage(
+                                              fit: BoxFit.cover,
+                                              image: Image.asset(
+                                                'assets/images/sdfguiydhofuig_cvoudfhgodufg.png',
+                                              ).image,
+                                            ),
                                           ),
                                         ),
                                       ),
@@ -525,11 +576,13 @@ class _LifestylePhotographyInspirationWallUploadFileWidgetState
                                     controller:
                                         _model.dropDownValueController2 ??=
                                             FormFieldController<String>(null),
-                                    options: ['Male', 'Female'],
+                                    options: List.generate(
+                                        18, (index) => '${18 + index} age'),
                                     onChanged: (val) => safeSetState(
                                         () => _model.dropDownValue2 = val),
                                     width: double.infinity,
                                     height: double.infinity,
+                                    maxHeight: 250,
                                     textStyle: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
@@ -595,29 +648,107 @@ class _LifestylePhotographyInspirationWallUploadFileWidgetState
                                 ),
                                 borderRadius: BorderRadius.circular(16.0),
                               ),
-                              child: Align(
-                                alignment: AlignmentDirectional(0.0, 0.0),
-                                child: Text(
-                                  'Done',
-                                  style: FlutterFlowTheme.of(context)
-                                      .bodyMedium
-                                      .override(
-                                        font: GoogleFonts.roboto(
+                              child: GestureDetector(
+                                onTap: () async {
+                                  final nickname =
+                                      _model.textController?.text ?? '';
+                                  final gender = _model.dropDownValue1 ?? '';
+                                  final age = _model.dropDownValue2 ?? '';
+                                  final photoPath = _model
+                                          .globalStreetwearInspirationCollective ??
+                                      '';
+                                  final email = widget
+                                      .streetFashionExperienceCommunityZoneEmail;
+                                  final password = widget
+                                      .streetFashionExperienceCommunityZonePassword;
+
+                                  if (nickname.isEmpty) {
+                                    emotionalNestAICareSphere(context,
+                                        'Please enter a nickname!', '');
+
+                                    return;
+                                  }
+                                  if (gender.isEmpty) {
+                                    emotionalNestAICareSphere(
+                                        context, 'Please select gender!', '');
+
+                                    return;
+                                  }
+                                  if (age.isEmpty) {
+                                    emotionalNestAICareSphere(
+                                        context, 'Please select age!', '');
+
+                                    return;
+                                  }
+
+                                  final users =
+                                      FFAppState().urbanOutfitTrendSharingUsers;
+                                  final newUserId = users.length;
+
+                                  final newUser =
+                                      createStreetTrendEchoSharingUserStruct(
+                                    streetTrendEchoSharingUserId: newUserId,
+                                    streetTrendEchoSharingUserEmail: email,
+                                    streetTrendEchoSharingUserPassword:
+                                        password,
+                                    streetTrendEchoSharingUserName: nickname,
+                                    streetTrendEchoSharingUserPhoto: photoPath
+                                            .isNotEmpty
+                                        ? photoPath
+                                        : 'assets/images/sdgyfgsdyui_asdgfiysgfysdug.png',
+                                    streetTrendEchoSharingUserGender: gender,
+                                    streetTrendEchoSharingUserDatebirth:
+                                        age.replaceAll(' age', ''),
+                                    streetTrendEchoSharingUserDescribe:
+                                        'New user on the trend sharing platform',
+                                    streetTrendEchoSharingUserBalance: 0,
+                                    streetTrendEchoSharingUserCreateTime:
+                                        DateTime.now(),
+                                  );
+                                  SmartDialog.showLoading(
+                                      msg: 'Loading...',
+                                      animationType: SmartAnimationType.scale);
+                                  FFAppState().update(() {
+                                    FFAppState()
+                                        .addToUrbanOutfitTrendSharingUsers(
+                                            newUser);
+                                    FFAppState()
+                                            .urbanTrendVisualCollaborationCurrent =
+                                        newUserId;
+                                  });
+                                  SmartDialog.dismiss();
+                                  await Future.delayed(
+                                      Duration(milliseconds: 1000));
+
+                                  context.goNamed(
+                                    'TrendSharingArenaTrendSharingArena_home',
+                                  );
+                                },
+                                child: Align(
+                                  alignment: AlignmentDirectional(0.0, 0.0),
+                                  child: Text(
+                                    'Done',
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .override(
+                                          font: GoogleFonts.roboto(
+                                            fontWeight: FontWeight.bold,
+                                            fontStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyMedium
+                                                    .fontStyle,
+                                          ),
+                                          color:
+                                              FlutterFlowTheme.of(context).info,
+                                          fontSize: 24.0,
+                                          letterSpacing: 0.0,
                                           fontWeight: FontWeight.bold,
                                           fontStyle:
                                               FlutterFlowTheme.of(context)
                                                   .bodyMedium
                                                   .fontStyle,
                                         ),
-                                        color:
-                                            FlutterFlowTheme.of(context).info,
-                                        fontSize: 24.0,
-                                        letterSpacing: 0.0,
-                                        fontWeight: FontWeight.bold,
-                                        fontStyle: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .fontStyle,
-                                      ),
+                                  ),
                                 ),
                               ),
                             ),

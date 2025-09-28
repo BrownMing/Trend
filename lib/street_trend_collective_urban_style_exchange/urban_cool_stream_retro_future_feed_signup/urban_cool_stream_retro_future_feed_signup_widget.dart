@@ -73,6 +73,16 @@ class _UrbanCoolStreamRetroFutureFeedSignupWidgetState
     }
     context.pushNamed(
       LifestylePhotographyInspirationWallUploadFileWidget.routeName,
+      queryParameters: {
+        'streetFashionExperienceCommunityZoneEmail': serializeParam(
+          _model.textController1.text,
+          ParamType.String,
+        ),
+        'streetFashionExperienceCommunityZonePassword': serializeParam(
+          _model.textController2.text,
+          ParamType.String,
+        ),
+      }.withoutNulls,
       extra: <String, dynamic>{
         kTransitionInfoKey: TransitionInfo(
           hasTransition: true,

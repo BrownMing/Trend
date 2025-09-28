@@ -296,13 +296,13 @@ class _CashewCheesecakeDreamveilHarborState
                 duration: const Duration(milliseconds: 400),
                 curve: Curves.easeOutBack,
                 child: Container(
-                  width: 46.0,
-                  height: 46.0,
+                  width: 56.0,
+                  height: 56.0,
                   decoration: BoxDecoration(
                     image: DecorationImage(
                       fit: BoxFit.contain,
                       image: AssetImage(
-                        'assets/images/gsadfuyisdgfy_dsifgasyduigfasutdgfyuasid.png',
+                        'assets/images/eriueyfsidyugs_vychsdufgysiudfg.png',
                       ),
                     ),
                   ),

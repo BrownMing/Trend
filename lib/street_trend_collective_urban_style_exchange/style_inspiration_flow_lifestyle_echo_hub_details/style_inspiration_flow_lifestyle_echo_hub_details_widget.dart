@@ -324,7 +324,7 @@ class _StyleInspirationFlowLifestyleEchoHubDetailsWidgetState
                             ),
                             Builder(
                               builder: (context) {
-                                // 从全局状态获取最新的评论数
+                       
                                 final currentPost = FFAppState()
                                     .creativeWardrobeFusionCommunPostImages
                                     .firstWhere(

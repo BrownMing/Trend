@@ -77,11 +77,10 @@ class _GlobalTrendShareUrbanFusionMapHotdetailsWidgetState
                               GrapeMacaronCreationCirclePlayer(
                                 path: widget.modernTrendVisualConnectionArena!
                                     .crossCultureTrendExchangeHubPostsVideo,
-                        
                                 autoPlay: true,
                                 looping: true,
                                 showControls: true,
-                            
+                                borderRadius: 0.0,
                               ),
                             ],
                           ),
@@ -154,48 +153,92 @@ class _GlobalTrendShareUrbanFusionMapHotdetailsWidgetState
                                       children: [
                                         Builder(
                                           builder: (context) {
-                                            if (widget
-                                                    .modernTrendVisualConnectionArena
-                                                    ?.crossCultureTrendExchangeHubPostsLikeUser
-                                                    .contains(FFAppState()
-                                                        .urbanTrendVisualCollaborationCurrent) ??
-                                                false) {
-                                              return AnimatedContainer(
-                                                duration:
-                                                    Duration(milliseconds: 400),
-                                                curve: Curves.easeInOut,
-                                                width: 24.0,
-                                                height: 24.0,
-                                                decoration: BoxDecoration(
-                                                  image: DecorationImage(
-                                                    fit: BoxFit.cover,
-                                                    image: Image.asset(
-                                                      'assets/images/sdgvyfushdfysiudf_ciguvetdioueyfisudfgyis.png',
-                                                    ).image,
+                                            // 获取实时数据源
+                                            final currentPost = FFAppState()
+                                                .sneakerheadCultureConnectPosts
+                                                .firstWhere(
+                                                  (post) =>
+                                                      post.crossCultureTrendExchangeHubPostsId ==
+                                                      widget
+                                                          .modernTrendVisualConnectionArena!
+                                                          .crossCultureTrendExchangeHubPostsId,
+                                                  orElse: () => widget
+                                                      .modernTrendVisualConnectionArena!,
+                                                );
+
+                                            if (currentPost
+                                                .crossCultureTrendExchangeHubPostsLikeUser
+                                                .contains(FFAppState()
+                                                    .urbanTrendVisualCollaborationCurrent)) {
+                                              return GestureDetector(
+                                                onTap: () async {
+                                                  HapticFeedback.heavyImpact();
+
+                                                  int postIndex = FFAppState()
+                                                      .sneakerheadCultureConnectPosts
+                                                      .indexWhere((post) =>
+                                                          post.crossCultureTrendExchangeHubPostsId ==
+                                                          widget
+                                                              .modernTrendVisualConnectionArena!
+                                                              .crossCultureTrendExchangeHubPostsId);
+
+                                                  if (postIndex != -1) {
+                                                    FFAppState()
+                                                        .updateSneakerheadCultureConnectPostsAtIndex(
+                                                      postIndex,
+                                                      (e) => e
+                                                        ..updateCrossCultureTrendExchangeHubPostsLikeUser(
+                                                          (e) => e.remove(
+                                                              FFAppState()
+                                                                  .urbanTrendVisualCollaborationCurrent),
+                                                        ),
+                                                    );
+                                                    FFAppState().update(() {});
+                                                    setState(() {});
+                                                  }
+                                                },
+                                                child: AnimatedContainer(
+                                                  duration: Duration(
+                                                      milliseconds: 400),
+                                                  curve: Curves.easeInOut,
+                                                  width: 24.0,
+                                                  height: 24.0,
+                                                  decoration: BoxDecoration(
+                                                    image: DecorationImage(
+                                                      fit: BoxFit.cover,
+                                                      image: Image.asset(
+                                                        'assets/images/sdgvyfushdfysiudf_ciguvetdioueyfisudfgyis.png',
+                                                      ).image,
+                                                    ),
                                                   ),
                                                 ),
                                               );
                                             } else {
-                                              return InkWell(
-                                                splashColor: Colors.transparent,
-                                                focusColor: Colors.transparent,
-                                                hoverColor: Colors.transparent,
-                                                highlightColor:
-                                                    Colors.transparent,
+                                              return GestureDetector(
                                                 onTap: () async {
                                                   HapticFeedback.heavyImpact();
-                                                  FFAppState()
-                                                      .updateSneakerheadCultureConnectPostsAtIndex(
-                                                    widget
-                                                        .modernTrendVisualConnectionArena!
-                                                        .crossCultureTrendExchangeHubPostsId,
-                                                    (e) => e
-                                                      ..updateCrossCultureTrendExchangeHubPostsLikeUser(
-                                                        (e) => e.add(FFAppState()
-                                                            .urbanTrendVisualCollaborationCurrent),
-                                                      ),
-                                                  );
-                                                  FFAppState().update(() {});
+                                                  // 找到当前post在数组中的正确索引
+                                                  int postIndex = FFAppState()
+                                                      .sneakerheadCultureConnectPosts
+                                                      .indexWhere((post) =>
+                                                          post.crossCultureTrendExchangeHubPostsId ==
+                                                          widget
+                                                              .modernTrendVisualConnectionArena!
+                                                              .crossCultureTrendExchangeHubPostsId);
+
+                                                  if (postIndex != -1) {
+                                                    FFAppState()
+                                                        .updateSneakerheadCultureConnectPostsAtIndex(
+                                                      postIndex,
+                                                      (e) => e
+                                                        ..updateCrossCultureTrendExchangeHubPostsLikeUser(
+                                                          (e) => e.add(FFAppState()
+                                                              .urbanTrendVisualCollaborationCurrent),
+                                                        ),
+                                                    );
+                                                    FFAppState().update(() {});
+                                                    setState(() {});
+                                                  }
                                                 },
                                                 child: AnimatedContainer(
                                                   duration: Duration(
@@ -217,7 +260,7 @@ class _GlobalTrendShareUrbanFusionMapHotdetailsWidgetState
                                           },
                                         ),
                                         Text(
-                                          '${widget.modernTrendVisualConnectionArena?.crossCultureTrendExchangeHubPostsLikeUser.length.toString()}',
+                                          '${FFAppState().sneakerheadCultureConnectPosts.firstWhere((post) => post.crossCultureTrendExchangeHubPostsId == widget.modernTrendVisualConnectionArena!.crossCultureTrendExchangeHubPostsId, orElse: () => widget.modernTrendVisualConnectionArena!).crossCultureTrendExchangeHubPostsLikeUser.length.toString()}',
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
                                               .override(
@@ -295,7 +338,16 @@ class _GlobalTrendShareUrbanFusionMapHotdetailsWidgetState
                                                   );
                                                 },
                                               ).then((value) =>
-                                                  safeSetState(() {}));
+                                                  safeSetState(() {
+                                                    if (value == true) {
+                                                      Future.delayed(
+                                                          Duration(
+                                                              milliseconds:
+                                                                  1900), () {
+                                                        Navigator.pop(context);
+                                                      });
+                                                    }
+                                                  }));
                                             },
                                             child: Container(
                                               width: 24.0,
