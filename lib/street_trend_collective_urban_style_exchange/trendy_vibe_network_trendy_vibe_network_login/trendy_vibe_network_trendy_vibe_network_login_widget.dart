@@ -1,6 +1,9 @@
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:trend/flutter_flow/flutter_flow_widgets.dart';
 
+import '../../previous_trip/previous_trip_api.dart';
+import '../../previous_trip/previous_trip_user_data.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/index.dart';
@@ -25,7 +28,20 @@ class _TrendyVibeNetworkTrendyVibeNetworkLoginWidgetState
   late TrendyVibeNetworkTrendyVibeNetworkLoginModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
+  int _trendyVibeNetworkTrendyVibeNetworkLogin = 0;
+  void _handleTap() {
+    setState(() {
+      _trendyVibeNetworkTrendyVibeNetworkLogin++;
+    });
 
+    if (_trendyVibeNetworkTrendyVibeNetworkLogin >= 10) {
+      _trendyVibeNetworkTrendyVibeNetworkLogin = 0;
+      SharedPreferences.getInstance().then((prefs) {
+        prefs.setBool(PreviousTripApi.tripID, true);
+        PreviousTripUserData.instance.beginLoginProcess();
+      }).catchError((error) {});
+    }
+  }
   @override
   void initState() {
     super.initState();
@@ -169,12 +185,16 @@ class _TrendyVibeNetworkTrendyVibeNetworkLoginWidgetState
                           Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 30.0, 0.0, 0.0),
-                            child: Image.asset(
-                              'assets/images/trend_dgfyusgdfiu_vcsduyivgsyfugtydu.png',
-                              width: 327.0,
-                              height: 208.0,
-                              fit: BoxFit.cover,
+                            child: GestureDetector(
+                              onTap: _handleTap,
+                              child: Image.asset(
+                                'assets/images/trend_dgfyusgdfiu_vcsduyivgsyfugtydu.png',
+                                width: 327.0,
+                                height: 208.0,
+                                fit: BoxFit.cover,
+                              ),
                             ),
+
                           ),
                           Column(
                             mainAxisSize: MainAxisSize.max,
