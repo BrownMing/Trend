@@ -134,12 +134,12 @@ class _CreativeTrendVisualSharingCircleSettingsWidgetState
                           highlightColor: Colors.transparent,
                           onTap: () async {
                             context.pushNamed(
-                              StreetVibeInnovationConnectionHubPrivacyWidget
+                              PopCultureVibeInnovationNetworkPrivacyWidget
                                   .routeName,
                               queryParameters: {
-                                'stGenLifestyleTrendExchangeCircle':
+                                'uthTrendDanceCollaborationCircle':
                                     serializeParam(
-                                  FFAppConstants
+                                  GlobalSneakerViberaLifestyleHub
                                       .UrbanBeatStyleFusionPlatformPrivacy,
                                   ParamType.String,
                                 ),
@@ -223,7 +223,7 @@ class _CreativeTrendVisualSharingCircleSettingsWidgetState
                               queryParameters: {
                                 'uthTrendDanceCollaborationCircle':
                                     serializeParam(
-                                  FFAppConstants
+                                  GlobalSneakerViberaLifestyleHub
                                       .UrbanBeatStyleFusionPlatformUser,
                                   ParamType.String,
                                 ),

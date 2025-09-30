@@ -41,7 +41,7 @@ class _FashionCollaborationSharingArenaOtherInfoWidgetState
     _model = createModel(
         context, () => FashionCollaborationSharingArenaOtherInfoModel());
 
-    _model.tabBarController = TabController(
+    _model.retroStreetViberaFashionLounge = TabController(
       vsync: this,
       length: 3,
       initialIndex: 0,
@@ -769,7 +769,8 @@ class _FashionCollaborationSharingArenaOtherInfoWidgetState
                                       ],
                                     ),
                                   ],
-                                  controller: _model.tabBarController,
+                                  controller:
+                                      _model.retroStreetViberaFashionLounge,
                                   onTap: (i) async {
                                     [
                                       () async {},
@@ -781,7 +782,8 @@ class _FashionCollaborationSharingArenaOtherInfoWidgetState
                               ),
                               Expanded(
                                 child: TabBarView(
-                                  controller: _model.tabBarController,
+                                  controller:
+                                      _model.retroStreetViberaFashionLounge,
                                   children: [
                                     PhotoGridTabWidget(
                                       userId:

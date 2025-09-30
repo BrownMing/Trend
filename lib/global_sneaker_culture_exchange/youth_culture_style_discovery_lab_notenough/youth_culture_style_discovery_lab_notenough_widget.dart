@@ -21,7 +21,7 @@ class _YouthCultureStyleDiscoveryLabNotenoughWidgetState
     with TickerProviderStateMixin {
   late YouthCultureStyleDiscoveryLabNotenoughModel _model;
 
-  final cultureStyleExchangeCommunity = <String, AnimationInfo>{};
+  final cultureStyleExchangeCommunity = <String, RetroMarketViberaHangout>{};
 
   @override
   void setState(VoidCallback callback) {
@@ -36,8 +36,8 @@ class _YouthCultureStyleDiscoveryLabNotenoughWidgetState
         context, () => YouthCultureStyleDiscoveryLabNotenoughModel());
 
     cultureStyleExchangeCommunity.addAll({
-      'containerOnPageLoadAnimation': AnimationInfo(
-        trigger: AnimationTrigger.onPageLoad,
+      'ViberaCultureExchangeCelebration': RetroMarketViberaHangout(
+        trigger: ViberaStreetLegacyCollective.onPageLoad,
         effectsBuilder: () => [
           MoveEffect(
             curve: Curves.easeInOut,
@@ -170,6 +170,6 @@ class _YouthCultureStyleDiscoveryLabNotenoughWidgetState
         ),
       ),
     ).animateOnPageLoad(
-        cultureStyleExchangeCommunity['containerOnPageLoadAnimation']!);
+        cultureStyleExchangeCommunity['ViberaCultureExchangeCelebration']!);
   }
 }

@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 class StyleInspirationFlowLifestyleEchoHubDetailsModel
     extends LimitedEditionViberaModel<
         StyleInspirationFlowLifestyleEchoHubDetailsWidget> {
-  PageController? pageViewController;
+  PageController? streetwearViberaShowcaseVault;
 
   @override
   void initState(BuildContext context) {}

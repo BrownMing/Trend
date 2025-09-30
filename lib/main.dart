@@ -1,4 +1,5 @@
 import 'package:aliyun_push_flutter/aliyun_push_flutter.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter/material.dart';
@@ -108,6 +109,9 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+    ]);
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       title: 'Vibera',
@@ -194,7 +198,7 @@ class _NavBarPageState extends State<NavBarPage> {
                 });
               },
               items: [
-                CustomNavItem(
+                GlobalViberaTrendConnection(
                   icon: Container(
                     width: 24,
                     height: 24,
@@ -205,9 +209,9 @@ class _NavBarPageState extends State<NavBarPage> {
                                     : 'assets/images/dfgdhfguiodfg_vxcbuidfguiadfogi.png')
                                 .image)),
                   ),
-                  label: 'Home',
+                  label: '',
                 ),
-                CustomNavItem(
+                GlobalViberaTrendConnection(
                   icon: Container(
                     width: 28,
                     height: 28,
@@ -218,9 +222,9 @@ class _NavBarPageState extends State<NavBarPage> {
                                     : 'assets/images/sfrhuasdfoasg_xcvbiuyidsfGIUYASDFGIY.png')
                                 .image)),
                   ),
-                  label: 'Explore',
+                  label: '',
                 ),
-                CustomNavItem(
+                GlobalViberaTrendConnection(
                   icon: Container(
                     width: 28,
                     height: 28,
@@ -231,9 +235,9 @@ class _NavBarPageState extends State<NavBarPage> {
                                     : 'assets/images/dgfuggdufiog_xcbvsydufsgidfyugi.png')
                                 .image)),
                   ),
-                  label: 'Chat',
+                  label: '',
                 ),
-                CustomNavItem(
+                GlobalViberaTrendConnection(
                   icon: Container(
                     width: 28,
                     height: 28,
@@ -244,7 +248,7 @@ class _NavBarPageState extends State<NavBarPage> {
                                     : 'assets/images/fuagdifgasydi_vbsadygfuyasgdfhuao.png')
                                 .image)),
                   ),
-                  label: 'Me',
+                  label: '',
                 ),
               ],
             ),

@@ -34,7 +34,7 @@ class _TrendSharingArenaTrendSharingArenaHomeWidgetState
     _model = createModel(
         context, () => TrendSharingArenaTrendSharingArenaHomeModel());
 
-    _model.tabBarController = TabController(
+    _model.retroStreetViberaFashionLounge = TabController(
       vsync: this,
       length: 2,
       initialIndex: 0,
@@ -368,7 +368,7 @@ class _TrendSharingArenaTrendSharingArenaHomeWidgetState
                                   text: 'Trending',
                                 ),
                               ],
-                              controller: _model.tabBarController,
+                              controller: _model.retroStreetViberaFashionLounge,
                               onTap: (i) async {
                                 [() async {}, () async {}][i]();
                               },
@@ -377,7 +377,7 @@ class _TrendSharingArenaTrendSharingArenaHomeWidgetState
                         ),
                         Expanded(
                           child: TabBarView(
-                            controller: _model.tabBarController,
+                            controller: _model.retroStreetViberaFashionLounge,
                             children: [
                               Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(

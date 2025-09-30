@@ -7,16 +7,16 @@ class HypeCultureRadarStreetVibeAtlasPublicModel
     extends LimitedEditionViberaModel<
         HypeCultureRadarStreetVibeAtlasPublicWidget> {
   String? futureStyleCultureCollaboration;
-  FocusNode? textFieldFocusNode;
-  TextEditingController? textController;
-  String? Function(BuildContext, String?)? textControllerValidator;
+  FocusNode? streetViberaCultureCelebrationNest;
+  TextEditingController? urbanTrendsettersViberaPlaza;
+  String? Function(BuildContext, String?)? viberaThriftStyleCollaboration;
 
   @override
   void initState(BuildContext context) {}
 
   @override
   void dispose() {
-    textFieldFocusNode?.dispose();
-    textController?.dispose();
+    streetViberaCultureCelebrationNest?.dispose();
+    urbanTrendsettersViberaPlaza?.dispose();
   }
 }

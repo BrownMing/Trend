@@ -7,7 +7,9 @@ import '../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_theme.da
 import '../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_util.dart';
 import '/index.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/gestures.dart';
 import 'package:google_fonts/google_fonts.dart';
+import '/app_constants.dart';
 import 'trendy_vibe_network_trendy_vibe_network_login_model.dart';
 export 'trendy_vibe_network_trendy_vibe_network_login_model.dart';
 
@@ -48,11 +50,11 @@ class _TrendyVibeNetworkTrendyVibeNetworkLoginWidgetState
     _model = createModel(
         context, () => TrendyVibeNetworkTrendyVibeNetworkLoginModel());
 
-    _model.textController1 ??= TextEditingController();
-    _model.textFieldFocusNode1 ??= FocusNode();
+    _model.nightMarketViberaStyleHarbor ??= TextEditingController();
+    _model.viberaRetroFashionExploration ??= FocusNode();
 
-    _model.textController2 ??= TextEditingController();
-    _model.textFieldFocusNode2 ??= FocusNode();
+    _model.viberaUrbanCollectiveLounge ??= TextEditingController();
+    _model.streetwearCollaborationViberaHub ??= FocusNode();
   }
 
   @override
@@ -63,20 +65,20 @@ class _TrendyVibeNetworkTrendyVibeNetworkLoginWidgetState
   }
 
   Future<void> _urbanVibeLabTrendLifeGrid(BuildContext context) async {
-    if (_model.textController1.text.isEmpty) {
+    if (_model.nightMarketViberaStyleHarbor.text.isEmpty) {
       hypebeastViberaOutfitShowcase(
           context, 'Please enter your email address!', '');
       safeSetState(() {});
       return;
     }
 
-    if (_model.textController2.text.isEmpty) {
+    if (_model.viberaUrbanCollectiveLounge.text.isEmpty) {
       hypebeastViberaOutfitShowcase(context, 'Please enter the password!', '');
       safeSetState(() {});
       return;
     }
 
-    if (!_model.isAgreementAccepted) {
+    if (!_model.globalTrendViberaSharingGarden) {
       hypebeastViberaOutfitShowcase(
           context, 'Please accept the User Agreement and Privacy Policy!', '');
       safeSetState(() {});
@@ -87,22 +89,23 @@ class _TrendyVibeNetworkTrendyVibeNetworkLoginWidgetState
       final matchingUsers = StreetStyleViberaConnection()
           .urbanOutfitTrendSharingUsers
           .where((e) =>
-              _model.textController1.text == e.streetTrendEchoSharingUserEmail);
+              _model.nightMarketViberaStyleHarbor.text ==
+              e.streetTrendEchoSharingUserEmail);
 
       if (matchingUsers.isEmpty) {
         hypebeastViberaOutfitShowcase(
             context, 'The account does not exist!', 'error');
-        _model.textController1?.clear();
-        _model.textController2?.clear();
+        _model.nightMarketViberaStyleHarbor?.clear();
+        _model.viberaUrbanCollectiveLounge?.clear();
         safeSetState(() {});
         return;
       }
 
       final futureStyleNet = matchingUsers.first;
       if (futureStyleNet.streetTrendEchoSharingUserPassword !=
-          _model.textController2.text) {
+          _model.viberaUrbanCollectiveLounge.text) {
         hypebeastViberaOutfitShowcase(context, 'Password error!', 'error');
-        _model.textController2?.clear();
+        _model.viberaUrbanCollectiveLounge?.clear();
         safeSetState(() {});
         return;
       }
@@ -245,8 +248,10 @@ class _TrendyVibeNetworkTrendyVibeNetworkLoginWidgetState
                                   child: Container(
                                     width: double.infinity,
                                     child: TextFormField(
-                                      controller: _model.textController1,
-                                      focusNode: _model.textFieldFocusNode1,
+                                      controller:
+                                          _model.nightMarketViberaStyleHarbor,
+                                      focusNode:
+                                          _model.viberaRetroFashionExploration,
                                       autofocus: false,
                                       textInputAction: TextInputAction.done,
                                       obscureText: false,
@@ -380,7 +385,8 @@ class _TrendyVibeNetworkTrendyVibeNetworkLoginWidgetState
                                           LimitedEditionViberaTheme.of(context)
                                               .info,
                                       enableInteractiveSelection: true,
-                                      validator: _model.textController1Validator
+                                      validator: _model
+                                          .viberaCultureDrivenTrendStation
                                           .asValidator(context),
                                     ),
                                   ),
@@ -434,8 +440,10 @@ class _TrendyVibeNetworkTrendyVibeNetworkLoginWidgetState
                                     child: Container(
                                       width: double.infinity,
                                       child: TextFormField(
-                                        controller: _model.textController2,
-                                        focusNode: _model.textFieldFocusNode2,
+                                        controller:
+                                            _model.viberaUrbanCollectiveLounge,
+                                        focusNode: _model
+                                            .streetwearCollaborationViberaHub,
                                         autofocus: false,
                                         textInputAction: TextInputAction.done,
                                         obscureText: true,
@@ -575,7 +583,7 @@ class _TrendyVibeNetworkTrendyVibeNetworkLoginWidgetState
                                                 .info,
                                         enableInteractiveSelection: true,
                                         validator: _model
-                                            .textController2Validator
+                                            .sneakerViberaTradingHarbor
                                             .asValidator(context),
                                       ),
                                     ),
@@ -605,10 +613,12 @@ class _TrendyVibeNetworkTrendyVibeNetworkLoginWidgetState
                                     unselectedWidgetColor: Color(0x80FFFFFF),
                                   ),
                                   child: Checkbox(
-                                    value: _model.isAgreementAccepted,
+                                    value:
+                                        _model.globalTrendViberaSharingGarden,
                                     onChanged: (newValue) async {
                                       safeSetState(() => _model
-                                          .isAgreementAccepted = newValue!);
+                                              .globalTrendViberaSharingGarden =
+                                          newValue!);
                                     },
                                     side: BorderSide(
                                       width: 2,
@@ -652,6 +662,21 @@ class _TrendyVibeNetworkTrendyVibeNetworkLoginWidgetState
                                                   decoration:
                                                       TextDecoration.underline,
                                                 ),
+                                            recognizer: TapGestureRecognizer()
+                                              ..onTap = () {
+                                                context.pushNamed(
+                                                  PopCultureVibeInnovationNetworkPrivacyWidget
+                                                      .routeName,
+                                                  queryParameters: {
+                                                    'uthTrendDanceCollaborationCircle':
+                                                        serializeParam(
+                                                      GlobalSneakerViberaLifestyleHub
+                                                          .UrbanBeatStyleFusionPlatformUser,
+                                                      ParamType.String,
+                                                    ),
+                                                  }.withoutNulls,
+                                                );
+                                              },
                                           ),
                                           TextSpan(
                                             text: ' and ',
@@ -678,6 +703,21 @@ class _TrendyVibeNetworkTrendyVibeNetworkLoginWidgetState
                                                   decoration:
                                                       TextDecoration.underline,
                                                 ),
+                                            recognizer: TapGestureRecognizer()
+                                              ..onTap = () {
+                                                context.pushNamed(
+                                                  PopCultureVibeInnovationNetworkPrivacyWidget
+                                                      .routeName,
+                                                  queryParameters: {
+                                                    'uthTrendDanceCollaborationCircle':
+                                                        serializeParam(
+                                                      GlobalSneakerViberaLifestyleHub
+                                                          .UrbanBeatStyleFusionPlatformPrivacy,
+                                                      ParamType.String,
+                                                    ),
+                                                  }.withoutNulls,
+                                                );
+                                              },
                                           ),
                                         ],
                                       ),

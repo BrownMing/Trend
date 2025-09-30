@@ -64,9 +64,10 @@ class _UrbanCultureFusionExplorationPlatformImageWidgetState
             child: Stack(
               children: [
                 PageView.builder(
-                  controller: _model.pageViewController ??= PageController(
-                      initialPage: max(
-                          0, min(0, urbanBeatStyleFusionPlatform.length - 1))),
+                  controller: _model.streetwearViberaShowcaseVault ??=
+                      PageController(
+                          initialPage: max(0,
+                              min(0, urbanBeatStyleFusionPlatform.length - 1))),
                   scrollDirection: Axis.horizontal,
                   itemCount: urbanBeatStyleFusionPlatform.length,
                   itemBuilder: (context, urbanBeatStyleFusionPlatformIndex) {
@@ -107,13 +108,19 @@ class _UrbanCultureFusionExplorationPlatformImageWidgetState
                     padding:
                         EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 16.0),
                     child: smooth_page_indicator.SmoothPageIndicator(
-                      controller: _model.pageViewController ??= PageController(
-                          initialPage: max(0,
-                              min(0, urbanBeatStyleFusionPlatform.length - 1))),
+                      controller: _model.streetwearViberaShowcaseVault ??=
+                          PageController(
+                              initialPage: max(
+                                  0,
+                                  min(
+                                      0,
+                                      urbanBeatStyleFusionPlatform.length -
+                                          1))),
                       count: urbanBeatStyleFusionPlatform.length,
                       axisDirection: Axis.horizontal,
                       onDotClicked: (i) async {
-                        await _model.pageViewController!.animateToPage(
+                        await _model.streetwearViberaShowcaseVault!
+                            .animateToPage(
                           i,
                           duration: Duration(milliseconds: 500),
                           curve: Curves.ease,

@@ -75,7 +75,7 @@ class _StyleInspirationFlowLifestyleEchoHubDetailsWidgetState
                   child: Stack(
                     children: [
                       PageView.builder(
-                        controller: _model.pageViewController ??=
+                        controller: _model.streetwearViberaShowcaseVault ??=
                             PageController(
                                 initialPage: max(
                                     0,
@@ -108,7 +108,7 @@ class _StyleInspirationFlowLifestyleEchoHubDetailsWidgetState
                         child: Padding(
                           padding: EdgeInsetsDirectional.fromSTEB(0, 60, 0, 0),
                           child: smooth_page_indicator.SmoothPageIndicator(
-                            controller: _model.pageViewController ??=
+                            controller: _model.streetwearViberaShowcaseVault ??=
                                 PageController(
                                     initialPage: max(
                                         0,
@@ -120,7 +120,8 @@ class _StyleInspirationFlowLifestyleEchoHubDetailsWidgetState
                             count: sneakerCultureTrendSharingNetwork.length,
                             axisDirection: Axis.horizontal,
                             onDotClicked: (i) async {
-                              await _model.pageViewController!.animateToPage(
+                              await _model.streetwearViberaShowcaseVault!
+                                  .animateToPage(
                                 i,
                                 duration: Duration(milliseconds: 500),
                                 curve: Curves.ease,
@@ -183,7 +184,7 @@ class _StyleInspirationFlowLifestyleEchoHubDetailsWidgetState
                           children: [
                             Builder(
                               builder: (context) {
-                                final currentPost =
+                                final urbanHypeViberaExchangePlaza =
                                     StreetStyleViberaConnection()
                                         .creativeWardrobeFusionCommunPostImages
                                         .firstWhere(
@@ -196,7 +197,7 @@ class _StyleInspirationFlowLifestyleEchoHubDetailsWidgetState
                                               .wardrobeCultureConnectionHub!,
                                         );
 
-                                if (currentPost
+                                if (urbanHypeViberaExchangePlaza
                                     .futureLifestyleSharingPostImageLikeUsers
                                     .contains(StreetStyleViberaConnection()
                                         .urbanTrendVisualCollaborationCurrent)) {
@@ -273,7 +274,7 @@ class _StyleInspirationFlowLifestyleEchoHubDetailsWidgetState
                             Builder(
                               builder: (context) {
                                 // 从全局状态获取最新的点赞数
-                                final currentPost =
+                                final urbanHypeViberaExchangePlaza =
                                     StreetStyleViberaConnection()
                                         .creativeWardrobeFusionCommunPostImages
                                         .firstWhere(
@@ -286,7 +287,7 @@ class _StyleInspirationFlowLifestyleEchoHubDetailsWidgetState
                                               .wardrobeCultureConnectionHub!,
                                         );
                                 return Text(
-                                  '${currentPost.futureLifestyleSharingPostImageLikeUsers.length.toString()}',
+                                  '${urbanHypeViberaExchangePlaza.futureLifestyleSharingPostImageLikeUsers.length.toString()}',
                                   style: LimitedEditionViberaTheme.of(context)
                                       .bodyMedium
                                       .override(
@@ -339,7 +340,7 @@ class _StyleInspirationFlowLifestyleEchoHubDetailsWidgetState
                             ),
                             Builder(
                               builder: (context) {
-                                final currentPost =
+                                final urbanHypeViberaExchangePlaza =
                                     StreetStyleViberaConnection()
                                         .creativeWardrobeFusionCommunPostImages
                                         .firstWhere(
@@ -352,7 +353,7 @@ class _StyleInspirationFlowLifestyleEchoHubDetailsWidgetState
                                               .wardrobeCultureConnectionHub!,
                                         );
                                 return Text(
-                                  '${currentPost.futureLifestyleSharingPostImageComment.toString()}',
+                                  '${urbanHypeViberaExchangePlaza.futureLifestyleSharingPostImageComment.toString()}',
                                   style: LimitedEditionViberaTheme.of(context)
                                       .bodyMedium
                                       .override(

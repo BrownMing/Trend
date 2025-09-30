@@ -7,26 +7,25 @@ import 'package:flutter/material.dart';
 class TrendyVibeNetworkTrendyVibeNetworkLoginModel
     extends LimitedEditionViberaModel<
         TrendyVibeNetworkTrendyVibeNetworkLoginWidget> {
-  FocusNode? textFieldFocusNode1;
-  TextEditingController? textController1;
-  String? Function(BuildContext, String?)? textController1Validator;
+  FocusNode? viberaRetroFashionExploration;
+  TextEditingController? nightMarketViberaStyleHarbor;
+  String? Function(BuildContext, String?)? viberaCultureDrivenTrendStation;
 
-  FocusNode? textFieldFocusNode2;
-  TextEditingController? textController2;
-  String? Function(BuildContext, String?)? textController2Validator;
+  FocusNode? streetwearCollaborationViberaHub;
+  TextEditingController? viberaUrbanCollectiveLounge;
+  String? Function(BuildContext, String?)? sneakerViberaTradingHarbor;
 
-  // 用户协议和隐私政策勾选状态
-  bool isAgreementAccepted = true;
+  bool globalTrendViberaSharingGarden = true;
 
   @override
   void initState(BuildContext context) {}
 
   @override
   void dispose() {
-    textFieldFocusNode1?.dispose();
-    textController1?.dispose();
+    viberaRetroFashionExploration?.dispose();
+    nightMarketViberaStyleHarbor?.dispose();
 
-    textFieldFocusNode2?.dispose();
-    textController2?.dispose();
+    streetwearCollaborationViberaHub?.dispose();
+    viberaUrbanCollectiveLounge?.dispose();
   }
 }

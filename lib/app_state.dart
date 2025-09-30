@@ -21,7 +21,8 @@ class StreetStyleViberaConnection extends ChangeNotifier {
     prefs = await SharedPreferences.getInstance();
     _safeInit(() {
       _urbanOutfitTrendSharingUsers = prefs
-              .getStringList('ff_urbanOutfitTrendSharingUsers')
+              .getStringList(
+                  'UrbanTrendExploration_urbanOutfitTrendSharingUsers')
               ?.map((x) {
                 try {
                   return StreetTrendEchoSharingUserStruct.fromSerializableMap(
@@ -36,13 +37,14 @@ class StreetStyleViberaConnection extends ChangeNotifier {
           _urbanOutfitTrendSharingUsers;
     });
     _safeInit(() {
-      _urbanTrendVisualCollaborationCurrent =
-          prefs.getInt('ff_urbanTrendVisualCollaborationCurrent') ??
-              _urbanTrendVisualCollaborationCurrent;
+      _urbanTrendVisualCollaborationCurrent = prefs.getInt(
+              'UrbanTrendExploration_urbanTrendVisualCollaborationCurrent') ??
+          _urbanTrendVisualCollaborationCurrent;
     });
     _safeInit(() {
       _sneakerheadCultureConnectPosts = prefs
-              .getStringList('ff_sneakerheadCultureConnectPosts')
+              .getStringList(
+                  'UrbanTrendExploration_sneakerheadCultureConnectPosts')
               ?.map((x) {
                 try {
                   return CrossCultureTrendExchangeHubPostsStruct
@@ -58,7 +60,8 @@ class StreetStyleViberaConnection extends ChangeNotifier {
     });
     _safeInit(() {
       _creativeWardrobeFusionCommunPostImages = prefs
-              .getStringList('ff_creativeWardrobeFusionCommunPostImages')
+              .getStringList(
+                  'UrbanTrendExploration_creativeWardrobeFusionCommunPostImages')
               ?.map((x) {
                 try {
                   return FutureLifestyleSharingPostImageStruct
@@ -74,7 +77,8 @@ class StreetStyleViberaConnection extends ChangeNotifier {
     });
     _safeInit(() {
       _trendDrivenStyleCollaborationTrends = prefs
-              .getStringList('ff_trendDrivenStyleCollaborationTrends')
+              .getStringList(
+                  'UrbanTrendExploration_trendDrivenStyleCollaborationTrends')
               ?.map((x) {
                 try {
                   return WorldFashionSharingCollectiveTrendsStruct
@@ -90,7 +94,8 @@ class StreetStyleViberaConnection extends ChangeNotifier {
     });
     _safeInit(() {
       _modernFashionInfluenceComments = prefs
-              .getStringList('ff_modernFashionInfluenceComments')
+              .getStringList(
+                  'UrbanTrendExploration_modernFashionInfluenceComments')
               ?.map((x) {
                 try {
                   return CreativeTrendBeatCollCommentsStruct
@@ -106,7 +111,8 @@ class StreetStyleViberaConnection extends ChangeNotifier {
     });
     _safeInit(() {
       _streetCultureExpressionNetworkChats = prefs
-              .getStringList('ff_streetCultureExpressionNetworkChats')
+              .getStringList(
+                  'UrbanTrendExploration_streetCultureExpressionNetworkChats')
               ?.map((x) {
                 try {
                   return NextGenStreetwearShowcaseChatStruct
@@ -122,7 +128,8 @@ class StreetStyleViberaConnection extends ChangeNotifier {
     });
     _safeInit(() {
       _aestheticStyleInspirationMessages = prefs
-              .getStringList('ff_aestheticStyleInspirationMessages')
+              .getStringList(
+                  'UrbanTrendExploration_aestheticStyleInspirationMessages')
               ?.map((x) {
                 try {
                   return GlobalHypeFashionExchangeMessageStruct
@@ -169,7 +176,7 @@ class StreetStyleViberaConnection extends ChangeNotifier {
         "StreetTrendEchoSharingUser_email": "techhub@outlook.com",
         "StreetTrendEchoSharingUser_password": "dfsdfasdgfsdg",
         "StreetTrendEchoSharingUser_name": "Maren",
-        "StreetTrendEchoSharingUser_photo": "assets/images/yugafyudgfdfugio_cxbvyhusdgifyuASDU.png",
+        "StreetTrendEchoSharingUser_photo": "assets/images/dfsuyidgfyui_futgydfosghuy.jpeg",
         "StreetTrendEchoSharingUser_gender": "Female",
         "StreetTrendEchoSharingUser_datebirth": "27",
         "StreetTrendEchoSharingUser_describe": "No chasing right in definitions, just being cool in instincts—my rhythm, my own melody.",
@@ -237,7 +244,7 @@ class StreetStyleViberaConnection extends ChangeNotifier {
         "StreetTrendEchoSharingUser_email": "thea.note@gmail.com",
         "StreetTrendEchoSharingUser_password": "1234561516",
         "StreetTrendEchoSharingUser_name": "Owen",
-        "StreetTrendEchoSharingUser_photo": "assets/images/dgsiugduifgo_jgvyusagdyuiagdfg.png",
+        "StreetTrendEchoSharingUser_photo": "assets/images/fdfiuygyui_adfigydsfghyuisaf.jpeg",
         "StreetTrendEchoSharingUser_gender": "Male",
         "StreetTrendEchoSharingUser_datebirth": "25",
         "StreetTrendEchoSharingUser_describe": "Not a standard answer, but a 'unique option'—my life, with its own filter.",
@@ -254,14 +261,14 @@ class StreetStyleViberaConnection extends ChangeNotifier {
   set urbanOutfitTrendSharingUsers(
       List<StreetTrendEchoSharingUserStruct> value) {
     _urbanOutfitTrendSharingUsers = value;
-    prefs.setStringList('ff_urbanOutfitTrendSharingUsers',
+    prefs.setStringList('UrbanTrendExploration_urbanOutfitTrendSharingUsers',
         value.map((x) => x.serialize()).toList());
   }
 
   void addToUrbanOutfitTrendSharingUsers(
       StreetTrendEchoSharingUserStruct value) {
     urbanOutfitTrendSharingUsers.add(value);
-    prefs.setStringList('ff_urbanOutfitTrendSharingUsers',
+    prefs.setStringList('UrbanTrendExploration_urbanOutfitTrendSharingUsers',
         _urbanOutfitTrendSharingUsers.map((x) => x.serialize()).toList());
   }
 
@@ -272,7 +279,7 @@ class StreetStyleViberaConnection extends ChangeNotifier {
   ) {
     urbanOutfitTrendSharingUsers[index] =
         updateFn(_urbanOutfitTrendSharingUsers[index]);
-    prefs.setStringList('ff_urbanOutfitTrendSharingUsers',
+    prefs.setStringList('UrbanTrendExploration_urbanOutfitTrendSharingUsers',
         _urbanOutfitTrendSharingUsers.map((x) => x.serialize()).toList());
   }
 
@@ -281,7 +288,8 @@ class StreetStyleViberaConnection extends ChangeNotifier {
       _urbanTrendVisualCollaborationCurrent;
   set urbanTrendVisualCollaborationCurrent(int value) {
     _urbanTrendVisualCollaborationCurrent = value;
-    prefs.setInt('ff_urbanTrendVisualCollaborationCurrent', value);
+    prefs.setInt(
+        'UrbanTrendExploration_urbanTrendVisualCollaborationCurrent', value);
   }
 
   List<CrossCultureTrendExchangeHubPostsStruct>
@@ -364,14 +372,14 @@ class StreetStyleViberaConnection extends ChangeNotifier {
   set sneakerheadCultureConnectPosts(
       List<CrossCultureTrendExchangeHubPostsStruct> value) {
     _sneakerheadCultureConnectPosts = value;
-    prefs.setStringList('ff_sneakerheadCultureConnectPosts',
+    prefs.setStringList('UrbanTrendExploration_sneakerheadCultureConnectPosts',
         value.map((x) => x.serialize()).toList());
   }
 
   void addToSneakerheadCultureConnectPosts(
       CrossCultureTrendExchangeHubPostsStruct value) {
     sneakerheadCultureConnectPosts.add(value);
-    prefs.setStringList('ff_sneakerheadCultureConnectPosts',
+    prefs.setStringList('UrbanTrendExploration_sneakerheadCultureConnectPosts',
         _sneakerheadCultureConnectPosts.map((x) => x.serialize()).toList());
   }
 
@@ -383,14 +391,14 @@ class StreetStyleViberaConnection extends ChangeNotifier {
   ) {
     sneakerheadCultureConnectPosts[index] =
         updateFn(_sneakerheadCultureConnectPosts[index]);
-    prefs.setStringList('ff_sneakerheadCultureConnectPosts',
+    prefs.setStringList('UrbanTrendExploration_sneakerheadCultureConnectPosts',
         _sneakerheadCultureConnectPosts.map((x) => x.serialize()).toList());
   }
 
   void insertAtIndexInSneakerheadCultureConnectPosts(
       int index, CrossCultureTrendExchangeHubPostsStruct value) {
     sneakerheadCultureConnectPosts.insert(index, value);
-    prefs.setStringList('ff_sneakerheadCultureConnectPosts',
+    prefs.setStringList('UrbanTrendExploration_sneakerheadCultureConnectPosts',
         _sneakerheadCultureConnectPosts.map((x) => x.serialize()).toList());
   }
 
@@ -436,7 +444,8 @@ class StreetStyleViberaConnection extends ChangeNotifier {
   set creativeWardrobeFusionCommunPostImages(
       List<FutureLifestyleSharingPostImageStruct> value) {
     _creativeWardrobeFusionCommunPostImages = value;
-    prefs.setStringList('ff_creativeWardrobeFusionCommunPostImages',
+    prefs.setStringList(
+        'UrbanTrendExploration_creativeWardrobeFusionCommunPostImages',
         value.map((x) => x.serialize()).toList());
   }
 
@@ -449,7 +458,7 @@ class StreetStyleViberaConnection extends ChangeNotifier {
     creativeWardrobeFusionCommunPostImages[index] =
         updateFn(_creativeWardrobeFusionCommunPostImages[index]);
     prefs.setStringList(
-        'ff_creativeWardrobeFusionCommunPostImages',
+        'UrbanTrendExploration_creativeWardrobeFusionCommunPostImages',
         _creativeWardrobeFusionCommunPostImages
             .map((x) => x.serialize())
             .toList());
@@ -509,18 +518,9 @@ class StreetStyleViberaConnection extends ChangeNotifier {
   set trendDrivenStyleCollaborationTrends(
       List<WorldFashionSharingCollectiveTrendsStruct> value) {
     _trendDrivenStyleCollaborationTrends = value;
-    prefs.setStringList('ff_trendDrivenStyleCollaborationTrends',
-        value.map((x) => x.serialize()).toList());
-  }
-
-  void addToTrendDrivenStyleCollaborationTrends(
-      WorldFashionSharingCollectiveTrendsStruct value) {
-    trendDrivenStyleCollaborationTrends.add(value);
     prefs.setStringList(
-        'ff_trendDrivenStyleCollaborationTrends',
-        _trendDrivenStyleCollaborationTrends
-            .map((x) => x.serialize())
-            .toList());
+        'UrbanTrendExploration_trendDrivenStyleCollaborationTrends',
+        value.map((x) => x.serialize()).toList());
   }
 
   void updateTrendDrivenStyleCollaborationTrendsAtIndex(
@@ -532,7 +532,7 @@ class StreetStyleViberaConnection extends ChangeNotifier {
     trendDrivenStyleCollaborationTrends[index] =
         updateFn(_trendDrivenStyleCollaborationTrends[index]);
     prefs.setStringList(
-        'ff_trendDrivenStyleCollaborationTrends',
+        'UrbanTrendExploration_trendDrivenStyleCollaborationTrends',
         _trendDrivenStyleCollaborationTrends
             .map((x) => x.serialize())
             .toList());
@@ -545,14 +545,14 @@ class StreetStyleViberaConnection extends ChangeNotifier {
   set modernFashionInfluenceComments(
       List<CreativeTrendBeatCollCommentsStruct> value) {
     _modernFashionInfluenceComments = value;
-    prefs.setStringList('ff_modernFashionInfluenceComments',
+    prefs.setStringList('UrbanTrendExploration_modernFashionInfluenceComments',
         value.map((x) => x.serialize()).toList());
   }
 
   void addToModernFashionInfluenceComments(
       CreativeTrendBeatCollCommentsStruct value) {
     modernFashionInfluenceComments.add(value);
-    prefs.setStringList('ff_modernFashionInfluenceComments',
+    prefs.setStringList('UrbanTrendExploration_modernFashionInfluenceComments',
         _modernFashionInfluenceComments.map((x) => x.serialize()).toList());
   }
 
@@ -564,7 +564,7 @@ class StreetStyleViberaConnection extends ChangeNotifier {
   ) {
     modernFashionInfluenceComments[index] =
         updateFn(_modernFashionInfluenceComments[index]);
-    prefs.setStringList('ff_modernFashionInfluenceComments',
+    prefs.setStringList('UrbanTrendExploration_modernFashionInfluenceComments',
         _modernFashionInfluenceComments.map((x) => x.serialize()).toList());
   }
 
@@ -586,7 +586,8 @@ class StreetStyleViberaConnection extends ChangeNotifier {
   set streetCultureExpressionNetworkChats(
       List<NextGenStreetwearShowcaseChatStruct> value) {
     _streetCultureExpressionNetworkChats = value;
-    prefs.setStringList('ff_streetCultureExpressionNetworkChats',
+    prefs.setStringList(
+        'UrbanTrendExploration_streetCultureExpressionNetworkChats',
         value.map((x) => x.serialize()).toList());
   }
 
@@ -594,7 +595,7 @@ class StreetStyleViberaConnection extends ChangeNotifier {
       NextGenStreetwearShowcaseChatStruct value) {
     streetCultureExpressionNetworkChats.add(value);
     prefs.setStringList(
-        'ff_streetCultureExpressionNetworkChats',
+        'UrbanTrendExploration_streetCultureExpressionNetworkChats',
         _streetCultureExpressionNetworkChats
             .map((x) => x.serialize())
             .toList());
@@ -609,7 +610,7 @@ class StreetStyleViberaConnection extends ChangeNotifier {
     streetCultureExpressionNetworkChats[index] =
         updateFn(_streetCultureExpressionNetworkChats[index]);
     prefs.setStringList(
-        'ff_streetCultureExpressionNetworkChats',
+        'UrbanTrendExploration_streetCultureExpressionNetworkChats',
         _streetCultureExpressionNetworkChats
             .map((x) => x.serialize())
             .toList());
@@ -631,14 +632,16 @@ class StreetStyleViberaConnection extends ChangeNotifier {
   set aestheticStyleInspirationMessages(
       List<GlobalHypeFashionExchangeMessageStruct> value) {
     _aestheticStyleInspirationMessages = value;
-    prefs.setStringList('ff_aestheticStyleInspirationMessages',
+    prefs.setStringList(
+        'UrbanTrendExploration_aestheticStyleInspirationMessages',
         value.map((x) => x.serialize()).toList());
   }
 
   void addToAestheticStyleInspirationMessages(
       GlobalHypeFashionExchangeMessageStruct value) {
     aestheticStyleInspirationMessages.add(value);
-    prefs.setStringList('ff_aestheticStyleInspirationMessages',
+    prefs.setStringList(
+        'UrbanTrendExploration_aestheticStyleInspirationMessages',
         _aestheticStyleInspirationMessages.map((x) => x.serialize()).toList());
   }
 
@@ -650,7 +653,8 @@ class StreetStyleViberaConnection extends ChangeNotifier {
   ) {
     aestheticStyleInspirationMessages[index] =
         updateFn(_aestheticStyleInspirationMessages[index]);
-    prefs.setStringList('ff_aestheticStyleInspirationMessages',
+    prefs.setStringList(
+        'UrbanTrendExploration_aestheticStyleInspirationMessages',
         _aestheticStyleInspirationMessages.map((x) => x.serialize()).toList());
   }
 }

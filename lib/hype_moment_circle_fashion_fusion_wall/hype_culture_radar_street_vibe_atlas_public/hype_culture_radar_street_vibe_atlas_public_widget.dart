@@ -34,8 +34,8 @@ class _HypeCultureRadarStreetVibeAtlasPublicWidgetState
     _model = createModel(
         context, () => HypeCultureRadarStreetVibeAtlasPublicModel());
 
-    _model.textController ??= TextEditingController();
-    _model.textFieldFocusNode ??= FocusNode();
+    _model.urbanTrendsettersViberaPlaza ??= TextEditingController();
+    _model.streetViberaCultureCelebrationNest ??= FocusNode();
   }
 
   @override
@@ -125,8 +125,10 @@ class _HypeCultureRadarStreetVibeAtlasPublicWidgetState
                                     child: Container(
                                       width: double.infinity,
                                       child: TextFormField(
-                                        controller: _model.textController,
-                                        focusNode: _model.textFieldFocusNode,
+                                        controller:
+                                            _model.urbanTrendsettersViberaPlaza,
+                                        focusNode: _model
+                                            .streetViberaCultureCelebrationNest,
                                         autofocus: false,
                                         textInputAction: TextInputAction.done,
                                         obscureText: false,
@@ -277,7 +279,7 @@ class _HypeCultureRadarStreetVibeAtlasPublicWidgetState
                                                 .info,
                                         enableInteractiveSelection: true,
                                         validator: _model
-                                            .textControllerValidator
+                                            .viberaThriftStyleCollaboration
                                             .asValidator(context),
                                       ),
                                     ),
@@ -372,7 +374,7 @@ class _HypeCultureRadarStreetVibeAtlasPublicWidgetState
                                               padding: MediaQuery.viewInsetsOf(
                                                   context),
                                               child:
-                                                  ButterCookieDreamveilStudioUploadMedia(
+                                                  ViberaAuthenticStyleMarketMedia(
                                                 allowVideoUpload: false,
                                                 onMediaSelected: (String path,
                                                     MediaType type) {
@@ -491,7 +493,9 @@ class _HypeCultureRadarStreetVibeAtlasPublicWidgetState
                                 return;
                               }
 
-                              if (_model.textController.text.trim().isEmpty) {
+                              if (_model.urbanTrendsettersViberaPlaza.text
+                                  .trim()
+                                  .isEmpty) {
                                 hypebeastViberaOutfitShowcase(
                                     context,
                                     'Please enter content for your post',
@@ -553,7 +557,7 @@ class _HypeCultureRadarStreetVibeAtlasPublicWidgetState
                                     StreetStyleViberaConnection()
                                         .urbanTrendVisualCollaborationCurrent,
                                 crossCultureTrendExchangeHubPostsDescribe:
-                                    _model.textController.text,
+                                    _model.urbanTrendsettersViberaPlaza.text,
                                 crossCultureTrendExchangeHubPostsComments: 0,
                                 crossCultureTrendExchangeHubPostsCreateTime:
                                     getCurrentTimestamp,

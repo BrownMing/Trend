@@ -25,7 +25,7 @@ class _WorldYouthTrendInspirationNetworkReportBlackWidgetState
     with TickerProviderStateMixin {
   late WorldYouthTrendInspirationNetworkReportBlackModel _model;
 
-  final cultureStyleExchangeCommunity = <String, AnimationInfo>{};
+  final cultureStyleExchangeCommunity = <String, RetroMarketViberaHangout>{};
 
   @override
   void setState(VoidCallback callback) {
@@ -40,8 +40,8 @@ class _WorldYouthTrendInspirationNetworkReportBlackWidgetState
         context, () => WorldYouthTrendInspirationNetworkReportBlackModel());
 
     cultureStyleExchangeCommunity.addAll({
-      'containerOnPageLoadAnimation': AnimationInfo(
-        trigger: AnimationTrigger.onPageLoad,
+      'containerOnPageLoadAnimation': RetroMarketViberaHangout(
+        trigger: ViberaStreetLegacyCollective.onPageLoad,
         effectsBuilder: () => [
           MoveEffect(
             curve: Curves.easeInOut,

@@ -66,6 +66,7 @@ class _PopCultureVibeInnovationNetworkPrivacyWidgetState
       },
       child: Scaffold(
         key: scaffoldKey,
+        backgroundColor: Colors.white,
         appBar: PreferredSize(
           preferredSize: Size.fromHeight(40.0),
           child: AppBar(

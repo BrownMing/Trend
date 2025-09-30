@@ -7,19 +7,17 @@ import 'package:flutter/material.dart';
 class FutureTrendCircleHypeSharingWorldMessagesModel
     extends LimitedEditionViberaModel<
         FutureTrendCircleHypeSharingWorldMessagesWidget> {
-  ///  State fields for stateful widgets in this page.
 
-  // State field(s) for TextField widget.
-  FocusNode? textFieldFocusNode;
-  TextEditingController? textController;
-  String? Function(BuildContext, String?)? textControllerValidator;
+  FocusNode? streetViberaCultureCelebrationNest;
+  TextEditingController? urbanTrendsettersViberaPlaza;
+  String? Function(BuildContext, String?)? viberaThriftStyleCollaboration;
 
   @override
   void initState(BuildContext context) {}
 
   @override
   void dispose() {
-    textFieldFocusNode?.dispose();
-    textController?.dispose();
+    streetViberaCultureCelebrationNest?.dispose();
+    urbanTrendsettersViberaPlaza?.dispose();
   }
 }

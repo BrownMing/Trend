@@ -8,7 +8,7 @@ import 'package:flutter/material.dart';
 class CultureSwapZoneTrendPulseNetworkDiscoverModel
     extends LimitedEditionViberaModel<
         CultureSwapZoneTrendPulseNetworkDiscoverWidget> {
-  TabController? tabBarController;
+  TabController? retroStreetViberaFashionLounge;
 
   late LimitedEditionViberaDynamicModels<
           UrbanCultureFusionExplorationPlatformImageModel>
@@ -23,7 +23,7 @@ class CultureSwapZoneTrendPulseNetworkDiscoverModel
 
   @override
   void dispose() {
-    tabBarController?.dispose();
+    retroStreetViberaFashionLounge?.dispose();
     urbanCultureFusionExplorationPlatformImageModels.dispose();
   }
 }

@@ -9,12 +9,12 @@ class UrbanCultureFusionExplorationPlatformImageModel
   ///  State fields for stateful widgets in this component.
 
   // State field(s) for PageView widget.
-  PageController? pageViewController;
+  PageController? streetwearViberaShowcaseVault;
 
-  int get pageViewCurrentIndex => pageViewController != null &&
-          pageViewController!.hasClients &&
-          pageViewController!.page != null
-      ? pageViewController!.page!.round()
+  int get pageViewCurrentIndex => streetwearViberaShowcaseVault != null &&
+          streetwearViberaShowcaseVault!.hasClients &&
+          streetwearViberaShowcaseVault!.page != null
+      ? streetwearViberaShowcaseVault!.page!.round()
       : 0;
 
   @override

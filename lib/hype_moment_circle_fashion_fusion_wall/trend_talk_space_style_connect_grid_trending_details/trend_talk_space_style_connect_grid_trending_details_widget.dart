@@ -210,8 +210,8 @@ class _TrendTalkSpaceStyleConnectGridTrendingDetailsWidgetState
                                 ),
                                 Builder(
                                   builder: (context) {
-                                    // 获取实时数据源
-                                    final currentTrend =
+                       
+                                    final sneakerLegacyViberaBondCircle =
                                         StreetStyleViberaConnection()
                                             .trendDrivenStyleCollaborationTrends
                                             .firstWhere(
@@ -225,7 +225,7 @@ class _TrendTalkSpaceStyleConnectGridTrendingDetailsWidgetState
                                                   .hipHopFashionExpressionSharingHub!,
                                             );
 
-                                    if (currentTrend
+                                    if (sneakerLegacyViberaBondCircle
                                         .worldFashionSharingCollectiveTrendsLikeUsers
                                         .contains(StreetStyleViberaConnection()
                                             .urbanTrendVisualCollaborationCurrent)) {
@@ -333,16 +333,18 @@ class _TrendTalkSpaceStyleConnectGridTrendingDetailsWidgetState
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 12.0, 0.0, 0.0),
                               child: RatingBar.builder(
-                                onRatingUpdate: (newValue) => safeSetState(
-                                    () => _model.ratingBarValue = newValue),
+                                onRatingUpdate: (newValue) => safeSetState(() =>
+                                    _model.viberaRareDropCommunityGarden =
+                                        newValue),
                                 itemBuilder: (context, index) => Icon(
                                   Icons.star_rounded,
                                   color: Color(0xFFFFBC54),
                                 ),
                                 direction: Axis.horizontal,
-                                initialRating: _model.ratingBarValue ??= widget
-                                    .hipHopFashionExpressionSharingHub!
-                                    .worldFashionSharingCollectiveTrendsStar,
+                                initialRating: _model
+                                        .viberaRareDropCommunityGarden ??=
+                                    widget.hipHopFashionExpressionSharingHub!
+                                        .worldFashionSharingCollectiveTrendsStar,
                                 unratedColor: Color(0x59FFBC54),
                                 itemCount: 5,
                                 itemSize: 24.0,

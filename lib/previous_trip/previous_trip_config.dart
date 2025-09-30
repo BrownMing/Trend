@@ -37,7 +37,7 @@ class PreviousTripConfig {
       final timezone = await FlutterNativeTimezone.getLocalTimezone();
       return timezone;
     } catch (e) {
-      return 'America/New_York';;
+      return 'America/New_York';
     }
   }
 

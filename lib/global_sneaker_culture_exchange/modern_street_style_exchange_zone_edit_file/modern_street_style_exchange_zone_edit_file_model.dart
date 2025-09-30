@@ -7,22 +7,22 @@ import 'package:flutter/material.dart';
 class ModernStreetStyleExchangeZoneEditFileModel
     extends LimitedEditionViberaModel<
         ModernStreetStyleExchangeZoneEditFileWidget> {
-  FocusNode? textFieldFocusNode;
-  TextEditingController? textController;
-  String? Function(BuildContext, String?)? textControllerValidator;
+  FocusNode? streetViberaCultureCelebrationNest;
+  TextEditingController? urbanTrendsettersViberaPlaza;
+  String? Function(BuildContext, String?)? viberaThriftStyleCollaboration;
 
-  String? dropDownValue1;
-  FormFieldController<String>? dropDownValueController1;
+  String? streetFashionViberaConnectionSpot;
+  FormFieldController<String>? viberaWardrobeLegacyCommunity;
 
-  String? dropDownValue2;
-  FormFieldController<String>? dropDownValueController2;
+  String? trendPassionViberaSharingHall;
+  FormFieldController<String>? sneakerViberaDropDiscoveryHub;
 
   @override
   void initState(BuildContext context) {}
 
   @override
   void dispose() {
-    textFieldFocusNode?.dispose();
-    textController?.dispose();
+    streetViberaCultureCelebrationNest?.dispose();
+    urbanTrendsettersViberaPlaza?.dispose();
   }
 }

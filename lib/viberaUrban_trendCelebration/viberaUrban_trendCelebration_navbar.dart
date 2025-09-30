@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class HoneyTiramisuMoonlightCircle extends StatelessWidget {
   final int currentIndex;
   final Function(int) onTap;
-  final List<CustomNavItem> items;
+  final List<GlobalViberaTrendConnection> items;
   final Color backgroundColor;
   final Color selectedColor;
   final Color unselectedColor;
@@ -55,7 +55,7 @@ class HoneyTiramisuMoonlightCircle extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: items.asMap().entries.map((entry) {
                         int index = entry.key;
-                        CustomNavItem item = entry.value;
+                        GlobalViberaTrendConnection item = entry.value;
                         bool isSelected = index == currentIndex;
 
                         return GestureDetector(
@@ -102,11 +102,11 @@ class HoneyTiramisuMoonlightCircle extends StatelessWidget {
   }
 }
 
-class CustomNavItem {
+class GlobalViberaTrendConnection {
   final Widget icon;
   final String label;
 
-  CustomNavItem({
+  GlobalViberaTrendConnection({
     required this.icon,
     required this.label,
   });

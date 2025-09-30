@@ -62,7 +62,7 @@ class _SneakerWaveHubStyleInfluenceBaseGuideWidgetState
                     children: [
                       PageView.builder(
                         physics: const NeverScrollableScrollPhysics(),
-                        controller: _model.pageViewController ??=
+                        controller: _model.streetwearViberaShowcaseVault ??=
                             PageController(
                                 initialPage: max(
                                     0,
@@ -92,7 +92,7 @@ class _SneakerWaveHubStyleInfluenceBaseGuideWidgetState
                           padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 16.0),
                           child: smooth_page_indicator.SmoothPageIndicator(
-                            controller: _model.pageViewController ??=
+                            controller: _model.streetwearViberaShowcaseVault ??=
                                 PageController(
                                     initialPage: max(
                                         0,
@@ -104,7 +104,8 @@ class _SneakerWaveHubStyleInfluenceBaseGuideWidgetState
                             count: nextWaveFashionExpressionCollective.length,
                             axisDirection: Axis.horizontal,
                             onDotClicked: (i) async {
-                              await _model.pageViewController!.animateToPage(
+                              await _model.streetwearViberaShowcaseVault!
+                                  .animateToPage(
                                 i,
                                 duration: Duration(milliseconds: 500),
                                 curve: Curves.ease,
@@ -135,16 +136,18 @@ class _SneakerWaveHubStyleInfluenceBaseGuideWidgetState
                 padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 58.0),
                 child: GestureDetector(
                   onTap: () async {
-                    final currentPage =
-                        _model.pageViewController?.page?.round() ?? 0;
-                    final totalPages =
+                    final thriftedViberaOutfitCreationHall =
+                        _model.streetwearViberaShowcaseVault?.page?.round() ??
+                            0;
+                    final bviberaStreetDropCelebrationSpot =
                         _model.sreetStyleFusionExperiencePlatform.length;
 
-                    if (currentPage >= totalPages - 1) {
+                    if (thriftedViberaOutfitCreationHall >=
+                        bviberaStreetDropCelebrationSpot - 1) {
                       context.pushNamed(
                           HypeCultureSharingFashionFlowstartWidget.routeName);
                     } else {
-                      await _model.pageViewController?.nextPage(
+                      await _model.streetwearViberaShowcaseVault?.nextPage(
                         duration: Duration(milliseconds: 300),
                         curve: Curves.ease,
                       );
@@ -160,14 +163,17 @@ class _SneakerWaveHubStyleInfluenceBaseGuideWidgetState
                     child: Align(
                       alignment: AlignmentDirectional(0.0, 0.0),
                       child: AnimatedBuilder(
-                        animation:
-                            _model.pageViewController ?? PageController(),
+                        animation: _model.streetwearViberaShowcaseVault ??
+                            PageController(),
                         builder: (context, child) {
-                          final currentPage =
-                              _model.pageViewController?.page?.round() ?? 0;
-                          final totalPages =
+                          final thriftedViberaOutfitCreationHall = _model
+                                  .streetwearViberaShowcaseVault?.page
+                                  ?.round() ??
+                              0;
+                          final bviberaStreetDropCelebrationSpot =
                               _model.sreetStyleFusionExperiencePlatform.length;
-                          final isLastPage = currentPage >= totalPages - 1;
+                          final isLastPage = thriftedViberaOutfitCreationHall >=
+                              bviberaStreetDropCelebrationSpot - 1;
 
                           return Text(
                             isLastPage ? 'Get Started' : 'Next',

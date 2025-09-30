@@ -38,8 +38,8 @@ class _LifestylePhotographyInspirationWallUploadFileWidgetState
     _model = createModel(
         context, () => LifestylePhotographyInspirationWallUploadFileModel());
 
-    _model.textController ??= TextEditingController();
-    _model.textFieldFocusNode ??= FocusNode();
+    _model.urbanTrendsettersViberaPlaza ??= TextEditingController();
+    _model.streetViberaCultureCelebrationNest ??= FocusNode();
   }
 
   @override
@@ -198,7 +198,7 @@ class _LifestylePhotographyInspirationWallUploadFileWidgetState
                                                       MediaQuery.viewInsetsOf(
                                                           context),
                                                   child:
-                                                      ButterCookieDreamveilStudioUploadMedia(
+                                                      ViberaAuthenticStyleMarketMedia(
                                                     allowVideoUpload: false,
                                                     onMediaSelected:
                                                         (String path,
@@ -308,8 +308,10 @@ class _LifestylePhotographyInspirationWallUploadFileWidgetState
                                     child: Container(
                                       width: double.infinity,
                                       child: TextFormField(
-                                        controller: _model.textController,
-                                        focusNode: _model.textFieldFocusNode,
+                                        controller:
+                                            _model.urbanTrendsettersViberaPlaza,
+                                        focusNode: _model
+                                            .streetViberaCultureCelebrationNest,
                                         autofocus: false,
                                         textInputAction: TextInputAction.done,
                                         obscureText: false,
@@ -449,7 +451,7 @@ class _LifestylePhotographyInspirationWallUploadFileWidgetState
                                                 .info,
                                         enableInteractiveSelection: true,
                                         validator: _model
-                                            .textControllerValidator
+                                            .viberaThriftStyleCollaboration
                                             .asValidator(context),
                                       ),
                                     ),
@@ -502,11 +504,12 @@ class _LifestylePhotographyInspirationWallUploadFileWidgetState
                                   ),
                                   child: LimitedEditionViberaDropDown<String>(
                                     controller:
-                                        _model.dropDownValueController1 ??=
+                                        _model.viberaWardrobeLegacyCommunity ??=
                                             FormFieldController<String>(null),
                                     options: ['Male', 'Female'],
-                                    onChanged: (val) => safeSetState(
-                                        () => _model.dropDownValue1 = val),
+                                    onChanged: (val) => safeSetState(() => _model
+                                            .streetFashionViberaConnectionSpot =
+                                        val),
                                     width: double.infinity,
                                     height: double.infinity,
                                     textStyle: LimitedEditionViberaTheme.of(
@@ -606,12 +609,13 @@ class _LifestylePhotographyInspirationWallUploadFileWidgetState
                                   ),
                                   child: LimitedEditionViberaDropDown<String>(
                                     controller:
-                                        _model.dropDownValueController2 ??=
+                                        _model.sneakerViberaDropDiscoveryHub ??=
                                             FormFieldController<String>(null),
                                     options: List.generate(
                                         18, (index) => '${18 + index} age'),
-                                    onChanged: (val) => safeSetState(
-                                        () => _model.dropDownValue2 = val),
+                                    onChanged: (val) => safeSetState(() =>
+                                        _model.trendPassionViberaSharingHall =
+                                            val),
                                     width: double.infinity,
                                     height: double.infinity,
                                     maxHeight: 250,
@@ -688,10 +692,15 @@ class _LifestylePhotographyInspirationWallUploadFileWidgetState
                               ),
                               child: GestureDetector(
                                 onTap: () async {
-                                  final nickname =
-                                      _model.textController?.text ?? '';
-                                  final gender = _model.dropDownValue1 ?? '';
-                                  final age = _model.dropDownValue2 ?? '';
+                                  final nickname = _model
+                                          .urbanTrendsettersViberaPlaza?.text ??
+                                      '';
+                                  final gender = _model
+                                          .streetFashionViberaConnectionSpot ??
+                                      '';
+                                  final age =
+                                      _model.trendPassionViberaSharingHall ??
+                                          '';
                                   final photoPath = _model
                                           .globalStreetwearInspirationCollective ??
                                       '';

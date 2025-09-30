@@ -351,7 +351,9 @@ class _FashionCollaborationSharingArenaMywalletsWidgetState
                             },
                           ),
                         ),
-                      ],
+                      ].addToEnd(SizedBox(
+                        height: 60,
+                      )),
                     ),
                   ),
                 ),

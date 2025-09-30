@@ -2,6 +2,7 @@ import '../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_theme.da
 import '../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_util.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:camera/camera.dart';
 import 'urban_style_expression_platform_video_chat_model.dart';
 export 'urban_style_expression_platform_video_chat_model.dart';
 
@@ -72,6 +73,32 @@ class _UrbanStyleExpressionPlatformVideoChatWidgetState
                   color:
                       LimitedEditionViberaTheme.of(context).secondaryBackground,
                   borderRadius: BorderRadius.circular(12.0),
+                ),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(12.0),
+                  child: FutureBuilder<void>(
+                    future: _model.cameraInitializeFuture,
+                    builder: (context, snapshot) {
+                      if (snapshot.connectionState == ConnectionState.done) {
+                        if (_model.cameraController != null &&
+                            _model.cameraController!.value.isInitialized) {
+                          return CameraPreview(_model.cameraController!);
+                        } else {
+                          return Center(
+                            child: Text(
+                              'The camera initialization failed',
+                              style: LimitedEditionViberaTheme.of(context)
+                                  .bodyMedium,
+                            ),
+                          );
+                        }
+                      } else {
+                        return Center(
+                          child: CircularProgressIndicator(),
+                        );
+                      }
+                    },
+                  ),
                 ),
               ),
             ),

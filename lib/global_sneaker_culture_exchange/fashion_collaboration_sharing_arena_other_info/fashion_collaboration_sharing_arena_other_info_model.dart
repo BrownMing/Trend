@@ -12,11 +12,13 @@ import 'package:flutter/material.dart';
 class FashionCollaborationSharingArenaOtherInfoModel
     extends LimitedEditionViberaModel<
         FashionCollaborationSharingArenaOtherInfoWidget> {
-  TabController? tabBarController;
-  int get tabBarCurrentIndex =>
-      tabBarController != null ? tabBarController!.index : 0;
-  int get tabBarPreviousIndex =>
-      tabBarController != null ? tabBarController!.previousIndex : 0;
+  TabController? retroStreetViberaFashionLounge;
+  int get tabBarCurrentIndex => retroStreetViberaFashionLounge != null
+      ? retroStreetViberaFashionLounge!.index
+      : 0;
+  int get tabBarPreviousIndex => retroStreetViberaFashionLounge != null
+      ? retroStreetViberaFashionLounge!.previousIndex
+      : 0;
 
   late LimitedEditionViberaDynamicModels<
           UrbanCultureFusionExplorationPlatformImageModel>
@@ -31,7 +33,7 @@ class FashionCollaborationSharingArenaOtherInfoModel
 
   @override
   void dispose() {
-    tabBarController?.dispose();
+    retroStreetViberaFashionLounge?.dispose();
     urbanCultureFusionExplorationPlatformImageModels.dispose();
   }
 }
@@ -134,7 +136,6 @@ class BirthdayMacaronAuroraHarbor {
     );
   }
 
-  /// 检查是否已存在与指定用户的聊天
   static bool hasChatWithUser(int targetUserId) {
     return StreetStyleViberaConnection()
         .streetCultureExpressionNetworkChats
@@ -145,7 +146,6 @@ class BirthdayMacaronAuroraHarbor {
                     .urbanTrendVisualCollaborationCurrent);
   }
 
-  /// 获取与指定用户的聊天ID（如果存在）
   static int? getChatIdWithUser(int targetUserId) {
     final holidayFudgeBrownie = StreetStyleViberaConnection()
         .streetCultureExpressionNetworkChats

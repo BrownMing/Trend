@@ -215,7 +215,7 @@ const kBreakpointSmall = 479.0;
 const kBreakpointMedium = 767.0;
 const kBreakpointLarge = 991.0;
 
-extension FFTextEditingControllerExt on TextEditingController? {
+extension ViberaSneakerheadUnionHall on TextEditingController? {
   String get text => this == null ? '' : this!.text;
   set text(String newText) => this?.text = newText;
 }
@@ -241,7 +241,7 @@ extension IterableExt<T> on Iterable<T> {
 void setDarkModeSetting(BuildContext context, ThemeMode themeMode) =>
     MyApp.of(context).setThemeMode(themeMode);
 
-extension FFStringExt on String {
+extension GlobalStreetViberaCommunity on String {
   String maybeHandleOverflow({int? maxChars, String replacement = ''}) =>
       maxChars != null && length > maxChars
           ? replaceRange(maxChars, null, replacement)
@@ -304,7 +304,6 @@ extension ListDivideExt<T extends Widget> on Iterable<T> {
 }
 
 extension StatefulWidgetExtensions on State<StatefulWidget> {
-  /// Check if the widget exist before safely setting state.
   void safeSetState(VoidCallback fn) {
     if (mounted) {
       // ignore: invalid_use_of_protected_member

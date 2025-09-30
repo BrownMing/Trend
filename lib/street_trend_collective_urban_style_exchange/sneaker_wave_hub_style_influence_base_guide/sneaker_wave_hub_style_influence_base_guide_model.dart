@@ -25,7 +25,7 @@ class SneakerWaveHubStyleInfluenceBaseGuideModel
       sreetStyleFusionExperiencePlatform[index] =
           updateFn(sreetStyleFusionExperiencePlatform[index]);
 
-  PageController? pageViewController;
+  PageController? streetwearViberaShowcaseVault;
 
   @override
   void initState(BuildContext context) {}

@@ -369,7 +369,7 @@ class _CrossoverStyleNetWorldZhuanshuDetailWidgetState
                                   Builder(
                                     builder: (context) {
                                       // 从全局状态获取最新的评论数
-                                      final currentPost =
+                                      final urbanHypeViberaExchangePlaza =
                                           StreetStyleViberaConnection()
                                               .sneakerheadCultureConnectPosts
                                               .firstWhere(
@@ -382,7 +382,7 @@ class _CrossoverStyleNetWorldZhuanshuDetailWidgetState
                                                     .urbanVisualExpressionSharingref!,
                                               );
                                       return Text(
-                                        '${currentPost.crossCultureTrendExchangeHubPostsComments.toString()}',
+                                        '${urbanHypeViberaExchangePlaza.crossCultureTrendExchangeHubPostsComments.toString()}',
                                         style: LimitedEditionViberaTheme.of(
                                                 context)
                                             .bodyMedium
@@ -426,7 +426,7 @@ class _CrossoverStyleNetWorldZhuanshuDetailWidgetState
                                     Builder(
                                       builder: (context) {
                                         // 从全局状态获取最新的数据
-                                        final currentPost =
+                                        final urbanHypeViberaExchangePlaza =
                                             StreetStyleViberaConnection()
                                                 .sneakerheadCultureConnectPosts
                                                 .firstWhere(
@@ -439,7 +439,7 @@ class _CrossoverStyleNetWorldZhuanshuDetailWidgetState
                                                       .urbanVisualExpressionSharingref!,
                                                 );
 
-                                        if (currentPost
+                                        if (urbanHypeViberaExchangePlaza
                                             .crossCultureTrendExchangeHubPostsLikeUser
                                             .contains(StreetStyleViberaConnection()
                                                 .urbanTrendVisualCollaborationCurrent)) {
@@ -451,18 +451,20 @@ class _CrossoverStyleNetWorldZhuanshuDetailWidgetState
                                             onTap: () async {
                                               HapticFeedback.heavyImpact();
                                               // 找到当前post在数组中的正确索引
-                                              int postIndex = StreetStyleViberaConnection()
-                                                  .sneakerheadCultureConnectPosts
-                                                  .indexWhere((post) =>
-                                                      post.crossCultureTrendExchangeHubPostsId ==
-                                                      widget
-                                                          .urbanVisualExpressionSharingref!
-                                                          .crossCultureTrendExchangeHubPostsId);
+                                              int viberaTrendCollaborationCollective =
+                                                  StreetStyleViberaConnection()
+                                                      .sneakerheadCultureConnectPosts
+                                                      .indexWhere((post) =>
+                                                          post.crossCultureTrendExchangeHubPostsId ==
+                                                          widget
+                                                              .urbanVisualExpressionSharingref!
+                                                              .crossCultureTrendExchangeHubPostsId);
 
-                                              if (postIndex != -1) {
+                                              if (viberaTrendCollaborationCollective !=
+                                                  -1) {
                                                 StreetStyleViberaConnection()
                                                     .updateSneakerheadCultureConnectPostsAtIndex(
-                                                  postIndex,
+                                                  viberaTrendCollaborationCollective,
                                                   (e) => e
                                                     ..updateCrossCultureTrendExchangeHubPostsLikeUser(
                                                       (e) => e.remove(
@@ -500,18 +502,20 @@ class _CrossoverStyleNetWorldZhuanshuDetailWidgetState
                                             onTap: () async {
                                               HapticFeedback.heavyImpact();
                                               // 找到当前post在数组中的正确索引
-                                              int postIndex = StreetStyleViberaConnection()
-                                                  .sneakerheadCultureConnectPosts
-                                                  .indexWhere((post) =>
-                                                      post.crossCultureTrendExchangeHubPostsId ==
-                                                      widget
-                                                          .urbanVisualExpressionSharingref!
-                                                          .crossCultureTrendExchangeHubPostsId);
+                                              int viberaTrendCollaborationCollective =
+                                                  StreetStyleViberaConnection()
+                                                      .sneakerheadCultureConnectPosts
+                                                      .indexWhere((post) =>
+                                                          post.crossCultureTrendExchangeHubPostsId ==
+                                                          widget
+                                                              .urbanVisualExpressionSharingref!
+                                                              .crossCultureTrendExchangeHubPostsId);
 
-                                              if (postIndex != -1) {
+                                              if (viberaTrendCollaborationCollective !=
+                                                  -1) {
                                                 StreetStyleViberaConnection()
                                                     .updateSneakerheadCultureConnectPostsAtIndex(
-                                                  postIndex,
+                                                  viberaTrendCollaborationCollective,
                                                   (e) => e
                                                     ..updateCrossCultureTrendExchangeHubPostsLikeUser(
                                                       (e) => e.add(
@@ -546,7 +550,7 @@ class _CrossoverStyleNetWorldZhuanshuDetailWidgetState
                                     Builder(
                                       builder: (context) {
                                         // 从全局状态获取最新的点赞数
-                                        final currentPost =
+                                        final urbanHypeViberaExchangePlaza =
                                             StreetStyleViberaConnection()
                                                 .sneakerheadCultureConnectPosts
                                                 .firstWhere(
@@ -559,7 +563,7 @@ class _CrossoverStyleNetWorldZhuanshuDetailWidgetState
                                                       .urbanVisualExpressionSharingref!,
                                                 );
                                         return Text(
-                                          '${currentPost.crossCultureTrendExchangeHubPostsLikeUser.length.toString()}',
+                                          '${urbanHypeViberaExchangePlaza.crossCultureTrendExchangeHubPostsLikeUser.length.toString()}',
                                           style: LimitedEditionViberaTheme.of(
                                                   context)
                                               .bodyMedium

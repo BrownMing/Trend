@@ -38,7 +38,7 @@ class _CultureSwapZoneTrendPulseNetworkDiscoverWidgetState
     _model = createModel(
         context, () => CultureSwapZoneTrendPulseNetworkDiscoverModel());
 
-    _model.tabBarController = TabController(
+    _model.retroStreetViberaFashionLounge = TabController(
       vsync: this,
       length: 2,
       initialIndex: 0,
@@ -217,7 +217,7 @@ class _CultureSwapZoneTrendPulseNetworkDiscoverWidgetState
                                   text: 'For you',
                                 ),
                               ],
-                              controller: _model.tabBarController,
+                              controller: _model.retroStreetViberaFashionLounge,
                               onTap: (i) async {
                                 [() async {}, () async {}][i]();
                               },
@@ -226,7 +226,7 @@ class _CultureSwapZoneTrendPulseNetworkDiscoverWidgetState
                         ),
                         Expanded(
                           child: TabBarView(
-                            controller: _model.tabBarController,
+                            controller: _model.retroStreetViberaFashionLounge,
                             children: [
                               Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
@@ -935,17 +935,17 @@ class _CultureSwapZoneTrendPulseNetworkDiscoverWidgetState
                                                                       HapticFeedback
                                                                           .heavyImpact();
                                                                       // 找到当前post在数组中的正确索引
-                                                                      int postIndex = StreetStyleViberaConnection()
+                                                                      int viberaTrendCollaborationCollective = StreetStyleViberaConnection()
                                                                           .sneakerheadCultureConnectPosts
                                                                           .indexWhere((post) =>
                                                                               post.crossCultureTrendExchangeHubPostsId ==
                                                                               youthArtStyleDiscoveryPlatformItem.crossCultureTrendExchangeHubPostsId);
 
-                                                                      if (postIndex !=
+                                                                      if (viberaTrendCollaborationCollective !=
                                                                           -1) {
                                                                         StreetStyleViberaConnection()
                                                                             .updateSneakerheadCultureConnectPostsAtIndex(
-                                                                          postIndex,
+                                                                          viberaTrendCollaborationCollective,
                                                                           (e) => e
                                                                             ..updateCrossCultureTrendExchangeHubPostsLikeUser(
                                                                               (e) => e.remove(StreetStyleViberaConnection().urbanTrendVisualCollaborationCurrent),
@@ -999,17 +999,17 @@ class _CultureSwapZoneTrendPulseNetworkDiscoverWidgetState
                                                                       HapticFeedback
                                                                           .heavyImpact();
                                                                       // 找到当前post在数组中的正确索引
-                                                                      int postIndex = StreetStyleViberaConnection()
+                                                                      int viberaTrendCollaborationCollective = StreetStyleViberaConnection()
                                                                           .sneakerheadCultureConnectPosts
                                                                           .indexWhere((post) =>
                                                                               post.crossCultureTrendExchangeHubPostsId ==
                                                                               youthArtStyleDiscoveryPlatformItem.crossCultureTrendExchangeHubPostsId);
 
-                                                                      if (postIndex !=
+                                                                      if (viberaTrendCollaborationCollective !=
                                                                           -1) {
                                                                         StreetStyleViberaConnection()
                                                                             .updateSneakerheadCultureConnectPostsAtIndex(
-                                                                          postIndex,
+                                                                          viberaTrendCollaborationCollective,
                                                                           (e) => e
                                                                             ..updateCrossCultureTrendExchangeHubPostsLikeUser(
                                                                               (e) => e.add(StreetStyleViberaConnection().urbanTrendVisualCollaborationCurrent),

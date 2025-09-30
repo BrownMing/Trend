@@ -1,3 +1,4 @@
+import 'package:flutter/gestures.dart';
 import 'package:trend/viberaUrban_trendCelebration/viberaUrban_trendCelebration_totast.dart';
 import '../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_theme.dart';
 import '../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_util.dart';
@@ -30,20 +31,20 @@ class _UrbanCoolStreamRetroFutureFeedSignupWidgetState
     _model =
         createModel(context, () => UrbanCoolStreamRetroFutureFeedSignupModel());
 
-    _model.textController1 ??= TextEditingController();
-    _model.textFieldFocusNode1 ??= FocusNode();
+    _model.nightMarketViberaStyleHarbor ??= TextEditingController();
+    _model.viberaRetroFashionExploration ??= FocusNode();
 
-    _model.textController2 ??= TextEditingController();
-    _model.textFieldFocusNode2 ??= FocusNode();
+    _model.viberaUrbanCollectiveLounge ??= TextEditingController();
+    _model.streetwearCollaborationViberaHub ??= FocusNode();
 
-    _model.textController3 ??= TextEditingController();
-    _model.textFieldFocusNode3 ??= FocusNode();
+    _model.streetwearViberaDiscoveryCircle ??= TextEditingController();
+    _model.viberaHypeCultureShowcase ??= FocusNode();
   }
 
   void _nextGenStyleHubGlobalTrendBox(BuildContext context) {
-    final hipHopStyleHub = _model.textController1.text.trim();
-    final danceTrendSpot = _model.textController2.text.trim();
-    final streetGrooveLab = _model.textController3.text.trim();
+    final hipHopStyleHub = _model.nightMarketViberaStyleHarbor.text.trim();
+    final danceTrendSpot = _model.viberaUrbanCollectiveLounge.text.trim();
+    final streetGrooveLab = _model.streetwearViberaDiscoveryCircle.text.trim();
 
     if (hipHopStyleHub.isEmpty) {
       hypebeastViberaOutfitShowcase(
@@ -66,7 +67,7 @@ class _UrbanCoolStreamRetroFutureFeedSignupWidgetState
       hypebeastViberaOutfitShowcase(
           context, 'The two inputs are inconsistent.', '');
       setState(() {
-        _model.textController3?.clear();
+        _model.streetwearViberaDiscoveryCircle?.clear();
       });
       return;
     }
@@ -74,11 +75,11 @@ class _UrbanCoolStreamRetroFutureFeedSignupWidgetState
       LifestylePhotographyInspirationWallUploadFileWidget.routeName,
       queryParameters: {
         'streetFashionExperienceCommunityZoneEmail': serializeParam(
-          _model.textController1.text,
+          _model.nightMarketViberaStyleHarbor.text,
           ParamType.String,
         ),
         'streetFashionExperienceCommunityZonePassword': serializeParam(
-          _model.textController2.text,
+          _model.viberaUrbanCollectiveLounge.text,
           ParamType.String,
         ),
       }.withoutNulls,
@@ -208,8 +209,10 @@ class _UrbanCoolStreamRetroFutureFeedSignupWidgetState
                                   child: Container(
                                     width: double.infinity,
                                     child: TextFormField(
-                                      controller: _model.textController1,
-                                      focusNode: _model.textFieldFocusNode1,
+                                      controller:
+                                          _model.nightMarketViberaStyleHarbor,
+                                      focusNode:
+                                          _model.viberaRetroFashionExploration,
                                       autofocus: false,
                                       textInputAction: TextInputAction.done,
                                       obscureText: false,
@@ -343,7 +346,8 @@ class _UrbanCoolStreamRetroFutureFeedSignupWidgetState
                                           LimitedEditionViberaTheme.of(context)
                                               .info,
                                       enableInteractiveSelection: true,
-                                      validator: _model.textController1Validator
+                                      validator: _model
+                                          .viberaCultureDrivenTrendStation
                                           .asValidator(context),
                                     ),
                                   ),
@@ -397,8 +401,10 @@ class _UrbanCoolStreamRetroFutureFeedSignupWidgetState
                                     child: Container(
                                       width: double.infinity,
                                       child: TextFormField(
-                                        controller: _model.textController2,
-                                        focusNode: _model.textFieldFocusNode2,
+                                        controller:
+                                            _model.viberaUrbanCollectiveLounge,
+                                        focusNode: _model
+                                            .streetwearCollaborationViberaHub,
                                         autofocus: false,
                                         textInputAction: TextInputAction.done,
                                         obscureText: true,
@@ -538,7 +544,7 @@ class _UrbanCoolStreamRetroFutureFeedSignupWidgetState
                                                 .info,
                                         enableInteractiveSelection: true,
                                         validator: _model
-                                            .textController2Validator
+                                            .sneakerViberaTradingHarbor
                                             .asValidator(context),
                                       ),
                                     ),
@@ -558,8 +564,10 @@ class _UrbanCoolStreamRetroFutureFeedSignupWidgetState
                                     child: Container(
                                       width: double.infinity,
                                       child: TextFormField(
-                                        controller: _model.textController3,
-                                        focusNode: _model.textFieldFocusNode3,
+                                        controller: _model
+                                            .streetwearViberaDiscoveryCircle,
+                                        focusNode:
+                                            _model.viberaHypeCultureShowcase,
                                         autofocus: false,
                                         textInputAction: TextInputAction.done,
                                         obscureText: true,
@@ -699,7 +707,7 @@ class _UrbanCoolStreamRetroFutureFeedSignupWidgetState
                                                 .info,
                                         enableInteractiveSelection: true,
                                         validator: _model
-                                            .textController3Validator
+                                            .viberaRetroWardrobeGarden
                                             .asValidator(context),
                                       ),
                                     ),
@@ -729,10 +737,12 @@ class _UrbanCoolStreamRetroFutureFeedSignupWidgetState
                                     unselectedWidgetColor: Color(0x80FFFFFF),
                                   ),
                                   child: Checkbox(
-                                    value: _model.isAgreementAccepted,
+                                    value:
+                                        _model.globalTrendViberaSharingGarden,
                                     onChanged: (newValue) async {
                                       safeSetState(() => _model
-                                          .isAgreementAccepted = newValue!);
+                                              .globalTrendViberaSharingGarden =
+                                          newValue!);
                                     },
                                     side: BorderSide(
                                       width: 2,
@@ -776,6 +786,21 @@ class _UrbanCoolStreamRetroFutureFeedSignupWidgetState
                                                   decoration:
                                                       TextDecoration.underline,
                                                 ),
+                                            recognizer: TapGestureRecognizer()
+                                              ..onTap = () {
+                                                context.pushNamed(
+                                                  PopCultureVibeInnovationNetworkPrivacyWidget
+                                                      .routeName,
+                                                  queryParameters: {
+                                                    'uthTrendDanceCollaborationCircle':
+                                                        serializeParam(
+                                                      GlobalSneakerViberaLifestyleHub
+                                                          .UrbanBeatStyleFusionPlatformUser,
+                                                      ParamType.String,
+                                                    ),
+                                                  }.withoutNulls,
+                                                );
+                                              },
                                           ),
                                           TextSpan(
                                             text: ' and ',
@@ -802,6 +827,21 @@ class _UrbanCoolStreamRetroFutureFeedSignupWidgetState
                                                   decoration:
                                                       TextDecoration.underline,
                                                 ),
+                                            recognizer: TapGestureRecognizer()
+                                              ..onTap = () {
+                                                context.pushNamed(
+                                                  PopCultureVibeInnovationNetworkPrivacyWidget
+                                                      .routeName,
+                                                  queryParameters: {
+                                                    'uthTrendDanceCollaborationCircle':
+                                                        serializeParam(
+                                                      GlobalSneakerViberaLifestyleHub
+                                                          .UrbanBeatStyleFusionPlatformPrivacy,
+                                                      ParamType.String,
+                                                    ),
+                                                  }.withoutNulls,
+                                                );
+                                              },
                                           ),
                                         ],
                                       ),

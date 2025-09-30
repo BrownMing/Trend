@@ -39,8 +39,8 @@ class _FutureTrendCircleHypeSharingWorldMessagesWidgetState
     _model = createModel(
         context, () => FutureTrendCircleHypeSharingWorldMessagesModel());
 
-    _model.textController ??= TextEditingController();
-    _model.textFieldFocusNode ??= FocusNode();
+    _model.urbanTrendsettersViberaPlaza ??= TextEditingController();
+    _model.streetViberaCultureCelebrationNest ??= FocusNode();
   }
 
   @override
@@ -514,8 +514,7 @@ class _FutureTrendCircleHypeSharingWorldMessagesWidgetState
                                                         ),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsets.all(
-                                                                  1.5),
+                                                              EdgeInsets.all(2),
                                                           child: Stack(
                                                             children: [
                                                               Container(
@@ -705,8 +704,10 @@ class _FutureTrendCircleHypeSharingWorldMessagesWidgetState
                                       child: Container(
                                         width: double.infinity,
                                         child: TextFormField(
-                                          controller: _model.textController,
-                                          focusNode: _model.textFieldFocusNode,
+                                          controller: _model
+                                              .urbanTrendsettersViberaPlaza,
+                                          focusNode: _model
+                                              .streetViberaCultureCelebrationNest,
                                           autofocus: false,
                                           textInputAction: TextInputAction.done,
                                           obscureText: false,
@@ -852,7 +853,7 @@ class _FutureTrendCircleHypeSharingWorldMessagesWidgetState
                                                   .info,
                                           enableInteractiveSelection: true,
                                           validator: _model
-                                              .textControllerValidator
+                                              .viberaThriftStyleCollaboration
                                               .asValidator(context),
                                         ),
                                       ),
@@ -867,12 +868,14 @@ class _FutureTrendCircleHypeSharingWorldMessagesWidgetState
                               hoverColor: Colors.transparent,
                               highlightColor: Colors.transparent,
                               onTap: () async {
-                                if (_model.textController.text != '') {
+                                if (_model.urbanTrendsettersViberaPlaza.text !=
+                                    '') {
                                   StreetStyleViberaConnection()
                                       .addToAestheticStyleInspirationMessages(
                                           GlobalHypeFashionExchangeMessageStruct(
                                     globalHypeFashionExchangeMessageContent:
-                                        _model.textController.text,
+                                        _model
+                                            .urbanTrendsettersViberaPlaza.text,
                                     globalHypeFashionExchangeMessageCreateId:
                                         StreetStyleViberaConnection()
                                             .urbanTrendVisualCollaborationCurrent,
@@ -882,7 +885,8 @@ class _FutureTrendCircleHypeSharingWorldMessagesWidgetState
                                   ));
                                   StreetStyleViberaConnection().update(() {});
                                   safeSetState(() {
-                                    _model.textController?.clear();
+                                    _model.urbanTrendsettersViberaPlaza
+                                        ?.clear();
                                   });
                                 }
                               },

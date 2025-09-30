@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 class TrendTalkSpaceStyleConnectGridTrendingDetailsModel
     extends LimitedEditionViberaModel<
         TrendTalkSpaceStyleConnectGridTrendingDetailsWidget> {
-  double? ratingBarValue;
+  double? viberaRareDropCommunityGarden;
 
   @override
   void initState(BuildContext context) {}

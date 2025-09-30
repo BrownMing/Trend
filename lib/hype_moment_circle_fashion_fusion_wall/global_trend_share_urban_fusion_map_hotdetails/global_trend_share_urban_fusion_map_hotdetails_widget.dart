@@ -159,8 +159,7 @@ class _GlobalTrendShareUrbanFusionMapHotdetailsWidgetState
                                       children: [
                                         Builder(
                                           builder: (context) {
-                                            // 获取实时数据源
-                                            final currentPost =
+                                            final urbanHypeViberaExchangePlaza =
                                                 StreetStyleViberaConnection()
                                                     .sneakerheadCultureConnectPosts
                                                     .firstWhere(
@@ -173,7 +172,7 @@ class _GlobalTrendShareUrbanFusionMapHotdetailsWidgetState
                                                           .modernTrendVisualConnectionArena!,
                                                     );
 
-                                            if (currentPost
+                                            if (urbanHypeViberaExchangePlaza
                                                 .crossCultureTrendExchangeHubPostsLikeUser
                                                 .contains(
                                                     StreetStyleViberaConnection()
@@ -182,18 +181,20 @@ class _GlobalTrendShareUrbanFusionMapHotdetailsWidgetState
                                                 onTap: () async {
                                                   HapticFeedback.heavyImpact();
 
-                                                  int postIndex = StreetStyleViberaConnection()
-                                                      .sneakerheadCultureConnectPosts
-                                                      .indexWhere((post) =>
-                                                          post.crossCultureTrendExchangeHubPostsId ==
-                                                          widget
-                                                              .modernTrendVisualConnectionArena!
-                                                              .crossCultureTrendExchangeHubPostsId);
+                                                  int viberaTrendCollaborationCollective =
+                                                      StreetStyleViberaConnection()
+                                                          .sneakerheadCultureConnectPosts
+                                                          .indexWhere((post) =>
+                                                              post.crossCultureTrendExchangeHubPostsId ==
+                                                              widget
+                                                                  .modernTrendVisualConnectionArena!
+                                                                  .crossCultureTrendExchangeHubPostsId);
 
-                                                  if (postIndex != -1) {
+                                                  if (viberaTrendCollaborationCollective !=
+                                                      -1) {
                                                     StreetStyleViberaConnection()
                                                         .updateSneakerheadCultureConnectPostsAtIndex(
-                                                      postIndex,
+                                                      viberaTrendCollaborationCollective,
                                                       (e) => e
                                                         ..updateCrossCultureTrendExchangeHubPostsLikeUser(
                                                           (e) => e.remove(
@@ -227,18 +228,20 @@ class _GlobalTrendShareUrbanFusionMapHotdetailsWidgetState
                                                 onTap: () async {
                                                   HapticFeedback.heavyImpact();
                                                   // 找到当前post在数组中的正确索引
-                                                  int postIndex = StreetStyleViberaConnection()
-                                                      .sneakerheadCultureConnectPosts
-                                                      .indexWhere((post) =>
-                                                          post.crossCultureTrendExchangeHubPostsId ==
-                                                          widget
-                                                              .modernTrendVisualConnectionArena!
-                                                              .crossCultureTrendExchangeHubPostsId);
+                                                  int viberaTrendCollaborationCollective =
+                                                      StreetStyleViberaConnection()
+                                                          .sneakerheadCultureConnectPosts
+                                                          .indexWhere((post) =>
+                                                              post.crossCultureTrendExchangeHubPostsId ==
+                                                              widget
+                                                                  .modernTrendVisualConnectionArena!
+                                                                  .crossCultureTrendExchangeHubPostsId);
 
-                                                  if (postIndex != -1) {
+                                                  if (viberaTrendCollaborationCollective !=
+                                                      -1) {
                                                     StreetStyleViberaConnection()
                                                         .updateSneakerheadCultureConnectPostsAtIndex(
-                                                      postIndex,
+                                                      viberaTrendCollaborationCollective,
                                                       (e) => e
                                                         ..updateCrossCultureTrendExchangeHubPostsLikeUser(
                                                           (e) => e.add(

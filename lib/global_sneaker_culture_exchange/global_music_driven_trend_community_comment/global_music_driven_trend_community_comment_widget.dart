@@ -37,8 +37,8 @@ class _GlobalMusicDrivenTrendCommunityCommentWidgetState
     _model = createModel(
         context, () => GlobalMusicDrivenTrendCommunityCommentModel());
 
-    _model.textController ??= TextEditingController();
-    _model.textFieldFocusNode ??= FocusNode();
+    _model.urbanTrendsettersViberaPlaza ??= TextEditingController();
+    _model.streetViberaCultureCelebrationNest ??= FocusNode();
   }
 
   @override
@@ -68,15 +68,15 @@ class _GlobalMusicDrivenTrendCommunityCommentWidgetState
           child: Container(
             width: double.infinity,
             child: TextFormField(
-              controller: _model.textController,
-              focusNode: _model.textFieldFocusNode,
+              controller: _model.urbanTrendsettersViberaPlaza,
+              focusNode: _model.streetViberaCultureCelebrationNest,
               onFieldSubmitted: (_) async {
-                if (_model.textController.text != '') {
+                if (_model.urbanTrendsettersViberaPlaza.text != '') {
                   StreetStyleViberaConnection()
                       .addToModernFashionInfluenceComments(
                           CreativeTrendBeatCollCommentsStruct(
                     creativeTrendBeatCollCommentsContent:
-                        _model.textController.text,
+                        _model.urbanTrendsettersViberaPlaza.text,
                     creativeTrendBeatCollCommentsCreateId:
                         StreetStyleViberaConnection()
                             .urbanTrendVisualCollaborationCurrent,
@@ -191,7 +191,8 @@ class _GlobalMusicDrivenTrendCommunityCommentWidgetState
                   ),
               cursorColor: LimitedEditionViberaTheme.of(context).info,
               enableInteractiveSelection: true,
-              validator: _model.textControllerValidator.asValidator(context),
+              validator:
+                  _model.viberaThriftStyleCollaboration.asValidator(context),
             ),
           ),
         ),

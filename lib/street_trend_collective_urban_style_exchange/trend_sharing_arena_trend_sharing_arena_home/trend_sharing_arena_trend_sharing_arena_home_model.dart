@@ -7,13 +7,13 @@ import 'package:flutter/material.dart';
 class TrendSharingArenaTrendSharingArenaHomeModel
     extends LimitedEditionViberaModel<
         TrendSharingArenaTrendSharingArenaHomeWidget> {
-  TabController? tabBarController;
+  TabController? retroStreetViberaFashionLounge;
 
   @override
   void initState(BuildContext context) {}
 
   @override
   void dispose() {
-    tabBarController?.dispose();
+    retroStreetViberaFashionLounge?.dispose();
   }
 }

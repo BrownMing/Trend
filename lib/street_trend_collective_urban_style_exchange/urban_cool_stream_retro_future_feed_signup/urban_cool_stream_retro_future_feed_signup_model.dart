@@ -7,31 +7,31 @@ import 'package:flutter/material.dart';
 class UrbanCoolStreamRetroFutureFeedSignupModel
     extends LimitedEditionViberaModel<
         UrbanCoolStreamRetroFutureFeedSignupWidget> {
-  FocusNode? textFieldFocusNode1;
-  TextEditingController? textController1;
-  String? Function(BuildContext, String?)? textController1Validator;
+  FocusNode? viberaRetroFashionExploration;
+  TextEditingController? nightMarketViberaStyleHarbor;
+  String? Function(BuildContext, String?)? viberaCultureDrivenTrendStation;
 
-  FocusNode? textFieldFocusNode2;
-  TextEditingController? textController2;
-  String? Function(BuildContext, String?)? textController2Validator;
+  FocusNode? streetwearCollaborationViberaHub;
+  TextEditingController? viberaUrbanCollectiveLounge;
+  String? Function(BuildContext, String?)? sneakerViberaTradingHarbor;
 
-  FocusNode? textFieldFocusNode3;
-  TextEditingController? textController3;
-  String? Function(BuildContext, String?)? textController3Validator;
+  FocusNode? viberaHypeCultureShowcase;
+  TextEditingController? streetwearViberaDiscoveryCircle;
+  String? Function(BuildContext, String?)? viberaRetroWardrobeGarden;
 
-  bool isAgreementAccepted = true;
+  bool globalTrendViberaSharingGarden = true;
   @override
   void initState(BuildContext context) {}
 
   @override
   void dispose() {
-    textFieldFocusNode1?.dispose();
-    textController1?.dispose();
+    viberaRetroFashionExploration?.dispose();
+    nightMarketViberaStyleHarbor?.dispose();
 
-    textFieldFocusNode2?.dispose();
-    textController2?.dispose();
+    streetwearCollaborationViberaHub?.dispose();
+    viberaUrbanCollectiveLounge?.dispose();
 
-    textFieldFocusNode3?.dispose();
-    textController3?.dispose();
+    viberaHypeCultureShowcase?.dispose();
+    streetwearViberaDiscoveryCircle?.dispose();
   }
 }

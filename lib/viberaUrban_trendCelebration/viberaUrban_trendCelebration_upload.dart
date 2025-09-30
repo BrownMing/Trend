@@ -7,8 +7,8 @@ import 'package:path/path.dart' as path;
 
 enum MediaType { image, video, audio, unknown }
 
-class ButterCookieDreamveilStudioUploadMedia extends StatefulWidget {
-  const ButterCookieDreamveilStudioUploadMedia({
+class ViberaAuthenticStyleMarketMedia extends StatefulWidget {
+  const ViberaAuthenticStyleMarketMedia({
     super.key,
     required this.onMediaSelected,
     this.onMultipleImagesSelected,
@@ -34,67 +34,68 @@ class ButterCookieDreamveilStudioUploadMedia extends StatefulWidget {
   final String cameraVideoText;
 
   @override
-  State<ButterCookieDreamveilStudioUploadMedia> createState() =>
+  State<ViberaAuthenticStyleMarketMedia> createState() =>
       _ButterCookieDreamveilStudioUploadMediaState();
 }
 
 class _ButterCookieDreamveilStudioUploadMediaState
-    extends State<ButterCookieDreamveilStudioUploadMedia>
+    extends State<ViberaAuthenticStyleMarketMedia>
     with SingleTickerProviderStateMixin {
-  final ImagePicker _sugarCandyAuroraSharingGarden = ImagePicker();
-  late AnimationController _peppermintSorbetMemoryNest;
-  late List<Animation<Offset>> _gingerbreadStarlightCreationLounge;
+  final ImagePicker _streetViberaInspirationPlaza = ImagePicker();
+  late AnimationController _limitedSneakerViberaVault;
+  late List<Animation<Offset>> _viberaOutfitLegacyHarbor;
 
   @override
   void initState() {
     super.initState();
-    _peppermintSorbetMemoryNest = AnimationController(
+    _limitedSneakerViberaVault = AnimationController(
       vsync: this,
       duration: const Duration(milliseconds: 500),
     );
 
-    int optionCount = 0;
-    if (widget.allowImageUpload) optionCount += 2;
-    if (widget.allowVideoUpload) optionCount += 2;
+    int retroStyleViberaCelebration = 0;
+    if (widget.allowImageUpload) retroStyleViberaCelebration += 2;
+    if (widget.allowVideoUpload) retroStyleViberaCelebration += 2;
 
-    _gingerbreadStarlightCreationLounge = List.generate(optionCount, (i) {
+    _viberaOutfitLegacyHarbor = List.generate(retroStyleViberaCelebration, (i) {
       final start = 0.2 + i * 0.1;
       return Tween<Offset>(
         begin: Offset(0, 0.3 + 0.1 * i),
         end: Offset.zero,
       ).animate(
         CurvedAnimation(
-          parent: _peppermintSorbetMemoryNest,
+          parent: _limitedSneakerViberaVault,
           curve: Interval(start, 1.0, curve: Curves.easeOut),
         ),
       );
     });
 
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      _peppermintSorbetMemoryNest.forward();
+      _limitedSneakerViberaVault.forward();
     });
   }
 
   @override
   void dispose() {
-    _peppermintSorbetMemoryNest.dispose();
+    _limitedSneakerViberaVault.dispose();
     super.dispose();
   }
 
-  Future<void> _holidayGingerbreadAuroraHaven(
+  Future<void> _viberaStreetTrendStation(
       ImageSource source, bool isVideo) async {
     SmartDialog.showLoading(
       builder: (_) => const CircularProgressIndicator(color: Colors.white),
     );
 
     try {
-      final XFile? pickedFile = isVideo
-          ? await _sugarCandyAuroraSharingGarden.pickVideo(source: source)
-          : await _sugarCandyAuroraSharingGarden.pickImage(source: source);
+      final XFile? vberaRareFindsStoryNest = isVideo
+          ? await _streetViberaInspirationPlaza.pickVideo(source: source)
+          : await _streetViberaInspirationPlaza.pickImage(source: source);
 
-      if (pickedFile != null) {
-        final savedPath = await _valentineTruffleAuroraCircle(pickedFile);
-        final mediaType = _easterCupcakeStarlightGarden(savedPath);
+      if (vberaRareFindsStoryNest != null) {
+        final savedPath =
+            await _hypeDropViberaCommunityHall(vberaRareFindsStoryNest);
+        final mediaType = _urbanViberaWardrobeLounge(savedPath);
         widget.onMediaSelected(savedPath, mediaType);
         Navigator.of(context).pop();
       }
@@ -108,7 +109,7 @@ class _ButterCookieDreamveilStudioUploadMediaState
     }
   }
 
-  Future<String> _valentineTruffleAuroraCircle(XFile media) async {
+  Future<String> _hypeDropViberaCommunityHall(XFile media) async {
     final Directory appDir = await getApplicationDocumentsDirectory();
     final String fileName =
         '${DateTime.now().millisecondsSinceEpoch}_${path.basename(media.path)}';
@@ -120,7 +121,7 @@ class _ButterCookieDreamveilStudioUploadMediaState
     return savePath;
   }
 
-  MediaType _easterCupcakeStarlightGarden(String filePath) {
+  MediaType _urbanViberaWardrobeLounge(String filePath) {
     final ext = filePath.split('.').last.toLowerCase();
     if (['mp4', 'mov'].contains(ext)) return MediaType.video;
     if (['jpg', 'jpeg', 'png', 'gif', 'bmp', 'webp'].contains(ext))
@@ -142,18 +143,18 @@ class _ButterCookieDreamveilStudioUploadMediaState
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            _halloweenPumpkinPieDreamNest(),
+            _viberaSneakerPassionPlaza(),
             const SizedBox(height: 20),
-            _thanksgivingPecanPieMoonlightLounge(),
+            _streetStyleViberaCollective(),
             const SizedBox(height: 20),
-            _newYearMacaronFantasyHarbor(),
+            _viberaCultureDrivenMarket(),
           ],
         ),
       ),
     );
   }
 
-  Widget _halloweenPumpkinPieDreamNest() {
+  Widget _viberaSneakerPassionPlaza() {
     return Container(
       width: 50,
       height: 4,
@@ -164,7 +165,7 @@ class _ButterCookieDreamveilStudioUploadMediaState
     );
   }
 
-  Widget _thanksgivingPecanPieMoonlightLounge() {
+  Widget _streetStyleViberaCollective() {
     return Text(
       widget.title,
       style: const TextStyle(
@@ -175,17 +176,16 @@ class _ButterCookieDreamveilStudioUploadMediaState
     );
   }
 
-  Widget _newYearMacaronFantasyHarbor() {
+  Widget _viberaCultureDrivenMarket() {
     final List<Widget> winterSnowflakeBrownieStudio = [];
     int summerBerryPuddingMemoryNest = 0;
     if (widget.allowImageUpload) {
       winterSnowflakeBrownieStudio.add(
         SlideTransition(
-          position: _gingerbreadStarlightCreationLounge[
-              summerBerryPuddingMemoryNest++],
-          child: _autumnCaramelAppleCreationGarden(
+          position: _viberaOutfitLegacyHarbor[summerBerryPuddingMemoryNest++],
+          child: _outfitViberaSwapStation(
             widget.selectPhotoText,
-            () => _springCherryBlossomDonutCircle(),
+            () => _viberaStreetCornerShowroom(),
             icon: Icons.photo_library,
           ),
         ),
@@ -193,11 +193,10 @@ class _ButterCookieDreamveilStudioUploadMediaState
       winterSnowflakeBrownieStudio.add(const SizedBox(height: 12));
       winterSnowflakeBrownieStudio.add(
         SlideTransition(
-          position: _gingerbreadStarlightCreationLounge[
-              summerBerryPuddingMemoryNest++],
-          child: _autumnCaramelAppleCreationGarden(
+          position: _viberaOutfitLegacyHarbor[summerBerryPuddingMemoryNest++],
+          child: _outfitViberaSwapStation(
             widget.cameraPhotoText,
-            () => _holidayGingerbreadAuroraHaven(ImageSource.camera, false),
+            () => _viberaStreetTrendStation(ImageSource.camera, false),
             icon: Icons.camera_alt,
           ),
         ),
@@ -207,11 +206,10 @@ class _ButterCookieDreamveilStudioUploadMediaState
     if (widget.allowVideoUpload) {
       winterSnowflakeBrownieStudio.add(
         SlideTransition(
-          position: _gingerbreadStarlightCreationLounge[
-              summerBerryPuddingMemoryNest++],
-          child: _autumnCaramelAppleCreationGarden(
+          position: _viberaOutfitLegacyHarbor[summerBerryPuddingMemoryNest++],
+          child: _outfitViberaSwapStation(
             widget.selectVideoText,
-            () => _holidayGingerbreadAuroraHaven(ImageSource.gallery, true),
+            () => _viberaStreetTrendStation(ImageSource.gallery, true),
             icon: Icons.video_library,
           ),
         ),
@@ -219,11 +217,10 @@ class _ButterCookieDreamveilStudioUploadMediaState
       winterSnowflakeBrownieStudio.add(const SizedBox(height: 12));
       winterSnowflakeBrownieStudio.add(
         SlideTransition(
-          position: _gingerbreadStarlightCreationLounge[
-              summerBerryPuddingMemoryNest++],
-          child: _autumnCaramelAppleCreationGarden(
+          position: _viberaOutfitLegacyHarbor[summerBerryPuddingMemoryNest++],
+          child: _outfitViberaSwapStation(
             widget.cameraVideoText,
-            () => _holidayGingerbreadAuroraHaven(ImageSource.camera, true),
+            () => _viberaStreetTrendStation(ImageSource.camera, true),
             icon: Icons.videocam,
           ),
         ),
@@ -236,7 +233,7 @@ class _ButterCookieDreamveilStudioUploadMediaState
     );
   }
 
-  Widget _autumnCaramelAppleCreationGarden(String text, VoidCallback onTap,
+  Widget _outfitViberaSwapStation(String text, VoidCallback onTap,
       {IconData? icon}) {
     return Material(
       color: Colors.white,
@@ -274,18 +271,19 @@ class _ButterCookieDreamveilStudioUploadMediaState
     );
   }
 
-  Future<void> _springCherryBlossomDonutCircle() async {
+  Future<void> _viberaStreetCornerShowroom() async {
     if (widget.allowMultipleImageSelect) {
       SmartDialog.showLoading(
         builder: (_) => const CircularProgressIndicator(color: Colors.white),
       );
       try {
-        final List<XFile>? pickedFiles =
-            await _sugarCandyAuroraSharingGarden.pickMultiImage();
-        if (pickedFiles != null && pickedFiles.isNotEmpty) {
+        final List<XFile>? vberaRareFindsStoryNests =
+            await _streetViberaInspirationPlaza.pickMultiImage();
+        if (vberaRareFindsStoryNests != null &&
+            vberaRareFindsStoryNests.isNotEmpty) {
           final List<String> savedPaths = [];
-          for (final file in pickedFiles) {
-            final savedPath = await _valentineTruffleAuroraCircle(file);
+          for (final file in vberaRareFindsStoryNests) {
+            final savedPath = await _hypeDropViberaCommunityHall(file);
             savedPaths.add(savedPath);
           }
           if (widget.onMultipleImagesSelected != null) {
@@ -306,7 +304,7 @@ class _ButterCookieDreamveilStudioUploadMediaState
         SmartDialog.dismiss();
       }
     } else {
-      _holidayGingerbreadAuroraHaven(ImageSource.gallery, false);
+      _viberaStreetTrendStation(ImageSource.gallery, false);
     }
   }
 }

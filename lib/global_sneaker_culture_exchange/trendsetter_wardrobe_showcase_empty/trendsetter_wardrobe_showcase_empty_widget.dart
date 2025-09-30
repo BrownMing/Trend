@@ -18,7 +18,7 @@ class _TrendsetterWardrobeShowcaseEmptyWidgetState
     with TickerProviderStateMixin {
   late TrendsetterWardrobeShowcaseEmptyModel _model;
 
-  final cultureStyleExchangeCommunity = <String, AnimationInfo>{};
+  final cultureStyleExchangeCommunity = <String, RetroMarketViberaHangout>{};
 
   @override
   void setState(VoidCallback callback) {
@@ -33,8 +33,8 @@ class _TrendsetterWardrobeShowcaseEmptyWidgetState
         createModel(context, () => TrendsetterWardrobeShowcaseEmptyModel());
 
     cultureStyleExchangeCommunity.addAll({
-      'GlobalStreetFashionInspirationHub': AnimationInfo(
-        trigger: AnimationTrigger.onPageLoad,
+      'GlobalStreetFashionInspirationHub': RetroMarketViberaHangout(
+        trigger: ViberaStreetLegacyCollective.onPageLoad,
         effectsBuilder: () => [
           FadeEffect(
             curve: Curves.easeInOut,

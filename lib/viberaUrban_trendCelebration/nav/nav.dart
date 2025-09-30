@@ -276,17 +276,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) =>
               FashionAestheticsExplorationPlatformBlacklistsWidget(),
         ),
-        ViberaAuthentic(
-          name: StreetVibeInnovationConnectionHubPrivacyWidget.routeName,
-          path: StreetVibeInnovationConnectionHubPrivacyWidget.routePath,
-          builder: (context, params) =>
-              StreetVibeInnovationConnectionHubPrivacyWidget(
-            stGenLifestyleTrendExchangeCircle: params.getParam(
-              'stGenLifestyleTrendExchangeCircle',
-              ParamType.String,
-            ),
-          ),
-        ),
+      
         ViberaAuthentic(
           name: PopCultureVibeInnovationNetworkPrivacyWidget.routeName,
           path: PopCultureVibeInnovationNetworkPrivacyWidget.routePath,

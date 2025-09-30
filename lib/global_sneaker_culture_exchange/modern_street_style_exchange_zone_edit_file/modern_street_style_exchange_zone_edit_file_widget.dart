@@ -31,8 +31,8 @@ class _ModernStreetStyleExchangeZoneEditFileWidgetState
     _model = createModel(
         context, () => ModernStreetStyleExchangeZoneEditFileModel());
 
-    _model.textController ??= TextEditingController();
-    _model.textFieldFocusNode ??= FocusNode();
+    _model.urbanTrendsettersViberaPlaza ??= TextEditingController();
+    _model.streetViberaCultureCelebrationNest ??= FocusNode();
   }
 
   @override
@@ -269,8 +269,10 @@ class _ModernStreetStyleExchangeZoneEditFileWidgetState
                                     child: Container(
                                       width: double.infinity,
                                       child: TextFormField(
-                                        controller: _model.textController,
-                                        focusNode: _model.textFieldFocusNode,
+                                        controller:
+                                            _model.urbanTrendsettersViberaPlaza,
+                                        focusNode: _model
+                                            .streetViberaCultureCelebrationNest,
                                         autofocus: false,
                                         textInputAction: TextInputAction.done,
                                         obscureText: false,
@@ -411,7 +413,7 @@ class _ModernStreetStyleExchangeZoneEditFileWidgetState
                                                 .info,
                                         enableInteractiveSelection: true,
                                         validator: _model
-                                            .textControllerValidator
+                                            .viberaThriftStyleCollaboration
                                             .asValidator(context),
                                       ),
                                     ),
@@ -464,11 +466,12 @@ class _ModernStreetStyleExchangeZoneEditFileWidgetState
                                   ),
                                   child: LimitedEditionViberaDropDown<String>(
                                     controller:
-                                        _model.dropDownValueController1 ??=
+                                        _model.viberaWardrobeLegacyCommunity ??=
                                             FormFieldController<String>(null),
                                     options: ['Male', 'Female'],
-                                    onChanged: (val) => safeSetState(
-                                        () => _model.dropDownValue1 = val),
+                                    onChanged: (val) => safeSetState(() => _model
+                                            .streetFashionViberaConnectionSpot =
+                                        val),
                                     width: double.infinity,
                                     height: double.infinity,
                                     textStyle: LimitedEditionViberaTheme.of(
@@ -569,11 +572,12 @@ class _ModernStreetStyleExchangeZoneEditFileWidgetState
                                   ),
                                   child: LimitedEditionViberaDropDown<String>(
                                     controller:
-                                        _model.dropDownValueController2 ??=
+                                        _model.sneakerViberaDropDiscoveryHub ??=
                                             FormFieldController<String>(null),
                                     options: ['Male', 'Female'],
-                                    onChanged: (val) => safeSetState(
-                                        () => _model.dropDownValue2 = val),
+                                    onChanged: (val) => safeSetState(() =>
+                                        _model.trendPassionViberaSharingHall =
+                                            val),
                                     width: double.infinity,
                                     height: double.infinity,
                                     textStyle: LimitedEditionViberaTheme.of(
@@ -633,29 +637,45 @@ class _ModernStreetStyleExchangeZoneEditFileWidgetState
                           Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 41.0, 0.0, 0.0),
-                            child: Container(
-                              width: double.infinity,
-                              height: 60.0,
-                              decoration: BoxDecoration(
-                                gradient: LinearGradient(
-                                  colors: [
-                                    Color(0xFFFF94FA),
-                                    Color(0xFF696EFF)
-                                  ],
-                                  stops: [0.0, 1.0],
-                                  begin: AlignmentDirectional(-1.0, 0.34),
-                                  end: AlignmentDirectional(1.0, -0.34),
+                            child: GestureDetector(
+                              onTap: () async {
+                                Navigator.pop(context);
+                              },
+                              child: Container(
+                                width: double.infinity,
+                                height: 60.0,
+                                decoration: BoxDecoration(
+                                  gradient: LinearGradient(
+                                    colors: [
+                                      Color(0xFFFF94FA),
+                                      Color(0xFF696EFF)
+                                    ],
+                                    stops: [0.0, 1.0],
+                                    begin: AlignmentDirectional(-1.0, 0.34),
+                                    end: AlignmentDirectional(1.0, -0.34),
+                                  ),
+                                  borderRadius: BorderRadius.circular(16.0),
                                 ),
-                                borderRadius: BorderRadius.circular(16.0),
-                              ),
-                              child: Align(
-                                alignment: AlignmentDirectional(0.0, 0.0),
-                                child: Text(
-                                  'Done',
-                                  style: LimitedEditionViberaTheme.of(context)
-                                      .bodyMedium
-                                      .override(
-                                        font: GoogleFonts.roboto(
+                                child: Align(
+                                  alignment: AlignmentDirectional(0.0, 0.0),
+                                  child: Text(
+                                    'Done',
+                                    style: LimitedEditionViberaTheme.of(context)
+                                        .bodyMedium
+                                        .override(
+                                          font: GoogleFonts.roboto(
+                                            fontWeight: FontWeight.bold,
+                                            fontStyle:
+                                                LimitedEditionViberaTheme.of(
+                                                        context)
+                                                    .bodyMedium
+                                                    .fontStyle,
+                                          ),
+                                          color: LimitedEditionViberaTheme.of(
+                                                  context)
+                                              .info,
+                                          fontSize: 24.0,
+                                          letterSpacing: 0.0,
                                           fontWeight: FontWeight.bold,
                                           fontStyle:
                                               LimitedEditionViberaTheme.of(
@@ -663,17 +683,7 @@ class _ModernStreetStyleExchangeZoneEditFileWidgetState
                                                   .bodyMedium
                                                   .fontStyle,
                                         ),
-                                        color: LimitedEditionViberaTheme.of(
-                                                context)
-                                            .info,
-                                        fontSize: 24.0,
-                                        letterSpacing: 0.0,
-                                        fontWeight: FontWeight.bold,
-                                        fontStyle: LimitedEditionViberaTheme.of(
-                                                context)
-                                            .bodyMedium
-                                            .fontStyle,
-                                      ),
+                                  ),
                                 ),
                               ),
                             ),
