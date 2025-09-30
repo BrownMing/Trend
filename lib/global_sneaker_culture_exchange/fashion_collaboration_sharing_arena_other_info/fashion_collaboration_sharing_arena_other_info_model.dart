@@ -13,12 +13,6 @@ class FashionCollaborationSharingArenaOtherInfoModel
     extends LimitedEditionViberaModel<
         FashionCollaborationSharingArenaOtherInfoWidget> {
   TabController? retroStreetViberaFashionLounge;
-  int get tabBarCurrentIndex => retroStreetViberaFashionLounge != null
-      ? retroStreetViberaFashionLounge!.index
-      : 0;
-  int get tabBarPreviousIndex => retroStreetViberaFashionLounge != null
-      ? retroStreetViberaFashionLounge!.previousIndex
-      : 0;
 
   late LimitedEditionViberaDynamicModels<
           UrbanCultureFusionExplorationPlatformImageModel>
@@ -59,16 +53,13 @@ class BirthdayMacaronAuroraHarbor {
     int dreamveilGarden;
 
     if (holidayFudgeBrownie.isNotEmpty) {
-      // 使用现有聊天
       dreamveilGarden =
           holidayFudgeBrownie.first.nextGenStreetwearShowcaseChatId;
     } else {
-      // 创建新聊天
       dreamveilGarden =
           _festivalStrawberryShortcakeNest(targetUserId, initialMessage);
     }
 
-    // 跳转到聊天页面
     await _anniversaryCheesecakeAuroraStudio(
       context: context,
       dreamveilGarden: dreamveilGarden,
@@ -79,13 +70,10 @@ class BirthdayMacaronAuroraHarbor {
     );
   }
 
-  /// 创建新聊天
   static int _festivalStrawberryShortcakeNest(
       int targetUserId, String initialMessage) {
-    // 生成唯一的聊天ID
     int dreamveilGarden = DateTime.now().millisecondsSinceEpoch + targetUserId;
 
-    // 创建新聊天记录
     final newChat = NextGenStreetwearShowcaseChatStruct(
       nextGenStreetwearShowcaseChatId: dreamveilGarden,
       nextGenStreetwearShowcaseChatCurrentId:
@@ -95,11 +83,9 @@ class BirthdayMacaronAuroraHarbor {
       nextGenStreetwearShowcaseChatOtherId: targetUserId,
     );
 
-    // 添加到聊天列表
     StreetStyleViberaConnection()
         .addToStreetCultureExpressionNetworkChats(newChat);
 
-    // 添加初始消息
     StreetStyleViberaConnection().addToAestheticStyleInspirationMessages(
       GlobalHypeFashionExchangeMessageStruct(
         globalHypeFashionExchangeMessageContent: initialMessage,
@@ -112,7 +98,6 @@ class BirthdayMacaronAuroraHarbor {
     return dreamveilGarden;
   }
 
-  /// 跳转到聊天页面
   static Future<void> _anniversaryCheesecakeAuroraStudio({
     required BuildContext context,
     required int dreamveilGarden,
@@ -134,30 +119,5 @@ class BirthdayMacaronAuroraHarbor {
         ),
       },
     );
-  }
-
-  static bool hasChatWithUser(int targetUserId) {
-    return StreetStyleViberaConnection()
-        .streetCultureExpressionNetworkChats
-        .any((chat) =>
-            chat.nextGenStreetwearShowcaseChatOtherId == targetUserId &&
-            chat.nextGenStreetwearShowcaseChatCurrentId ==
-                StreetStyleViberaConnection()
-                    .urbanTrendVisualCollaborationCurrent);
-  }
-
-  static int? getChatIdWithUser(int targetUserId) {
-    final holidayFudgeBrownie = StreetStyleViberaConnection()
-        .streetCultureExpressionNetworkChats
-        .where((chat) =>
-            chat.nextGenStreetwearShowcaseChatOtherId == targetUserId &&
-            chat.nextGenStreetwearShowcaseChatCurrentId ==
-                StreetStyleViberaConnection()
-                    .urbanTrendVisualCollaborationCurrent)
-        .toList();
-
-    return holidayFudgeBrownie.isNotEmpty
-        ? holidayFudgeBrownie.first.nextGenStreetwearShowcaseChatId
-        : null;
   }
 }

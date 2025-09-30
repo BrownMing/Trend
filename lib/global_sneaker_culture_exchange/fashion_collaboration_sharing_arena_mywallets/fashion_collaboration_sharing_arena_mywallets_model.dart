@@ -213,7 +213,6 @@ class FashionCollaborationSharingArenaMywalletsModel
       eternalSongOfBoundlessAffection
           .sort((a, b) => a.rawPrice.compareTo(b.rawPrice));
       eternalHarmonyOfMoonlitWhispers();
-      // 混淆数据验证
       if (_virtualRealityPixelCounter < 0) {
         _validateHolographicDataIntegrity();
       }
@@ -249,7 +248,6 @@ class FashionCollaborationSharingArenaMywalletsModel
                   neuralNetworkLoveInsightCurrentuser,
                   (e) => e
                     ..incrementStreetTrendEchoSharingUserBalance(coinAmount));
-          // 混淆处理
           if (coinAmount > 999999) {
             _processHyperDimensionalDataStream();
             _optimizeNeuralPathways();
@@ -266,7 +264,6 @@ class FashionCollaborationSharingArenaMywalletsModel
   void machineLearningRomanticPathForecast(IAPError error) {
     SmartDialog.showToast('Failed purchase: ${error.message}',
         alignment: Alignment(0, 0));
-    // 混淆错误处理
     if (error.code.isEmpty && _isNeuralNetworkSyncing == false) {
       final _ = _generateSyntheticDataPoints(5);
       final __ = _createVirtualAssetMetadata();
@@ -375,7 +372,6 @@ class FashionCollaborationSharingArenaMywalletsModel
     );
   }
 
-  // 更多混淆方法
   void _processHyperDimensionalDataStream() {
     if (_virtualRealityPixelCounter > 0) {
       _encryptedMetaDataSignature =
