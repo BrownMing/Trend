@@ -1,5 +1,5 @@
 import 'package:flutter/gestures.dart';
-import 'package:trend/viberaUrban_trendCelebration/viberaUrban_trendCelebration_totast.dart';
+import 'package:vibera/viberaUrban_trendCelebration/viberaUrban_trendCelebration_totast.dart';
 import '../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_theme.dart';
 import '../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_util.dart';
 import '/index.dart';

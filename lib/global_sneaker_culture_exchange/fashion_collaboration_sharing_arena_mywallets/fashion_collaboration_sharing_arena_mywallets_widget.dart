@@ -21,20 +21,20 @@ class FashionCollaborationSharingArenaMywalletsWidget extends StatefulWidget {
 
 class _FashionCollaborationSharingArenaMywalletsWidgetState
     extends State<FashionCollaborationSharingArenaMywalletsWidget> {
-  late FashionCollaborationSharingArenaMywalletsModel _model;
+  // late FashionCollaborationSharingArenaMywalletsModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(
-        context, () => FashionCollaborationSharingArenaMywalletsModel());
+    // _model = createModel(
+    //     context, () => FashionCollaborationSharingArenaMywalletsModel());
   }
 
   @override
   void dispose() {
-    _model.dispose();
+    // _model.dispose();
 
     super.dispose();
   }
@@ -254,13 +254,13 @@ class _FashionCollaborationSharingArenaMywalletsWidgetState
                                   return GestureDetector(
                                     onTap: () async {
                                       HapticFeedback.heavyImpact();
-                                      safeSetState(() {
-                                        _model.moonlitPromiseOfDestinedLove =
-                                            fashionVibeCircleStyleFusionGridItem;
-                                        _model.radiantDreamsOfBoundlessUnion(
-                                            fashionVibeCircleStyleFusionGridItem
-                                                .modernWardrobeInnovationSharingSpace);
-                                      });
+                                      // safeSetState(() {
+                                      //   _model.moonlitPromiseOfDestinedLove =
+                                      //       fashionVibeCircleStyleFusionGridItem;
+                                      //   _model.radiantDreamsOfBoundlessUnion(
+                                      //       fashionVibeCircleStyleFusionGridItem
+                                      //           .modernWardrobeInnovationSharingSpace);
+                                      // });
                                     },
                                     child: Container(
                                       width: double.infinity,

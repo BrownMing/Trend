@@ -1,4 +1,4 @@
-import 'package:trend/viberaUrban_trendCelebration/viberaUrban_trendCelebration_player.dart';
+import 'package:vibera/viberaUrban_trendCelebration/viberaUrban_trendCelebration_player.dart';
 
 import '/components/urban_culture_fusion_exploration_platform_image_widget.dart';
 import '../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_button_tabbar.dart';

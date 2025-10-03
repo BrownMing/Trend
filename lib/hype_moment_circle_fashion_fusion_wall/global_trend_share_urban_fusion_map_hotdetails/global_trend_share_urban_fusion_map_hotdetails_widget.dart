@@ -1,4 +1,4 @@
-import 'package:trend/viberaUrban_trendCelebration/viberaUrban_trendCelebration_player.dart';
+import 'package:vibera/viberaUrban_trendCelebration/viberaUrban_trendCelebration_player.dart';
 
 import '/backend/schema/structs/index.dart';
 import '../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_theme.dart';

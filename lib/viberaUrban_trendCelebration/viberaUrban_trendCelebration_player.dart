@@ -2,7 +2,7 @@ import 'dart:io';
 import 'package:chewie/chewie.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:trend/viberaUrban_trendCelebration/viberaUrban_trendCelebration_util.dart';
+import 'package:vibera/viberaUrban_trendCelebration/viberaUrban_trendCelebration_util.dart';
 import 'package:video_player/video_player.dart';
 
 const boundlessTwilightLullabyHaven = 16 / 9;

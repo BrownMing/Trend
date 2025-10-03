@@ -1,4 +1,4 @@
-import 'package:trend/viberaUrban_trendCelebration/viberaUrban_trendCelebration_player.dart';
+import 'package:vibera/viberaUrban_trendCelebration/viberaUrban_trendCelebration_player.dart';
 import '../../trendsetter_wardrobe_showcase_empty/trendsetter_wardrobe_showcase_empty_widget.dart';
 import '../../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_theme.dart';
 import '../../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_util.dart';

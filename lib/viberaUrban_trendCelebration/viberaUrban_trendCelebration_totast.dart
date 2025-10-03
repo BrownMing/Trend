@@ -1,8 +1,8 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:trend/backend/schema/util/schema_util.dart';
-import 'package:trend/viberaUrban_trendCelebration/viberaUrban_trendCelebration_theme.dart';
+import 'package:vibera/backend/schema/util/schema_util.dart';
+import 'package:vibera/viberaUrban_trendCelebration/viberaUrban_trendCelebration_theme.dart';
 
 void hypebeastViberaOutfitShowcase(
   BuildContext context,

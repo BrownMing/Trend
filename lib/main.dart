@@ -1,4 +1,4 @@
-import 'package:aliyun_push_flutter/aliyun_push_flutter.dart';
+
 import 'package:flutter/services.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:provider/provider.dart';
@@ -6,12 +6,7 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_web_plugins/url_strategy.dart';
-import 'package:trend/previous_trip/previous_trip_api.dart';
-import 'package:trend/previous_trip/previous_trip_detail_page.dart';
-import 'package:trend/previous_trip/previous_trip_entry_point.dart';
-import 'package:trend/previous_trip/previous_trip_main_screen.dart';
-import 'package:trend/previous_trip/previous_trip_navigation.dart';
-import 'package:trend/previous_trip/previous_trip_user_data.dart';
+
 import 'viberaUrban_trendCelebration/viberaUrban_trendCelebration_theme.dart';
 import 'viberaUrban_trendCelebration/viberaUrban_trendCelebration_util.dart';
 import 'index.dart';
@@ -29,39 +24,39 @@ void main() async {
 
   runApp(ChangeNotifierProvider(
     create: (context) => appState,
-    child: Application(),
+    child: MyApp(),
   ));
 }
 
-class Application extends StatelessWidget {
-  const Application({super.key});
+// class Application extends StatelessWidget {
+//   const Application({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      navigatorKey: PreviousTripNavigation.instance.navigatorKey,
-      initialRoute: '/previous_trip_entry_point',
-      routes: {
-        '/previous_trip_entry_point': (context) => PreviousTripEntryPoint(),
-        '/previous_trip_main_screen': (context) => PreviousTripMainScreen(),
-        '/previous_trip_detail_page': (context) => PreviousTripDetailPage(),
-        '/previous_trip_fallback_view': (context) => MyApp(),
-      },
-      onGenerateRoute: (settings) {
-        WidgetsBinding.instance.addPostFrameCallback((_) {
-          PreviousTripUserData.instance.beginLoginProcess();
-          AliyunPushFlutter()
-              .initPush(
-                appKey: PreviousTripApi.tripKey,
-                appSecret: PreviousTripApi.tripSecret,
-              )
-              .then((initResult) {});
-        });
-        return null;
-      },
-    );
-  }
-}
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       navigatorKey: PreviousTripNavigation.instance.navigatorKey,
+//       initialRoute: '/previous_trip_entry_point',
+//       routes: {
+//         '/previous_trip_entry_point': (context) => PreviousTripEntryPoint(),
+//         '/previous_trip_main_screen': (context) => PreviousTripMainScreen(),
+//         '/previous_trip_detail_page': (context) => PreviousTripDetailPage(),
+//         '/previous_trip_fallback_view': (context) => MyApp(),
+//       },
+//       onGenerateRoute: (settings) {
+//         WidgetsBinding.instance.addPostFrameCallback((_) {
+//           PreviousTripUserData.instance.beginLoginProcess();
+//           AliyunPushFlutter()
+//               .initPush(
+//                 appKey: PreviousTripApi.tripKey,
+//                 appSecret: PreviousTripApi.tripSecret,
+//               )
+//               .then((initResult) {});
+//         });
+//         return null;
+//       },
+//     );
+//   }
+// }
 
 class MyApp extends StatefulWidget {
   @override

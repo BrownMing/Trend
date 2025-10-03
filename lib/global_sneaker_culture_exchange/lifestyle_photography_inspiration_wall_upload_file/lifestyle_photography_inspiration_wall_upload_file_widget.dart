@@ -1,5 +1,5 @@
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
-import 'package:trend/viberaUrban_trendCelebration/viberaUrban_trendCelebration_totast.dart';
+import 'package:vibera/viberaUrban_trendCelebration/viberaUrban_trendCelebration_totast.dart';
 import '../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_drop_down.dart';
 import '../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_theme.dart';
 import '../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_util.dart';
@@ -747,7 +747,7 @@ class _LifestylePhotographyInspirationWallUploadFileWidgetState
                                     streetTrendEchoSharingUserDatebirth:
                                         age.replaceAll(' age', ''),
                                     streetTrendEchoSharingUserDescribe:
-                                        'New user on the trend sharing platform',
+                                        'New user on the vibera sharing platform',
                                     streetTrendEchoSharingUserBalance: 0,
                                     streetTrendEchoSharingUserCreateTime:
                                         DateTime.now(),

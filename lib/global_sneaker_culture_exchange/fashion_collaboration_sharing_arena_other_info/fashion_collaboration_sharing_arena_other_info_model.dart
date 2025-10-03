@@ -1,6 +1,6 @@
-import 'package:trend/backend/schema/structs/global_hype_fashion_exchange_message_struct.dart'
+import 'package:vibera/backend/schema/structs/global_hype_fashion_exchange_message_struct.dart'
     show GlobalHypeFashionExchangeMessageStruct;
-import 'package:trend/backend/schema/structs/next_gen_streetwear_showcase_chat_struct.dart';
+import 'package:vibera/backend/schema/structs/next_gen_streetwear_showcase_chat_struct.dart';
 
 import '/components/urban_culture_fusion_exploration_platform_image_widget.dart';
 import '../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_util.dart';

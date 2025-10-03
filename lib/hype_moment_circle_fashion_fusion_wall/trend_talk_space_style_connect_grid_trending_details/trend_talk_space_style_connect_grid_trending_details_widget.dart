@@ -210,13 +210,12 @@ class _TrendTalkSpaceStyleConnectGridTrendingDetailsWidgetState
                                 ),
                                 Builder(
                                   builder: (context) {
-                       
                                     final sneakerLegacyViberaBondCircle =
                                         StreetStyleViberaConnection()
                                             .trendDrivenStyleCollaborationTrends
                                             .firstWhere(
-                                              (trend) =>
-                                                  trend
+                                              (vibera) =>
+                                                  vibera
                                                       .worldFashionSharingCollectiveTrendsId ==
                                                   widget
                                                       .hipHopFashionExpressionSharingHub!
@@ -238,8 +237,8 @@ class _TrendTalkSpaceStyleConnectGridTrendingDetailsWidgetState
                                           // 找到当前trend在数组中的正确索引
                                           int trendIndex = StreetStyleViberaConnection()
                                               .trendDrivenStyleCollaborationTrends
-                                              .indexWhere((trend) =>
-                                                  trend
+                                              .indexWhere((vibera) =>
+                                                  vibera
                                                       .worldFashionSharingCollectiveTrendsId ==
                                                   widget
                                                       .hipHopFashionExpressionSharingHub!
@@ -286,8 +285,8 @@ class _TrendTalkSpaceStyleConnectGridTrendingDetailsWidgetState
                                           // 找到当前trend在数组中的正确索引
                                           int trendIndex = StreetStyleViberaConnection()
                                               .trendDrivenStyleCollaborationTrends
-                                              .indexWhere((trend) =>
-                                                  trend
+                                              .indexWhere((vibera) =>
+                                                  vibera
                                                       .worldFashionSharingCollectiveTrendsId ==
                                                   widget
                                                       .hipHopFashionExpressionSharingHub!

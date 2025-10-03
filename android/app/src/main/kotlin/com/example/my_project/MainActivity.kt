@@ -1,4 +1,4 @@
-package com.mycompany.trend
+package com.mycompany.vibera
 
 import io.flutter.embedding.android.FlutterActivity
 
