@@ -36,7 +36,7 @@ class UrbanStyleExpressionPlatformVideoChatModel
 
       cameraInitializeFuture = cameraController!.initialize();
     } catch (e) {
-      print('相机初始化错误: $e');
+   
     }
   }
 
