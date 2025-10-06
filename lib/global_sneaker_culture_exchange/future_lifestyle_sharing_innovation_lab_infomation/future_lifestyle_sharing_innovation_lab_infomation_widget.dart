@@ -401,7 +401,9 @@ class _FutureLifestyleSharingInnovationLabInfomationWidgetState
                             ),
                           ),
                         ),
-                      ],
+                      ].addToEnd(SizedBox(
+                        height: 100,
+                      )),
                     ),
                   ),
                 ),

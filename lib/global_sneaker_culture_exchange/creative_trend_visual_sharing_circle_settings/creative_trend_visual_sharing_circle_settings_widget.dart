@@ -310,6 +310,17 @@ class _CreativeTrendVisualSharingCircleSettingsWidgetState
                                 ..streetTrendEchoSharingUserPassword = null,
                             );
                             StreetStyleViberaConnection().update(() {});
+                            context.goNamed(
+                              TrendyVibeNetworkTrendyVibeNetworkLoginWidget
+                                  .routeName,
+                              extra: <String, dynamic>{
+                                kTransitionInfoKey: TransitionInfo(
+                                  hasTransition: true,
+                                  transitionType:
+                                      PageTransitionType.bottomToTop,
+                                ),
+                              },
+                            );
                           },
                           child: Column(
                             mainAxisSize: MainAxisSize.max,

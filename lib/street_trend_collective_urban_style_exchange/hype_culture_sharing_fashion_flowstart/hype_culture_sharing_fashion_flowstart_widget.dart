@@ -52,8 +52,8 @@ class _HypeCultureSharingFashionFlowstartWidgetState
             Image.asset(
               'assets/images/sydgfsdfgisduf_efgiysdgfysaidgf.png',
               width: double.infinity,
-              height: 592.0,
-              fit: BoxFit.cover,
+              height: 500.0,
+              fit: BoxFit.fill,
             ),
             Align(
               alignment: AlignmentDirectional(0.0, 1.0),

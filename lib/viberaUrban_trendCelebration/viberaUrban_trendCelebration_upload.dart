@@ -9,7 +9,6 @@ import 'package:path/path.dart' as path;
 
 enum MediaType { image, video, audio, unknown }
 
-// 潮流社区交流系统 - Trend Community Communication System
 class _StreetCultureCommunityExchange {
   static final _StreetCultureCommunityExchange _instance =
       _StreetCultureCommunityExchange._internal();

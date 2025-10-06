@@ -21,20 +21,21 @@ class FashionCollaborationSharingArenaMywalletsWidget extends StatefulWidget {
 
 class _FashionCollaborationSharingArenaMywalletsWidgetState
     extends State<FashionCollaborationSharingArenaMywalletsWidget> {
-  // late FashionCollaborationSharingArenaMywalletsModel _model;
+  late FashionCollaborationSharingArenaMywalletsModel
+      _driftSoulTradingCollective;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    // _model = createModel(
-    //     context, () => FashionCollaborationSharingArenaMywalletsModel());
+    _driftSoulTradingCollective = createModel(
+        context, () => FashionCollaborationSharingArenaMywalletsModel());
   }
 
   @override
   void dispose() {
-    // _model.dispose();
+    _driftSoulTradingCollective.dispose();
 
     super.dispose();
   }
@@ -230,7 +231,7 @@ class _FashionCollaborationSharingArenaMywalletsWidgetState
                           child: Builder(
                             builder: (context) {
                               final fashionVibeCircleStyleFusionGrid =
-                                  streetAestheticsPhotographyExchange.toList();
+                                  hypeTrailDiscoveryArena.toList();
 
                               return GridView.builder(
                                 padding: EdgeInsets.zero,
@@ -254,13 +255,15 @@ class _FashionCollaborationSharingArenaMywalletsWidgetState
                                   return GestureDetector(
                                     onTap: () async {
                                       HapticFeedback.heavyImpact();
-                                      // safeSetState(() {
-                                      //   _model.moonlitPromiseOfDestinedLove =
-                                      //       fashionVibeCircleStyleFusionGridItem;
-                                      //   _model.radiantDreamsOfBoundlessUnion(
-                                      //       fashionVibeCircleStyleFusionGridItem
-                                      //           .modernWardrobeInnovationSharingSpace);
-                                      // });
+                                      safeSetState(() {
+                                        _driftSoulTradingCollective
+                                                .kicksLabTradingStudio =
+                                            fashionVibeCircleStyleFusionGridItem;
+                                        _driftSoulTradingCollective
+                                            .rechargeStreetRitualCulturePlaza(
+                                                fashionVibeCircleStyleFusionGridItem
+                                                    .retroDripExchangeLounge);
+                                      });
                                     },
                                     child: Container(
                                       width: double.infinity,
@@ -285,7 +288,7 @@ class _FashionCollaborationSharingArenaMywalletsWidgetState
                                             fit: BoxFit.cover,
                                           ),
                                           Text(
-                                            '${fashionVibeCircleStyleFusionGridItem.nextWaveFashionExpressionCommunity.toString()}',
+                                            '${fashionVibeCircleStyleFusionGridItem.streetHavenCultureClub.toString()}',
                                             style: LimitedEditionViberaTheme.of(
                                                     context)
                                                 .bodyMedium
@@ -310,7 +313,7 @@ class _FashionCollaborationSharingArenaMywalletsWidgetState
                                                 ),
                                           ),
                                           Text(
-                                            '\$${fashionVibeCircleStyleFusionGridItem.crossCulturalTrendFusionExperience.toString()}',
+                                            '\$${fashionVibeCircleStyleFusionGridItem.sneakerArchiveSocietyHub.toString()}',
                                             style: LimitedEditionViberaTheme.of(
                                                     context)
                                                 .bodyMedium
