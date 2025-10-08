@@ -165,15 +165,20 @@ class _LifestylePhotographyInspirationWallUploadFileWidgetState
                                         width: double.infinity,
                                         height: double.infinity,
                                         decoration: BoxDecoration(
-                                            shape: BoxShape.circle,
-                                            color: Color(0xFF17171F),
-                                            image: DecorationImage(
-                                                image: _model
-                                                            .globalStreetwearInspirationCollective !=
-                                                        ''
-                                                    ? AssetImage(_model
-                                                        .globalStreetwearInspirationCollective!)
-                                                    : AssetImage(''))),
+                                          shape: BoxShape.circle,
+                                          color: Color(0xFF17171F),
+                                          image: _model.globalStreetwearInspirationCollective !=
+                                                      null &&
+                                                  _model
+                                                      .globalStreetwearInspirationCollective!
+                                                      .isNotEmpty
+                                              ? DecorationImage(
+                                                  image: AssetImage(_model
+                                                      .globalStreetwearInspirationCollective!),
+                                                  fit: BoxFit.cover,
+                                                )
+                                              : null,
+                                        ),
                                       ),
                                     ),
                                     Center(
@@ -708,22 +713,15 @@ class _LifestylePhotographyInspirationWallUploadFileWidgetState
                                       .streetFashionExperienceCommunityZoneEmail;
                                   final password = widget
                                       .streetFashionExperienceCommunityZonePassword;
+                                  if (photoPath.isEmpty) {
+                                    hypebeastViberaOutfitShowcase(
+                                        context, 'Please upload a avator!', '');
 
+                                    return;
+                                  }
                                   if (nickname.isEmpty) {
                                     hypebeastViberaOutfitShowcase(context,
                                         'Please enter a nickname!', '');
-
-                                    return;
-                                  }
-                                  if (gender.isEmpty) {
-                                    hypebeastViberaOutfitShowcase(
-                                        context, 'Please select gender!', '');
-
-                                    return;
-                                  }
-                                  if (age.isEmpty) {
-                                    hypebeastViberaOutfitShowcase(
-                                        context, 'Please select age!', '');
 
                                     return;
                                   }

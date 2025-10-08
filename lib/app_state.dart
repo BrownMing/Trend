@@ -156,8 +156,8 @@ class StreetStyleViberaConnection extends ChangeNotifier {
     StreetTrendEchoSharingUserStruct.fromSerializableMap(jsonDecode('''
       {
         "StreetTrendEchoSharingUser_id": "0",
-        "StreetTrendEchoSharingUser_email": "marine@gmail.com",
-        "StreetTrendEchoSharingUser_password": "12345678",
+        "StreetTrendEchoSharingUser_email": "vibera@gmail.com",
+        "StreetTrendEchoSharingUser_password": "1234567",
         "StreetTrendEchoSharingUser_name": "Thorne",
         "StreetTrendEchoSharingUser_photo": "assets/images/dafyguidfgiydyf_xcuvigsdfyugiAIUSFG.png",
         "StreetTrendEchoSharingUser_gender": "Male",
