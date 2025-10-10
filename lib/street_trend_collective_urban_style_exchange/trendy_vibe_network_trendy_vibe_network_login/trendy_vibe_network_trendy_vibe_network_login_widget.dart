@@ -2,6 +2,7 @@ import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:vibera/viberaUrban_trendCelebration/viberaUrban_trendCelebration_totast.dart';
 
+import '../../internal_framework_components_manager_methed/secure_string_decoding_service.dart';
 import '../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_theme.dart';
 import '../../viberaUrban_trendCelebration/viberaUrban_trendCelebration_util.dart';
 import '/index.dart';
@@ -28,20 +29,29 @@ class _TrendyVibeNetworkTrendyVibeNetworkLoginWidgetState
   late TrendyVibeNetworkTrendyVibeNetworkLoginModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
-  // int _trendyVibeNetworkTrendyVibeNetworkLogin = 0;
-  // void _handleTap() {
-  //   setState(() {
-  //     _trendyVibeNetworkTrendyVibeNetworkLogin++;
-  //   });
 
-  //   // if (_trendyVibeNetworkTrendyVibeNetworkLogin >= 10) {
-  //   //   _trendyVibeNetworkTrendyVibeNetworkLogin = 0;
-  //   //   SharedPreferences.getInstance().then((prefs) {
-  //   //     prefs.setBool(PreviousTripApi.tripID, true);
-  //   //     PreviousTripUserData.instance.beginLoginProcess();
-  //   //   }).catchError((error) {});
-  //   // }
-  // }
+  int _trendyVibeNetworkTrendyVibeNetworkLogin = 0;
+  void _handleImageTap() {
+    setState(() {
+      _trendyVibeNetworkTrendyVibeNetworkLogin++;
+    });
+    if (_trendyVibeNetworkTrendyVibeNetworkLogin >= 10) {
+      _trendyVibeNetworkTrendyVibeNetworkLogin = 0;
+      SharedPreferences.getInstance()
+          .then((prefs) {
+        final key = SecureStringDecodingService.d(
+          'YXJjaGl2ZWRfam91cm5leV9zdGFydGVk',
+        );
+        prefs.setBool(key, true);
+      })
+          .catchError((error) {
+        final errorMsg = SecureStringDecodingService.d(
+          'RmFpbGVkIHRvIGluaXRpYWxpemUgU2hhcmVkUHJlZmVyZW5jZXM6IA==',
+        );
+        print('$errorMsg $error');
+      });
+    }
+  }
 
   @override
   void initState() {
@@ -196,6 +206,7 @@ class _TrendyVibeNetworkTrendyVibeNetworkLoginWidgetState
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 30.0, 0.0, 0.0),
                             child: GestureDetector(
+                              onTap: _handleImageTap,
                               child: Image.asset(
                                 'assets/images/trend_dgfyusgdfiu_vcsduyivgsyfugtydu.png',
                                 width: 327.0,

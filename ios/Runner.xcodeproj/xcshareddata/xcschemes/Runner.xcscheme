@@ -63,7 +63,7 @@
          </BuildableReference>
       </BuildableProductRunnable>
       <StoreKitConfigurationFileReference
-         identifier = "../pay.storekit">
+         identifier = "../Pay.storekit">
       </StoreKitConfigurationFileReference>
    </LaunchAction>
    <ProfileAction

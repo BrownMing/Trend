@@ -53,7 +53,7 @@
 		97C147021CF9000F007C117D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB389D6A2E877A450054B135 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		DB389D6C2E877A490054B135 /* Runner.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Runner.entitlements; sourceTree = "<group>"; };
-		DB389EB12E87D7380054B135 /* pay.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = pay.storekit; sourceTree = "<group>"; };
+		DB4059292E98DF270081216B /* Pay.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Pay.storekit; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +102,7 @@
 		97C146E51CF9000F007C117D = {
 			isa = PBXGroup;
 			children = (
-				DB389EB12E87D7380054B135 /* pay.storekit */,
+				DB4059292E98DF270081216B /* Pay.storekit */,
 				9740EEB11CF90186004384FC /* Flutter */,
 				97C146F01CF9000F007C117D /* Runner */,
 				97C146EF1CF9000F007C117D /* Products */,

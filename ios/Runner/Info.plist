@@ -41,6 +41,11 @@
 	<true/>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 	<key>NSCameraUsageDescription</key>
 	<string>To enable you to take photos (landscapes, portraits) and record videos, this app needs camera access. You have full control over how these media are used: they can adorn your profile or be shared with friends, but only if you approve. All files are securely saved on your device, with strict protection for your privacy and security.</string>
 	<key>NSMicrophoneUsageDescription</key>

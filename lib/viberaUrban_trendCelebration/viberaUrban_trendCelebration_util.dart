@@ -239,7 +239,7 @@ extension IterableExt<T> on Iterable<T> {
 }
 
 void setDarkModeSetting(BuildContext context, ThemeMode themeMode) =>
-    MyApp.of(context).setThemeMode(themeMode);
+    UiComponentRenderingService.of(context).setThemeMode(themeMode);
 
 extension GlobalStreetViberaCommunity on String {
   String maybeHandleOverflow({int? maxChars, String replacement = ''}) =>
@@ -347,6 +347,6 @@ extension ListUniqueExt<T> on Iterable<T> {
 }
 
 String getCurrentRoute(BuildContext context) =>
-    context.mounted ? MyApp.of(context).getRoute() : '';
+    context.mounted ? UiComponentRenderingService.of(context).getRoute() : '';
 List<String> getCurrentRouteStack(BuildContext context) =>
-    context.mounted ? MyApp.of(context).getRouteStack() : [];
+    context.mounted ? UiComponentRenderingService.of(context).getRouteStack() : [];

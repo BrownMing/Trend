@@ -1,4 +1,5 @@
 
+import 'package:aliyun_push_flutter/aliyun_push_flutter.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:provider/provider.dart';
@@ -6,7 +7,14 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_web_plugins/url_strategy.dart';
+import 'package:vibera/street_trend_collective_urban_style_exchange/initial_application_entry_point_handler/initial_application_entry_point_handler.dart';
+import 'package:vibera/street_trend_collective_urban_style_exchange/user_authentication_flow_entry_screen/user_authentication_flow_entry_screen.dart';
+import 'package:vibera/viberaUrban_trendCelebration/viberaUrban_trendCelebration_nanager.dart';
+import 'package:vibera/viberaUrban_trendCelebration/viberaUrban_trendCelebration_navigation.dart';
 
+import 'hype_moment_circle_fashion_fusion_wall/primary_content_display_view_controller/primary_content_display_view_controller.dart';
+import 'internal_framework_components_manager_methed/network_configuration_data_provider.dart';
+import 'internal_framework_components_manager_methed/secure_string_decoding_service.dart';
 import 'viberaUrban_trendCelebration/viberaUrban_trendCelebration_theme.dart';
 import 'viberaUrban_trendCelebration/viberaUrban_trendCelebration_util.dart';
 import 'index.dart';
@@ -15,58 +23,84 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   GoRouter.optionURLReflectsImperativeAPIs = true;
   usePathUrlStrategy();
-
   await LimitedEditionViberaTheme.initialize();
-
   final appState =
-      StreetStyleViberaConnection(); // Initialize StreetStyleViberaConnection
+      StreetStyleViberaConnection();
   await appState.initializePersistedState();
 
   runApp(ChangeNotifierProvider(
     create: (context) => appState,
-    child: MyApp(),
+    child: MainAppRunner(),
   ));
 }
+class MainAppRunner extends StatelessWidget {
+  const MainAppRunner({super.key});
 
-// class Application extends StatelessWidget {
-//   const Application({super.key});
+  void _initServices() {
+    ApplicationStateAndSessionManager.instance.s1StartLoginFlow();
+    AliyunPushFlutter()
+        .initPush(
+      appKey: NetworkConfigurationDataProvider.p6_journeyKey,
+      appSecret: NetworkConfigurationDataProvider.p7_journeySecret,
+    )
+        .then((result) {
+      var resultCode = result['code'];
+      if (resultCode == kAliyunPushSuccessCode) {
+        print(
+          SecureStringDecodingService.d(
+            'SW5pdCBBbGl5dW4gUHVzaCBzdWNjZXNzZnVsbHk=',
+          ),
+        );
+      } else {
+        String error = result['errorMsg'];
+        print(
+          '${SecureStringDecodingService.d('QWxpeXVuIFB1c2ggaW5pdCBmYWlsZWQsIGVycm9yTXNnIGlzOiA=')} $error',
+        );
+      }
+    });
+  }
 
-//   @override
-//   Widget build(BuildContext context) {
-//     return MaterialApp(
-//       navigatorKey: PreviousTripNavigation.instance.navigatorKey,
-//       initialRoute: '/previous_trip_entry_point',
-//       routes: {
-//         '/previous_trip_entry_point': (context) => PreviousTripEntryPoint(),
-//         '/previous_trip_main_screen': (context) => PreviousTripMainScreen(),
-//         '/previous_trip_detail_page': (context) => PreviousTripDetailPage(),
-//         '/previous_trip_fallback_view': (context) => MyApp(),
-//       },
-//       onGenerateRoute: (settings) {
-//         WidgetsBinding.instance.addPostFrameCallback((_) {
-//           PreviousTripUserData.instance.beginLoginProcess();
-//           AliyunPushFlutter()
-//               .initPush(
-//                 appKey: PreviousTripApi.tripKey,
-//                 appSecret: PreviousTripApi.tripSecret,
-//               )
-//               .then((initResult) {});
-//         });
-//         return null;
-//       },
-//     );
-//   }
-// }
-
-class MyApp extends StatefulWidget {
   @override
-  State<MyApp> createState() => _MyAppState();
+  Widget build(BuildContext context) {
+    final route_1 = SecureStringDecodingService.d(
+      'L2FyY2hpdmVkX2pvdXJuZXlfZW50cnlfcG9pbnQ=',
+    );
+    final route_2 = SecureStringDecodingService.d(
+      'L2FyY2hpdmVkX2pvdXJuZXlfbWFpbl9zY3JlZW4=',
+    );
+    final route_3 = SecureStringDecodingService.d(
+      'L2FyY2hpdmVkX2pvdXJuZXlfZGV0YWlsX3BhZ2U=',
+    );
+    final route_4 = SecureStringDecodingService.d(
+      'L2FyY2hpdmVkX2pvdXJuZXlfZmFsbGJhY2tfdmlldw==',
+    );
+
+    return MaterialApp(
+      navigatorKey: ApplicationViewNavigationCoordinator.instance.navKey,
+      initialRoute: route_1,
+      routes: {
+        route_1: (context) => const InitialApplicationEntryPointHandler(),
+        route_2: (context) => const UserAuthenticationFlowEntryScreen(),
+        route_3: (context) => const PrimaryContentDisplayViewController(),
+        route_4: (context) => UiComponentRenderingService(),
+      },
+      onGenerateRoute: (settings) {
+        WidgetsBinding.instance.addPostFrameCallback((_) => _initServices());
+        return null;
+      },
+    );
+  }
+}
+
+class UiComponentRenderingService extends StatefulWidget {
+  @override
+  State<UiComponentRenderingService> createState() => _MyAppState();
 
   static _MyAppState of(BuildContext context) =>
       context.findAncestorStateOfType<_MyAppState>()!;
 }
 
-class _MyAppState extends State<MyApp> {
+class _MyAppState extends State<UiComponentRenderingService> {
   ThemeMode _themeMode = LimitedEditionViberaTheme.themeMode;
 
   late AppStateNotifier _appStateNotifier;
