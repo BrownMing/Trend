@@ -191,7 +191,7 @@ class _FashionCollaborationSharingArenaMywalletsWidgetState
                                         ),
                                   ),
                                   Text(
-                                    '\$${StreetStyleViberaConnection().urbanOutfitTrendSharingUsers.elementAtOrNull(StreetStyleViberaConnection().urbanTrendVisualCollaborationCurrent)?.streetTrendEchoSharingUserBalance.toString()}',
+                                    '\${StreetStyleViberaConnection().urbanOutfitTrendSharingUsers.elementAtOrNull(StreetStyleViberaConnection().urbanTrendVisualCollaborationCurrent)?.streetTrendEchoSharingUserBalance.toString()}',
                                     style: LimitedEditionViberaTheme.of(context)
                                         .bodyMedium
                                         .override(
