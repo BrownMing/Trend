@@ -114,15 +114,48 @@ class _CultureSwapZoneTrendPulseNetworkDiscoverWidgetState
                           );
                         },
                         child: Container(
-                          width: 44.0,
-                          height: 44.0,
+                          padding: EdgeInsets.symmetric(horizontal: 14.0, vertical: 10.0),
                           decoration: BoxDecoration(
-                            image: DecorationImage(
-                              fit: BoxFit.cover,
-                              image: Image.asset(
-                                'assets/images/vstydiuysdgiuf_ewftifsdygyuegfiuwy.png',
-                              ).image,
+                            gradient: LinearGradient(
+                              colors: [
+                                  Color(0xFFFF94FA),
+                                  Color(0xFF696EFF),
+                                ],
+                              begin: Alignment.topLeft,
+                              end: Alignment.bottomRight,
                             ),
+                            borderRadius: BorderRadius.circular(22.0),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Color(0xFF39D2C0).withOpacity(0.4),
+                                blurRadius: 12.0,
+                                spreadRadius: 1.0,
+                                offset: Offset(0, 3),
+                              ),
+                            ],
+                          ),
+                          child: Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              Icon(
+                                Icons.add_circle_outline,
+                                color: Colors.white,
+                                size: 18.0,
+                              ),
+                              SizedBox(width: 6.0),
+                              Text(
+                                'Public',
+                                style: LimitedEditionViberaTheme.of(context)
+                                    .bodyMedium
+                                    .override(
+                                      font: GoogleFonts.poppins(),
+                                      color: Colors.white,
+                                      fontSize: 13.0,
+                                      fontWeight: FontWeight.w600,
+                                      letterSpacing: 0.5,
+                                    ),
+                              ),
+                            ],
                           ),
                         ),
                       ),
@@ -261,7 +294,7 @@ class _CultureSwapZoneTrendPulseNetworkDiscoverWidgetState
                                         0,
                                         16.0,
                                         0,
-                                        0,
+                                        100,
                                       ),
                                       itemBuilder: (context,
                                           culturalVisualStorytellingCommunityIndex) {
@@ -579,7 +612,7 @@ class _CultureSwapZoneTrendPulseNetworkDiscoverWidgetState
                                           .toList();
 
                                   return ListView.separated(
-                                    padding: EdgeInsets.zero,
+                                    padding: EdgeInsets.fromLTRB(0, 0, 0, 100),
                                     shrinkWrap: true,
                                     scrollDirection: Axis.vertical,
                                     itemCount:

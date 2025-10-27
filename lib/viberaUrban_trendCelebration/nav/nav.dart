@@ -287,6 +287,16 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               ParamType.String,
             ),
           ),
+        ),
+        ViberaAuthentic(
+          name: UserStatisticsListWidget.routeName,
+          path: UserStatisticsListWidget.routePath,
+          builder: (context, params) => UserStatisticsListWidget(
+            type: params.getParam(
+              'type',
+              ParamType.String,
+            ),
+          ),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
       observers: [routeObserver],

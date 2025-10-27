@@ -116,7 +116,9 @@ class _YouthCultureStyleDiscoveryLabNotenoughWidgetState
                 hoverColor: Colors.transparent,
                 highlightColor: Colors.transparent,
                 onTap: () async {
-                  context.pushNamed(
+                  Navigator.of(context, rootNavigator: true).pop();
+                  
+                  appNavigatorKey.currentContext?.pushNamed(
                     FashionCollaborationSharingArenaMywalletsWidget.routeName,
                     extra: <String, dynamic>{
                       kTransitionInfoKey: TransitionInfo(
@@ -125,8 +127,6 @@ class _YouthCultureStyleDiscoveryLabNotenoughWidgetState
                       ),
                     },
                   );
-
-                  Navigator.pop(context);
                 },
                 child: Container(
                   width: double.infinity,

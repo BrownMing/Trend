@@ -210,7 +210,28 @@ class _NavBarPageState extends State<NavBarPage> {
       resizeToAvoidBottomInset: !widget.disableResizeToAvoidBottomInset,
       body: Stack(
         children: [
-          _currentPage ?? tabs[_currentPageName]!,
+          // 添加页面切换动画
+          AnimatedSwitcher(
+            duration: Duration(milliseconds: 300),
+            switchInCurve: Curves.easeInOut,
+            switchOutCurve: Curves.easeInOut,
+            transitionBuilder: (Widget child, Animation<double> animation) {
+              return FadeTransition(
+                opacity: animation,
+                child: SlideTransition(
+                  position: Tween<Offset>(
+                    begin: Offset(0.03, 0),
+                    end: Offset.zero,
+                  ).animate(animation),
+                  child: child,
+                ),
+              );
+            },
+            child: Container(
+              key: ValueKey<String>(_currentPageName),
+              child: _currentPage ?? tabs[_currentPageName]!,
+            ),
+          ),
           Positioned(
             left: 0,
             right: 0,
@@ -228,54 +249,74 @@ class _NavBarPageState extends State<NavBarPage> {
               },
               items: [
                 GlobalViberaTrendConnection(
-                  icon: Container(
-                    width: 24,
-                    height: 24,
-                    decoration: BoxDecoration(
-                        image: DecorationImage(
-                            image: Image.asset(currentIndex == 0
-                                    ? 'assets/images/difguidfgodufig_vcbuyidfugihdof.png'
-                                    : 'assets/images/dfgdhfguiodfg_vxcbuidfguiadfogi.png')
-                                .image)),
+                  icon: AnimatedScale(
+                    scale: currentIndex == 0 ? 1.2 : 1.0,
+                    duration: Duration(milliseconds: 200),
+                    curve: Curves.easeInOut,
+                    child: Container(
+                      width: 24,
+                      height: 24,
+                      decoration: BoxDecoration(
+                          image: DecorationImage(
+                              image: Image.asset(currentIndex == 0
+                                      ? 'assets/images/difguidfgodufig_vcbuyidfugihdof.png'
+                                      : 'assets/images/dfgdhfguiodfg_vxcbuidfguiadfogi.png')
+                                  .image)),
+                    ),
                   ),
                   label: '',
                 ),
                 GlobalViberaTrendConnection(
-                  icon: Container(
-                    width: 28,
-                    height: 28,
-                    decoration: BoxDecoration(
-                        image: DecorationImage(
-                            image: Image.asset(currentIndex == 1
-                                    ? 'assets/images/werhufdbohdifgu_vxcsdfghuaisdogfiusi.png'
-                                    : 'assets/images/sfrhuasdfoasg_xcvbiuyidsfGIUYASDFGIY.png')
-                                .image)),
+                  icon: AnimatedScale(
+                    scale: currentIndex == 1 ? 1.2 : 1.0,
+                    duration: Duration(milliseconds: 200),
+                    curve: Curves.easeInOut,
+                    child: Container(
+                      width: 28,
+                      height: 28,
+                      decoration: BoxDecoration(
+                          image: DecorationImage(
+                              image: Image.asset(currentIndex == 1
+                                      ? 'assets/images/werhufdbohdifgu_vxcsdfghuaisdogfiusi.png'
+                                      : 'assets/images/sfrhuasdfoasg_xcvbiuyidsfGIUYASDFGIY.png')
+                                  .image)),
+                    ),
                   ),
                   label: '',
                 ),
                 GlobalViberaTrendConnection(
-                  icon: Container(
-                    width: 28,
-                    height: 28,
-                    decoration: BoxDecoration(
-                        image: DecorationImage(
-                            image: Image.asset(currentIndex == 2
-                                    ? 'assets/images/wedauifgdufiogA_cxvbiagdsfyuasgyiuD.png'
-                                    : 'assets/images/dgfuggdufiog_xcbvsydufsgidfyugi.png')
-                                .image)),
+                  icon: AnimatedScale(
+                    scale: currentIndex == 2 ? 1.2 : 1.0,
+                    duration: Duration(milliseconds: 200),
+                    curve: Curves.easeInOut,
+                    child: Container(
+                      width: 28,
+                      height: 28,
+                      decoration: BoxDecoration(
+                          image: DecorationImage(
+                              image: Image.asset(currentIndex == 2
+                                      ? 'assets/images/wedauifgdufiogA_cxvbiagdsfyuasgyiuD.png'
+                                      : 'assets/images/dgfuggdufiog_xcbvsydufsgidfyugi.png')
+                                  .image)),
+                    ),
                   ),
                   label: '',
                 ),
                 GlobalViberaTrendConnection(
-                  icon: Container(
-                    width: 28,
-                    height: 28,
-                    decoration: BoxDecoration(
-                        image: DecorationImage(
-                            image: Image.asset(currentIndex == 3
-                                    ? 'assets/images/sgdfafuihgHDFOUIG_cvxbjdfghiaudfhgIO.png'
-                                    : 'assets/images/fuagdifgasydi_vbsadygfuyasgdfhuao.png')
-                                .image)),
+                  icon: AnimatedScale(
+                    scale: currentIndex == 3 ? 1.2 : 1.0,
+                    duration: Duration(milliseconds: 200),
+                    curve: Curves.easeInOut,
+                    child: Container(
+                      width: 28,
+                      height: 28,
+                      decoration: BoxDecoration(
+                          image: DecorationImage(
+                              image: Image.asset(currentIndex == 3
+                                      ? 'assets/images/sgdfafuihgHDFOUIG_cvxbjdfghiaudfhgIO.png'
+                                      : 'assets/images/fuagdifgasydi_vbsadygfuyasgdfhuao.png')
+                                  .image)),
+                    ),
                   ),
                   label: '',
                 ),
